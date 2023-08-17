@@ -8,13 +8,13 @@
 
 antiphonChant = \relative c'' {
   \AntiphonSignature
-  a4 c \CC c d d4 d
+  \C a c \CC c d \C d d
   \divisioMinima
-  d d c \CC d e c4 \CL d e d4 d
+  d d c \CC d e \C c \CL d e \C d d
   \divisioMaior \break
   a d c b a g \EE a g
   \divisioMinima
-  f4 g a bes c bes a a
+  \C f g a bes c bes a a
   \finalis
 }
 
