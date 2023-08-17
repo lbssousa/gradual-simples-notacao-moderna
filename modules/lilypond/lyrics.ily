@@ -211,4 +211,12 @@ Terminatio =
     }
   #})
 
+AfterStanzaSpacing =
+#(define-music-function
+  ()
+  ()
+  #{
+    \override VerticalAxisGroup.nonstaff-nonstaff-spacing.basic-distance = 4
+  #})
+
 AltLyrics = \override Lyrics.LyricText.font-shape = #'italic

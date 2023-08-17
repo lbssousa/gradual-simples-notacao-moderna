@@ -105,6 +105,13 @@ CCC =
   (ly:pitch? ly:pitch? ly:pitch?)
   #{ \tuplet 3/2 { $pa 8( $pb $pc ) } #})
 
+% Neuma de três notas, com episema na segunda e terceira nota
+CEE =
+#(define-music-function
+  (pa pb pc)
+  (ly:pitch? ly:pitch? ly:pitch?)
+  #{ \tuplet 3/2 { $pa 8( $pb 8.*2/3 $pc ) } #})
+
 % Neuma de três notas, com quilisma na segunda nota
 CQC =
 #(define-music-function

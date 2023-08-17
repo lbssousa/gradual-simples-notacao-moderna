@@ -9,7 +9,7 @@ chantGloriaInchoatioVIII = \relative c'' { \C a }
 
 chantTenorVIII = \relative c'' { \T c }
 
-chantFlexaVIII = \relative c'' { c2*1/2 a4 }
+chantFlexaVIII = \relative c'' { \A c \C a }
 chantFlexaCumEpenthesisVIII = \relative c'' {
   \A c \eC a
 }

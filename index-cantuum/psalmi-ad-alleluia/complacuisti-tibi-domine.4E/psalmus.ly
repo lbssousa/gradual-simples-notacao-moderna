@@ -7,6 +7,7 @@
 \include "../../../modules/lilypond/lyrics.ily"
 
 psalmChant = {
+  \key c \major
   \PsalmSignature
   \chantInchoatioIV
   \chantTenorIV
@@ -42,7 +43,7 @@ psalmVerseII = \lyricmode {
       \psalmChant
     }
 
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
+    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
   >>
 }

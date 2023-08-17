@@ -9,12 +9,22 @@
 psalmChant = {
   \PsalmSignature
   \chantInchoatioIVA
+  \chantTenorIVA
+  \chantMediatioIVA
+  \divisioMaxima
+  \chantTenorIVA
+  \chantTerminatioIVc
+  \finalis
+}
+
+psalmChantCumFlexa = {
+  \PsalmSignature
+  \chantInchoatioIVA
   \bar "!"
   \chantTenorIVA^\markup { \italic flexa }
   \chantFlexaIVA
   \bar "!"
   \chantTenorIVA
-  \break
   \chantMediatioCumEpenthesisIVA
   \divisioMaxima
   \chantTenorIVA
@@ -67,7 +77,6 @@ psalmVerseV = \lyricmode {
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \AltLyrics
   \VSup "9" E -- le __ _ _ _
   \Tenor "dirige os humildes"
   na jus -- ti -- _ ça,
@@ -79,14 +88,14 @@ psalmVerseVI = \lyricmode {
 \score {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
-      \transpose c g, \psalmChant
+      \transpose c g, \psalmChantCumFlexa
     }
 
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseI
+    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIII
+    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
   >>
 }

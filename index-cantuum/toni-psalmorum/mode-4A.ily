@@ -40,6 +40,21 @@ chantTerminatioCumEpenthesisIVc = \relative c'' {
   \A d \eC c
 }
 
+gloriaPatriChantIVA = {
+  \time 1/4
+  \chantGloriaInchoatioIVA
+  \chantTenorIVA
+  \chantMediatioIVA
+  \divisioMaxima
+  \chantInchoatioIVA
+  \chantTenorIVA
+  \chantMediatioIVA
+  \divisioMaxima
+  \chantTenorIVA
+  \chantTerminatioIVA
+  \finalis
+}
+
 gloriaPatriChantIVc = {
   \time 1/4
   \chantGloriaInchoatioIVA
@@ -53,6 +68,14 @@ gloriaPatriChantIVc = {
   \chantTenorIVA
   \chantTerminatioIVc
   \finalis
+}
+
+gloriaPatriVerseIVA = \lyricmode {
+  \set stanza = "Opcional:"
+  Gló -- ria ao
+  \Tenor "Pai e ao Filho e ao Espí" -- ri -- to San -- to,
+  Co -- mo __ \Tenor "era no princípio, a" -- go -- ra~e sem -- pre,
+  \Tenor "pelos séculos dos" sé -- cu -- los, a -- mém!
 }
 
 gloriaPatriVerseIVc = \lyricmode {

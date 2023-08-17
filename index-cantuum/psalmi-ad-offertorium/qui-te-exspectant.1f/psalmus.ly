@@ -10,9 +10,9 @@ psalmChant = {
   \PsalmSignature
   \chantInchoatioI
   \chantTenorI
-  \chantMediatioCumEpenthesisI
-  \divisioMaxima
-  \break
+  \chantMediatioPrimusCumEpenthesisI
+  \chantMediatioSecundusCumEpenthesisI
+  \divisioMaxima \break
   \chantTenorI
   \chantTerminatioCumEpenthesisIf
   \finalis
@@ -68,10 +68,10 @@ psalmVerseV = \lyricmode {
       \psalmChant
     }
 
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseI
+    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIII
+    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
   >>
 }

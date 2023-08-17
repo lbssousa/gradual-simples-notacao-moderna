@@ -46,7 +46,7 @@ chantTerminatioCumEpenthesisES = \relative c'' {
 }
 
 chantAlleluiaES = \relative c' {
-  f4 e \CC f g \CCC f f e d c \CL d e e4
+  \C f e \CC f g \CCC f f e d c \CL d e \C e
 }
 
 lyricsAlleluiaES = \lyricmode {
