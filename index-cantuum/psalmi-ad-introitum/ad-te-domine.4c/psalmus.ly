@@ -20,22 +20,26 @@ psalmChant = {
 psalmChantCumFlexa = {
   \PsalmSignature
   \chantInchoatioIVA
-  \bar "!"
-  \chantTenorIVA^\markup { \italic flexa }
-  \chantFlexaIVA
-  \bar "!"
   \chantTenorIVA
+  \bar "!"
+  \section
+  \sectionLabel \markup { \italic flexa }
+  \chantFlexaIVA
+  \divisioMinima
+  \chantTenorIVA
+  \bar "!"
   \chantMediatioCumEpenthesisIVA
   \divisioMaxima
   \chantTenorIVA
   \chantTerminatioIVc
   \finalis
+  \fine
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \VSup "2b" Não tri -- _ _ _
-  \Tenor "unfem sobre mim os"
+  \VSup "2b" Não tri --
+  \Tenor "unfem sobre mim os" _ _ _
   i -- ni -- mi -- _ gos!
   \Tenor \VSup "3a" "Não se envergonha quem em vós põe a espe" -- ran -- ça.
 }
@@ -43,8 +47,8 @@ psalmVerseI = \lyricmode {
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
-  \VSup "4" Mos -- trai -- _ _ _
-  \Tenor "-me, ó Senhor, vos" --
+  \VSup "4" Mos -- trai --
+  \Tenor "-me, ó Senhor, vos" -- _ _ _
   sos ca -- mi -- _ nhos
   \Tenor "e fazei-me conhecer a vossa es" -- tra -- da!
 }
@@ -61,24 +65,24 @@ psalmVerseIII = \lyricmode {
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
-  \VSup "7cd" De mim __ _ _ _
-  \Tenor "lembrai-vos, porque sois mi" --
+  \VSup "7cd" De mim __
+  \Tenor "lembrai-vos, porque sois mi" -- _ _ _
   se -- ri -- cór -- _ dia
   \Tenor "e sois bondade sem limites, ó" Se -- nhor!
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \VSup "8" O Se -- _ _ _
-  \Tenor "nhor é pieda" --
+  \VSup "8" O Se --
+  \Tenor "nhor é pieda" -- _ _ _
   de e re -- ti -- dão,
   \Tenor "e reconduz ao bom caminho os peca" -- do -- res.
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \VSup "9" E -- le __ _ _ _
-  \Tenor "dirige os humildes"
+  \VSup "9" E -- le __
+  \Tenor "dirige os humildes" _ _ _
   na jus -- ti -- _ ça,
   \Tenor "e aos pobres ele ensina o seu ca" -- mi -- nho.
 }
@@ -91,11 +95,11 @@ psalmVerseVI = \lyricmode {
       \transpose c g, \psalmChantCumFlexa
     }
 
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseII
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseV
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
   >>
 }

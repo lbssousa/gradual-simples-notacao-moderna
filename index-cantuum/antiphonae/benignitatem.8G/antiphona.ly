@@ -10,9 +10,7 @@ antiphonChant = \relative c'' {
   \AntiphonSignature
   \key c \major
   \C g
-  \slurDotted
-  \CC f a
-  \slurSolid
+  \C_C f a
   \C c \EE b g
   \divisioMinima
   \EE b c \EE a g \C a g f
@@ -20,9 +18,7 @@ antiphonChant = \relative c'' {
   g f a c \EE b g
   \divisioMinima
   \EE b c \C a
-  \slurDotted
-  b( \Ldim a)
-  \slurSolid
+  \C_L b a
   \C g g
   \finalis
 }

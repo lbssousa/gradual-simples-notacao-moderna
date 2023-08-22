@@ -5,6 +5,11 @@
 \include "../../modules/lilypond/lyrics.ily"
 
 chantInchoatioVI = \relative c' { \C f \CC g a }
+chantAltInchoatioVI = \relative c' {
+  \C f
+  \once \slurDashed
+  \CC g a
+}
 chantGloriaInchoatioVI = \relative c' { \C f g }
 
 chantTenorVI = \relative c'' { \T a }
@@ -18,8 +23,18 @@ chantMediatioCumEpenthesisVI = \relative c'' { \C g \A a \eC f }
 chantTerminatioVIF = \relative c' {
   \C f \CC g a \A g \C f
 }
+chantAltTerminatioVIF = \relative c' {
+  \C f
+  \once \slurDashed
+  \CC g a \A g \C f
+}
 chantTerminatioCumEpenthesisVIF = \relative c' {
   \C f \CC g a \A g \eC f
+}
+chantAltTerminatioCumEpenthesisVIF = \relative c' {
+  \C f
+  \once \slurDashed
+  \CC g a \A g \eC f
 }
 
 gloriaPatriChantVIF = {
