@@ -100,27 +100,24 @@ psalmVerseX = \lyricmode {
     piece = "D 1 e"
   }
   \new GregorianTranscriptionStaff <<
-    {
-      \new GregorianTranscriptionVoice = "psalm" {
-        \psalmChant
-      }
-
-      \new GregorianTranscriptionVoice = "responsorium" {
-        \chantResponsorium \finalis
-      }
+    \new GregorianTranscriptionVoice = "psalm" {
+      \psalmChant
+      \chantResponsorium
     }
 
-    \new GregorianTranscriptionLyrics \lyricsto "responsorium" \lyricsResponsorium
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" {
+      \psalmVerseI
+      \lyricsResponsorium
+    }
 
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseII
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseVI
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseVII
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseVIII
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIX
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIX
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseX
   >>
 }

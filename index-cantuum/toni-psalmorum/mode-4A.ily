@@ -18,10 +18,10 @@ chantGloriaInchoatioIVA = \relative c'' {
 chantTenorIVA = \relative c'' { \T d }
 
 chantFlexaIVA = \relative c'' {
-  \A d^\markup { \italic flexa } \C c
+  \A d \C c
 }
 chantFlexaCumEpenthesisIVA = \relative c'' {
-  \A d^\markup { \italic flexa } \eC c
+  \A d \eC c
 }
 
 chantMediatioIVA = \relative c'' {

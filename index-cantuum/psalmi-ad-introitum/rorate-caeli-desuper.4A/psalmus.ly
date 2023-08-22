@@ -8,25 +8,12 @@
 
 psalmChant = {
   \PsalmSignature
-  \chantInchoatioIVA
-  \bar "!"
+  \chantAltInchoatioIVA
   \chantTenorIVA
   \chantMediatioCumEpenthesisIVA
   \divisioMaxima \break
   \chantTenorIVA
   \chantTerminatioCumEpenthesisIVA
-  \finalis
-}
-
-psalmChantAlt = {
-  \PsalmSignature
-  \chantInchoatioIVA
-  \bar "!"
-  \chantTenorIVA
-  \chantMediatioIVA
-  \divisioMaxima \break
-  \chantTenorIVA
-  \chantTerminatioIVA
   \finalis
 }
 
@@ -59,29 +46,35 @@ psalmVerseIV = \lyricmode {
   \Tenor "chega aos confins do uni" -- ver -- so a su -- a voz.
 }
 
-psalmVerseVa = \lyricmode {
+psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \VSup "6" Ar -- mou __
+  \VSup "6ab" Ar -- mou __
   \Tenor "no alto uma" ten -- da pa -- ra~o sol;
-  \Tenor "ele desponta no céu" e se le -- van -- _ \Tenor "ta ↵"
+  \Tenor "ele desponta no céu" e se le -- van -- _ ta.
 }
 
-psalmVerseVb = \lyricmode {
-  _ _
-  \Tenor "como um esposo do" quar -- to nup -- ci -- al,
+psalmVerseVI = \lyricmode {
+  \set stanza = "6."
+  \AltLyrics
+  \set ignoreMelismata = ##t
+  \VSup "6cd" Co -- mo um
+  \unset ignoreMelismata
+  \Tenor "esposo do" quar -- to nup -- ci -- al,
   \Tenor "como um herói exultan" -- te~em seu ca -- mi -- _ nho.
 }
 
-psalmVerseVIa = \lyricmode {
-  \set stanza = "6."
-  \VSup "7" \markup { \concat { "D" \undertie "e u" "m" } } ex -- \Tenor "tremo do céu" põe -- -se~a cor -- rer,
-  \Tenor "e vai traçando o seu ras" -- tro lu -- mi -- no -- \Tenor "so, ↵"
+psalmVerseVII = \lyricmode {
+  \set stanza = "7."
+  \VSup "7ab" \markup { \concat { "D" \undertie "e u" "m" } } ex -- \Tenor "tremo do céu" põe -- -se~a cor -- _ rer,
+  \Tenor "e vai traçando o seu ras" -- tro lu -- mi -- no -- _ so.
 }
 
-psalmVerseVIb = \lyricmode {
-  _ _
-  \Tenor "até que possa chegar ao" ou -- tro~ex -- tre -- mo,
-  \Tenor "e nada pode fu" -- gir ao seu ca -- lor.
+psalmVerseVIII = \lyricmode {
+  \set stanza = "8."
+  \AltLyrics
+  \VSup "7ab" A -- té __
+  \Tenor "que possa chegar ao" ou -- tro~ex -- tre -- _ mo,
+  \Tenor "e nada pode fu" -- gir ao seu ca -- _ lor.
 }
 
 \GregorianTranscriptionLayout
@@ -92,23 +85,14 @@ psalmVerseVIb = \lyricmode {
       \transpose c g, \psalmChant
     }
 
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseII
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVa
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVb
-  >>
-}
-
-\score {
-  \new GregorianTranscriptionStaff <<
-    \new GregorianTranscriptionVoice = "psalm" {
-      \transpose c g, \psalmChantAlt
-    }
-
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIa
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIb
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
   >>
 }
 

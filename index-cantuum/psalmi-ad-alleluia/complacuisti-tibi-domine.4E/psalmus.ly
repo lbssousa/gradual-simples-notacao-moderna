@@ -43,7 +43,7 @@ psalmVerseII = \lyricmode {
       \psalmChant
     }
 
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseI
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
   >>
 }

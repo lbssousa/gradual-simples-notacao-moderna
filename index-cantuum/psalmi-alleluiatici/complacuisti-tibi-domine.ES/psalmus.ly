@@ -68,24 +68,20 @@ psalmVerseVII = \lyricmode {
     piece = "E *"
   }
   \new GregorianTranscriptionStaff <<
-    {
-      \new GregorianTranscriptionVoice = "psalm" {
-        \psalmChant
-      }
-
-      \new GregorianTranscriptionVoice = "alleluia" {
-        \chantAlleluiaES \finalis
-      }
+    \new GregorianTranscriptionVoice = "psalm" {
+      \psalmChant
+      \chantAlleluiaES
     }
 
-    \new GregorianTranscriptionLyrics \lyricsto "alleluia" \lyricsAlleluiaES
-
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseII
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" {
+      \psalmVerseI
+      \lyricsAlleluiaES
+    }
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
   >>
 }

@@ -18,9 +18,7 @@ antiphonChant = \relative c' {
   g \Cp g \C a g \Cp g \C f
   \divisioMinima
   \CL e c \C d \CC f e
-  \slurDotted
-  \C d( c)
-  \slurSolid
+  \C_C d c
   \QC e f \Ldim g \CC f e \C d d
   \finalis
 }

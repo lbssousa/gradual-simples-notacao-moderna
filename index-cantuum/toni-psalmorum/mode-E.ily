@@ -13,9 +13,8 @@ chantMediatioCumEpenthesisE = \relative c' {
 chantTerminatioEI = \relative c' { \CC f d \AA e f g }
 chantTerminatioCumEpenthesisEI = \relative c' {
   \CC f d
-  \slurDotted
+  \once \slurDashed
   e2*1/4( f4)
-  \slurSolid
   g
 }
 

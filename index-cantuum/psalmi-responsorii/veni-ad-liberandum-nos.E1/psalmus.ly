@@ -26,7 +26,7 @@ psalmChant = {
 }
 
 psalmVerseI = \lyricmode {
-  _ __ _ _ _
+  _ _ _ _
   \set stanza = "1."
   \Tenor \VSup "3c" "Vinde logo nos trazer" a __
   \set ignoreMelismata = ##t
@@ -90,24 +90,20 @@ psalmVerseVIII = \lyricmode {
     piece = "E 1"
   }
   \new GregorianTranscriptionStaff <<
-    {
-      \new GregorianTranscriptionVoice = "psalm" {
-        \psalmChant
-      }
-
-      \new GregorianTranscriptionVoice = "responsorium" {
-        \chantResponsorium \finalis
-      }
+    \new GregorianTranscriptionVoice = "psalm" {
+      \psalmChant
+      \chantResponsorium
     }
 
-    \new GregorianTranscriptionLyrics \lyricsto "responsorium" \lyricsResponsorium
-
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseII
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" {
+      \psalmVerseI
+      \lyricsResponsorium
+    }
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
   >>
 }

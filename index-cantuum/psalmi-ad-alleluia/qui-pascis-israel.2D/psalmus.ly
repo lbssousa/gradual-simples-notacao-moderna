@@ -10,22 +10,26 @@ psalmChant = {
   \key c \major
   \PsalmSignature
   \chantInchoatioII
-  \bar "!"
-  \chantTenorII^\markup { \italic flexa }
-  \chantFlexaII
-  \bar "!"
   \chantTenorII
+  \bar "!"
+  \section
+  \sectionLabel \markup { \italic flexa }
+  \chantFlexaII
+  \divisioMinima
+  \chantTenorII
+  \bar "!"
   \chantMediatioCumEpenthesisII
   \divisioMaxima
   \chantTenorII
   \chantTerminatioIID
   \finalis
+  \fine
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \VSup "2ab" Ó Pas -- _ _ _
-  \Tenor "tor de Israel, prestai ou" -- vi -- _ dos.
+  \VSup "2ab" Ó Pas --
+  \Tenor "tor de Israel, prestai ou" -- _ _ _ vi -- _ dos.
   \Tenor "Vós, que a José apascentais qual um" re -- ba -- nho!
 }
 
@@ -46,7 +50,7 @@ psalmVerseII = \lyricmode {
       \transpose d g \psalmChant
     }
 
-    \new GregorianTranscriptionLyrics \with { \AfterStanzaSpacing } \lyricsto "psalm" \psalmVerseI
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
   >>
 }
