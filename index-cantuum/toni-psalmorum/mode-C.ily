@@ -21,8 +21,38 @@ chantAlleluiaCI = \relative c'' {
   \divisioMinima
   d \CC f g \CL g f \C f
 }
-
 lyricsAlleluiaCI = \lyricmode {
   \set stanza = \Responsorium
   A -- le -- lu -- ia, a -- le -- lu -- ia.
+}
+
+chantTerminatioCII = \relative c'' { \AA g a \CC a g }
+chantTerminatioCumEpenthesisCII = \relative c'' { \eAA g a \CC a g }
+
+chantInchoatioCIII = \relative c'' { \Cp a \AA a bes }
+chantTenorPrimusCIII = \relative c'' { \T a }
+chantMediatioCIII = \relative c'' { \AA g a \C g }
+chantMediatioCumEpenthesisCIII = \relative c'' {
+  \AA g a \eC g
+}
+chantTenorSecundusCIII = \relative c'' { \T g }
+chantTerminatioCIIIa = \relative c' { \C f \AA g a \C a }
+chantTerminatioCumEpenthesisCIIIa = \relative c' {
+  \C f \eAA g a \C a
+}
+chantTerminatioCIIIg = \relative c' { \C f \AA g a \CC a g }
+chantTerminatioCumEpenthesisCIIIg = \relative c' {
+  \C f \eAA g a \CC a g
+}
+
+chantTenorCIV = \relative c' { \T f }
+chantAlleluiaPrimusCIV = \relative c' {
+  \C f f d c \finalis
+}
+chantAlleluiaSecundusCIV = \relative c'' {
+  \C a \CC a g \CC g f \C f \finalis
+}
+lyricsAlleluiaCIV = \lyricmode {
+  \set stanza = \Responsorium
+  A -- le -- lu -- ia.
 }

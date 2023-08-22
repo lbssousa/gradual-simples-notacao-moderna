@@ -21,7 +21,7 @@ chantMediatioCumEpenthesisII = \relative c'' {
 
 
 chantTerminatioIID = \relative c' { \C e \A c \C d }
-chantTerminatioCumEpenthesisVIIIG = \relative c' {
+chantTerminatioCumEpenthesisIID = \relative c' {
   \C e \A c \eC d
 }
 
@@ -31,7 +31,7 @@ gloriaPatriChantIID = {
   \chantInchoatioII
   \chantTenorII
   \chantMediatioII
-  \divisioMaxima
+  \divisioMaxima \break
   \chantGloriaInchoatioII
   \chantTenorII
   \chantMediatioII
@@ -41,7 +41,7 @@ gloriaPatriChantIID = {
   \finalis
 }
 
-gloriaPatriVerseVIIIG = \lyricmode {
+gloriaPatriVerseIID = \lyricmode {
   \set stanza = "Opcional:"
   Gló -- ria~ao
   \Tenor "Pai e ao Filho e ao Espírito" San -- to,

@@ -7,16 +7,21 @@
 chantInchoatioIVA = \relative c'' {
   \C d \CC c d
 }
+chantAltInchoatioIVA = \relative c'' {
+  \C d
+  \once \slurDashed
+  \CC c d
+}
 chantGloriaInchoatioIVA = \relative c'' {
   \C d c d
 }
 chantTenorIVA = \relative c'' { \T d }
 
-chantFlexaCumEpenthesisIVA = \relative c'' {
-  \A d \eC c
-}
 chantFlexaIVA = \relative c'' {
-  \A d \C c
+  \A d^\markup { \italic flexa } \C c
+}
+chantFlexaCumEpenthesisIVA = \relative c'' {
+  \A d^\markup { \italic flexa } \eC c
 }
 
 chantMediatioIVA = \relative c'' {
