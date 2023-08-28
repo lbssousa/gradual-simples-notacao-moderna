@@ -8,30 +8,30 @@
 
 psalmChant = {
   \PsalmSignature
-  \chantInchoatioIVA
+  \chantInchoatioIVA #'()
   \chantTenorIVA
-  \chantMediatioIVA
+  \chantMediatioIVA #'((syneresis . partial))
   \divisioMaxima
   \chantTenorIVA
-  \chantTerminatioIVc
+  \chantTerminatioIVc #'((syneresis . partial))
   \finalis
 }
 
 psalmChantCumFlexa = {
   \PsalmSignature
-  \chantInchoatioIVA
+  \chantInchoatioIVA #'((dieresis . partial))
   \chantTenorIVA
   \bar "!"
   \section
   \sectionLabel \markup { \italic flexa }
-  \chantFlexaIVA
+  \chantFlexaIVA #'()
   \divisioMinima
   \chantTenorIVA
   \bar "!"
-  \chantMediatioCumEpenthesisIVA
+  \chantMediatioIVA #'((syneresis . partial))
   \divisioMaxima
   \chantTenorIVA
-  \chantTerminatioIVc
+  \chantTerminatioIVc #'((syneresis . partial))
   \finalis
   \fine
 }
@@ -40,8 +40,10 @@ psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "2b" Não tri --
   \Tenor "unfem sobre mim os" _ _ _
-  i -- ni -- mi -- _ gos!
-  \Tenor \VSup "3a" "Não se envergonha quem em vós põe a espe" -- ran -- ça.
+  i -- ni --
+  \MelismaOff mi -- gos! \MelismaOn
+  \Tenor \VSup "3a" "Não se envergonha quem em vós põe a espe" --
+  \MelismaOff ran -- ça. \MelismaOn
 }
 
 psalmVerseII = \lyricmode {
@@ -49,17 +51,20 @@ psalmVerseII = \lyricmode {
   \AltLyrics
   \VSup "4" Mos -- trai --
   \Tenor "-me, ó Senhor, vos" -- _ _ _
-  sos ca -- mi -- _ nhos
-  \Tenor "e fazei-me conhecer a vossa es" -- tra -- da!
+  sos ca --
+  \MelismaOff mi -- nhos \MelismaOn
+  \Tenor "e fazei-me conhecer a vossa es" --
+  \MelismaOff tra -- da! \MelismaOn
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
   \VSup "5" Vos -- sa __
   \Tenor "verdade me oriente e me con" -- du -- za,
-  \Tenor "porque sois o Deus da"
-  mi -- nha sal -- va -- ção;
-  \Tenor "em vós espero, ó Senhor, todos os" di -- as.
+  \Tenor "porque sois o Deus da minha"
+  sal -- va -- ção; __
+  \Tenor "em vós espero, ó Senhor, todos os"
+  \MelismaOff di -- as. \MelismaOn
 }
 
 psalmVerseIV = \lyricmode {
@@ -67,24 +72,28 @@ psalmVerseIV = \lyricmode {
   \AltLyrics
   \VSup "7cd" De mim __
   \Tenor "lembrai-vos, porque sois mi" -- _ _ _
-  se -- ri -- cór -- _ dia
-  \Tenor "e sois bondade sem limites, ó" Se -- nhor!
+  se -- ri --
+  \MelismaOff cór -- dia \MelismaOn
+  \Tenor "e sois bondade sem limites, ó Se" -- nhor! __
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
   \VSup "8" O Se --
-  \Tenor "nhor é pieda" -- _ _ _
-  de e re -- ti -- dão,
-  \Tenor "e reconduz ao bom caminho os peca" -- do -- res.
+  \Tenor "nhor é piedade e" _ _ _
+  re -- ti -- dão, __
+  \Tenor "e reconduz ao bom caminho os peca" --
+  \MelismaOff do -- res. \MelismaOn
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \VSup "9" E -- le __
   \Tenor "dirige os humildes" _ _ _
-  na jus -- ti -- _ ça,
-  \Tenor "e aos pobres ele ensina o seu ca" -- mi -- nho.
+  na jus --
+  \MelismaOff ti -- ça, \MelismaOn
+  \Tenor "e aos pobres ele ensina o seu ca" --
+  \MelismaOff mi -- nho. \MelismaOn
 }
 
 \GregorianTranscriptionLayout

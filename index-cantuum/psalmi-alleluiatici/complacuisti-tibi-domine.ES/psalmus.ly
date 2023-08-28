@@ -8,56 +8,69 @@
 
 psalmChant = {
   \PsalmSignature
-  \chantTenorES
-  \chantMediatioCumEpenthesisES
+  \chantTenorEStar
+  \chantMediatioEStar #'((syneresis . partial))
   \divisioMaxima
-  \chantTenorES
-  \chantTerminatioCumEpenthesisES
+  \chantTenorEStar
+  \break
+  \chantTerminatioEStar #'((syneresis . partial)
+                           (epenthesis . partial))
   \finalis
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \Tenor \VSup "2" "Favorecestes, ó Senhor, a vossa" ter -- _ ra,
-  \Tenor "libertastes os cativos de" Ja -- có. _ _
+  \Tenor \VSup "2" "Favorecestes, ó Senhor, a vossa"
+  \MelismaOff ter -- ra, \MelismaOn
+  \Tenor "libertastes os cativos de" Ja -- có. __
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
-  \Tenor \VSup "3" "Perdoastes o pecado ao vosso" po -- _ vo, \Tenor "encobristes toda a falta co" -- me -- ti -- _ da.
+  \Tenor \VSup "3" "Perdoastes o pecado ao vosso"
+  \MelismaOff po -- vo, \MelismaOn
+  \Tenor "encobristes toda a falta co" -- me --
+  \MelismaOff ti -- _ da. \MelismaOn
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \Tenor \VSup "4" "Retirastes a ameaça que fi" -- zes -- _ tes,
-  \Tenor "acalmastes o furor de vos" -- sa __ i -- _ ra.
+  \Tenor \VSup "4" "Retirastes a ameaça que fi" --
+  \MelismaOff zes -- tes, \MelismaOn
+  \Tenor "acalmastes o furor de vos" -- sa __
+  \MelismaOff i -- _ ra. \MelismaOn
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
-  \Tenor \VSup "5" "Renovai-nos, nosso Deus e" Sal -- va -- dor,
-  \Tenor "esquecei a vossa mágoa con" -- tra __ nós! _ _
+  \Tenor \VSup "5" "Renovai-nos, nosso Deus e Salva" -- dor, __
+  \Tenor "esquecei a vossa mágoa con" -- tra __ nós! __
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \Tenor \VSup "6" "Ficareis eternamente irri" -- ta -- _ do?
-  \Tenor "Guardareis a vossa ira pe" -- los __ sé -- cu -- los?
+  \Tenor \VSup "6" "Ficareis eternamente irri" --
+  \MelismaOff ta -- do? \MelismaOn
+  \Tenor "Guardareis a vossa ira pe" -- los __
+  \MelismaOff sé -- cu -- los? \MelismaOn
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \AltLyrics
-  \Tenor \VSup "7" "Não vireis restituir a nossa" vi -- _ da,
-  \Tenor "para que em vós se rejubile o vos" -- so __ po -- _ vo?
+  \Tenor \VSup "7" "Não vireis restituir a nossa"
+  \MelismaOff vi -- da, \MelismaOn
+  \Tenor "para que em vós se rejubile o vos" -- so __
+  \MelismaOff po -- _ vo? \MelismaOn
 }
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
-  \Tenor \VSup "8" "Mostrai-nos, ó Senhor, vossa bon" -- da -- _ de,
-  \Tenor "concedei-nos também vossa sal" -- va -- ção. _ _
+  \Tenor \VSup "8" "Mostrai-nos, ó Senhor, vossa bon" --
+  \MelismaOff da -- de, \MelismaOn
+  \Tenor "concedei-nos também vossa sal" -- va -- ção. __
 
 }
 
@@ -70,12 +83,13 @@ psalmVerseVII = \lyricmode {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
       \psalmChant
-      \chantAlleluiaES
+      \chantAlleluiaEStar
+      \finalis
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {
       \psalmVerseI
-      \lyricsAlleluiaES
+      \lyricsAlleluiaEStar
     }
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
