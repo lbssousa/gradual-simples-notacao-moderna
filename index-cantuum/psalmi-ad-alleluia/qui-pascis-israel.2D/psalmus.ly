@@ -14,14 +14,14 @@ psalmChant = {
   \bar "!"
   \section
   \sectionLabel \markup { \italic flexa }
-  \chantFlexaII
+  \chantFlexaII #'()
   \divisioMinima
   \chantTenorII
   \bar "!"
-  \chantMediatioCumEpenthesisII
+  \chantMediatioII #'((syneresis . partial))
   \divisioMaxima
   \chantTenorII
-  \chantTerminatioIID
+  \chantTerminatioIID #'()
   \finalis
   \fine
 }
@@ -29,7 +29,8 @@ psalmChant = {
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "2ab" Ó Pas --
-  \Tenor "tor de Israel, prestai ou" -- _ _ _ vi -- _ dos.
+  \Tenor "tor de Israel, prestai ou" -- _ _ _
+  \MelismaOff vi -- dos. \MelismaOn
   \Tenor "Vós, que a José apascentais qual um" re -- ba -- nho!
 }
 
@@ -38,7 +39,7 @@ psalmVerseII = \lyricmode {
   \AltLyrics
   \VSup "15" Vol -- tai --
   \Tenor "-vos para nós, Deus do uni" -- ver -- so!
-  \Tenor "Olhai dos altos céus e" ob -- ser -- vai.
+  \Tenor "Olhai dos altos céus e obser" -- vai. __
   \Tenor "Visitai a vossa vinha e pro" -- te -- gei -- -a!
 }
 
