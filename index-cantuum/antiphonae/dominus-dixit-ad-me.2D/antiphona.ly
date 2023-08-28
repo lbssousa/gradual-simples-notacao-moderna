@@ -23,20 +23,20 @@ antiphonChant = \relative c' {
 antiphonLyrics = \lyricmode {
   Dó -- mi -- nus di -- xit ad me:
   Fí -- li -- us
-  \set ignoreMelismata = ##t
+  \MelismaOff
   me -- us
-  \unset ignoreMelismata
+  \MelismaOn
   es __ tu:
-  \set ignoreMelismata = ##t
+  \MelismaOff
   e --
-  \unset ignoreMelismata
+  \MelismaOn
   go __ ho -- di -- e gé -- nu -- i te.
 }
 
 antiphonLyricsPt = \lyricmode {
   \AltLyrics
   O Se -- nhor dis -- se a mim: Tu és o meu __ Fi -- lho,
-  Eu __ ho -- je __ _ ge -- rei a ti!
+  Eu __ _ ho -- je __ "" ge -- rei a ti!
 }
 
 \GregorianTranscriptionLayout
