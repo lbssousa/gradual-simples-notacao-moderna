@@ -2,57 +2,113 @@
 
 \include "gregorian.ly"
 \include "../../modules/lilypond/neums.ily"
+\include "../../modules/lilypond/psalmody.ily"
 \include "../../modules/lilypond/lyrics.ily"
 
-chantInchoatioIII = \relative c'' { g \CC a c }
-chantGloriaInchoatioIII = \relative c'' { g \C a c }
+chantInchoatioIII =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeInchoatioOnePostTwo g a c #options
+    }
+  #})
 
 chantTenorIII = \relative c'' { \T c }
 
-chantFlexaIII = \relative c'' { \A c \C a }
-chantFlexaCumEpenthesisIII = \relative c'' {
-  \A c \eC a
-}
+chantFlexaIII =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusOnePostOne c a a #options
+    }
+  #})
 
-chantMediatioPrimusIII = \relative c'' { \A d \C c }
-chantMediatioPrimusCumEpenthesisIII = \relative c'' {
-  \A d \eC c
-}
+chantMediatioPrimusIII =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusOnePostOne d c c #options
+    }
+  #})
 
-chantMediatioSecundusIII = \relative c'' {
-  \AA b a \C c
-}
-chantMediatioSecundusCumEpenthesisIII = \relative c'' {
-  \Ap c \AA b a \C c
-}
+chantMediatioSecundusIII =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusTwoPreEpenthesisPostOne c b a c #options
+    }
+  #})
 
+chantTerminatioIIIa =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C a
+      \MakeAccentusOnePostTwo c c b a #options
+    }
+  #})
 
-chantTerminatioIIIg = \relative c'' { \CC c b \CC a b \A a \C g }
-chantTerminatioCumEpenthesisIIIg = \relative c'' {
-  \CC c b \CC a b \A a \eC g
-}
+chantTerminatioIIIg =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \CC c b \CC a b
+      \MakeAccentusOnePostOne a g g #options
+    }
+  #})
 
-gloriaPatriChantIIIg = {
+chantSegmentGloriaPatriIII = {
   \time 1/4
   \key c \major
-  \chantInchoatioIII
+  \chantInchoatioIII #'((dieresis . total))
   \chantTenorIII
-  \chantMediatioPrimusIII
-  \chantMediatioSecundusIII
+  \chantMediatioPrimusIII #'()
+  \chantMediatioSecundusIII #'()
   \divisioMaxima
-  \chantGloriaInchoatioIII
-  \chantMediatioPrimusIII
-  \chantMediatioSecundusIII
+  \chantInchoatioIII #'()
+  \chantMediatioPrimusIII #'()
+  \chantMediatioSecundusIII #'()
   \divisioMaxima
   \chantTenorIII
-  \chantTerminatioIIIg
+}
+
+gloriaPatriChantIIIa = {
+  \chantSegmentGloriaPatriIII
+  \chantTerminatioIIIa #'((syneresis . total))
   \finalis
 }
 
-gloriaPatriVerseIIIg = \lyricmode {
+gloriaPatriChantIIIg = {
+  \chantSegmentGloriaPatriIII
+  \chantTerminatioIIIg #'((syneresis . total))
+  \finalis
+}
+
+verseSegmentGloriaPatriIII = \lyricmode {
   \set stanza = "Opcional:"
   Gló -- ria~ao
   \Tenor "Pai e ao Filho e ao Espírito" San -- to,
   Co -- \Tenor "mo era no princípio, agora e" sem -- pre,
-  \Tenor "pelos séculos dos sé" -- cu -- los, a -- mém!
+}
+
+gloriaPatriVerseIIIa = \lyricmode {
+  \verseSegmentGloriaPatriIII
+  \Tenor "pelos séculos dos séculos," a -- mém! __
+}
+
+gloriaPatriVerseIIIg = \lyricmode {
+  \verseSegmentGloriaPatriIII
+  \Tenor "pelos séculos dos sécu" -- los, a -- mém! __
 }

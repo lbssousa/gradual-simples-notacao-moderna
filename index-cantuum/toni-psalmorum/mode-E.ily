@@ -1,54 +1,135 @@
 \version "2.24.1"
 
 \include "../../modules/lilypond/neums.ily"
+\include "../../modules/lilypond/psalmody.ily"
 \include "../../modules/lilypond/symbols.ily"
 
-chantTenorE = \relative c' { \T e }
+chantTenorEOne = \relative c' { \T e }
 
-chantMediatioE = \relative c' { \AA e f \C e }
-chantMediatioCumEpenthesisE = \relative c' {
-  \AA e f \eC e
-}
+chantMediatioEOne =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \MakeAccentusTwoPostOne e f e e #options
+    }
+  #})
 
-chantTerminatioEI = \relative c' { \CC f d \AA e f g }
-chantTerminatioCumEpenthesisEI = \relative c' {
-  \CC f d
-  \once \slurDashed
-  e2*1/4( f4)
-  g
-}
+chantTerminatioEOne =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \CC f d
+      \MakeAccentusTwoPostOneAlt e f g #options
+    }
+  #})
 
-chantInchoatioEV = \relative c'' {
-  \CC a b
-}
-chantInchoatioCumEpenthesisEV = \relative c'' {
-  \eCC a b
-}
-chantTenorEV = \relative c'' { \T a }
-chantMediatioEV = \relative c'' {
-  \AA g a \C g
-}
-chantMediatioCumEpenthesisEV = \relative c'' {
-  \AA g a \eC g
-}
-
-chantTenorES = \relative c'' { \T g }
-
-chantMediatioES = \relative c'' { \A a \C g }
-chantMediatioCumEpenthesisES = \relative c'' {
-  \A a \eC g
-}
-
-chantTerminatioES = \relative c'' { \CC g f \A e }
-chantTerminatioCumEpenthesisES = \relative c'' {
-  \CC g f \A e \Cp e \Cp e
+chantTerminatioETwod =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \MakeAccentusOnePostOne e d d #options
+    }
+  #})
+chantTerminatioETwoe = \relative c' {
+  \C f d f e
 }
 
-chantAlleluiaES = \relative c' {
+chantTenorEThree = \relative c'' { \T a }
+
+chantMediatioEThree =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusTwoPostOne a g g #options
+    }
+  #})
+
+chantTerminatioEThree =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusTwoPostOne g f f #options
+    }
+  #})
+
+chantMediatioEFour =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \chantTerminatioEThree #options
+  #})
+
+chantTerminatioEFour =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusTwoPostOne g a a #options
+    }
+  #})
+
+chantInchoatioEFive =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeInchoatioTwoPreEpenthesis a a b #options
+    }
+  #})
+
+chantTenorEFive = \relative c'' { \T a }
+
+chantMediatioEFive =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusTwoPostOne g a g g #options
+    }
+  #})
+
+chantTenorEStar = \relative c'' { \T g }
+
+chantMediatioEStar =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusOnePostOne a g g #options
+    }
+  #})
+
+chantTerminatioEStar =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \CC g f
+      \MakeAccentusOnePostOne e e e #options
+    }
+  #})
+
+chantAlleluiaEStar = \relative c' {
   \C f e \CC f g \CCC f f e d c \CL d e \C e
 }
 
-lyricsAlleluiaES = \lyricmode {
+lyricsAlleluiaEStar = \lyricmode {
   \set stanza = \Responsorium
   A -- le -- lu -- ia, __ a -- le -- lu -- ia.
 }

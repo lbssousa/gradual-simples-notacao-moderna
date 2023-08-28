@@ -1,30 +1,195 @@
 \version "2.24.1"
 
+\include "gregorian.ly"
 \include "../../modules/lilypond/neums.ily"
+\include "../../modules/lilypond/psalmody.ily"
+\include "../../modules/lilypond/lyrics.ily"
 
-chantInchoatioI = \relative c' { \C f \CC g a }
+chantInchoatioI =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \MakeInchoatioOnePostTwo f g a #options
+    }
+  #})
+
+chantSicutInchoatioI = \relative c'' {
+  \MakeInchoatioTwoPostTwo g f g a #'()
+}
 
 chantTenorI = \relative c'' { \T a }
 
-chantFlexaI = \relative c'' { \A a \C g }
-chantFlexaCumEpenthesisI = \relative c'' { \A a \eC g }
+chantFlexaI =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusOnePostOne a g g #options
+    }
+  #})
 
-chantMediatioPrimusI = \relative c'' { \A bes \C a }
-chantMediatioPrimusCumEpenthesisI = \relative c'' { \A bes \eC a }
+chantMediatioPrimusI =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusOnePostOne bes a a #options
+    }
+  #})
 
-chantMediatioSecundusI = \relative c'' { \A g \C a }
-chantMediatioSecundusCumEpenthesisI = \relative c'' { \A g \eC a }
+chantMediatioSecundusI =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusOnePostOne g a a #options
+    }
+  #})
 
-chantTerminatioIf = \relative c'' {
-  \C g f \AA g a \CC g f
+chantTerminatioIa =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C g f
+      \MakeAccentusOnePostOne g a a #options
+    }
+  #})
+
+chantTerminatioIaTwo =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C g f
+      \MakeAccentusOnePostTwo g g g a #options
+    }
+  #})
+
+chantTerminatioIg =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C g f
+      \MakeAccentusTwoPostOne g a g g #options
+    }
+  #})
+
+chantTerminatioIgTwo =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C g f
+      \MakeAccentusOnePostThree g g g a g #options
+    }
+  #})
+
+chantTerminatioIgFour =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C g f
+      \MakeAccentusOnePostOne a g g #options
+    }
+  #})
+
+chantTerminatioIf =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C g f
+      \MakeAccentusTwoPostTwo g a g g f #options
+    }
+  #})
+
+chantTerminatioIDTwo =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C g f
+      \MakeAccentusTwoPreEpenthesisPostOne g g f d #options
+    }
+  #})
+
+chantSegmentGloriaPatriI = {
+  \time 1/4
+  \key d \minor
+  \chantInchoatioI #'((dieresis . total))
+  \chantTenorI
+  \chantMediatioPrimusI #'((epenthesis . total))
+  \chantMediatioSecundusI #'()
+  \divisioMaxima
+  \chantSicutInchoatioI
+  \chantTenorI
+  \chantMediatioPrimusI #'()
+  \chantMediatioSecundusI #'()
+  \divisioMaxima
+  \chantTenorI
 }
-chantTerminatioCumEpenthesisIf = \relative c'' {
-  \C g f \AA g a \eCC g f
+
+gloriaPatriChantIa = {
+  \chantSegmentGloriaPatriI
+  \chantTerminatioIa #'((syneresis . total))
+  \finalis
 }
 
-chantTerminatioIg = \relative c'' {
-  \C g f \AA g a \C g
+gloriaPatriChantIaTwo = {
+  \chantSegmentGloriaPatriI
+  \chantTerminatioIaTwo #'((syneresis . total))
+  \finalis
 }
-chantTerminatioCumEpenthesisIg = \relative c'' {
-  \C g f \AA g a \eC g
+
+gloriaPatriChantIg = {
+  \chantSegmentGloriaPatriI
+  \chantTerminatioIg #'((syneresis . total))
+  \finalis
+}
+
+gloriaPatriChantIgTwo = {
+  \chantSegmentGloriaPatriI
+  \chantTerminatioIgTwo #'((syneresis . total))
+  \finalis
+}
+
+gloriaPatriChantIgFour = {
+  \chantSegmentGloriaPatriI
+  \chantTerminatioIgFour #'((syneresis . total))
+  \finalis
+}
+
+gloriaPatriChantIf = {
+  \chantSegmentGloriaPatriI
+  \chantTerminatioIf #'((syneresis . total))
+  \finalis
+}
+
+gloriaPatriChantIDTwo = {
+  \chantSegmentGloriaPatriI
+  \chantTerminatioIDTwo #'((syneresis . total))
+  \finalis
+}
+
+gloriaPatriVerseI = \lyricmode {
+  \set stanza = "Opcional:"
+  Gló -- ria ao
+  \Tenor "Pai e ao Filho e ao Es" -- pí -- ri -- to San -- to,
+  Co -- mo \Tenor "era no princípio, a" -- go -- ra~e sem -- pre,
+  \Tenor "pelos séculos dos sé" -- cu -- los, a -- mém!
 }

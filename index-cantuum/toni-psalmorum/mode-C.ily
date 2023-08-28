@@ -2,57 +2,137 @@
 
 \include "gregorian.ly"
 \include "../../modules/lilypond/neums.ily"
+\include "../../modules/lilypond/psalmody.ily"
 \include "../../modules/lilypond/symbols.ily"
 
 chantTenorC = \relative c' { \T f }
 
-chantMediatioC = \relative c'' { \A g \C f }
-chantMediatioCumEpenthesisC = \relative c'' {
-  \A g \eC f
-}
+chantMediatioC =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusOnePostOne g f f #options
+    }
+  #})
 
-chantTerminatioCI = \relative c' { \C e \A g \C a }
-chantTerminatioCumEpenthesisCI = \relative c' {
-  \C e \A g \Cp g \C a
-}
+chantTerminatioCOne =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \C e
+      \MakeAccentusOnePostOne g g a #options
+    }
+  #})
 
-chantAlleluiaCI = \relative c'' {
+chantAlleluiaCOne = \relative c'' {
   \C a \CC a g \C g f
   \divisioMinima
   d \CC f g \CL g f \C f
 }
-lyricsAlleluiaCI = \lyricmode {
+lyricsAlleluiaCOne = \lyricmode {
   \set stanza = \Responsorium
   A -- le -- lu -- ia, a -- le -- lu -- ia.
 }
 
-chantTerminatioCII = \relative c'' { \AA g a \CC a g }
-chantTerminatioCumEpenthesisCII = \relative c'' { \eAA g a \CC a g }
+chantTerminatioCTwoa =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusTwoPreEpenthesisPostOne g g a a #options
+    }
+  #})
 
-chantInchoatioCIII = \relative c'' { \Cp a \AA a bes }
-chantTenorPrimusCIII = \relative c'' { \T a }
-chantMediatioCIII = \relative c'' { \AA g a \C g }
-chantMediatioCumEpenthesisCIII = \relative c'' {
-  \AA g a \eC g
-}
-chantTenorSecundusCIII = \relative c'' { \T g }
-chantTerminatioCIIIa = \relative c' { \C f \AA g a \C a }
-chantTerminatioCumEpenthesisCIIIa = \relative c' {
-  \C f \eAA g a \C a
-}
-chantTerminatioCIIIg = \relative c' { \C f \AA g a \CC a g }
-chantTerminatioCumEpenthesisCIIIg = \relative c' {
-  \C f \eAA g a \CC a g
-}
+chantTerminatioCTwog =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusTwoPreEpenthesisPostTwo g g a a g #options
+    }
+  #})
 
-chantTenorCIV = \relative c' { \T f }
-chantAlleluiaPrimusCIV = \relative c' {
+chantInchoatioCThree =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeInchoatioTwoPreEpenthesis a a bes #options
+    }
+  #})
+
+chantTenorPrimusCThree = \relative c'' { \T a }
+chantMediatioCThree =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusTwoPostOne g a g g #options
+    }
+  #})
+
+chantTenorSecundusCThree = \relative c'' { \T g }
+
+chantTerminatioCThreea =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \C f
+      \MakeAccentusTwoPreEpenthesisPostOne g g a a #options
+    }
+  #})
+
+chantTerminatioCThreeg =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \C f
+      \MakeAccentusTwoPreEpenthesisPostTwo g g a a g #options
+    }
+  #})
+
+chantAlleluiaPrimusCFour = \relative c' {
   \C f f d c \finalis
 }
-chantAlleluiaSecundusCIV = \relative c'' {
+chantAlleluiaSecundusCFour = \relative c'' {
   \C a \CC a g \CC g f \C f \finalis
 }
-lyricsAlleluiaCIV = \lyricmode {
+lyricsAlleluiaCFour = \lyricmode {
   \set stanza = \Responsorium
   A -- le -- lu -- ia.
 }
+
+chantTenorCStar = \relative c' { \T c }
+
+chantMediatioCStar =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \C b a
+      \MakeAccentusOnePostOne c c c #options
+    }
+  #})
+
+chantTerminatioCStar =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \MakeAccentusOnePostOne c a a #options
+    }
+  #})

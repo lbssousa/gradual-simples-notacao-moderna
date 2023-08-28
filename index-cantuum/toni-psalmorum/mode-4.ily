@@ -1,22 +1,73 @@
 \version "2.24.1"
 
+\include "gregorian.ly"
 \include "../../modules/lilypond/neums.ily"
+\include "../../modules/lilypond/psalmody.ily"
+\include "../../modules/lilypond/lyrics.ily"
 
-chantInchoatioIV = \relative c'' { \C a \CC g a }
+chantInchoatioIV =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeInchoatioOnePostTwo a g a #options
+    }
+  #})
 
 chantTenorIV = \relative c'' { \T a }
 
-chantFlexaIV = \relative c'' { \A a \C g }
-chantFlexaCumEpenthesisIV = \relative c'' { \A a \eC g }
+chantFlexaIV =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusOnePostOne a g g #options
+    }
+  #})
 
-chantMediatioIV = \relative c'' { \C g a \A b \C a }
-chantMediatioCumEpenthesisIV = \relative c'' {
-  \C g a \A b \eC a
+chantMediatioIV =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C g a
+      \MakeAccentusOnePostOne b a a #options
+    }
+  #})
+
+chantTerminatioIVE =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C g a \CC b a
+      \MakeAccentusTwoPreEpenthesisPostOne g g f e #options
+    }
+  #})
+
+gloriaPatriChantIVE = {
+  \time 1/4
+  \chantInchoatioIV #'((dieresis . total))
+  \chantTenorIV
+  \chantMediatioIV #'()
+  \divisioMaxima
+  \chantInchoatioIV #'()
+  \chantTenorIV
+  \chantMediatioIV #'()
+  \divisioMaxima
+  \chantTenorIV
+  \chantTerminatioIVE #'((syneresis . total))
+  \finalis
 }
 
-chantTerminatioCumEpenthesisIVE = \relative c'' {
-  \C g a \CC b a \eAA g f \C e
-}
-chantTerminatioIVE = \relative c'' {
-  \C g a \CC b a \AA g f \C e
+gloriaPatriVerseIVE = \lyricmode {
+  \set stanza = "Opcional:"
+  Gló -- ria ao
+  \Tenor "Pai e ao Filho e ao Espí" -- ri -- to San -- to,
+  Co -- mo __ \Tenor "era no princípio, a" -- go -- ra~e sem -- pre,
+  \Tenor "pelos séculos dos sécu" -- los, a -- mém! __
 }

@@ -2,42 +2,58 @@
 
 \include "gregorian.ly"
 \include "../../modules/lilypond/neums.ily"
+\include "../../modules/lilypond/psalmody.ily"
 \include "../../modules/lilypond/lyrics.ily"
 
 chantInchoatioII = \relative c' { \C c d }
-chantGloriaInchoatioII = \relative c' { \C d }
+chantSicutInchoatioII = \relative c' { \C d }
 
 chantTenorII = \relative c' { \T f }
 
-chantFlexaII = \relative c' { \A f \C d }
-chantFlexaCumEpenthesisII = \relative c' {
-  \A f \eC d
-}
+chantFlexaII =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \MakeAccentusOnePostOne f d d #options
+    }
+  #})
 
-chantMediatioII = \relative c'' { \A g \C f }
-chantMediatioCumEpenthesisII = \relative c'' {
-  \A g \eC f
-}
+chantMediatioII =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusOnePostOne g f f #options
+    }
+  #})
 
-
-chantTerminatioIID = \relative c' { \C e \A c \C d }
-chantTerminatioCumEpenthesisIID = \relative c' {
-  \C e \A c \eC d
-}
+chantTerminatioIID =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \C e
+      \MakeAccentusOnePostOne c d d #options
+    }
+  #})
 
 gloriaPatriChantIID = {
   \time 1/4
   \key c \major
   \chantInchoatioII
   \chantTenorII
-  \chantMediatioII
+  \chantMediatioII #'()
   \divisioMaxima \break
-  \chantGloriaInchoatioII
+  \chantSicutInchoatioII
   \chantTenorII
-  \chantMediatioII
+  \chantMediatioII #'()
   \divisioMaxima
   \chantTenorII
-  \chantTerminatioIID
+  \chantTerminatioIID #'((syneresis . total))
   \finalis
 }
 
@@ -46,5 +62,5 @@ gloriaPatriVerseIID = \lyricmode {
   Gló -- ria~ao
   \Tenor "Pai e ao Filho e ao Espírito" San -- to,
   Co -- \Tenor "mo era no princípio, agora e" sem -- pre,
-  \Tenor "pelos séculos dos sécu" -- los, a -- mém!
+  \Tenor "pelos séculos dos séculos," a -- mém! __
 }
