@@ -21,76 +21,84 @@ lyricsResponsorium = \lyricmode {
 psalmChant = {
   \PsalmSignature
   \chantTenorD
-  \chantMediatioCumEpenthesisD
+  \chantMediatioD #'((syneresis . partial))
   \divisioMaxima
   \chantTenorD
-  \chantTerminatioCumEpenthesisDIe
+  \break
+  \chantTerminatioDOnee #'((syneresis . partial))
   \finalis
 }
 
 psalmVerseI = \lyricmode {
-  _ _ _ _
+  _ _
   \set stanza = "1."
-  \Tenor \VSup "1" "Que alegria, quando ouvi que" me dis -- se -- _ ram:
+  \Tenor \VSup "1" "Que alegria, quando ouvi que" me dis -- \MelismaOff se -- ram: \MelismaOn
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
-  \Tenor \VSup "2" "E agora nossos pés já se" de -- _ têm,
-  \Tenor "Jerusalém, em" tu -- as por -- _ tas.
+  \Tenor \VSup "2" "E agora nossos pés já se de" -- têm, __
+  \Tenor "Jerusalém, em" tu -- as
+  \MelismaOff por -- tas. \MelismaOn
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \Tenor \VSup "3" "Jerusalém, cidade bem edifi" -- ca -- _ da
-  \Tenor "num conjunto har" -- mo -- ni -- o -- _ so.
+  \Tenor \VSup "3" "Jerusalém, cidade bem edifi" --
+  \MelismaOff ca -- da \MelismaOn
+  \Tenor "num conjunto har" -- mo -- ni --
+  \MelismaOff o -- so. \MelismaOn
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
-  \Tenor \VSup "4ab" "Para lá sobem as tribos de" Is -- ra -- el,
-  \Tenor "as tri" -- bos do Se -- _ nhor.
+  \Tenor \VSup "4ab" "Para lá sobem as tribos de Isra" -- el, __
+  \Tenor "as tribos" do Se -- nhor. __
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \Tenor \VSup "4cd" "Para louvar, segundo a lei de" Is -- ra -- el,
-  \Tenor "o no" -- me do Se -- _ nhor.
+  \Tenor \VSup "4cd" "Para louvar, segundo a lei de Isra" -- el, __
+  \Tenor "o nome" do Se -- nhor. __
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \AltLyrics
-  \Tenor \VSup "5" "A sede da justiça lá" es -- _ tá
-  \Tenor "e o tro" -- no de Da -- _ vi.
+  \Tenor \VSup "5" "A sede da justiça lá es" -- tá __
+  \Tenor "e o trono" de Da -- vi. __
 }
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
-  \Tenor \VSup "6" "Rogai que viva em paz Je" -- ru -- sa -- lém,
-  \Tenor "e em segurança os" que te a -- _ mam!
+  \Tenor \VSup "6" "Rogai que viva em paz Jerusa" -- lém, __
+  \Tenor "e em segurança os" que te
+  \MelismaOff a -- mam! \MelismaOn
 }
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
   \AltLyrics
-  \Tenor \VSup "7" "Que a paz habite dentro de teus" mu -- _ ros,
-  \Tenor "tranquilidade em" teus pa -- lá -- _ cios!
+  \Tenor \VSup "7" "Que a paz habite dentro de teus"
+  \MelismaOff mu -- ros, \MelismaOn
+  \Tenor "tranquilidade em" teus pa --
+  \MelismaOff lá -- cios! \MelismaOn
 }
 
 psalmVerseIX = \lyricmode {
   \set stanza = "9."
-  \Tenor \VSup"8" "Por amor a meus irmãos e meus a" -- mi -- _ gos,
-  \Tenor "peço: “A" -- paz es -- te -- ja~em ti”!
+  \Tenor \VSup"8" "Por amor a meus irmãos e meus a" --
+  \MelismaOff mi -- gos, \MelismaOn
+  \Tenor "peço: “A paz es" -- te -- ja~em ti”! __
 }
 
 psalmVerseX = \lyricmode {
   \set stanza = "10."
   \AltLyrics
-  \Tenor \VSup "9" "Pelo amor que tenho à casa do" Se -- _ nhor,
-  \Tenor "eu te de" -- se -- jo to -- do bem!
+  \Tenor \VSup "9" "Pelo amor que tenho à casa do Se" -- nhor, __
+  \Tenor "eu te desejo" to -- do bem! __
 }
 
 \GregorianTranscriptionLayout
