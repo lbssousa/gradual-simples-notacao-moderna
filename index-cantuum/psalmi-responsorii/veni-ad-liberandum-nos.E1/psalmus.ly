@@ -17,69 +17,73 @@ lyricsResponsorium = \lyricmode {
 
 psalmChant = {
   \PsalmSignature
-  \chantTenorE
-  \chantMediatioCumEpenthesisE
+  \chantTenorEOne
+  \chantMediatioEOne #'((syneresis . partial))
   \divisioMaxima
-  \chantTenorE
-  \chantTerminatioCumEpenthesisEI
+  \chantTenorEOne
+  \chantTerminatioEOne #'((syneresis . partial))
   \finalis
 }
 
 psalmVerseI = \lyricmode {
-  _ _ _ _
+  _ _ _
   \set stanza = "1."
-  \Tenor \VSup "3c" "Vinde logo nos trazer" a __
-  \set ignoreMelismata = ##t
-  sal -- va -- ção!
-  \unset ignoreMelismata
+  \Tenor \VSup "3c" "Vinde logo nos trazer a sal" --
+  va -- ção! __ _
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
-  \Tenor \VSup "2ab" "Ó Pastor de Israel, prestai ou" -- vi -- _ dos.
-  \Tenor "Vós, que a José apascentais qual um" re -- ba -- nho!
+  \Tenor \VSup "2ab" "Ó Pastor de Israel, prestai ou" --
+  vi -- dos.
+  \Tenor "Vós, que a José apascentais qual um" re --
+  ba -- nho!
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \Tenor \VSup "3bc" "Despertai vosso poder, ó" nos -- so Deus,
-  \Tenor "e vinde logo nos trazer" a __
-  \set ignoreMelismata = ##t
-  sal -- va -- ção!
-  \unset ignoreMelismata
+  \Tenor \VSup "3bc" "Despertai vosso poder, ó nosso" Deus, __ _
+  \Tenor "e vinde logo nos trazer a sal" --
+  va -- ção! __ _
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
-  \Tenor \VSup "9" "Arrancastes do Egito esta vi" -- dei -- _ ra,
-  \Tenor "e expulsastes as nações para" plan -- tá -- -la.
+  \Tenor \VSup "9" "Arrancastes do Egito esta vi" --
+  dei -- ra,
+  \Tenor "e expulsastes as nações para" plan --
+  tá -- -la.
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \Tenor \VSup "10" "Diante dela preparastes o ter" -- re -- _ no,
-  \Tenor "lançou raízes e encheu a terra" in -- tei -- ra.
+  \Tenor \VSup "10" "Diante dela preparastes o ter" --
+  re -- no,
+  \Tenor "lançou raízes e encheu a terra" in --
+  tei -- ra.
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \AltLyrics
-  \Tenor \VSup "11" "Os montes recobriu com sua" som -- _ bra,
-  \Tenor "e os cedros do Senhor com os" seus __ ra -- mos.
+  \Tenor \VSup "11" "Os montes recobriu com sua"
+  som -- bra,
+  \Tenor "e os cedros do Senhor com os" seus __
+  ra -- mos.
 }
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
-  \Tenor \VSup "12" "Até o mar se estenderam seus sar" -- men -- _ tos,
+  \Tenor \VSup "12" "Até o mar se estenderam seus sar" -- men -- tos,
   \Tenor "até o rio os seus rebentos se es" -- pa -- lha -- ram.
 }
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
   \AltLyrics
-  \Tenor \VSup "15" "Voltai-vos para nós, Deus do universo! Olhai dos altos céus e" ob -- ser -- vai.
+  \Tenor \VSup "15" "Voltai-vos para nós, Deus do universo! Olhai dos altos céus e obser" -- vai. _ __
   \Tenor "Visitai a vossa vinha e pro" -- te -- gei -- -a!
 }
 

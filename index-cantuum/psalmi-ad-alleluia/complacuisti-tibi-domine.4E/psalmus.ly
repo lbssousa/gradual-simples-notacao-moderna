@@ -9,12 +9,12 @@
 psalmChant = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioIV
+  \chantInchoatioIV #'()
   \chantTenorIV
-  \chantMediatioIV
+  \chantMediatioIV #'()
   \divisioMaxima
   \chantTenorIV
-  \chantTerminatioCumEpenthesisIVE
+  \chantTerminatioIVE #'((syneresis . total))
   \finalis
 }
 
@@ -23,7 +23,7 @@ psalmVerseI = \lyricmode {
   \VSup "2" Fa -- vo --
   \Tenor "recestes, ó Senhor, a"
   vos -- sa ter -- ra,
-  \Tenor "libertastes os ca" -- ti -- vos de __ _ Ja -- có.
+  \Tenor "libertastes os cati" -- vos de Ja -- có. __
 }
 
 psalmVerseII = \lyricmode {
@@ -32,7 +32,7 @@ psalmVerseII = \lyricmode {
   \VSup "8" Mos -- trai --
   \Tenor "-nos, ó Senhor, vos" --
   sa bon -- da -- de,
-  \Tenor "concedei-nos tam" -- bém vos -- sa __ sal -- va -- ção!
+  \Tenor "concedei-nos também vos" -- sa sal -- va -- ção! __
 }
 
 \GregorianTranscriptionLayout
