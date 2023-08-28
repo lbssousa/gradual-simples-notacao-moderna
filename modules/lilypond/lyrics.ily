@@ -105,6 +105,9 @@ markupFiveSyllables =
                              ,(ly:music-property syllable5 'text))))
   #{ #syllable1 #syllable2 #syllable3 #syllable4 #syllable5 #})
 
+MelismaOff = \set ignoreMelismata = ##t
+MelismaOn = \unset ignoreMelismata
+
 I =
 #(define-music-function
   (syllable)

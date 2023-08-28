@@ -140,6 +140,14 @@ Vs =
   #{ \once \slurDown $p 8( \O $p ) #}
 )
 
+% Neuma de duas notas do tipo "pes quassus"
+Pq =
+#(define-music-function
+  (pa pb)
+  (ly:pitch? ly:pitch?)
+  #{ \once \slurDown $pa 8( \reverseturn $pb ) #}
+)
+
 % Neuma de três notas, totalmente cursivo
 CCC =
 #(define-music-function
@@ -154,8 +162,8 @@ C_CC =
   (pa pb pc)
   (ly:pitch? ly:pitch? ly:pitch?)
   #{
-    \once \slurHalfDashed
-    $pa 4( $pb 8 $pc )
+    \once \phrasingSlurDashed
+    $pa 4\( $pb 8( $pc ) \)
   #}
 )
 
@@ -183,14 +191,6 @@ CCCC =
   #{ $pa 16( $pb $pc $pd )) #}
 )
 
-% Nota para corda de recitação
-T =
-#(define-music-function
-  (p)
-  (ly:pitch?)
-  #{ $p \breve*1/8 #}
-)
-
 % Neuma de uma nota precedido de epêntese em uma cadência salmódica
 eC =
 #(define-music-function
@@ -205,36 +205,4 @@ eCC =
   (pa pb)
   (ly:pitch? ly:pitch?)
   #{ \Cp $pa \CC $pa $pb #}
-)
-
-% Nota de apoio/acento em uma cadência salmódica
-A =
-#(define-music-function
-  (p)
-  (ly:pitch?)
-  #{ $p 2*1/2 #}
-)
-
-% Nota de apoio/acento em uma cadência salmódica, com parênteses
-Ap =
-#(define-music-function
-  (p)
-  (ly:pitch?)
-  #{ \parenthesize $p 2*1/2 #}
-)
-
-% Neuma de duas notas de apoio/acento em uma cadência salmódica
-AA =
-#(define-music-function
-  (pa pb)
-  (ly:pitch? ly:pitch?)
-  #{ $pa 2*1/4( $pb ) #}
-)
-
-% Neuma de duas notas de apoio/acento precedido de epêntese em uma cadência salmódica
-eAA =
-#(define-music-function
-  (pa pb)
-  (ly:pitch? ly:pitch?)
-  #{ \Ap $pa \AA $pa $pb #}
 )
