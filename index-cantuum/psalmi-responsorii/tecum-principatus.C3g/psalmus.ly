@@ -19,75 +19,76 @@ lyricsResponsorium = \lyricmode {
 psalmOddVersesChant = {
   \PsalmSignature
   \chantTenorC
-  \chantMediatioC
+  \chantMediatioC #'((syneresis . partial))
   \divisioMaxima \break
   \chantTenorC
-  \chantTerminatioCumEpenthesisCII
+  \chantTerminatioCTwog #'((syneresis . partial))
   \finalis \break
 }
 
 psalmEvenVersesChant = {
   \PsalmSignature
   \key d \minor
-  \chantInchoatioCIII
-  \chantTenorPrimusCIII
-  \chantMediatioCIII
-  \divisioMaxima
-  \chantTenorSecundusCIII
-  \chantTerminatioCumEpenthesisCIIIg
+  \chantInchoatioCThree #'((epenthesis . partial))
+  \chantTenorPrimusCThree
+  \chantMediatioCThree #'((syneresis . partial))
+  \divisioMaxima \break
+  \chantTenorSecundusCThree
+  \chantTerminatioCThreeg #'((syneresis . partial))
   \finalis \break
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \Tenor \VSup "3" "Tu és príncipe desde o dia em que nas" -- ces -- te;
-  \Tenor "na glória e esplendor da santi" -- _ da -- de. __
+  \Tenor \VSup "3" "Tu és príncipe desde o dia em que nas" -- \MelismaOff ces -- te; \MelismaOn
+  \Tenor "na glória e esplendor da santi" -- da -- de.
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \VSup "1ab" Pa -- la -- \Tenor "vra do Senhor ao meu" Se -- nhor:
-  \Tenor "“Assenta-te ao lado meu" di -- _ rei -- to”. __
+  \VSup "1ab" Pa -- la -- \Tenor "vra do Senhor ao meu Se" -- nhor: __ _
+  \Tenor "“Assenta-te ao lado meu" di -- rei -- to”. __
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
   \AltLyrics
-  \Tenor \VSup "2ab" "O Senhor estenderá desde" Si -- ão
-  \Tenor "vosso cetro de poder, pois" E -- le diz: __
+  \Tenor \VSup "2ab" "O Senhor estenderá desde Si" -- ão __
+  \Tenor "vosso cetro de poder, pois Ele" diz: __ _
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
-  \VSup "2b" “Do -- mi -- \Tenor "na com" vi -- gor
-  \Tenor "teus i" -- ni -- _ mi -- gos”. __
+  \VSup "2b" “Do -- mi -- \Tenor "na com vi" -- gor __ _
+  \Tenor "teus i" -- ni -- mi -- gos”. __
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \Tenor \VSup "4a" "Jurou o" Se -- nhor
-  \Tenor "e manterá sua pa" -- _ la -- vra: __
+  \Tenor \VSup "4a" "Jurou o Se" -- nhor __
+  \Tenor "e manterá sua pa" -- la -- vra: __
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   _ \VSup "4bc" “Tu \Tenor "és sacerdote eterna" -- men -- te,
-  \Tenor "segundo a ordem do rei" Mel -- qui -- se -- dec!” __
+  \Tenor "segundo a ordem do rei Melqui" -- se -- dec!” __ _
 }
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
   \AltLyrics
-  \Tenor \VSup "5" "À vossa destra está o Senhor, Ele" vos diz:
-  \Tenor "“No dia da ira esmagarás os reis da" _ ter -- ra!” __
+  \Tenor \VSup "5" "À vossa destra está o Senhor, Ele vos" diz: __
+  \Tenor "“No dia da ira esmagarás os reis da"
+  ter -- ra!” __
 }
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
   \AltLyrics
   _ \VSup "7" “Be -- \Tenor "berás água corrente no ca" -- mi -- nho,
-  \Tenor "por isso seguirás de fron" -- te~er -- _ gui -- da!” __
+  \Tenor "por isso seguirás de fron" -- te~er -- gui -- da!” __
 }
 
 \GregorianTranscriptionLayout

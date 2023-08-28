@@ -8,62 +8,69 @@
 
 psalmChant = {
   \PsalmSignature
-  \chantTenorCIV
-  \chantTerminatioCumEpenthesisCI
+  \chantTenorC
+  \chantTerminatioCOne #'((syneresis . partial))
   \finalis
 }
 
 psalmVerseIa = \lyricmode {
   \set stanza = "1a."
-  \Tenor \VSup "1ab" "Cantai ao Senhor Deus um can" -- to no -- _ vo.
+  \Tenor \VSup "1ab" "Cantai ao Senhor Deus um can" -- to
+  \MelismaOff no -- vo. \MelismaOn
 }
 
 psalmVerseIb = \lyricmode {
   \set stanza = "1b."
-  \Tenor "Porque ele fez" pro -- dí -- _ gios.
+  \Tenor "Porque ele fez" pro --
+  \MelismaOff dí -- gios. \MelismaOn
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2a."
   \AltLyrics
-  \Tenor \VSup "1cd" "Sua mão e o seu braço for" -- te~e san -- _ to.
-  _ _ _ _
+  \Tenor \VSup "1cd" "Sua mão e o seu braço for" -- te~e
+  \MelismaOff san -- to. \MelismaOn
+  "" _ _ _
   \set stanza = "2b."
-  \Tenor "Alcançaram-lhe a" vi -- tó -- _ ria.
+  \Tenor "Alcançaram-lhe a" vi --
+  \MelismaOff tó -- ria. \MelismaOn
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3a."
-  \Tenor \VSup "2" "O Senhor fez conhecer" a sal -- va -- ção.
-  _ _ _ _
+  \Tenor \VSup "2" "O Senhor fez conhecer a sal" -- va -- ção. __
+  "" _ _ _
   \set stanza = "3b."
-  \Tenor "E às nações, sua" jus -- ti -- _ ça.
+  \Tenor "E às nações, sua" jus --
+  \MelismaOff ti -- ça. \MelismaOn
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4a."
   \AltLyrics
-  \Tenor \VSup "3ab" "Recordou o seu amor sem" -- pre fi -- _ el.
-  _ _ _ _
+  \Tenor \VSup "3ab" "Recordou o seu amor sempre" fi -- el. __
+  "" _ _ _
   \set stanza = "4b."
-  \Tenor "Pela ca" -- sa de~Is -- ra -- el.
+  \Tenor "Pela casa de Is" -- ra -- el. __
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5a."
-  \Tenor \VSup "3cd" "Os confins do universo con" -- tem -- pla -- _ ram.
-  _ _ _ _
+  \Tenor \VSup "3cd" "Os confins do universo con" -- tem --
+  \MelismaOff pla -- ram. \MelismaOn
+  "" _ _ _
   \set stanza = "5b."
-  \Tenor "A salvação" do nos -- so Deus.
+  \Tenor "A salvação do nos" -- so Deus. __
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6a."
   \AltLyrics
-  \Tenor \VSup "4" "Aclamai o Senhor Deus, ó ter" -- ra~in -- tei -- _ ra.
-  _ _ _ _
+  \Tenor \VSup "4" "Aclamai o Senhor Deus, ó ter" -- ra~in --
+  \MelismaOff tei -- ra. \MelismaOn
+  "" _ _ _
   \set stanza = "6b."
-  \Tenor "Alegrai" -- -vos e~e -- xul -- tai!
+  \Tenor "Alegrai-vos e e" -- xul -- tai! __
 }
 
 \GregorianTranscriptionLayout
@@ -79,22 +86,22 @@ psalmVerseVI = \lyricmode {
       \psalmChant
       \section
       \sectionLabel \markup { \italic "Grupo ou todos" }
-      \chantAlleluiaPrimusCIV
+      \chantAlleluiaPrimusCFour
       \break
       \section
       \sectionLabel \markup { \italic "Cantor" }
       \psalmChant
       \section
       \sectionLabel \markup { \italic "Todos" }
-      \chantAlleluiaSecundusCIV
+      \chantAlleluiaSecundusCFour
       \fine
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {
       \psalmVerseIa
-      \lyricsAlleluiaCIV
+      \lyricsAlleluiaCFour
       \psalmVerseIb
-      \lyricsAlleluiaCIV
+      \lyricsAlleluiaCFour
     }
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
