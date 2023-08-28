@@ -2,6 +2,7 @@
 
 \include "gregorian.ly"
 \include "../../modules/lilypond/neums.ily"
+\include "../../modules/lilypond/psalmody.ily"
 \include "../../modules/lilypond/lyrics.ily"
 
 chantInchoatioVIII = \relative c'' { \C g a }
@@ -9,42 +10,78 @@ chantGloriaInchoatioVIII = \relative c'' { \C a }
 
 chantTenorVIII = \relative c'' { \T c }
 
-chantFlexaVIII = \relative c'' { \A c \C a }
-chantFlexaCumEpenthesisVIII = \relative c'' {
-  \A c \eC a
-}
+chantFlexaVIII =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusOnePostOne c a a #options
+    }
+  #})
 
-chantMediatioVIII = \relative c'' { \A d \C c }
-chantMediatioCumEpenthesisVIII = \relative c'' {
-  \A d \eC c
-}
+chantMediatioVIII =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusOnePostOne d c c #options
+    }
+  #})
 
+chantTerminatioVIIIc =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C a c
+      \MakeAccentusOnePostOne d c c #options
+    }
+  #})
 
-chantTerminatioVIIIG = \relative c'' { \C b c \A a \C g }
-chantTerminatioCumEpenthesisVIIIG = \relative c'' {
-  \C b c \A a \eC g
-}
+chantTerminatioVIIIG =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C b c
+      \MakeAccentusOnePostOne a g g #options
+    }
+  #})
 
-gloriaPatriChantVIIIG = {
+chantSegmentGloriaPatriVIII = {
   \time 1/4
   \key c \major
   \chantInchoatioVIII
   \chantTenorVIII
-  \chantMediatioVIII
+  \chantMediatioVIII #'()
   \divisioMaxima
   \chantGloriaInchoatioVIII
   \chantTenorVIII
-  \chantMediatioVIII
+  \chantMediatioVIII #'()
   \divisioMaxima
   \chantTenorVIII
-  \chantTerminatioVIIIG
+}
+
+gloriaPatriChantVIIIc = {
+  \chantSegmentGloriaPatriVIII
+  \chantTerminatioVIIIc #'((syneresis . total))
   \finalis
 }
 
-gloriaPatriVerseVIIIG = \lyricmode {
+gloriaPatriChantVIIIG = {
+  \chantSegmentGloriaPatriVIII
+  \chantTerminatioVIIIG #'((syneresis . total))
+  \finalis
+}
+
+gloriaPatriVerseVIII = \lyricmode {
   \set stanza = "Opcional:"
   Gló -- ria~ao
   \Tenor "Pai e ao Filho e ao Espírito" San -- to,
   Co -- \Tenor "mo era no princípio, agora e" sem -- pre,
-  \Tenor "pelos séculos dos sé" -- cu -- los, a -- mém!
+  \Tenor "pelos séculos dos sécu" -- los, a -- mém! __
 }

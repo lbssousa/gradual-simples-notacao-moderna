@@ -2,60 +2,72 @@
 
 \include "gregorian.ly"
 \include "../../modules/lilypond/neums.ily"
+\include "../../modules/lilypond/psalmody.ily"
 \include "../../modules/lilypond/lyrics.ily"
 
-chantInchoatioVI = \relative c' { \C f \CC g a }
-chantAltInchoatioVI = \relative c' {
-  \C f
-  \once \slurDashed
-  \CC g a
-}
-chantGloriaInchoatioVI = \relative c' { \C f g }
+chantInchoatioVI =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \MakeInchoatioOnePostTwo f g a #options
+    }
+  #})
 
 chantTenorVI = \relative c'' { \T a }
 
-chantFlexaVI = \relative c'' { \A a \C g }
-chantFlexaCumEpenthesisVI = \relative c'' { \A a \eC g }
+chantFlexaVI =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeAccentusOnePostOne a g g #options
+    }
+  #})
 
-chantMediatioVI = \relative c'' { \C g \A a \C f }
-chantMediatioCumEpenthesisVI = \relative c'' { \C g \A a \eC f }
+chantMediatioVI =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \C g
+      \MakeAccentusOnePostOne a f f #options
+    }
+  #})
 
-chantTerminatioVIF = \relative c' {
-  \C f \CC g a \A g \C f
-}
-chantAltTerminatioVIF = \relative c' {
-  \C f
-  \once \slurDashed
-  \CC g a \A g \C f
-}
-chantTerminatioCumEpenthesisVIF = \relative c' {
-  \C f \CC g a \A g \eC f
-}
-chantAltTerminatioCumEpenthesisVIF = \relative c' {
-  \C f
-  \once \slurDashed
-  \CC g a \A g \eC f
-}
+chantTerminatioVIF =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \C f \CC g a
+      \MakeAccentusOnePostOne g f f #options
+    }
+  #})
 
 gloriaPatriChantVIF = {
   \time 1/4
-  \chantGloriaInchoatioVI
+  \chantInchoatioVI #'((dieresis . total))
   \chantTenorVI
-  \chantMediatioVI
+  \chantMediatioVI #'()
   \divisioMaxima
-  \chantInchoatioVI
+  \chantInchoatioVI #'()
   \chantTenorVI
-  \chantMediatioVI
+  \chantMediatioVI #'()
   \divisioMaxima
   \chantTenorVI
-  \chantTerminatioVIF
+  \chantTerminatioVIF #'((syneresis . total))
   \finalis
 }
 
 gloriaPatriVerseVIF = \lyricmode {
   \set stanza = "Opcional:"
-  Gló -- ria
-  \Tenor "ao Pai e ao Filho e ao Espíri" -- to San -- to,
+  Gló -- ria ao
+  \Tenor "Pai e ao Filho e ao Espíri" -- to San -- to,
   Co -- mo __ \Tenor "era no princípio, ago" -- ra~e sem -- pre,
-  \Tenor "pelos séculos dos sé" -- cu -- los, __ a -- mém!
+  \Tenor "pelos séculos dos sécu" -- los, a -- mém! __
 }
