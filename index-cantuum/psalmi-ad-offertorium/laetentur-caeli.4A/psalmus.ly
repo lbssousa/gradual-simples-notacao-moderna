@@ -8,50 +8,58 @@
 
 psalmChant = {
   \PsalmSignature
-  \chantInchoatioIVA
+  \chantInchoatioIVA #'()
   \chantTenorIVA
-  \chantMediatioIVA
+  \chantMediatioIVA #'((syneresis . partial))
   \divisioMaxima \break
   \chantTenorIVA
-  \chantTerminatioCumEpenthesisIVA
+  \chantTerminatioIVA #'((syneresis . partial))
   \finalis
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "1" Can -- tai __
-  \Tenor "ao Senhor Deus um" can -- to no vo,
-  \Tenor \VSup "2a" "cantai ao Senhor Deus," ó ter -- ra~in -- tei -- _ ra!
+  \Tenor "ao Senhor Deus um" can -- to
+  \MelismaOff no -- vo, \MelismaOn
+  \Tenor \VSup "2a" "cantai ao Senhor Deus," ó ter -- ra~in --
+  \MelismaOff tei -- ra! \MelismaOn
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
   \VSup "2bc" Can -- tai __
-  \Tenor "e bendizei seu" san -- to no -- me!
-  \Tenor "Dia após dia anunci" -- ai su -- a sal -- va -- ção!
+  \Tenor "e bendizei seu" san -- to
+  \MelismaOff no -- me! \MelismaOn
+  \Tenor "Dia após dia anunciai su" -- a sal -- va -- ção! __
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
   \VSup "3" Ma -- ni --
-  \Tenor "festai a sua gló" -- ria~en -- tre~as na -- ções,
-  \Tenor "e entre os povos do univer" -- so seus pro -- dí -- _ gios!
+  \Tenor "festai a sua glória en" -- tre~as na -- ções, __
+  \Tenor "e entre os povos do univer" -- so seus pro --
+  \MelismaOff dí -- gios! \MelismaOn
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
   \VSup "8b" O -- fe --
-  \Tenor "recei um sacrifício" nos seus á -- trios,
-  \Tenor \VSup "9a" "adorai-o no esplendor" da san -- ti -- da -- _ de!
+  \Tenor "recei um sacrifício" nos seus
+  \MelismaOff á -- trios, \MelismaOn
+  \Tenor \VSup "9a" "adorai-o no esplendor" da san -- ti --
+  \MelismaOff da -- de! \MelismaOn
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
   \VSup "13cd" Go -- ver --
-  \Tenor "nará o mundo todo" com jus -- ti -- ça,
-  \Tenor "e os povos julgará" com le -- al -- da -- _ de.
+  \Tenor "nará o mundo todo" com jus --
+  \MelismaOff ti -- ça, \MelismaOn
+  \Tenor "e os povos julgará" com le -- al --
+  \MelismaOff da -- de. \MelismaOn
 }
 
 \GregorianTranscriptionLayout

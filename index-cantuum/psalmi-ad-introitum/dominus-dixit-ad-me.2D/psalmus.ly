@@ -14,14 +14,14 @@ psalmChant = {
   \bar "!"
   \section
   \sectionLabel \markup { \italic flexa }
-  \chantFlexaII
+  \chantFlexaII #'((syneresis . total))
   \divisioMinima
   \chantTenorII
   \bar "!"
-  \chantMediatioCumEpenthesisII
+  \chantMediatioII #'((syneresis . partial))
   \divisioMaxima
   \chantTenorII
-  \chantTerminatioCumEpenthesisIID
+  \chantTerminatioIID #'((syneresis . partial))
   \finalis
   \fine
 }
@@ -29,54 +29,61 @@ psalmChant = {
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "1" Por que
-  \Tenor "os povos agitados se re" _ _ _ -- vol -- _ tam?
-  \Tenor "Por que tramam as nações" pro -- je -- tos vãos?
+  \Tenor "os povos agitados se re" _ _ --
+  \MelismaOff vol -- tam? \MelismaOn
+  \Tenor "Por que tramam as nações proje" -- tos vãos? __
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
   \VSup "6" “Fui eu
-  \Tenor "mesmo que escolhi este" _ _ _ meu _ Rei,
-  \Tenor "e em Sião, meu monte santo," o con -- sa -- grei!”
+  \Tenor "mesmo que escolhi este meu" _ _ Rei, __
+  \Tenor "e em Sião, meu monte santo, o con" -- sa -- grei!” __
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
   \VSup "8" Po -- des
-  \Tenor "pedir-me, e em resposta eu te" da -- rei
-  \Tenor "por tua herança os povos todos e as" na -- _ ções,
-  \Tenor "e há de ser a terra inteira o teu" do -- mí -- _ nio.
+  \Tenor "pedir-me, e em resposta eu te da" -- rei __
+  \Tenor "por tua herança os povos todos e as na" -- ções, __
+  \Tenor "e há de ser a terra inteira o teu" do --
+  \MelismaOff mí -- nio. \MelismaOn
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
   \VSup "9" “Com ce --
-  \Tenor "tro férreo haverás de domi" -- _ _ _ ná -- _ -los,
-  \Tenor "e quebrá-los como um vaso de" ar -- gi -- _ la!”
+  \Tenor "tro férreo haverás de domi" -- _ _
+  \MelismaOff ná -- -los, \MelismaOn
+  \Tenor "e quebrá-los como um vaso de" ar --
+  \MelismaOff gi -- la!” \MelismaOn
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
   \VSup "10" E a --
-  \Tenor "gora, poderosos," _ _ _ en -- ten -- dei;
-  \Tenor "soberanos, aprendei es" ta li -- _ ção.
+  \Tenor "gora, poderosos, enten" _ _ -- dei; __
+  \Tenor "soberanos, aprendei esta" li -- ção. __
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \AltLyrics
   \VSup "11" Com te --
-  \Tenor "mor servi a Deus, rendei-lhe" _ _ _ gló -- _ ria
-  \Tenor "e prestai-lhe homenagem com" res -- pei -- _ to!
+  \Tenor "mor servi a Deus, rendei-lhe" _ _
+  \MelismaOff gló -- ria \MelismaOn
+  \Tenor "e prestai-lhe homenagem com" res --
+  \MelismaOff pei -- to! \MelismaOn
 }
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
   \VSup "12cd" Fe -- li --
-  \Tenor "zes hão de ser todos a" -- _ _ _ que -- _ les
-  \Tenor "que põem sua esperança" no Se -- _ nhor!
+  \Tenor "zes hão de ser todos a" -- _ _
+  \MelismaOff que -- les \MelismaOn
+  \Tenor "que põem sua esperança no" Se -- nhor! __
 }
 
 \GregorianTranscriptionLayout
