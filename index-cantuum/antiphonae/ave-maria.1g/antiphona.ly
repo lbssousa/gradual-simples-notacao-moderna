@@ -26,9 +26,9 @@ antiphonChant = \relative c' {
 antiphonLyrics = \lyricmode {
   A -- ve, Ma -- rí -- a, gra -- ti -- a ple -- na: _ _ Dó -- mi -- nus te -- cum:
   be -- ne -- dí -- cta _ tu in mu -- li --
-  \set ignoreMelismata = ##t
+  \MelismaOff
   é -- ri --
-  \unset ignoreMelismata
+  \MelismaOn
   bus, al -- le -- lú -- ia.
 }
 

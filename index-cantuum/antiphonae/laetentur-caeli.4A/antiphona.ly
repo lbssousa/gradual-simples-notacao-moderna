@@ -20,18 +20,18 @@ antiphonChant = \relative c'' {
 antiphonLyrics = \lyricmode {
   Læ -- tén -- tur cæ -- li __ et ex -- súl -- tet __ ter -- ra
   an -- te fá --
-  \set ignoreMelismata = ##t
+  \MelismaOff
   ci -- em
-  \unset ignoreMelismata
+  \MelismaOn
   Dó -- mi -- ni, __ quó -- ni -- am ve -- nit.
 }
 
 antiphonLyricsPt = \lyricmode {
   \AltLyrics
   Os céus se~a -- le -- grem __ e e -- xul --
-  \set ignoreMelismata = ##t
+  \MelismaOff
   te a
-  \unset ignoreMelismata
+  \MelismaOn
   ter -- ra
   an -- te~a fa -- ce __ do Se -- nhor, __ pois __ e -- le vei -- o.
 }

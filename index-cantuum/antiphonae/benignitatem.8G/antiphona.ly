@@ -25,13 +25,13 @@ antiphonChant = \relative c'' {
 
 antiphonLyrics = \lyricmode {
   Be --
-  \set ignoreMelismata = ##t
+  \MelismaOff
   ni -- gni --
-  \unset ignoreMelismata
+  \MelismaOn
   tá -- tem __ fe -- cit __ Dó -- mi -- nus, et ter -- ra no -- stra __ de -- dit
-  \set ignoreMelismata = ##t
+  \MelismaOff
   fru -- ctum
-  \unset ignoreMelismata
+  \MelismaOn
   su -- um.
 }
 
