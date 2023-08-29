@@ -115,7 +115,7 @@ psalmVerseVIII = \lyricmode {
 \score {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
-      \psalmChant
+      \psalmChantAlt
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
