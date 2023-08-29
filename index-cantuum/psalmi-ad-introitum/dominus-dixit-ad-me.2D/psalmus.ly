@@ -104,6 +104,8 @@ psalmVerseVII = \lyricmode {
   >>
 }
 
+\markup \vspace #3
+
 \score {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "gloria" {

@@ -117,6 +117,8 @@ psalmVerseVIII = \lyricmode {
   >>
 }
 
+\markup \vspace #1
+
 \score {
   \header {
     piece = "Versos pares"

@@ -191,5 +191,5 @@ gloriaPatriVerseI = \lyricmode {
   Gló -- ria ao
   \Tenor "Pai e ao Filho e ao Es" -- pí -- ri -- to San -- to,
   Co -- mo \Tenor "era no princípio, a" -- go -- ra~e sem -- pre,
-  \Tenor "pelos séculos dos sé" -- cu -- los, a -- mém!
+  \Tenor "pelos séculos dos sécu" -- los, a -- mém!
 }

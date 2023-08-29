@@ -10,17 +10,6 @@ psalmChant = {
   \PsalmSignature
   \chantInchoatioIVA #'()
   \chantTenorIVA
-  \chantMediatioIVA #'((syneresis . partial))
-  \divisioMaxima
-  \chantTenorIVA
-  \chantTerminatioIVc #'((syneresis . partial))
-  \finalis
-}
-
-psalmChantCumFlexa = {
-  \PsalmSignature
-  \chantInchoatioIVA #'((dieresis . partial))
-  \chantTenorIVA
   \bar "!"
   \section
   \sectionLabel \markup { \italic flexa }
@@ -101,7 +90,7 @@ psalmVerseVI = \lyricmode {
 \score {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
-      \transpose c g, \psalmChantCumFlexa
+      \transpose c g, \psalmChant
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
@@ -112,6 +101,8 @@ psalmVerseVI = \lyricmode {
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
   >>
 }
+
+\markup \vspace #3
 
 \score {
   \new GregorianTranscriptionStaff <<
