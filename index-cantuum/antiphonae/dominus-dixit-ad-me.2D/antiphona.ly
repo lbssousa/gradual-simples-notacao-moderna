@@ -2,6 +2,7 @@
 
 \include "gregorian.ly"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 \include "../../../modules/lilypond/symbols.ily"
@@ -18,6 +19,7 @@ antiphonChant = \relative c' {
   \CC e f \CC d c \Cp c
   \C d e f d
   \finalis
+  \Spacer 10
 }
 
 antiphonLyrics = \lyricmode {

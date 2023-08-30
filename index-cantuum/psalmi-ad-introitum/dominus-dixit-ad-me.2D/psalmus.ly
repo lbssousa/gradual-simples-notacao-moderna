@@ -3,33 +3,56 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-2.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
-psalmChant = {
+psalmChantA = {
   \key c \major
   \PsalmSignature
   \chantInchoatioII
   \chantTenorII
-  \bar "!"
-  \section
-  \sectionLabel \markup { \italic flexa }
+  \chantMediatioII #'((syneresis . partial))
+  \divisioMaxima
+  \chantTenorII
+  \chantTerminatioIID #'((syneresis . total))
+  \finalis
+  \Spacer 27
+}
+
+psalmChantB = {
+  \key c \major
+  \PsalmSignature
+  \chantInchoatioII
+  \chantTenorII
   \chantFlexaII #'((syneresis . total))
   \divisioMinima
   \chantTenorII
-  \bar "!"
   \chantMediatioII #'((syneresis . partial))
   \divisioMaxima
   \chantTenorII
   \chantTerminatioIID #'((syneresis . partial))
   \finalis
-  \fine
+  \Spacer 13
+}
+
+psalmChantC = {
+  \key c \major
+  \PsalmSignature
+  \chantInchoatioII
+  \chantTenorII
+  \chantMediatioII #'((syneresis . partial))
+  \divisioMaxima
+  \chantTenorII
+  \chantTerminatioIID #'((syneresis . partial))
+  \finalis
+  \Spacer 25
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "1" Por que
-  \Tenor "os povos agitados se re" _ _ --
+  \Tenor "os povos agitados se re" --
   \MelismaOff vol -- tam? \MelismaOn
   \Tenor "Por que tramam as nações proje" -- tos vãos? __
 }
@@ -38,7 +61,7 @@ psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
   \VSup "6" “Fui eu
-  \Tenor "mesmo que escolhi este meu" _ _ Rei, __
+  \Tenor "mesmo que escolhi este meu" Rei, __
   \Tenor "e em Sião, meu monte santo, o con" -- sa -- grei!” __
 }
 
@@ -53,9 +76,8 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "9" “Com ce --
-  \Tenor "tro férreo haverás de domi" -- _ _
+  \Tenor "tro férreo haverás de domi" --
   \MelismaOff ná -- -los, \MelismaOn
   \Tenor "e quebrá-los como um vaso de" ar --
   \MelismaOff gi -- la!” \MelismaOn
@@ -63,16 +85,16 @@ psalmVerseIV = \lyricmode {
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
+  \AltLyrics
   \VSup "10" E a --
-  \Tenor "gora, poderosos, enten" _ _ -- dei; __
+  \Tenor "gora, poderosos, enten" -- dei; __
   \Tenor "soberanos, aprendei esta" li -- ção. __
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \AltLyrics
   \VSup "11" Com te --
-  \Tenor "mor servi a Deus, rendei-lhe" _ _
+  \Tenor "mor servi a Deus, rendei-lhe"
   \MelismaOff gló -- ria \MelismaOn
   \Tenor "e prestai-lhe homenagem com" res --
   \MelismaOff pei -- to! \MelismaOn
@@ -80,8 +102,9 @@ psalmVerseVI = \lyricmode {
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
+  \AltLyrics
   \VSup "12cd" Fe -- li --
-  \Tenor "zes hão de ser todos a" -- _ _
+  \Tenor "zes hão de ser todos a" --
   \MelismaOff que -- les \MelismaOn
   \Tenor "que põem sua esperança no" Se -- nhor! __
 }
@@ -91,12 +114,34 @@ psalmVerseVII = \lyricmode {
 \score {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
-      \transpose d g \psalmChant
+      \transpose d g \psalmChantA
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+  >>
+}
+
+\markup \vspace #1
+
+\score {
+  \new GregorianTranscriptionStaff <<
+    \new GregorianTranscriptionVoice = "psalm" {
+      \transpose d g \psalmChantB
+    }
+
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+  >>
+}
+
+\markup \vspace #1
+
+\score {
+  \new GregorianTranscriptionStaff <<
+    \new GregorianTranscriptionVoice = "psalm" {
+      \transpose d g \psalmChantC
+    }
+
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
@@ -104,7 +149,7 @@ psalmVerseVII = \lyricmode {
   >>
 }
 
-\markup \vspace #3
+\markup \vspace #1
 
 \score {
   \new GregorianTranscriptionStaff <<

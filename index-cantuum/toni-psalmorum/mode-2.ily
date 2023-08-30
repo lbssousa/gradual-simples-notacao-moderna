@@ -2,6 +2,7 @@
 
 \include "gregorian.ly"
 \include "../../modules/lilypond/neums.ily"
+\include "../../modules/lilypond/spacing.ily"
 \include "../../modules/lilypond/psalmody.ily"
 \include "../../modules/lilypond/lyrics.ily"
 
@@ -55,6 +56,7 @@ gloriaPatriChantIID = {
   \chantTenorII
   \chantTerminatioIID #'((syneresis . total))
   \finalis
+  \Spacer 1
 }
 
 gloriaPatriVerseIID = \lyricmode {

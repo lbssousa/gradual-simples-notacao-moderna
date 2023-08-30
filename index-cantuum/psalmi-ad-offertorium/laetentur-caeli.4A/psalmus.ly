@@ -3,6 +3,7 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-4A.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
@@ -11,10 +12,11 @@ psalmChant = {
   \chantInchoatioIVA #'()
   \chantTenorIVA
   \chantMediatioIVA #'((syneresis . partial))
-  \divisioMaxima \break
+  \divisioMaxima
   \chantTenorIVA
   \chantTerminatioIVA #'((syneresis . partial))
   \finalis
+  \Spacer 25
 }
 
 psalmVerseI = \lyricmode {
