@@ -3,6 +3,7 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-7.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
@@ -13,12 +14,13 @@ psalmChant = {
   \chantTenorVII
   \chantMediatioPrimusVII #'()
   \chantMediatioSecundusVII #'((syneresis . partial))
-  \divisioMaxima \break
+  \divisioMaxima
   \chantTenorVII
   \chantTerminatioPrimusVII #'()
   \chantTerminatioSecundusVIIa #'((syneresis . partial)
                                   (epenthesis . partial))
   \finalis
+  \Spacer 15
 }
 
 psalmVerseI = \lyricmode {
@@ -106,6 +108,8 @@ psalmVerseVIII = \lyricmode {
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
   >>
 }
+
+\markup \vspace #1
 
 \score {
   \new GregorianTranscriptionStaff <<

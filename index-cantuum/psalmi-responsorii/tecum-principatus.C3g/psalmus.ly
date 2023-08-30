@@ -3,6 +3,7 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-C.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
@@ -20,10 +21,10 @@ psalmOddVersesChant = {
   \PsalmSignature
   \chantTenorC
   \chantMediatioC #'((syneresis . partial))
-  \divisioMaxima \break
+  \divisioMaxima
   \chantTenorC
   \chantTerminatioCTwog #'((syneresis . partial))
-  \finalis \break
+  \finalis
 }
 
 psalmEvenVersesChant = {
@@ -32,10 +33,10 @@ psalmEvenVersesChant = {
   \chantInchoatioCThree #'((epenthesis . partial))
   \chantTenorPrimusCThree
   \chantMediatioCThree #'((syneresis . partial))
-  \divisioMaxima \break
+  \divisioMaxima
   \chantTenorSecundusCThree
   \chantTerminatioCThreeg #'((syneresis . partial))
-  \finalis \break
+  \finalis
 }
 
 psalmVerseI = \lyricmode {
@@ -126,7 +127,9 @@ psalmVerseVIII = \lyricmode {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
       \psalmEvenVersesChant
+      \Spacer 1
       \chantResponsorium
+      \Spacer 13
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {
