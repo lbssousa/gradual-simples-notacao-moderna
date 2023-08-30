@@ -77,6 +77,7 @@ gloriaPatriChantIVA = {
   \chantSegmentGloriaPatriIVA
   \chantTerminatioIVA #'((syneresis . total))
   \finalis
+  \Spacer 2
 }
 
 gloriaPatriChantIVc = {

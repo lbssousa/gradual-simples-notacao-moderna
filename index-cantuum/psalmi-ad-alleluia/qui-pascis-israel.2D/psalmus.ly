@@ -3,40 +3,48 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-2.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
-psalmChant = {
+psalmChantA = {
   \key c \major
   \PsalmSignature
   \chantInchoatioII
   \chantTenorII
-  \bar "!"
-  \section
-  \sectionLabel \markup { \italic flexa }
-  \chantFlexaII #'()
-  \divisioMinima
-  \chantTenorII
-  \bar "!"
-  \chantMediatioII #'((syneresis . partial))
+  \chantMediatioII #'()
   \divisioMaxima
   \chantTenorII
   \chantTerminatioIID #'()
   \finalis
-  \fine
+  \Spacer 26
+}
+
+psalmChantB = {
+  \key c \major
+  \PsalmSignature
+  \chantInchoatioII
+  \chantTenorII
+  \chantFlexaII #'()
+  \divisioMinima
+  \chantTenorII
+  \chantMediatioII #'((syneresis . total))
+  \divisioMaxima
+  \chantTenorII
+  \chantTerminatioIID #'()
+  \finalis
+  \Spacer 17
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "2ab" Ó Pas --
-  \Tenor "tor de Israel, prestai ou" -- _ _ _
-  \MelismaOff vi -- dos. \MelismaOn
+  \Tenor "tor de Israel, prestai ou" -- vi -- dos.
   \Tenor "Vós, que a José apascentais qual um" re -- ba -- nho!
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "15" Vol -- tai --
   \Tenor "-vos para nós, Deus do uni" -- ver -- so!
   \Tenor "Olhai dos altos céus e obser" -- vai. __
@@ -48,10 +56,21 @@ psalmVerseII = \lyricmode {
 \score {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
-      \transpose d g \psalmChant
+      \transpose d g \psalmChantA
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
+  >>
+}
+
+\markup \vspace #1
+
+\score {
+  \new GregorianTranscriptionStaff <<
+    \new GregorianTranscriptionVoice = "psalm" {
+      \transpose d g \psalmChantB
+    }
+
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
   >>
 }

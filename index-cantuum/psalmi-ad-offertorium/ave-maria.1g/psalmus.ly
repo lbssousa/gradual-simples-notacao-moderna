@@ -3,67 +3,62 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-1.ily"
 \include "../../../modules/lilypond/neums.ily"
-\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
 psalmChant = {
   \PsalmSignature
-  \chantInchoatioI #'()
+  \chantInchoatioI
   \chantTenorI
-  \chantMediatioPrimusI #'()
-  \chantMediatioSecundusI #'((syneresis . partial))
+  \chantMediatioPrimusCumEpenthesisI
+  \chantMediatioSecundusCumEpenthesisI
   \divisioMaxima
+  \break
   \chantTenorI
-  \chantTerminatioIg #'((syneresis . partial))
+  \chantTerminatioCumEpenthesisIg
   \finalis
-  \Spacer 12
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "1" Se -- nhor __
   \Tenor "meu Deus, a vós elevo a"
-  mi -- nha
-  \MelismaOff al -- ma, \MelismaOn
-  \Tenor "em vós confio: que eu não seja en" -- ver -- go --
-  nha -- do.
+  mi -- _ nha al -- _ ma,
+  \Tenor "em vós confio: que eu não seja en" -- ver -- go -- nha _ -- do.
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
-  \VSup "7cd" De mim __
-  \Tenor "lembrai-vos, porque sois mi" se -- ri --
-  \MelismaOff cór -- dia \MelismaOn
-  \Tenor "e sois bondade sem limites," ó Se -- nhor! __ _
+  \VSup "6" Re -- cor --
+  \Tenor "dai, Senhor meu Deus,"
+  vos -- sa ter -- nu _ -- ra
+  \Tenor "e a vossa salvação que" são e -- ter _ -- nas!
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \VSup "8" O Se --
-  \Tenor "nhor é piedade e" re -- ti -- dão, __
-  \Tenor "e reconduz ao bom caminho os" pe -- ca --
-  do -- res.
+  \VSup "10" Ver -- da --
+  \Tenor "de e amor são os ca" --
+  mi -- nhos do Se _ -- nhor
+  \Tenor "para quem guarda sua Aliança e" seus pre -- cei _ -- tos.
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
-  \VSup "9" E -- le __
-  \Tenor "dirige os humildes" na jus --
-  \MelismaOff ti -- ça, \MelismaOn
-  \Tenor "e aos pobres ele ensina o" seu ca --
-  mi -- nho.
+  \VSup "20" De -- fen --
+  \Tenor "dei a minha vida e"
+  li -- _ ber -- tai _ -- -me;
+  \Tenor "em vós confio, que eu não seja en" -- ver -- go -- nha _ -- do!
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \VSup "14" O Se --
-  \Tenor "nhor se torna íntimo aos" que o
-  \MelismaOff te -- mem \MelismaOn
-  \Tenor "e lhes dá a conhecer su" -- a~A -- li --
-  an -- ça.
+  \VSup "22" Li -- ber --
+  \Tenor "tai, ó Senhor"
+  Deus, _ a Is -- ra -- el
+  \Tenor "de toda a sua an" -- gús -- tia~e a -- fli -- ção!
 }
 
 \GregorianTranscriptionLayout

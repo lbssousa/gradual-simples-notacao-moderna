@@ -2,6 +2,7 @@
 
 \include "gregorian.ly"
 \include "../../modules/lilypond/neums.ily"
+\include "../../modules/lilypond/spacing.ily"
 \include "../../modules/lilypond/psalmody.ily"
 \include "../../modules/lilypond/lyrics.ily"
 
@@ -62,6 +63,7 @@ gloriaPatriChantVIF = {
   \chantTenorVI
   \chantTerminatioVIF #'((syneresis . total))
   \finalis
+  \Spacer 3
 }
 
 gloriaPatriVerseVIF = \lyricmode {

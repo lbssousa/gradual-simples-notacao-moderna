@@ -3,6 +3,7 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-C.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
@@ -10,10 +11,11 @@ psalmChant = {
   \PsalmSignature
   \chantTenorC
   \chantMediatioC #'((syneresis . partial))
-  \divisioMaxima \break
+  \divisioMaxima
   \chantTenorC
   \chantTerminatioCOne #'((syneresis . partial))
-  \finalis \break
+  \finalis
+  \Spacer 1
 }
 
 psalmVerseI = \lyricmode {
@@ -35,7 +37,7 @@ psalmVerseII = \lyricmode {
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \Tenor \VSup "15" "Voltai-vos para nós, Deus do universo! Olhai dos altos céus e obser" -- vai. __
+  \Tenor \VSup "15" "Voltai-vos para nós, Deus do universo! ’ Olhai dos altos céus e obser" -- vai. __
   \Tenor "Visitai a vossa vinha e pro" -- te --
   \MelismaOff gei -- -a! \MelismaOn
 }
@@ -75,7 +77,7 @@ psalmVerseVII = \lyricmode {
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
   \AltLyrics
-  \Tenor \VSup "20" "Convertei-nos, ó Senhor Deus do universo, e sobre nós iluminai a vossa"
+  \Tenor \VSup "20" "Convertei-nos, ó Senhor Deus do universo, ’ e sobre nós iluminai a vossa"
   \MelismaOff fa -- ce! \MelismaOn
   \Tenor "Se voltardes para nós, sere" -- mos
   \MelismaOff sal -- vos! \MelismaOn
@@ -92,6 +94,7 @@ psalmVerseVIII = \lyricmode {
       \psalmChant
       \chantAlleluiaCOne
       \finalis
+      \Spacer 22
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {

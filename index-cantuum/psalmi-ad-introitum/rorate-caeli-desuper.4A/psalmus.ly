@@ -3,6 +3,7 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-4A.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
@@ -11,10 +12,11 @@ psalmChant = {
   \chantInchoatioIVA #'((dieresis . partial))
   \chantTenorIVA
   \chantMediatioIVA #'((syneresis . partial))
-  \divisioMaxima \break
+  \divisioMaxima
   \chantTenorIVA
   \chantTerminatioIVA #'((syneresis . partial))
   \finalis
+  \Spacer 18
 }
 
 psalmVerseI = \lyricmode {
@@ -75,7 +77,7 @@ psalmVerseVII = \lyricmode {
   \set stanza = "7."
   \VSup "7ab" \markup { \concat { "D" \undertie "e u" "m" } } ex -- \Tenor "tremo do céu põe" -se~a cor -- rer, __
   \Tenor "e vai traçando o seu ras" -- tro lu -- mi --
-  \MelismaOff no -- _ so. \MelismaOn
+  \MelismaOff no -- so. \MelismaOn
 }
 
 psalmVerseVIII = \lyricmode {
@@ -105,6 +107,8 @@ psalmVerseVIII = \lyricmode {
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
   >>
 }
+
+\markup \vspace #1
 
 \score {
   \new GregorianTranscriptionStaff <<
