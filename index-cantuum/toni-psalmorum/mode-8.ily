@@ -2,6 +2,7 @@
 
 \include "gregorian.ly"
 \include "../../modules/lilypond/neums.ily"
+\include "../../modules/lilypond/spacing.ily"
 \include "../../modules/lilypond/psalmody.ily"
 \include "../../modules/lilypond/lyrics.ily"
 
@@ -76,6 +77,7 @@ gloriaPatriChantVIIIG = {
   \chantSegmentGloriaPatriVIII
   \chantTerminatioVIIIG #'((syneresis . total))
   \finalis
+  \Spacer 12
 }
 
 gloriaPatriVerseVIII = \lyricmode {

@@ -3,32 +3,54 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-4A.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
-psalmChant = {
+psalmChantA = {
   \PsalmSignature
   \chantInchoatioIVA #'()
   \chantTenorIVA
-  \bar "!"
-  \section
-  \sectionLabel \markup { \italic flexa }
+  \chantMediatioIVA #'()
+  \divisioMaxima
+  \chantTenorIVA
+  \chantTerminatioIVc #'()
+  \finalis
+  \Spacer 13
+}
+
+psalmChantB = {
+  \PsalmSignature
+  \chantInchoatioIVA #'()
+  \chantTenorIVA
   \chantFlexaIVA #'()
   \divisioMinima
   \chantTenorIVA
-  \bar "!"
+  \break
+  \chantMediatioIVA #'((syneresis . total))
+  \divisioMaxima
+  \chantTenorIVA
+  \chantTerminatioIVc #'()
+  \finalis
+  \Spacer 11
+}
+
+psalmChantC = {
+  \PsalmSignature
+  \chantInchoatioIVA #'()
+  \chantTenorIVA
   \chantMediatioIVA #'((syneresis . partial))
   \divisioMaxima
   \chantTenorIVA
   \chantTerminatioIVc #'((syneresis . partial))
   \finalis
-  \fine
+  \Spacer 16
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "2b" Não tri --
-  \Tenor "unfem sobre mim os" _ _ _
+  \Tenor "unfem sobre mim os"
   i -- ni --
   \MelismaOff mi -- gos! \MelismaOn
   \Tenor \VSup "3a" "Não se envergonha quem em vós põe a espe" --
@@ -39,7 +61,7 @@ psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
   \VSup "4" Mos -- trai --
-  \Tenor "-me, ó Senhor, vos" -- _ _ _
+  \Tenor "-me, ó Senhor, vos" --
   sos ca --
   \MelismaOff mi -- nhos \MelismaOn
   \Tenor "e fazei-me conhecer a vossa es" --
@@ -58,9 +80,8 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "7cd" De mim __
-  \Tenor "lembrai-vos, porque sois mi" -- _ _ _
+  \Tenor "lembrai-vos, porque sois mi" --
   se -- ri --
   \MelismaOff cór -- dia \MelismaOn
   \Tenor "e sois bondade sem limites, ó Se" -- nhor! __
@@ -68,8 +89,9 @@ psalmVerseIV = \lyricmode {
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
+  \AltLyrics
   \VSup "8" O Se --
-  \Tenor "nhor é piedade e" _ _ _
+  \Tenor "nhor é piedade e"
   re -- ti -- dão, __
   \Tenor "e reconduz ao bom caminho os peca" --
   \MelismaOff do -- res. \MelismaOn
@@ -78,7 +100,7 @@ psalmVerseV = \lyricmode {
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \VSup "9" E -- le __
-  \Tenor "dirige os humildes" _ _ _
+  \Tenor "dirige os humildes"
   na jus --
   \MelismaOff ti -- ça, \MelismaOn
   \Tenor "e aos pobres ele ensina o seu ca" --
@@ -90,19 +112,41 @@ psalmVerseVI = \lyricmode {
 \score {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
-      \transpose c g, \psalmChant
+      \transpose c g, \psalmChantA
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+  >>
+}
+
+\markup \vspace #1
+
+\score {
+  \new GregorianTranscriptionStaff <<
+    \new GregorianTranscriptionVoice = "psalm" {
+      \transpose c g, \psalmChantB
+    }
+
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+  >>
+}
+
+\markup \vspace #1
+
+\score {
+  \new GregorianTranscriptionStaff <<
+    \new GregorianTranscriptionVoice = "psalm" {
+      \transpose c g, \psalmChantC
+    }
+
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
   >>
 }
 
-\markup \vspace #3
+\markup \vspace #1
 
 \score {
   \new GregorianTranscriptionStaff <<
