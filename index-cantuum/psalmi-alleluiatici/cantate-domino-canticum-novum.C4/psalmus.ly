@@ -3,7 +3,6 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-C.ily"
 \include "../../../modules/lilypond/neums.ily"
-\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 

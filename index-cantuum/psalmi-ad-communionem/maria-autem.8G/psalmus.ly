@@ -3,10 +3,11 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-8.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
-psalmChant = {
+psalmChantA = {
   \PsalmSignature
   \key c \major
   \chantInchoatioVIII
@@ -17,26 +18,36 @@ psalmChant = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
+  \Spacer 25
 }
 
-psalmChantCumFlexa = {
+psalmChantB = {
   \PsalmSignature
   \key c \major
   \chantInchoatioVIII
   \chantTenorVIII
-  \bar "!"
-  \section
-  \sectionLabel \markup { \italic flexa }
   \chantFlexaVIII #'((syneresis . total))
-  \divisioMinima
   \chantTenorVIII
-  \bar "!"
+  \chantMediatioVIII #'((syneresis . total))
+  \divisioMaxima
   \break
-  \chantMediatioVIII #'((syneresis . partial))
+  \chantTenorVIII
+  \chantTerminatioVIIIG #'()
+  \finalis
+  \Spacer 15
+}
+
+psalmChantC = {
+  \PsalmSignature
+  \key c \major
+  \chantInchoatioVIII
+  \chantTenorVIII
+  \chantMediatioVIII #'()
   \divisioMaxima
   \chantTenorVIII
-  \chantTerminatioVIIIG #'((syneresis . partial))
+  \chantTerminatioVIIIG #'((syneresis . total))
   \finalis
+  \Spacer 25
 }
 
 psalmVerseI = \lyricmode {
@@ -85,7 +96,7 @@ psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \AltLyrics
   \VSup "23" Or -- de --
-  \Tenor "nou, então, às nuvens lá dos" -- céus, __
+  \Tenor "nou, então, às nuvens lá dos" céus, __
   \Tenor "e as comportas das alturas" fez a -- brir. __
 }
 
@@ -118,7 +129,6 @@ psalmVerseIX = \lyricmode {
 
 psalmVerseX = \lyricmode {
   \set stanza = "10."
-  \AltLyrics
   \VSup "71" O -- ve --
   \Tenor "lhas e cordeiros fez dei" -- xar __
   \Tenor "para seu povo de Jacó pastore" -- ar, __
@@ -129,7 +139,7 @@ psalmVerseX = \lyricmode {
 psalmVerseXI = \lyricmode {
   \set stanza = "11."
   \VSup "72" Com re --
-  \Tenor "to coração apascen" -- _ _
+  \Tenor "to coração apascen" --
   \MelismaOff tou -- -os \MelismaOn
   \Tenor "e com mão habilidosa os" con -- du -- ziu. __
 }
@@ -139,7 +149,7 @@ psalmVerseXI = \lyricmode {
 \score {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
-      \transpose c a, \psalmChant
+      \transpose c a, \psalmChantA
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
@@ -157,9 +167,19 @@ psalmVerseXI = \lyricmode {
 \score {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
-      \transpose c a, \psalmChantCumFlexa
+      \transpose c a, \psalmChantB
     }
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseX
+  >>
+}
+
+\markup \vspace #1
+
+\score {
+  \new GregorianTranscriptionStaff <<
+    \new GregorianTranscriptionVoice = "psalm" {
+      \transpose c a, \psalmChantC
+    }
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseXI
   >>
 }

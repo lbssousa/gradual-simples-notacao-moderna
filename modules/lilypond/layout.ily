@@ -7,6 +7,7 @@ AntiphonSignature = {
 
 PsalmSignature = {
   \time 1/4
+  %\override Lyrics.LyricText.X-extent  = #'(0 . 3)
 }
 
 GregorianTranscriptionLayout = \layout {

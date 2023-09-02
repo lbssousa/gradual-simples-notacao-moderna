@@ -3,11 +3,12 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-D.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
 chantResponsorium = \relative c'' {
-  \C b b b c b a g a b b a
+  \C b b c b b a g a b b a
   \finalis
 }
 
@@ -116,6 +117,7 @@ psalmVerseX = \lyricmode {
     \new GregorianTranscriptionVoice = "psalm" {
       \psalmChant
       \chantResponsorium
+      \Spacer 12
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {

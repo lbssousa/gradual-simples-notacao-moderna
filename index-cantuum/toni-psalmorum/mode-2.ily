@@ -48,7 +48,7 @@ gloriaPatriChantIID = {
   \chantInchoatioII
   \chantTenorII
   \chantMediatioII #'()
-  \divisioMaxima \break
+  \divisioMaxima
   \chantSicutInchoatioII
   \chantTenorII
   \chantMediatioII #'()
@@ -56,7 +56,7 @@ gloriaPatriChantIID = {
   \chantTenorII
   \chantTerminatioIID #'((syneresis . total))
   \finalis
-  \Spacer 1
+  \Spacer 15
 }
 
 gloriaPatriVerseIID = \lyricmode {
