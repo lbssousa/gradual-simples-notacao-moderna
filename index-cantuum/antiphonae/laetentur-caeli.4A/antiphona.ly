@@ -10,9 +10,9 @@
 antiphonChant = \relative c'' {
   \AntiphonSignature
   \C a g a \EE c d \Vs d
-  \C c d e \C_C d c \E d \C d
+  \C c d e \C_C d c \E d \E d
   \divisioMaior
-  a d c \C_C b a \C a g \EE a g
+  \C a d c \C_C b a \C a g \EE a g
   \divisioMinima
   \EE f g \C a \Ldim c \C a a
   \finalis
