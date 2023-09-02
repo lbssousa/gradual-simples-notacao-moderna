@@ -20,4 +20,8 @@ GregorianTranscriptionLayout = \layout {
     \hide TupletNumber
     \hide TupletBracket
   }
+  %\context {
+  %  \GregorianTranscriptionVoice
+  %  \consists Stem_engraver
+  %}
 }

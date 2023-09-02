@@ -1,11 +1,19 @@
 \version "2.24.1"
 
+dC = #(ly:make-duration 2 0)
+dCC = #(ly:make-duration 3 0)
+dCCCC = #(ly:make-duration 4 0)
+
+Episema = \tenuto
+Oriscus = \haydnturn
+Quilisma = \prall
+
 % Neuma de uma nota, cursivo
 C =
 #(define-music-function
   (p)
   (ly:pitch?)
-  #{ $p 4 #}
+  #{ $p \dC #}
 )
 
 % Neuma de uma nota, cursivo, com parênteses
@@ -13,7 +21,7 @@ Cp =
 #(define-music-function
   (p)
   (ly:pitch?)
-  #{ \parenthesize $p 4 #}
+  #{ \parenthesize $p \dC #}
 )
 
 % Neuma de uma nota, com episema
@@ -21,7 +29,7 @@ E =
 #(define-music-function
   (p)
   (ly:pitch?)
-  #{ $p 4.*2/3 #}
+  #{ $p \dC^\Episema #}
 )
 
 % Neuma de uma nota, com liquescência diminutiva
@@ -31,7 +39,7 @@ Ldim =
   (ly:pitch?)
   #{
     %\tweak font-size -4 $pa
-    $p ^">"
+    $p \dC^">"
   #}
 )
 
@@ -42,7 +50,7 @@ Laum =
   (ly:pitch?)
   #{
     %\tweak font-size -4 $pa
-    $p ^"<"
+    $p \dC^"<"
   #}
 )
 
@@ -51,7 +59,7 @@ O =
 #(define-music-function
   (p)
   (ly:pitch?)
-  #{ $p \reverseturn #}
+  #{ $p \dC\Oriscus #}
 )
 
 % Neuma de duas notas, totalmente cursivo
@@ -59,7 +67,7 @@ CC =
 #(define-music-function
   (pa pb)
   (ly:pitch? ly:pitch?)
-  #{ $pa 8( $pb ) #}
+  #{ $pa \dCC( $pb ) #}
 )
 
 % Dois neumas de uma nota, cursivos, com ligadura parcial
@@ -69,7 +77,7 @@ C_C =
   (ly:pitch? ly:pitch?)
   #{
     \once \slurDashed
-    $pa 4( $pb )
+    $pa \dC( $pb )
   #}
 )
 
@@ -78,7 +86,7 @@ CE =
 #(define-music-function
   (pa pb)
   (ly:pitch? ly:pitch?)
-  #{ $pa 8( $pb 8.*2/3) #}
+  #{ $pa \dCC( $pb ^\Episema) #}
 )
 
 % Neuma de duas notas, com episema nas duas notas
@@ -86,7 +94,7 @@ EE =
 #(define-music-function
   (pa pb)
   (ly:pitch? ly:pitch?)
-  #{ $pa 8.*2/3( $pb ) #}
+  #{ $pa \dCC^\Episema( $pb ^\Episema) #}
 )
 
 % Neuma de duas notas, cursivo na primeira nota e com liquescência na última nota
@@ -94,7 +102,7 @@ CL =
 #(define-music-function
   (pa pb)
   (ly:pitch? ly:pitch?)
-  #{ $pa 8(
+  #{ $pa \dCC(
      \tweak font-size -4
      $pb )
      %$pb ^">" )
@@ -108,7 +116,7 @@ C_L =
   (ly:pitch? ly:pitch?)
   #{
     \once \slurDashed
-    $pa 4( $pb ^">" )
+    $pa \dC( $pb ^">")
   #}
 )
 
@@ -117,9 +125,9 @@ EL =
 #(define-music-function
   (pa pb)
   (ly:pitch? ly:pitch?)
-  #{ $pa 8.*2/3(
+  #{ $pa \dCC^\Episema(
      \tweak font-size -4
-     $pb 8)
+     $pb )
      %$pb ^">" )
   #}
 )
@@ -129,7 +137,7 @@ QC =
 #(define-music-function
   (pa pb)
   (ly:pitch? ly:pitch?)
-  #{ $pa 8( \prallup $pb ) #}
+  #{ $pa \dCC\Quilisma( $pb ) #}
 )
 
 % Neuma de duas notas do tipo "virga strata"
@@ -137,7 +145,7 @@ Vs =
 #(define-music-function
   (p)
   (ly:pitch?)
-  #{ \once \slurDown $p 8( \O $p ) #}
+  #{ \once \slurDown $p \dCC( $p \Oriscus) #}
 )
 
 % Neuma de duas notas do tipo "pes quassus"
@@ -145,7 +153,7 @@ Pq =
 #(define-music-function
   (pa pb)
   (ly:pitch? ly:pitch?)
-  #{ \once \slurDown $pa 8( \reverseturn $pb ) #}
+  #{ \once \slurDown $pa \dCC\Oriscus( $pb ) #}
 )
 
 % Neuma de três notas, totalmente cursivo
@@ -153,7 +161,7 @@ CCC =
 #(define-music-function
   (pa pb pc)
   (ly:pitch? ly:pitch? ly:pitch?)
-  #{ \tuplet 3/2 { $pa 8( $pb $pc ) } #}
+  #{ \tuplet 3/2 { $pa \dCC( $pb $pc ) } #}
 )
 
 % Neuma de uma nota seguido de neuma de duas notas, totalmente cursivos, com ligadura parcial
@@ -163,7 +171,7 @@ C_CC =
   (ly:pitch? ly:pitch? ly:pitch?)
   #{
     \once \phrasingSlurDashed
-    $pa 4\( $pb 8( $pc ) \)
+    $pa \dC\( $pb \dCC( $pc ) \)
   #}
 )
 
@@ -172,7 +180,7 @@ CEE =
 #(define-music-function
   (pa pb pc)
   (ly:pitch? ly:pitch? ly:pitch?)
-  #{ \tuplet 3/2 { $pa 8( $pb 8.*2/3 $pc ) } #}
+  #{ \tuplet 3/2 { $pa \dCC( $pb ^\Episema $pc ^\Episema) } #}
 )
 
 % Neuma de três notas, com quilisma na segunda nota
@@ -180,7 +188,7 @@ CQC =
 #(define-music-function
   (pa pb pc)
   (ly:pitch? ly:pitch? ly:pitch?)
-  #{ \tuplet 3/2 { $pa 8( $pb \prallup $pc ) } #}
+  #{ \tuplet 3/2 { $pa \dCC( $pb \prall $pc ) } #}
 )
 
 % Neuma de quatro notas, totalmente cursivo
@@ -188,7 +196,7 @@ CCCC =
 #(define-music-function
   (pa pb pc pd)
   (ly:pitch? ly:pitch? ly:pitch? ly:pitch?)
-  #{ $pa 16( $pb $pc $pd )) #}
+  #{ $pa \dCCCC( $pb $pc $pd )) #}
 )
 
 % Neuma de uma nota precedido de epêntese em uma cadência salmódica
