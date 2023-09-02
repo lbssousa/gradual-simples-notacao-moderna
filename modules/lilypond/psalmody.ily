@@ -97,18 +97,18 @@ MakeInchoatioTwoPreEpenthesis =
   (case (assoc-get 'dieresis options)
     ((total)
       #{
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \AA $pa $pb
       #})
     ((partial)
       #{
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \once \slurDashed
         \AA $pa $pb
       #})
     (else
       #{
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \AA $pa $pb
       #})))
 
@@ -121,20 +121,20 @@ MakeAccentusOnePostOne =
     ((total)
       #{
         \A $pa (
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         $pb )
       #})
     ((partial)
       #{
         \once \slurDashed
         \A $pa (
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         $pb )
       #})
     (else
       #{
         \A $pa
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \C $pb
       #})))
 
@@ -147,20 +147,20 @@ MakeAccentusOnePostTwo =
     ((total)
       #{
         \A $pa (
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \CC $pb $pc )
       #})
     ((partial)
       #{
         \once \phrasingSlurDashed
         \A $pa \(
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \CC $pb $pc \)
       #})
     (else
       #{
         \A $pa
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \CC $pb $pc
       #})))
 
@@ -173,20 +173,20 @@ MakeAccentusOnePostThree =
     ((total)
       #{
         \A $pa (
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \CCC $pb $pc $pd )
       #})
     ((partial)
       #{
         \once \phrasingSlurDashed
         \A $pa \(
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \CCC $pb $pc $pd \)
       #})
     (else
       #{
         \A $pa
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \CC $pb $pc $pd
       #})))
 
@@ -199,20 +199,20 @@ MakeAccentusTwoPostOne =
     ((total)
       #{
         $pa 2*1/4 ( $pb
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \C $pc )
       #})
     ((partial)
       #{
         \once \phrasingSlurDashed
         $pa 2*1/4 \(( $pb )
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \C $pc \)
       #})
     (else
       #{
         \AA $pa $pb
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \C $pc
       #})))
 
@@ -244,20 +244,20 @@ MakeAccentusTwoPostTwo =
     ((total)
       #{
         $pa 2*1/4 ( $pb
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \CC $pc $pd )
       #})
     ((partial)
       #{
         \once \phrasingSlurDashed
         $pa 2*1/4 \(( $pb )
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \CC $pc $pd \)
       #})
     (else
       #{
         \AA $pa $pb
-        \MakeEpenthesis $pe 4 #options
+        \MakeEpenthesis $pe \dC #options
         \CC $pc $pd
       #})))
 
