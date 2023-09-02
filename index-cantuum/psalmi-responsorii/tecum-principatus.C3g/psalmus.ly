@@ -42,7 +42,7 @@ psalmEvenVersesChant = {
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \Tenor \VSup "3" "Tu és príncipe desde o dia em que nas" -- \MelismaOff ces -- te; \MelismaOn
-  \Tenor "na glória e esplendor da santi" -- da -- de.
+  \Tenor "na glória e esplendor da santi" -- da -- de. __
 }
 
 psalmVerseII = \lyricmode {
@@ -105,6 +105,7 @@ psalmVerseVIII = \lyricmode {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
       \psalmOddVersesChant
+      \Spacer 1
       \chantResponsorium
     }
 

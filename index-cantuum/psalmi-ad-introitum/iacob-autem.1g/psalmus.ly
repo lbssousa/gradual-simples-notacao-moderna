@@ -3,33 +3,36 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-1.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
-psalmChant = {
+psalmChantA = {
   \PsalmSignature
   \key d \minor
   \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'()
   \chantMediatioSecundusI #'((syneresis . partial))
-  \divisioMaxima \break
+  \divisioMaxima
   \chantTenorI
   \chantTerminatioIg #'((syneresis . partial))
   \finalis
+  \Spacer 25
 }
 
-psalmChantAlt = {
+psalmChantB = {
   \PsalmSignature
   \key d \minor
   \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'()
   \chantMediatioSecundusI #'((syneresis . total))
-  \divisioMaxima \break
+  \divisioMaxima
   \chantTenorI
   \chantTerminatioIg #'()
   \finalis
+  \Spacer 15
 }
 
 psalmVerseI = \lyricmode {
@@ -100,7 +103,7 @@ psalmVerseVIII = \lyricmode {
 \score {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
-      \psalmChant
+      \psalmChantA
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
@@ -115,7 +118,7 @@ psalmVerseVIII = \lyricmode {
 \score {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
-      \psalmChantAlt
+      \psalmChantB
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII

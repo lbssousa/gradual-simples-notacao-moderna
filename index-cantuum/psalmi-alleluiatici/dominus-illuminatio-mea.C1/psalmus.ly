@@ -3,6 +3,7 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-C.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
@@ -10,10 +11,10 @@ psalmChant = {
   \PsalmSignature
   \chantTenorC
   \chantMediatioC #'((syneresis . partial))
-  \divisioMaxima \break
+  \divisioMaxima
   \chantTenorC
   \chantTerminatioCOne #'((syneresis . partial))
-  \finalis \break
+  \finalis
 }
 
 psalmVerseI = \lyricmode {
@@ -127,8 +128,10 @@ psalmVerseXIII = \lyricmode {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
       \psalmChant
+      \Spacer 1
       \chantAlleluiaCOne
       \finalis
+      \Spacer 11
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {

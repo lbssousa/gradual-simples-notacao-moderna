@@ -3,6 +3,7 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-4.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
@@ -16,6 +17,7 @@ psalmChant = {
   \chantTenorIV
   \chantTerminatioIVE #'()
   \finalis
+  \Spacer 21
 }
 
 psalmVerseI = \lyricmode {
