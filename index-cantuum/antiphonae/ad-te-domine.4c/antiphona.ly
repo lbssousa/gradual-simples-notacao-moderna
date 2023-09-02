@@ -17,7 +17,7 @@ antiphonChant = \relative c'' {
   \divisioMinima
   \C f g a bes c bes a a
   \finalis
-  \Spacer 6
+  \Spacer 7
 }
 
 antiphonLyrics = \lyricmode {
