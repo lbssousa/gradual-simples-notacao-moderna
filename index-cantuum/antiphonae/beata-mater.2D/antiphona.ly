@@ -7,46 +7,48 @@
 \include "../../../modules/lilypond/lyrics.ily"
 \include "../../../modules/lilypond/symbols.ily"
 
-antiphonChant = \relative c'' {
+antiphonChant = \relative c' {
   \AntiphonSignature
   \key c \major
-  \C g b a \EE c b \Pq g a
+  \C d d f \C_C d c
   \divisioMinima
-  \C f a c d b c a \Ldim a \C g \E a \Cp a
-  \divisioMaior \break
-  \Ldim a \C g e f \C_C g a \C a g g
+  d c d f \CC f e \C c
+  \divisioMaior
+  c d \CC f g \EE f e \CC d c \C d \C_C f e \C d d
+  \divisioMaior
+  c \E d \EE f g \E f \CC f e \C_C d c \E e \CC f e \E d \C d d
   \finalis
-  \Spacer 17
+  \Spacer 22
 }
 
 antiphonLyrics = \lyricmode {
-  Ma -- rí -- a au -- tem con -- ser -- vá -- bat óm -- ni -- a ver -- ba hæc, _ cón -- fe -- rens in cor -- de su -- o.
+  Be -- á -- ta \MelismaOff Ma -- ter \MelismaOn et in -- tác -- ta Vir -- go,
+  glo -- ri -- ó -- sa Re -- gí -- na __ mun -- di,
+  in -- ter -- cé -- de pro no -- bis ad Dó -- mi -- num.
 }
 
 antiphonLyricsPt = \lyricmode {
   \AltLyrics
-  Ma -- ri -- a, po -- rém, con -- ser -- va -- va to -- das es -- sas pa -- la -- vras, pon -- de -- ran -- do-as
-  \MelismaOff
-  no seu
-  \MelismaOn
-  co -- ra -- ção.
+  Ben -- di -- ta Mãe __ e in -- tac -- ta Vir -- gem,
+  glo -- ri -- o -- sa Ra -- i -- \MelismaOff nha do \MelismaOn mun -- do,
+  in -- ter -- ce -- dei por \MelismaOff to -- dos \MelismaOn nós jun -- to~ao Se -- nhor.
 }
 
 \GregorianTranscriptionLayout
 
 \header {
-  meter = "Cantus ID 003696 cf. Lc 2,19"
+  meter = "cf. Sl 2,7"
   arranger = "Adapt.: Lincoln Haas Hein, Laércio de Sousa"
 }
 
 \score {
   \header {
-    piece = "VIII G"
+    piece = "II D"
   }
 
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "antiphon" {
-      \transpose c a, \antiphonChant
+      \transpose d g \antiphonChant
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics

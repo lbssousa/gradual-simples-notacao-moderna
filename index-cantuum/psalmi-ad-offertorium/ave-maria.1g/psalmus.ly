@@ -3,62 +3,55 @@
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-1.ily"
 \include "../../../modules/lilypond/neums.ily"
+\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
 psalmChant = {
   \PsalmSignature
-  \chantInchoatioI
+  \chantInchoatioI #'()
   \chantTenorI
-  \chantMediatioPrimusCumEpenthesisI
-  \chantMediatioSecundusCumEpenthesisI
+  \chantMediatioPrimusI #'()
+  \chantMediatioSecundusI #'((syneresis . partial))
   \divisioMaxima
-  \break
   \chantTenorI
-  \chantTerminatioCumEpenthesisIg
+  \chantTerminatioIg #'((syneresis . partial))
   \finalis
+  \Spacer 12
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \VSup "1" Se -- nhor __
-  \Tenor "meu Deus, a vós elevo a"
-  mi -- _ nha al -- _ ma,
-  \Tenor "em vós confio: que eu não seja en" -- ver -- go -- nha _ -- do.
+  \VSup "2" Fa -- vo --
+  \Tenor "recestes, ó Senhor, a"
+  vos -- sa \MelismaOff ter -- ra, \MelismaOn
+  \Tenor "libertastes os cativos" de Ja -- có. __ _
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
-  \VSup "6" Re -- cor --
-  \Tenor "dai, Senhor meu Deus,"
-  vos -- sa ter -- nu _ -- ra
-  \Tenor "e a vossa salvação que" são e -- ter _ -- nas!
+  \VSup "11" A ver --
+  \Tenor "dade e o amor se en" con -- tra -- rão, __
+  \Tenor "a justiça e a paz se a" --
+  bra -- ça -- rão. __ _
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \VSup "10" Ver -- da --
-  \Tenor "de e amor são os ca" --
-  mi -- nhos do Se _ -- nhor
-  \Tenor "para quem guarda sua Aliança e" seus pre -- cei _ -- tos.
+  \VSup "12" Da ter --
+  \Tenor "ra brotará a fi" -- de -- li --
+  \MelismaOff da -- de, \MelismaOn
+  \Tenor "e a justiça olhará dos" al -- tos céus. __ _
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
-  \VSup "20" De -- fen --
-  \Tenor "dei a minha vida e"
-  li -- _ ber -- tai _ -- -me;
-  \Tenor "em vós confio, que eu não seja en" -- ver -- go -- nha _ -- do!
-}
-
-psalmVerseV = \lyricmode {
-  \set stanza = "5."
-  \VSup "22" Li -- ber --
-  \Tenor "tai, ó Senhor"
-  Deus, _ a Is -- ra -- el
-  \Tenor "de toda a sua an" -- gús -- tia~e a -- fli -- ção!
+  \VSup "13" O Se --
+  \Tenor "nhor nos dará tudo o" que é bom, __
+  \Tenor "e a nossa terra nos dará su" -- as co --
+  lhei -- tas.
 }
 
 \GregorianTranscriptionLayout
@@ -73,6 +66,5 @@ psalmVerseV = \lyricmode {
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
   >>
 }

@@ -1,5 +1,6 @@
 \version "2.24.1"
 
+\include "gregorian.ly"
 \include "../../modules/lilypond/neums.ily"
 \include "../../modules/lilypond/psalmody.ily"
 \include "../../modules/lilypond/symbols.ily"
@@ -124,6 +125,15 @@ chantTerminatioEStar =
       \MakeAccentusOnePostOne e e e #options
     }
   #})
+
+chantAlleluiaETwod = \relative c' {
+  \C e e e e \divisioMinima e e \CCC d g f \C e
+}
+
+lyricsAlleluiaETwod = \lyricmode {
+  \set stanza = \Responsorium
+  A -- le -- lu -- ia, a -- le -- lu -- ia.
+}
 
 chantAlleluiaEStar = \relative c' {
   \C f e \CC f g \CCC f f e d c \CL d e \C e
