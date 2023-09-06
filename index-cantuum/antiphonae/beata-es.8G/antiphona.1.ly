@@ -10,33 +10,31 @@
 antiphonChant = \relative c'' {
   \AntiphonSignature
   \key c \major
-  \C g b a \EE c b \Pq g a
+  \C a f \CC f g \C g
   \divisioMinima
-  \C f a c d b c a \Ldim a \C g \E a \Cp a
-  \divisioMaior \break
-  \Ldim a \C g e f \C_C g a \C a g g
+  a \CC g f \C g \CC g a \C f
+  \divisioMaior
+  a c b c a \C_C a g \C a b a g g
   \finalis
-  \Spacer 17
+  \Spacer 15
 }
 
 antiphonLyrics = \lyricmode {
-  Ma -- rí -- a au -- tem con -- ser -- vá -- bat óm -- ni -- a ver -- ba hæc, _ cón -- fe -- rens in cor -- de su -- o.
+  Be -- á -- ta es, Vir -- go Ma -- rí -- a,
+  quæ óm -- ni -- um por -- tá -- sti cre -- a -- tó -- rem.
 }
 
 antiphonLyricsPt = \lyricmode {
   \AltLyrics
-  Ma -- ri -- a, po -- rém, con -- ser -- va -- va to -- das es -- sas pa -- la -- vras, pon -- de -- ran -- do-as
-  \MelismaOff
-  no seu
-  \MelismaOn
-  co -- ra -- ção.
+  Ben -- di -- ta sois, Vir -- gem Ma -- ri -- a,
+  que~em vós trou -- xes -- tes \MelismaOff o cri -- \MelismaOn a -- dor de tu -- do.
 }
 
 \GregorianTranscriptionLayout
 
 \header {
-  meter = "Cantus ID 003696 cf. Lc 2,19"
-  arranger = "Adapt.: Lincoln Haas Hein, Laércio de Sousa"
+  meter = " "
+  arranger = "Adapt.: Laércio de Sousa"
 }
 
 \score {

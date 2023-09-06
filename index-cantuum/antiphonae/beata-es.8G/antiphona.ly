@@ -10,32 +10,42 @@
 antiphonChant = \relative c'' {
   \AntiphonSignature
   \key c \major
-  \C g b a \EE c b \Pq g a
+  \C g
+  \C_C f a
+  \C c \EE b g
   \divisioMinima
-  \C f a c d b c a \Ldim a \C g \E a \Cp a
-  \divisioMaior \break
-  \Ldim a \C g e f \C_C g a \C a g g
+  \EE b c \EE a g \C a g f
+  \divisioMaior
+  g f a c \EE b g
+  \divisioMinima
+  \EE b c \C a
+  \C_L b a
+  \C g g
   \finalis
-  \Spacer 17
+  \Spacer 15
 }
 
 antiphonLyrics = \lyricmode {
-  Ma -- rí -- a au -- tem con -- ser -- vá -- bat óm -- ni -- a ver -- ba hæc, _ cón -- fe -- rens in cor -- de su -- o.
+  Be --
+  \MelismaOff
+  ni -- gni --
+  \MelismaOn
+  tá -- tem __ fe -- cit __ Dó -- mi -- nus, et ter -- ra no -- stra __ de -- dit
+  \MelismaOff
+  fru -- ctum
+  \MelismaOn
+  su -- um.
 }
 
 antiphonLyricsPt = \lyricmode {
   \AltLyrics
-  Ma -- ri -- a, po -- rém, con -- ser -- va -- va to -- das es -- sas pa -- la -- vras, pon -- de -- ran -- do-as
-  \MelismaOff
-  no seu
-  \MelismaOn
-  co -- ra -- ção.
+  Com bon -- da -- de __ a -- giu __ o Se -- nhor, e~a nos -- sa ter -- ra __ deu __ o seu __ fru -- to.
 }
 
 \GregorianTranscriptionLayout
 
 \header {
-  meter = "Cantus ID 003696 cf. Lc 2,19"
+  meter = "Cantus ID a01124 cf. Sl 84(85),13"
   arranger = "Adapt.: Lincoln Haas Hein, Laércio de Sousa"
 }
 
