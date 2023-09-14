@@ -187,7 +187,7 @@ MakeAccentusOnePostThree =
       #{
         \A $pa
         \MakeEpenthesis $pe \dC #options
-        \CC $pb $pc $pd
+        \CCC $pb $pc $pd
       #})))
 
 % Acento cadencial de duas nota com pós-acento de uma nota
