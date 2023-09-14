@@ -2,6 +2,7 @@
 
 \include "gregorian.ly"
 \include "../../modules/lilypond/neums.ily"
+\include "../../modules/lilypond/spacing.ily"
 \include "../../modules/lilypond/psalmody.ily"
 \include "../../modules/lilypond/lyrics.ily"
 
@@ -56,12 +57,14 @@ gloriaPatriChantIVE = {
   \chantMediatioIV #'()
   \divisioMaxima
   \chantInchoatioIV #'()
+  \break
   \chantTenorIV
   \chantMediatioIV #'()
   \divisioMaxima
   \chantTenorIV
   \chantTerminatioIVE #'((syneresis . total))
   \finalis
+  \Spacer 13
 }
 
 gloriaPatriVerseIVE = \lyricmode {
@@ -69,5 +72,5 @@ gloriaPatriVerseIVE = \lyricmode {
   Gló -- ria ao
   \Tenor "Pai e ao Filho e ao Espí" -- ri -- to San -- to,
   Co -- mo __ \Tenor "era no princípio, a" -- go -- ra~e sem -- pre,
-  \Tenor "pelos séculos dos sécu" -- los, a -- mém! __
+  \Tenor "pelos séculos dos sé" -- cu -- los, a -- mém! __
 }
