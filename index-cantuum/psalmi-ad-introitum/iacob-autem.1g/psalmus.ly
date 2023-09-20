@@ -10,7 +10,7 @@
 psalmChantA = {
   \PsalmSignature
   \key d \minor
-  \chantInchoatioI #'()
+  \S \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'()
   \chantMediatioSecundusI #'((syneresis . partial))
@@ -24,12 +24,12 @@ psalmChantA = {
 psalmChantB = {
   \PsalmSignature
   \key d \minor
-  \chantInchoatioI #'()
+  \S \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'()
   \chantMediatioSecundusI #'((syneresis . total))
   \divisioMaxima
-  \chantTenorI
+  \S \chantTenorI
   \chantTerminatioIg #'()
   \finalis
   \Spacer 15
@@ -87,7 +87,7 @@ psalmVerseVII = \lyricmode {
   \set stanza = "7."
   \VSup "5c" Pa -- ra __
   \Tenor "que vejas prosperar Je" -- ru -- sa -- lém __
-  \Tenor \VSup "6a" "e os filhos" dos teus fi -- lhos.
+  \VSup "6a" \Tenor "e os filhos" dos teus fi -- lhos.
 }
 
 psalmVerseVIII = \lyricmode {
@@ -95,7 +95,7 @@ psalmVerseVIII = \lyricmode {
   \AltLyrics
   \VSup "6bc" Ó Se --
   \Tenor "nhor, que venha a paz a" Is -- ra -- el, __
-  \Tenor "que venha a paz ao" vos -- so po -- vo!
+  "" \Tenor "que venha a paz ao" vos -- so po -- vo!
 }
 
 \GregorianTranscriptionLayout

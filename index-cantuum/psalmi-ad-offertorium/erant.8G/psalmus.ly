@@ -10,28 +10,28 @@
 psalmChantA = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantMediatioVIII #'((syneresis . total))
   \divisioMaxima
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . total))
   \finalis
-  \Spacer 26
+  \Spacer 25
 }
 
 psalmChantB = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantFlexaVIII #'((epenthesis . partial))
   \divisioMinima
-  \chantTenorVIII
+  \S \chantTenorVIII
   \chantMediatioVIII #'()
   \divisioMaxima
   \break
-  \chantTenorVIII
+  \S \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
   \Spacer 14
@@ -40,14 +40,14 @@ psalmChantB = {
 psalmChantC = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantMediatioVIII #'((syneresis . partial))
   \divisioMaxima
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
-  \Spacer 26
+  \Spacer 25
 }
 
 psalmVerseI = \lyricmode {
@@ -61,9 +61,9 @@ psalmVerseII = \lyricmode {
   \set stanza = "2."
   \VSup "7cd" Não pe --
   \Tenor "distes ofertas nem" ví -- ti -- mas,
-  \Tenor "holocaustos por nossos pe" --
+  "" \Tenor "holocaustos por nossos pe" --
   \MelismaOff ca -- dos. \MelismaOn
-  \Tenor \VSup "8a" "E então eu vos disse:" “Eis que
+  \VSup "8a" \Tenor "E então eu vos disse:" “Eis que
   \MelismaOff ve -- nho!” \MelismaOn
 }
 
@@ -72,9 +72,9 @@ psalmVerseIII = \lyricmode {
   \AltLyrics
   \VSup "8b" So -- bre
   \Tenor "mim está escrito no" li -- _ vro:
-  \Tenor \VSup "9" "“Com prazer faço a vossa von" --
+  \VSup "9" \Tenor "“Com prazer faço a vossa von" --
   \MelismaOff ta -- de. \MelismaOn
-  \Tenor "Guardo em meu coração" vos -- sa lei!” __
+  "" \Tenor "Guardo em meu coração" vos -- sa lei!” __
 }
 
 psalmVerseIV = \lyricmode {
@@ -106,7 +106,7 @@ psalmVerseV = \lyricmode {
   >>
 }
 
-\markup \vspace #2
+\markup \vspace #1
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -119,7 +119,7 @@ psalmVerseV = \lyricmode {
   >>
 }
 
-\markup \vspace #2
+\markup \vspace #1
 
 \score {
   \new GregorianTranscriptionStaff <<
