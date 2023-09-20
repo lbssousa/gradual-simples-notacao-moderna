@@ -14,6 +14,18 @@ C =
   #{ $p \dC #}
 )
 
+% Slot para alinhamento de letra.
+S =
+#(define-music-function
+  ()
+  ()
+  #{
+    \cadenzaOn
+    \once \omit NoteHead c \dC
+    \cadenzaOff
+  #}
+)
+
 % Neuma de uma nota, cursivo, com parênteses
 Cp =
 #(define-music-function
@@ -239,7 +251,7 @@ CQC =
   (ly:pitch? ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC( $pb \prall
+    $pa \dC( $pb \Quilisma
     \cadenzaOff
     $pc )
   #}
@@ -255,6 +267,32 @@ CCCC =
     $pa \dC( $pb $pc
     \cadenzaOff
     $pd )
+  #}
+)
+
+% Neuma de quatro notas, com quilisma na terceira nota
+CCQC =
+#(define-music-function
+  (pa pb pc pd)
+  (ly:pitch? ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC( $pb $pc \Quilisma
+    \cadenzaOff
+    $pd )
+  #}
+)
+
+% Neuma de cinco notas, totalmente cursivo
+CCCCC =
+#(define-music-function
+  (pa pb pc pd pe)
+  (ly:pitch? ly:pitch? ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC( $pb $pc $pd
+    \cadenzaOff
+    $pe )
   #}
 )
 
