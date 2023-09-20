@@ -9,14 +9,14 @@
 
 psalmChant = {
   \PsalmSignature
-  \chantInchoatioIVA #'()
+  \S \chantInchoatioIVA #'()
   \chantTenorIVA
   \chantMediatioIVA #'((syneresis . partial))
   \divisioMaxima
-  \chantTenorIVA
+  \S \chantTenorIVA
   \chantTerminatioIVA #'((syneresis . partial))
   \finalis
-  \Spacer 25
+  \Spacer 23
 }
 
 psalmVerseI = \lyricmode {
@@ -24,7 +24,7 @@ psalmVerseI = \lyricmode {
   \VSup "1" Can -- tai __
   \Tenor "ao Senhor Deus um" can -- to
   \MelismaOff no -- vo, \MelismaOn
-  \Tenor \VSup "2a" "cantai ao Senhor Deus," ó ter -- ra~in --
+  \VSup "2a" \Tenor "cantai ao Senhor Deus," ó ter -- ra~in --
   \MelismaOff tei -- ra! \MelismaOn
 }
 
@@ -34,14 +34,14 @@ psalmVerseII = \lyricmode {
   \VSup "2bc" Can -- tai __
   \Tenor "e bendizei seu" san -- to
   \MelismaOff no -- me! \MelismaOn
-  \Tenor "Dia após dia anunciai su" -- a sal -- va -- ção! __
+  "" \Tenor "Dia após dia anunciai su" -- a sal -- va -- ção! __
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
   \VSup "3" Ma -- ni --
   \Tenor "festai a sua glória en" -- tre~as na -- ções, __
-  \Tenor "e entre os povos do univer" -- so seus pro --
+  "" \Tenor "e entre os povos do univer" -- so seus pro --
   \MelismaOff dí -- gios! \MelismaOn
 }
 
@@ -51,7 +51,7 @@ psalmVerseIV = \lyricmode {
   \VSup "8b" O -- fe --
   \Tenor "recei um sacrifício" nos seus
   \MelismaOff á -- trios, \MelismaOn
-  \Tenor \VSup "9a" "adorai-o no esplendor" da san -- ti --
+  \VSup "9a" \Tenor "adorai-o no esplendor" da san -- ti --
   \MelismaOff da -- de! \MelismaOn
 }
 
@@ -60,7 +60,7 @@ psalmVerseV = \lyricmode {
   \VSup "13cd" Go -- ver --
   \Tenor "nará o mundo todo" com jus --
   \MelismaOff ti -- ça, \MelismaOn
-  \Tenor "e os povos julgará" com le -- al --
+  "" \Tenor "e os povos julgará" com le -- al --
   \MelismaOff da -- de. \MelismaOn
 }
 

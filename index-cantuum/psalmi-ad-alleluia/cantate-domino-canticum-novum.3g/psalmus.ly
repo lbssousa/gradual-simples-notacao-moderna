@@ -10,7 +10,7 @@
 psalmChant = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioIII #'()
+  \S \chantInchoatioIII #'()
   \chantTenorIII
   \chantMediatioPrimusIII #'()
   \chantMediatioSecundusIII #'((syneresis . partial))
@@ -18,7 +18,7 @@ psalmChant = {
   \chantTenorIII
   \chantTerminatioIIIg #'()
   \finalis
-  \Spacer 12
+  \Spacer 22
 }
 
 psalmVerseI = \lyricmode {
