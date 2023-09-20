@@ -9,7 +9,7 @@
 
 psalmChant = {
   \PsalmSignature
-  \chantInchoatioI #'()
+  \S \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'()
   \chantMediatioSecundusI #'((syneresis . partial))

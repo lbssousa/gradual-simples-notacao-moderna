@@ -11,7 +11,7 @@ psalmChant = {
   \PsalmSignature
   \key c \major
   \once \slurDashed
-  \chantInchoatioVI #'((dieresis . partial))
+  \S \chantInchoatioVI #'((dieresis . partial))
   \chantTenorVI
   \chantMediatioVI #'((syneresis . partial))
   \divisioMaxima

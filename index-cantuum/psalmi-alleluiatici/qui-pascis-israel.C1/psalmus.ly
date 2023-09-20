@@ -9,7 +9,7 @@
 
 psalmChant = {
   \PsalmSignature
-  \chantTenorC
+  \S \chantTenorC
   \chantMediatioC #'((syneresis . partial))
   \divisioMaxima
   \chantTenorC
@@ -20,7 +20,7 @@ psalmChant = {
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \Tenor \VSup "2ab" "Ó Pastor de Israel, prestai ou" --
+  \VSup "2ab" \Tenor "Ó Pastor de Israel, prestai ou" --
   \MelismaOff vi -- dos. \MelismaOn
   \Tenor "Vós, que a José apascentais qual um" re --
   \MelismaOff ba -- nho! \MelismaOn
@@ -29,7 +29,7 @@ psalmVerseI = \lyricmode {
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
-  \Tenor \VSup "9" "Arrancastes do Egito esta vi" --
+  \VSup "9" \Tenor "Arrancastes do Egito esta vi" --
   \MelismaOff dei -- ra, \MelismaOn
   \Tenor "e expulsastes as nações para" plan --
   \MelismaOff tá -- -la. \MelismaOn
@@ -37,7 +37,7 @@ psalmVerseII = \lyricmode {
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \Tenor \VSup "15" "Voltai-vos para nós, Deus do universo! ’ Olhai dos altos céus e obser" -- vai. __
+  \VSup "15" \Tenor "Voltai-vos para nós, Deus do universo! ’ Olhai dos altos céus e obser" -- vai. __
   \Tenor "Visitai a vossa vinha e pro" -- te --
   \MelismaOff gei -- -a! \MelismaOn
 }
@@ -45,14 +45,14 @@ psalmVerseIII = \lyricmode {
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
-  \Tenor \VSup "16" "Foi a vossa mão direita que a plan" -- tou; __
+  \VSup "16" \Tenor "Foi a vossa mão direita que a plan" -- tou; __
   \Tenor "protegei-a, e ao rebento que" fir --
   \MelismaOff mas -- tes! \MelismaOn
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \Tenor \VSup "17" "E aqueles que a cortaram e a quei" --
+  \VSup "17" \Tenor "E aqueles que a cortaram e a quei" --
   \MelismaOff ma -- ram, \MelismaOn
   \Tenor "vão perecer ante o furor de vos" -- sa
   \MelismaOff fa -- ce. \MelismaOff
@@ -61,14 +61,14 @@ psalmVerseV = \lyricmode {
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \AltLyrics
-  \Tenor \VSup "18" "Pousai a mão por sobre o vosso Prote" --
+  \VSup "18" \Tenor "Pousai a mão por sobre o vosso Prote" --
   \MelismaOff gi -- do, \MelismaOn
   \Tenor "o filho do homem que escolhestes pa" -- ra vós! __
 }
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
-  \Tenor \VSup "19" "E nunca mais vos deixaremos, Senhor"
+  \VSup "19" \Tenor "E nunca mais vos deixaremos, Senhor"
   Deus! __
   \Tenor "Dai-nos vida, e louvaremos vos" -- so
   \MelismaOff no -- me! \MelismaOn
@@ -77,7 +77,7 @@ psalmVerseVII = \lyricmode {
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
   \AltLyrics
-  \Tenor \VSup "20" "Convertei-nos, ó Senhor Deus do universo, ’ e sobre nós iluminai a vossa"
+  \VSup "20" \Tenor "Convertei-nos, ó Senhor Deus do universo, ’ e sobre nós iluminai a vossa"
   \MelismaOff fa -- ce! \MelismaOn
   \Tenor "Se voltardes para nós, sere" -- mos
   \MelismaOff sal -- vos! \MelismaOn
