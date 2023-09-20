@@ -14,12 +14,12 @@ antiphonChant = \relative c' {
   e c d
   \C_C f e
   \CC c d \C c
-  \divisioMaior
+  \divisioMaior \break
   \C_CC f e d
   \CC e f \CC d c \Cp c
   \C d e f d
   \finalis
-  \Spacer 10
+  \Spacer 14
 }
 
 antiphonLyrics = \lyricmode {

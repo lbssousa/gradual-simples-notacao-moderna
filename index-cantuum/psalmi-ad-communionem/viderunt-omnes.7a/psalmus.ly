@@ -10,7 +10,7 @@
 psalmChant = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioVII #'()
+  \S \chantInchoatioVII #'()
   \chantTenorVII
   \chantMediatioPrimusVII #'()
   \chantMediatioSecundusVII #'((syneresis . partial))

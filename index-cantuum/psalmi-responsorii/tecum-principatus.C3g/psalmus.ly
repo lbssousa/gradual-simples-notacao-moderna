@@ -8,18 +8,18 @@
 \include "../../../modules/lilypond/lyrics.ily"
 
 chantResponsorium = \relative c' {
-  \C f f f f g a g \CC f d \C f g g f
+  \C f f f g a g f d f g \CC g f
   \finalis
 }
 
 lyricsResponsorium = \lyricmode {
   \set stanza = \Responsorium
-  Co -- mo~o~or -- va -- lho,~an -- tes da~au -- ro -- ra, __ eu te ge -- rei.
+  Co -- mo~o~or -- va -- lho,~an -- tes da~au -- ro -- ra,~eu te ge -- rei. __
 }
 
 psalmOddVersesChant = {
   \PsalmSignature
-  \chantTenorC
+  \S \chantTenorC
   \chantMediatioC #'((syneresis . partial))
   \divisioMaxima
   \chantTenorC
@@ -30,7 +30,7 @@ psalmOddVersesChant = {
 psalmEvenVersesChant = {
   \PsalmSignature
   \key d \minor
-  \chantInchoatioCThree #'((epenthesis . partial))
+  \S \chantInchoatioCThree #'((epenthesis . partial))
   \chantTenorPrimusCThree
   \chantMediatioCThree #'((syneresis . partial))
   \divisioMaxima
@@ -41,7 +41,7 @@ psalmEvenVersesChant = {
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \Tenor \VSup "3" "Tu és príncipe desde o dia em que nas" -- \MelismaOff ces -- te; \MelismaOn
+  \VSup "3" \Tenor "Tu és príncipe desde o dia em que nas" -- \MelismaOff ces -- te; \MelismaOn
   \Tenor "na glória e esplendor da santi" -- da -- de. __
 }
 
@@ -54,7 +54,7 @@ psalmVerseII = \lyricmode {
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
   \AltLyrics
-  \Tenor \VSup "2ab" "O Senhor estenderá desde Si" -- ão __
+  \VSup "2ab" \Tenor "O Senhor estenderá desde Si" -- ão __
   \Tenor "vosso cetro de poder, pois Ele" diz: __ _
 }
 
@@ -67,7 +67,7 @@ psalmVerseIV = \lyricmode {
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \Tenor \VSup "4a" "Jurou o Se" -- nhor __
+  \VSup "4a" \Tenor "Jurou o Se" -- nhor __
   \Tenor "e manterá sua pa" -- la -- vra: __
 }
 
@@ -80,7 +80,7 @@ psalmVerseVI = \lyricmode {
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
   \AltLyrics
-  \Tenor \VSup "5" "À vossa destra está o Senhor, Ele vos" diz: __
+  \VSup "5" \Tenor "À vossa destra está o Senhor, Ele vos" diz: __
   \Tenor "“No dia da ira esmagarás os reis da"
   ter -- ra!” __
 }
@@ -130,7 +130,7 @@ psalmVerseVIII = \lyricmode {
       \psalmEvenVersesChant
       \Spacer 1
       \chantResponsorium
-      \Spacer 13
+      \Spacer 20 %17
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {

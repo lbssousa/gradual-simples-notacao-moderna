@@ -10,7 +10,7 @@
 psalmChantA = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioII
+  \S \chantInchoatioII
   \chantTenorII
   \chantMediatioII #'((syneresis . partial))
   \divisioMaxima
@@ -23,7 +23,7 @@ psalmChantA = {
 psalmChantB = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioII
+  \S \chantInchoatioII
   \chantTenorII
   \chantFlexaII #'((syneresis . total))
   \divisioMinima
@@ -33,13 +33,13 @@ psalmChantB = {
   \chantTenorII
   \chantTerminatioIID #'((syneresis . partial))
   \finalis
-  \Spacer 13
+  \Spacer 16
 }
 
 psalmChantC = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioII
+  \S \chantInchoatioII
   \chantTenorII
   \chantMediatioII #'((syneresis . partial))
   \divisioMaxima
