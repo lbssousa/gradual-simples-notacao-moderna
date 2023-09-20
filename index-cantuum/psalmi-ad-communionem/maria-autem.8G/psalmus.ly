@@ -10,7 +10,7 @@
 psalmChantA = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantMediatioVIII #'((syneresis . partial)
                         (epenthesis . partial))
@@ -18,13 +18,13 @@ psalmChantA = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
-  \Spacer 25
+  \Spacer 19
 }
 
 psalmChantB = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantFlexaVIII #'((syneresis . total))
   \chantTenorVIII
@@ -40,7 +40,7 @@ psalmChantB = {
 psalmChantC = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantMediatioVIII #'()
   \divisioMaxima
@@ -140,7 +140,7 @@ psalmVerseXI = \lyricmode {
   \set stanza = "11."
   \VSup "72" Com re --
   \Tenor "to coração apascen" --
-  \MelismaOff tou -- -os \MelismaOn
+  \MelismaOff tou- -- os \MelismaOn
   \Tenor "e com mão habilidosa os" con -- du -- ziu. __
 }
 

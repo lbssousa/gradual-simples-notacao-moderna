@@ -10,7 +10,7 @@
 psalmChant = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioIV #'()
+  \S \chantInchoatioIV #'()
   \chantTenorIV
   \chantMediatioIV #'((syneresis . partial))
   \divisioMaxima
