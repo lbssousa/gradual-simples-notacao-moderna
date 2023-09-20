@@ -9,14 +9,14 @@
 
 psalmChant = {
   \PsalmSignature
-  \chantInchoatioIVA #'((dieresis . partial))
+  \S \chantInchoatioIVA #'((dieresis . partial))
   \chantTenorIVA
   \chantMediatioIVA #'((syneresis . partial))
   \divisioMaxima
   \chantTenorIVA
   \chantTerminatioIVA #'((syneresis . partial))
   \finalis
-  \Spacer 18
+  \Spacer 20
 }
 
 psalmVerseI = \lyricmode {

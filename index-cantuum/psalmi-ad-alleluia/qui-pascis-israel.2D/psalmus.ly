@@ -10,7 +10,7 @@
 psalmChantA = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioII
+  \S \chantInchoatioII
   \chantTenorII
   \chantMediatioII #'()
   \divisioMaxima
@@ -23,7 +23,7 @@ psalmChantA = {
 psalmChantB = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioII
+  \S \chantInchoatioII
   \chantTenorII
   \chantFlexaII #'()
   \divisioMinima
@@ -48,7 +48,7 @@ psalmVerseII = \lyricmode {
   \VSup "15" Vol -- tai --
   \Tenor "-vos para nós, Deus do uni" -- ver -- so!
   \Tenor "Olhai dos altos céus e obser" -- vai. __
-  \Tenor "Visitai a vossa vinha e pro" -- te -- gei -- -a!
+  \Tenor "Visitai a vossa vinha e pro" -- te -- gei- -- a!
 }
 
 \GregorianTranscriptionLayout
