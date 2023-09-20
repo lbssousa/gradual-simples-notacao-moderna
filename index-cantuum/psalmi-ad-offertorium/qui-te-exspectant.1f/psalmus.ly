@@ -9,7 +9,7 @@
 
 psalmChant = {
   \PsalmSignature
-  \chantInchoatioI #'()
+  \S \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'((epenthesis . partial))
   \chantMediatioSecundusI #'((syneresis . partial))
@@ -17,7 +17,7 @@ psalmChant = {
   \chantTenorI
   \chantTerminatioIf #'((syneresis . partial))
   \finalis
-  \Spacer 11
+  \Spacer 10
 }
 
 psalmVerseI = \lyricmode {

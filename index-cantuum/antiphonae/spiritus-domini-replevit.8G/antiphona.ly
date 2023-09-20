@@ -10,7 +10,7 @@
 antiphonChant = \relative c' {
   \AntiphonSignature
   \key c \major
-  \Cp d \C d \CCC f a g \CL g a \C a g \EE f e
+  \Cp d \C d \once \stemDown \CCC f a g \CL g a \C a g \EE f e
   \divisioMinima
   \C d \EE f g \EE g d \CL f g \CL a g \break \C f \CC g a \C a
   \divisioMaior

@@ -10,7 +10,7 @@
 psalmChant = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioIV #'()
+  \S \chantInchoatioIV #'()
   \chantTenorIV
   \chantMediatioIV #'()
   \divisioMaxima
@@ -18,7 +18,7 @@ psalmChant = {
   \break
   \chantTerminatioIVE #'((syneresis . total))
   \finalis
-  \Spacer 22
+  \Spacer 21
 }
 
 psalmVerseI = \lyricmode {

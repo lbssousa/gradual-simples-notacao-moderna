@@ -67,6 +67,7 @@ chantSegmentGloriaPatriIVA = {
   \chantMediatioIVA #'()
   \divisioMaxima
   \chantInchoatioIVA #'()
+  \break
   \chantTenorIVA
   \chantMediatioIVA #'()
   \divisioMaxima
@@ -84,6 +85,7 @@ gloriaPatriChantIVc = {
   \chantSegmentGloriaPatriIVA
   \chantTerminatioIVc #'((syneresis . total))
   \finalis
+  \Spacer 5
 }
 
 verseSegmentGloriaPatriIVA = \lyricmode {
