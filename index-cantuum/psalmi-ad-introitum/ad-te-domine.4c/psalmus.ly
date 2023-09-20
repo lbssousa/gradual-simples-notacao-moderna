@@ -9,11 +9,11 @@
 
 psalmChantA = {
   \PsalmSignature
-  \chantInchoatioIVA #'()
+  \S \chantInchoatioIVA #'()
   \chantTenorIVA
   \chantMediatioIVA #'()
-  \divisioMaxima
-  \chantTenorIVA
+  \divisioMaxima \break
+  \S \chantTenorIVA
   \chantTerminatioIVc #'()
   \finalis
   \Spacer 13
@@ -21,7 +21,7 @@ psalmChantA = {
 
 psalmChantB = {
   \PsalmSignature
-  \chantInchoatioIVA #'()
+  \S \chantInchoatioIVA #'()
   \chantTenorIVA
   \chantFlexaIVA #'()
   \divisioMinima
@@ -32,12 +32,12 @@ psalmChantB = {
   \chantTenorIVA
   \chantTerminatioIVc #'()
   \finalis
-  \Spacer 11
+  \Spacer 10
 }
 
 psalmChantC = {
   \PsalmSignature
-  \chantInchoatioIVA #'()
+  \S \chantInchoatioIVA #'()
   \chantTenorIVA
   \chantMediatioIVA #'((syneresis . partial))
   \divisioMaxima
@@ -53,18 +53,18 @@ psalmVerseI = \lyricmode {
   \Tenor "unfem sobre mim os"
   i -- ni --
   \MelismaOff mi -- gos! \MelismaOn
-  \Tenor \VSup "3a" "Não se envergonha quem em vós põe a espe" --
+  \VSup "3a" \Tenor "Não se envergonha quem em vós põe a espe" --
   \MelismaOff ran -- ça. \MelismaOn
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
-  \VSup "4" Mos -- trai --
-  \Tenor "-me, ó Senhor, vos" --
+  \VSup "4" Mos -- trai- --
+  \Tenor "me, ó Senhor, vos" --
   sos ca --
   \MelismaOff mi -- nhos \MelismaOn
-  \Tenor "e fazei-me conhecer a vossa es" --
+  "" \Tenor "e fazei-me conhecer a vossa es" --
   \MelismaOff tra -- da! \MelismaOn
 }
 

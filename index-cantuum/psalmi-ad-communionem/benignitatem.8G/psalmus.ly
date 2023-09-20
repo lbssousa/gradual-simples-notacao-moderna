@@ -10,14 +10,14 @@
 psalmChant = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantMediatioVIII #'((syneresis . partial))
   \divisioMaxima
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
-  \Spacer 25
+  \Spacer 24
 }
 
 psalmVerseI = \lyricmode {

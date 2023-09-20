@@ -8,7 +8,7 @@
 
 psalmChant = {
   \PsalmSignature
-  \chantTenorEStar
+  \S \chantTenorEStar
   \chantMediatioEStar #'((syneresis . partial))
   \divisioMaxima
   \chantTenorEStar
@@ -20,7 +20,7 @@ psalmChant = {
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \Tenor \VSup "2" "Favorecestes, ó Senhor, a vossa"
+  \VSup "2" \Tenor "Favorecestes, ó Senhor, a vossa"
   \MelismaOff ter -- ra, \MelismaOn
   \Tenor "libertastes os cativos de" Ja -- có. __
 }
@@ -28,7 +28,7 @@ psalmVerseI = \lyricmode {
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
-  \Tenor \VSup "3" "Perdoastes o pecado ao vosso"
+  \VSup "3" \Tenor "Perdoastes o pecado ao vosso"
   \MelismaOff po -- vo, \MelismaOn
   \Tenor "encobristes toda a falta co" -- me --
   \MelismaOff ti -- _ da. \MelismaOn
@@ -36,7 +36,7 @@ psalmVerseII = \lyricmode {
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \Tenor \VSup "4" "Retirastes a ameaça que fi" --
+  \VSup "4" \Tenor "Retirastes a ameaça que fi" --
   \MelismaOff zes -- tes, \MelismaOn
   \Tenor "acalmastes o furor de vos" -- sa __
   \MelismaOff i -- _ ra. \MelismaOn
@@ -45,13 +45,13 @@ psalmVerseIII = \lyricmode {
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
-  \Tenor \VSup "5" "Renovai-nos, nosso Deus e Salva" -- dor, __
+  \VSup "5" \Tenor "Renovai-nos, nosso Deus e Salva" -- dor, __
   \Tenor "esquecei a vossa mágoa con" -- tra __ nós! __
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \Tenor \VSup "6" "Ficareis eternamente irri" --
+  \VSup "6" \Tenor "Ficareis eternamente irri" --
   \MelismaOff ta -- do? \MelismaOn
   \Tenor "Guardareis a vossa ira pe" -- los __
   \MelismaOff sé -- cu -- los? \MelismaOn
@@ -60,7 +60,7 @@ psalmVerseV = \lyricmode {
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \AltLyrics
-  \Tenor \VSup "7" "Não vireis restituir a nossa"
+  \VSup "7" \Tenor "Não vireis restituir a nossa"
   \MelismaOff vi -- da, \MelismaOn
   \Tenor "para que em vós se rejubile o vos" -- so __
   \MelismaOff po -- _ vo? \MelismaOn
@@ -68,10 +68,9 @@ psalmVerseVI = \lyricmode {
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
-  \Tenor \VSup "8" "Mostrai-nos, ó Senhor, vossa bon" --
+  \VSup "8" \Tenor "Mostrai-nos, ó Senhor, vossa bon" --
   \MelismaOff da -- de, \MelismaOn
   \Tenor "concedei-nos também vossa sal" -- va -- ção. __
-
 }
 
 \GregorianTranscriptionLayout
