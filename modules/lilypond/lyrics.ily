@@ -167,14 +167,11 @@ TerminatioIVc =
 
 VSup =
 #(define-music-function
-  (sup text)
-  (markup? markup?)
+  (sup)
+  (markup?)
   #{
     \lyricmode {
-      \markup \concat {
-        \super { \normal-text #sup }
-        #text
-      }
+      \markup \super { \normal-text #sup }
     }
   #})
 
@@ -223,3 +220,5 @@ AfterStanzaSpacing =
   #})
 
 AltLyrics = \override Lyrics.LyricText.font-shape = #'italic
+BoldLyrics = \override Lyrics.LyricText.font-series = #'bold
+NormalLyrics = \override Lyrics.LyricText.font-series = #'medium
