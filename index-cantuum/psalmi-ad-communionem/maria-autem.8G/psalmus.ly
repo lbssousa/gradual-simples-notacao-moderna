@@ -18,7 +18,7 @@ psalmChantA = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
-  \Spacer 19
+  \Spacer 12
 }
 
 psalmChantB = {
@@ -27,6 +27,7 @@ psalmChantB = {
   \S \chantInchoatioVIII
   \chantTenorVIII
   \chantFlexaVIII #'((syneresis . total))
+  \divisioMinima
   \chantTenorVIII
   \chantMediatioVIII #'((syneresis . total))
   \divisioMaxima
@@ -104,7 +105,7 @@ psalmVerseVII = \lyricmode {
   \set stanza = "7."
   \VSup "24" Fez cho --
   \Tenor "ver-lhes o maná e alimen" --
-  \MelismaOff tou -- _ -os, \MelismaOn
+  \MelismaOff tou- -- _ os, \MelismaOn
   \Tenor "e lhes deu para comer o" pão do céu. __
 }
 

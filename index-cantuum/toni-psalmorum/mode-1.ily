@@ -190,6 +190,6 @@ gloriaPatriVerseI = \lyricmode {
   \set stanza = "Opcional:"
   Gló -- ria ao
   \Tenor "Pai e ao Filho e ao Es" -- pí -- ri -- to San -- to,
-  Co -- mo \Tenor "era no princípio, a" -- go -- ra~e sem -- pre,
+  Co -- mo __ \Tenor "era no princípio, a" -- go -- ra~e sem -- pre,
   \Tenor "pelos séculos dos sécu" -- los, a -- mém! __
 }

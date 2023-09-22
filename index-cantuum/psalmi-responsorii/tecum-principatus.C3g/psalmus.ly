@@ -73,7 +73,7 @@ psalmVerseV = \lyricmode {
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  _ \VSup "4bc" “Tu \Tenor "és sacerdote eterna" -- men -- te,
+  \VSup "4bc" "" “Tu __ \Tenor "és sacerdote eterna" -- men -- te,
   \Tenor "segundo a ordem do rei Melqui" -- se -- dec!” __ _
 }
 
@@ -88,7 +88,7 @@ psalmVerseVII = \lyricmode {
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
   \AltLyrics
-  _ \VSup "7" “Be -- \Tenor "berás água corrente no ca" -- mi -- nho,
+  \VSup "7" "" “Be -- \Tenor "berás água corrente no ca" -- mi -- nho,
   \Tenor "por isso seguirás de fron" -- te~er -- gui -- da!” __
 }
 
@@ -130,7 +130,7 @@ psalmVerseVIII = \lyricmode {
       \psalmEvenVersesChant
       \Spacer 1
       \chantResponsorium
-      \Spacer 20 %17
+      \Spacer 19 %17
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {
