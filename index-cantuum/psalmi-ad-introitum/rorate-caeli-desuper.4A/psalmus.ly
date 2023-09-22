@@ -75,7 +75,7 @@ psalmVerseVI = \lyricmode {
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
-  \VSup "7ab" \markup { \concat { "D" \undertie "e u" "m" } } ex -- \Tenor "tremo do céu põe" -se~a cor -- rer, __
+  \VSup "7ab" De~um ex -- \Tenor "tremo do céu põe" -se~a cor -- rer, __
   \Tenor "e vai traçando o seu ras" -- tro lu -- mi --
   \MelismaOff no -- so. \MelismaOn
 }
@@ -83,7 +83,7 @@ psalmVerseVII = \lyricmode {
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
   \AltLyrics
-  \VSup "7ab" A -- té __
+  \VSup "7cd" A -- té __
   \Tenor "que possa chegar ao" ou -- tro~ex --
   \MelismaOff tre -- mo, \MelismaOn
   \Tenor "e nada pode fugir" ao seu ca -- lor. __
