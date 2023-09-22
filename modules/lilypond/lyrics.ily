@@ -1,3 +1,6 @@
+\version "2.24.1"
+
+\include "./alignment-functions/center-on-digit.ily"
 \include "./symbols.ily"
 
 markupOneSyllable =
@@ -171,6 +174,7 @@ VSup =
   (markup?)
   #{
     \lyricmode {
+      \once \override LyricText.X-offset = #center-on-digit
       \markup \super { \normal-text #sup }
     }
   #})
