@@ -134,6 +134,7 @@ Tenor =
   (tenor)
   (ly:music?)
   #{
+    \once \revert LyricText.X-offset
     \once \override LyricText.self-alignment-X = #LEFT
     #tenor
   #})

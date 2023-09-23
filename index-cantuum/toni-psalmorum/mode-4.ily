@@ -57,14 +57,12 @@ gloriaPatriChantIVE = {
   \chantMediatioIV #'()
   \divisioMaxima
   \chantInchoatioIV #'()
-  \break
   \chantTenorIV
   \chantMediatioIV #'()
   \divisioMaxima
   \chantTenorIV
   \chantTerminatioIVE #'((syneresis . total))
   \finalis
-  \Spacer 13
 }
 
 gloriaPatriVerseIVE = \lyricmode {

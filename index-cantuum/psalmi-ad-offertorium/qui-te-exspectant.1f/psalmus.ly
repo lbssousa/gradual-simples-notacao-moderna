@@ -12,12 +12,12 @@ psalmChant = {
   \S \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'((epenthesis . partial))
+  \break
   \chantMediatioSecundusI #'((syneresis . partial))
   \divisioMaxima
   \chantTenorI
   \chantTerminatioIf #'((syneresis . partial))
   \finalis
-  \Spacer 10
 }
 
 psalmVerseI = \lyricmode {
