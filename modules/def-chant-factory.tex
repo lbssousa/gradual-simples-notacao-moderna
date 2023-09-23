@@ -141,7 +141,7 @@
   }
 }
 
-\def\@Lily@Staff@Size{24}
+\def\@Lily@Staff@Size{20}
 
 \NewDocumentCommand \MakeChantAntiphon { s m O{} } {
   \def\@Antiphon@L{antiphona\IfBlankF{#3}{.#3}}
@@ -224,13 +224,7 @@
 }
 
 \NewDocumentCommand \MakeChantHymn { m m } {
-  \iftoggle{onecolumn}{
-    \GregorioImportR{index-cantuum/#1}{#2}{psalmus-v1}{psalmus-v1-pt}
-  }{
-    \begin{paracol}{2}
-      \GregorioImportLR{index-cantuum/#1}{#2}{psalmus-v1}{psalmus-v1-pt}
-    \end{paracol}
-  }
+  \lilypondfile[staffsize=\@Lily@Staff@Size]{index-cantuum/#1/#2/hymnus}
 }
 
 \newtoggle{biginitial}
