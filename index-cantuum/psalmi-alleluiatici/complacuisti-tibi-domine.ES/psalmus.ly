@@ -12,7 +12,6 @@ psalmChant = {
   \chantMediatioEStar #'((syneresis . partial))
   \divisioMaxima
   \chantTenorEStar
-  \break
   \chantTerminatioEStar #'((syneresis . partial)
                            (epenthesis . partial))
   \finalis

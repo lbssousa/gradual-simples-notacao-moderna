@@ -77,7 +77,6 @@ gloriaPatriChantVIIIG = {
   \chantSegmentGloriaPatriVIII
   \chantTerminatioVIIIG #'((syneresis . total))
   \finalis
-  \Spacer 12
 }
 
 gloriaPatriVerseVIII = \lyricmode {

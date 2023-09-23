@@ -20,7 +20,7 @@ psalmChant = {
   \S \chantTenorEOne
   \chantMediatioEOne #'((syneresis . partial))
   \divisioMaxima
-  \S \chantTenorEOne
+  \S \chantTenorEOne \break
   \chantTerminatioEOne #'((syneresis . partial))
   \finalis
 }
