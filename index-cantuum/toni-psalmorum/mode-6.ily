@@ -63,7 +63,7 @@ gloriaPatriChantVIF = {
   \chantTenorVI
   \chantTerminatioVIF #'((syneresis . total))
   \finalis
-  \Spacer 3
+
 }
 
 gloriaPatriVerseVIF = \lyricmode {
