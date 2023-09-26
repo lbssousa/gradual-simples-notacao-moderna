@@ -14,13 +14,13 @@ psalmChant = {
   \chantTenorVII
   \chantMediatioPrimusVII #'()
   \chantMediatioSecundusVII #'((syneresis . partial))
-  \divisioMaxima
+  \divisioMaxima \break
   \chantTenorVII
   \chantTerminatioPrimusVII #'()
   \chantTerminatioSecundusVIIa #'((syneresis . partial)
                                   (epenthesis . partial))
   \finalis
-  \Spacer 15
+
 }
 
 psalmVerseI = \lyricmode {

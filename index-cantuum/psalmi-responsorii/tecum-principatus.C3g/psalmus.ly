@@ -2,6 +2,7 @@
 
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-C.ily"
+\include "../../../modules/lilypond/colors.ily"
 \include "../../../modules/lilypond/neums.ily"
 \include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
@@ -24,7 +25,7 @@ psalmOddVersesChant = {
   \divisioMaxima
   \chantTenorC
   \chantTerminatioCTwog #'((syneresis . partial))
-  \finalis
+  \finalis \break
 }
 
 psalmEvenVersesChant = {
@@ -94,19 +95,22 @@ psalmVerseVIII = \lyricmode {
 
 \GregorianTranscriptionLayout
 
-\header {
-  meter = "C 3 g"
-}
-
 \score {
   \header {
-    piece = "Versos ímpares"
+    piece = "C 3 g"
   }
+
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
+      \section
+      \sectionLabel \markup {
+        \with-color #gregorio-color {
+          \italic "Versos ímpares"
+        }
+      }
       \psalmOddVersesChant
-      \Spacer 1
       \chantResponsorium
+      \fine
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {
@@ -122,15 +126,17 @@ psalmVerseVIII = \lyricmode {
 \markup \vspace #1
 
 \score {
-  \header {
-    piece = "Versos pares"
-  }
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
+      \section
+      \sectionLabel \markup {
+        \with-color #gregorio-color {
+          \italic "Versos pares"
+        }
+      }
       \psalmEvenVersesChant
-      \Spacer 1
       \chantResponsorium
-      \Spacer 19 %17
+      \fine
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {

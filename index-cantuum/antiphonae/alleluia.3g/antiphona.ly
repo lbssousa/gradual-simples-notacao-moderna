@@ -13,7 +13,6 @@ antiphonChant = \relative c'' {
   a g \CC g a \CC g f
   g \CC g f \C e e
   \finalis
-  \Spacer 8
 }
 
 antiphonLyrics = \lyricmode {
