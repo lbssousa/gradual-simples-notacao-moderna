@@ -17,7 +17,7 @@ psalmChantA = {
   \chantTenorII
   \chantTerminatioIID #'((syneresis . total))
   \finalis
-  \Spacer 27
+
 }
 
 psalmChantB = {
@@ -33,7 +33,7 @@ psalmChantB = {
   \chantTenorII
   \chantTerminatioIID #'((syneresis . partial))
   \finalis
-  \Spacer 16
+
 }
 
 psalmChantC = {
@@ -46,7 +46,7 @@ psalmChantC = {
   \chantTenorII
   \chantTerminatioIID #'((syneresis . partial))
   \finalis
-  \Spacer 25
+
 }
 
 psalmVerseI = \lyricmode {
@@ -122,7 +122,7 @@ psalmVerseVII = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #2
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -134,7 +134,7 @@ psalmVerseVII = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #2
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -149,7 +149,7 @@ psalmVerseVII = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #4
 
 \score {
   \new GregorianTranscriptionStaff <<

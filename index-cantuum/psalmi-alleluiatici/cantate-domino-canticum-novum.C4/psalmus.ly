@@ -2,6 +2,7 @@
 
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-C.ily"
+\include "../../../modules/lilypond/colors.ily"
 \include "../../../modules/lilypond/neums.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
@@ -82,17 +83,33 @@ psalmVerseVI = \lyricmode {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
       \section
-      \sectionLabel \markup { \italic "Cantor" }
+      \sectionLabel \markup {
+        \with-color #gregorio-color {
+          \italic "Cantor"
+        }
+      }
       \psalmChant
       \section
-      \sectionLabel \markup { \italic "Grupo ou todos" }
+      \sectionLabel \markup {
+        \with-color #gregorio-color {
+          \italic "Grupo ou todos"
+        }
+      }
       \chantAlleluiaPrimusCFour
       \break
       \section
-      \sectionLabel \markup { \italic "Cantor" }
+      \sectionLabel \markup {
+        \with-color #gregorio-color {
+          \italic "Cantor"
+        }
+      }
       \psalmChant
       \section
-      \sectionLabel \markup { \italic "Todos" }
+      \sectionLabel \markup {
+        \with-color #gregorio-color {
+          \italic "Todos"
+        }
+      }
       \chantAlleluiaSecundusCFour
       \fine
     }

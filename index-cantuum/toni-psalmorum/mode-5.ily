@@ -56,7 +56,7 @@ gloriaPatriChantVa = {
   \chantInchoatioV
   \chantTenorV
   \chantMediatioV #'()
-  \divisioMaxima \break
+  \divisioMaxima
   \chantSicutInchoatioV
   \chantTenorV
   \chantMediatioV #'()

@@ -18,7 +18,7 @@ psalmChant = {
   \chantTenorIII
   \chantTerminatioIIIg #'()
   \finalis
-  \Spacer 22
+
 }
 
 psalmVerseI = \lyricmode {
