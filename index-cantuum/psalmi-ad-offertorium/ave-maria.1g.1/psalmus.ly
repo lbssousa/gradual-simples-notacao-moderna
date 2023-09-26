@@ -9,15 +9,17 @@
 
 psalmChant = {
   \PsalmSignature
+  \key d \minor
   \S \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'()
+  \break
   \chantMediatioSecundusI #'((syneresis . partial))
   \divisioMaxima
   \chantTenorI
   \chantTerminatioIg #'((syneresis . partial))
   \finalis
-  \Spacer 12
+
 }
 
 psalmVerseI = \lyricmode {

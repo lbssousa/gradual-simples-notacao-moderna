@@ -15,7 +15,6 @@ psalmChant = {
   \chantTenorC
   \chantTerminatioCOne #'((syneresis . partial))
   \finalis
-  \Spacer 1
 }
 
 psalmVerseI = \lyricmode {
@@ -94,7 +93,6 @@ psalmVerseVIII = \lyricmode {
       \psalmChant
       \chantAlleluiaCOne
       \finalis
-      \Spacer 22
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {

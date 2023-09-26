@@ -22,7 +22,7 @@ antiphonChant = \relative c' {
   \C_C d c
   \QC e f \Ldim g \CC f e \C d d
   \finalis
-  \Spacer 20
+
 }
 
 antiphonLyrics = \lyricmode {

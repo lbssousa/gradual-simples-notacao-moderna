@@ -12,11 +12,11 @@ psalmChant = {
   \S \chantInchoatioIVA #'((dieresis . partial))
   \chantTenorIVA
   \chantMediatioIVA #'((syneresis . partial))
-  \divisioMaxima
+  \divisioMaxima \break
   \chantTenorIVA
   \chantTerminatioIVA #'((syneresis . partial))
   \finalis
-  \Spacer 20
+
 }
 
 psalmVerseI = \lyricmode {

@@ -17,7 +17,7 @@ psalmChantA = {
   \chantTenorII
   \chantTerminatioIID #'()
   \finalis
-  \Spacer 26
+
 }
 
 psalmChantB = {
@@ -33,7 +33,7 @@ psalmChantB = {
   \chantTenorII
   \chantTerminatioIID #'()
   \finalis
-  \Spacer 17
+
 }
 
 psalmVerseI = \lyricmode {

@@ -25,10 +25,10 @@ psalmChant = {
   \chantMediatioD #'((syneresis . partial))
   \divisioMaxima
   \S \chantTenorD
-  \break
+
   \chantTerminatioDOnee #'((syneresis . partial))
   \finalis
-  \Spacer 1
+
 }
 
 psalmVerseI = \lyricmode {

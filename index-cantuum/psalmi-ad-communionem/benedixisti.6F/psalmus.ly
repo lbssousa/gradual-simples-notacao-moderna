@@ -18,7 +18,7 @@ psalmChant = {
   \chantTenorVI
   \chantTerminatioVIF #'((syneresis . partial))
   \finalis
-  \Spacer 25
+
 }
 
 psalmVerseI = \lyricmode {
