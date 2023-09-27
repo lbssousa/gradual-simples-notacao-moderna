@@ -20,9 +20,8 @@ lyricsResponsorium = \lyricmode {
 psalmChant = {
   \PsalmSignature
   \S \chantTenorD
-  \break
   \chantMediatioD #'((syneresis . partial))
-  \divisioMaxima
+  \divisioMaxima \break
   \S \chantTenorD
   \chantTerminatioDOneb #'((syneresis . partial))
   \finalis
@@ -117,7 +116,6 @@ psalmVerseX = \lyricmode {
     \new GregorianTranscriptionVoice = "psalm" {
       \psalmChant
       \chantResponsorium
-      \Spacer 12
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {

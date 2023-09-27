@@ -128,10 +128,9 @@ psalmVerseXIII = \lyricmode {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
       \psalmChant
-      \Spacer 1
+      \break
       \chantAlleluiaCOne
       \finalis
-      \Spacer 8
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {

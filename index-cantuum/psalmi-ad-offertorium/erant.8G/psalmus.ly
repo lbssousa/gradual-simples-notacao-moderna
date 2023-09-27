@@ -17,7 +17,7 @@ psalmChantA = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . total))
   \finalis
-  \Spacer 25
+
 }
 
 psalmChantB = {
@@ -26,15 +26,14 @@ psalmChantB = {
   \S \chantInchoatioVIII
   \chantTenorVIII
   \chantFlexaVIII #'((epenthesis . partial))
-  \divisioMinima
+  \divisioMinima %\break
   \S \chantTenorVIII
   \chantMediatioVIII #'()
   \divisioMaxima
-  \break
   \S \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
-  \Spacer 14
+
 }
 
 psalmChantC = {
@@ -47,7 +46,7 @@ psalmChantC = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
-  \Spacer 25
+
 }
 
 psalmVerseI = \lyricmode {
@@ -106,7 +105,7 @@ psalmVerseV = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #2
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -119,7 +118,7 @@ psalmVerseV = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #2
 
 \score {
   \new GregorianTranscriptionStaff <<

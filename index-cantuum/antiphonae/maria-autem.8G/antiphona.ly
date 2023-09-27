@@ -13,10 +13,10 @@ antiphonChant = \relative c'' {
   \C g b a \EE c b \Pq g a
   \divisioMinima
   \C f a c d b c a \Ldim a \C g \E a \Cp a
-  \divisioMaior \break
+  \divisioMaior
   \Ldim a \C g e f \C_C g a \C a g g
   \finalis
-  \Spacer 17
+
 }
 
 antiphonLyrics = \lyricmode {
