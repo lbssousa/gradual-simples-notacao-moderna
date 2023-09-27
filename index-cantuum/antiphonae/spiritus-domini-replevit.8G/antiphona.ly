@@ -12,11 +12,11 @@ antiphonChant = \relative c' {
   \key c \major
   \Cp d \C d \once \stemDown \CCC f a g \CL g a \C a g \EE f e
   \divisioMinima
-  \C d \EE f g \EE g d \CL f g \CL a g \break \C f \CC g a \C a
+  \C d \EE f g \EE g d \CL f g \CL a g \C f \CC g a \C a
   \divisioMaior
   \CCC g f d \CC e f \CL g a \C g
   \finalis
-  \Spacer 15
+
 }
 
 antiphonLyrics = \lyricmode {
