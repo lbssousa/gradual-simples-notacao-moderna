@@ -10,24 +10,24 @@
 psalmChantA = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioIII #'()
+  \S \chantInchoatioIII #'()
   \chantTenorIII
   \chantFlexaIII #'((syneresis . total))
   \divisioMinima
-  \chantTenorIII
+  \S \chantTenorIII
   \chantMediatioPrimusIII #'()
   \chantMediatioSecundusIII #'()
   \divisioMaxima
   \chantTenorIII
   \chantTerminatioIIIg #'()
   \finalis
-  \Spacer 14
+
 }
 
 psalmChantB = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioIII #'()
+  \S \chantInchoatioIII #'()
   \chantTenorIII
   \chantMediatioPrimusIII #'()
   \chantMediatioSecundusIII #'()
@@ -35,14 +35,14 @@ psalmChantB = {
   \chantTenorIII
   \chantTerminatioIIIg #'()
   \finalis
-  \Spacer 25
+
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "1b" Tri -- bu --
   \Tenor "tai-lhe a glória e o po" -- der! __
-  \Tenor \VSup "2" "Dai-lhe a glória devida" ao seu no -- me,
+  \VSup "2" \Tenor "Dai-lhe a glória devida" ao seu no -- me,
   \Tenor "adorai-o com santo" or -- na -- men -- to!
 }
 
@@ -65,7 +65,7 @@ psalmVerseII = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #3
 
 \score {
   \new GregorianTranscriptionStaff <<

@@ -2,6 +2,7 @@
 
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-E.ily"
+\include "../../../modules/lilypond/colors.ily"
 \include "../../../modules/lilypond/neums.ily"
 \include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
@@ -19,7 +20,7 @@ lyricsResponsorium = \lyricmode {
 
 psalmOddVersesChant = {
   \PsalmSignature
-  \chantTenorEOne
+  \S \chantTenorEOne
   \chantMediatioEOne #'((syneresis . partial))
   \divisioMaxima
   \chantTenorEOne
@@ -29,7 +30,7 @@ psalmOddVersesChant = {
 
 psalmEvenVersesChant = {
   \PsalmSignature
-  \chantInchoatioEFive #'((epenthesis . partial))
+  \S \chantInchoatioEFive #'((epenthesis . partial))
   \chantTenorEFive
   \chantMediatioEFive #'((syneresis . partial))
   \divisioMaxima
@@ -40,13 +41,13 @@ psalmEvenVersesChant = {
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \Tenor \VSup "11" "Os reis de toda a" ter -- ra
+  \VSup "11" \Tenor "Os reis de toda a" ter -- ra
   \Tenor "hão de a" -- do -- rá -- -lo.
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  _ \VSup "1" Dai __ \Tenor "ao Rei vossos poderes, Senhor" Deus, __ _
+  \VSup "1" "" Dai __ \Tenor "ao Rei vossos poderes, Senhor" Deus, __ _
   \Tenor "vossa justiça ao descendente da re" -- a --
   \MelismaOff le -- za! \MelismaOn
 }
@@ -54,21 +55,21 @@ psalmVerseII = \lyricmode {
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
   \AltLyrics
-  \Tenor \VSup "2" "Com justiça ele governe o vosso" po -- vo,
+  \VSup "2" \Tenor "Com justiça ele governe o vosso" po -- vo,
   \Tenor "com equidade ele julgue os vos" -- sos po -- bres.
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
-  _ \VSup "3" Das __ \Tenor "montanhas venha a paz a todo o" po -- vo,
+  \VSup "3" "" Das __ \Tenor "montanhas venha a paz a todo o" po -- vo,
   \Tenor "e desça das colinas a" jus --
   \MelismaOff ti -- ça! \MelismaOn
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \Tenor \VSup "4" "Este Rei defenderá os que são pobres, ’ os filhos dos humildes salva" -- rá, __ _
+  \VSup "4" \Tenor "Este Rei defenderá os que são pobres, ’ os filhos dos humildes salva" -- rá, __ _
   \Tenor "e por terra abaterá os o" -- pres -- so -- res!
 }
 
@@ -81,7 +82,7 @@ psalmVerseVI = \lyricmode {
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
   \AltLyrics
-  \Tenor \VSup "12" "Libertará o indigente que su" -- pli -- ca,
+  \VSup "12" \Tenor "Libertará o indigente que su" -- pli -- ca,
   \Tenor "e o pobre ao qual ninguém quer a" -- ju -- dar. __ _
 }
 
@@ -94,31 +95,34 @@ psalmVerseVIII = \lyricmode {
 
 psalmVerseIX = \lyricmode {
   \set stanza = "9."
-  \Tenor \VSup "17ab" "Seja bendito o seu nome para" sem -- pre!
+  \VSup "17ab" \Tenor "Seja bendito o seu nome para" sem -- pre!
   \Tenor "E que dure como o sol sua" me -- mó -- ria!
 }
 
 psalmVerseX = \lyricmode {
   \set stanza = "10."
-  _ \VSup "17cd" To -- \Tenor "dos os povos serão nele abenço" -- a -- dos,
+  \VSup "17cd" "" To -- \Tenor "dos os povos serão nele abenço" -- a -- dos,
   \Tenor "todas as gentes cantarão o seu" lou -- vor! __
 }
 
 \GregorianTranscriptionLayout
 
-\header {
-  meter = "E 5"
-}
-
 \score {
   \header {
-    piece = "Versos ímpares"
+    piece = "E 5"
   }
+
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
+      \section
+      \sectionLabel \markup {
+        \with-color #gregorio-color {
+          \italic "Versos ímpares"
+        }
+      }
       \psalmOddVersesChant
       \chantResponsorium
-      \Spacer 22
+      \fine
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {
@@ -135,14 +139,17 @@ psalmVerseX = \lyricmode {
 \markup \vspace #1
 
 \score {
-  \header {
-    piece = "Versos pares"
-  }
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
+      \section
+      \sectionLabel \markup {
+        \with-color #gregorio-color {
+          \italic "Versos pares"
+        }
+      }
       \psalmEvenVersesChant
       \chantResponsorium
-      \Spacer 20
+      \fine
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {

@@ -14,11 +14,11 @@ antiphonChant = \relative c'' {
   \divisioMinima
   \C b c a g \EE a g \C f
   \divisioMaior
-  \E g \EE f a \C c c \CC b g
-  \divisioMinima \break
+  \E g \EE f a \break \C c c \CC b g
+  \divisioMinima
   \C b c a b a g \Cp g
   \finalis
-  \Spacer 18
+
 }
 
 antiphonLyrics = \lyricmode {

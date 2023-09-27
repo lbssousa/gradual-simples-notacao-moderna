@@ -2,6 +2,7 @@
 
 \include "gregorian.ly"
 \include "../../toni-psalmorum/mode-C.ily"
+\include "../../../modules/lilypond/colors.ily"
 \include "../../../modules/lilypond/neums.ily"
 \include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
@@ -9,7 +10,7 @@
 
 psalmChantA = {
   \PsalmSignature
-  \chantTenorC
+  \S \chantTenorC
   \chantTerminatioCOne #'((syneresis . partial))
   \finalis
 }
@@ -24,7 +25,7 @@ psalmChantB = {
 
 psalmVerseIa = \lyricmode {
   \set stanza = "1a."
-  \Tenor \VSup "1" "Filhos de Deus, tributai ao" Se -- nhor.
+  \VSup "1" \Tenor "Filhos de Deus, tributai ao" Se -- nhor.
 }
 
 psalmVerseIb = \lyricmode {
@@ -35,7 +36,7 @@ psalmVerseIb = \lyricmode {
 psalmVerseII = \lyricmode {
   \set stanza = "2a."
   \AltLyrics
-  \Tenor \VSup "2" "Dai-lhe a glória devida ao" seu
+  \VSup "2" \Tenor "Dai-lhe a glória devida ao" seu
   \MelismaOff no -- me. \MelismaOn
   "" _ _ _
   \set stanza = "2b."
@@ -45,7 +46,7 @@ psalmVerseII = \lyricmode {
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3a."
-  \Tenor \VSup "3" "Eis a voz do Senhor so" -- bre~as
+  \VSup "3" \Tenor "Eis a voz do Senhor so" -- bre~as
   \MelismaOff á -- guas. \MelismaOn
   "" _ _ _
   \set stanza = "3b."
@@ -56,7 +57,7 @@ psalmVerseIII = \lyricmode {
 psalmVerseIV = \lyricmode {
   \set stanza = "4a."
   \AltLyrics
-  \Tenor \VSup "4" "Eis a voz do Senhor com poder! ’ Eis a voz do Senhor ma" -- jes --
+  \VSup "4" \Tenor "Eis a voz do Senhor com poder! ’ Eis a voz do Senhor ma" -- jes --
   \MelismaOff to -- sa. \MelismaOn
   "" _ _ _
   \set stanza = "4b."
@@ -66,7 +67,7 @@ psalmVerseIV = \lyricmode {
 
 psalmVerseV = \lyricmode {
   \set stanza = "5a."
-  \Tenor \VSup "5" "Eis que a voz do Senhor que" -- bra~os
+  \VSup "5" \Tenor "Eis que a voz do Senhor que" -- bra~os
   \MelismaOff ce -- dros. \MelismaOn
   "" _ _ _
   \set stanza = "5b."
@@ -77,7 +78,7 @@ psalmVerseV = \lyricmode {
 psalmVerseVI = \lyricmode {
   \set stanza = "6a."
   \AltLyrics
-  \Tenor \VSup "10" "É o Senhor que domina os" di --
+  \VSup "10" \Tenor "É o Senhor que domina os" di --
   \MelismaOff lú -- vios. \MelismaOn
   "" _ _ _
   \set stanza = "6b."
@@ -88,7 +89,7 @@ psalmVerseVI = \lyricmode {
 psalmVerseVII = \lyricmode {
   \set stanza = "7a."
   \AltLyrics
-  \Tenor \VSup "11" "Que o Senhor fortaleça o" seu
+  \VSup "11" \Tenor "Que o Senhor fortaleça o" seu
   \MelismaOff po -- vo. \MelismaOn
   "" _ _ _
   \set stanza = "7b."
@@ -105,17 +106,33 @@ psalmVerseVII = \lyricmode {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
       \section
-      \sectionLabel \markup { \italic "Cantor" }
+      \sectionLabel \markup {
+        \with-color #gregorio-color {
+          \italic "Cantor"
+        }
+      }
       \psalmChantA
       \section
-      \sectionLabel \markup { \italic "Grupo ou todos" }
-      \chantAlleluiaPrimusCFour
-      \break
+      \sectionLabel \markup {
+        \with-color #gregorio-color {
+          \italic "Grupo ou todos"
+        }
+      }
+      \chantAlleluiaPrimusCFour \break
+
       \section
-      \sectionLabel \markup { \italic "Cantor" }
+      \sectionLabel \markup {
+        \with-color #gregorio-color {
+          \italic "Cantor"
+        }
+      }
       \psalmChantB
       \section
-      \sectionLabel \markup { \italic "Todos" }
+      \sectionLabel \markup {
+        \with-color #gregorio-color {
+          \italic "Todos"
+        }
+      }
       \chantAlleluiaSecundusCFour
       \fine
     }
