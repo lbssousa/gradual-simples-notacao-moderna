@@ -10,14 +10,14 @@
 psalmChant = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantMediatioVIII #'((syneresis . partial))
   \divisioMaxima
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
-  \Spacer 25
+
 }
 
 psalmVerseI = \lyricmode {
@@ -73,7 +73,7 @@ psalmVerseVI = \lyricmode {
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
-  \VSup "7ab" \markup { \concat { "D" \undertie "e u" "m" } } ex -- \Tenor "tremo do céu põe-se a cor" -- rer, __
+  \VSup "7ab" De~um ex -- \Tenor "tremo do céu põe-se a cor" -- rer, __
   \Tenor "e vai traçando o seu rastro" lu -- mi --
   \MelismaOff no -- so. \MelismaOn
 }
@@ -105,6 +105,8 @@ psalmVerseVIII = \lyricmode {
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
   >>
 }
+
+\markup \vspace #2
 
 \score {
   \new GregorianTranscriptionStaff <<

@@ -10,7 +10,7 @@
 psalmChantA = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantFlexaVIII #'((syneresis . partial))
   \divisioMinima
@@ -20,26 +20,26 @@ psalmChantA = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'()
   \finalis
-  \Spacer 22 %21
+
 }
 
 psalmChantB = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantMediatioVIII #'()
   \divisioMaxima
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . total))
   \finalis
-  \Spacer 25
+
 }
 
 psalmChantC = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantFlexaVIII #'()
   \divisioMinima
@@ -49,20 +49,20 @@ psalmChantC = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'()
   \finalis
-  \Spacer 10
+
 }
 
 psalmChantD = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantMediatioVIII #'((syneresis . partial))
   \divisioMaxima
   \chantTenorVIII
   \chantTerminatioVIIIG #'()
   \finalis
-  \Spacer 24 %23
+
 }
 
 psalmVerseI = \lyricmode {
@@ -194,8 +194,6 @@ psalmVerseIX = \lyricmode {
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIX
   >>
 }
-
-\markup \vspace #1
 
 \score {
   \new GregorianTranscriptionStaff <<
