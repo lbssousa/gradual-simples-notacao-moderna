@@ -9,11 +9,11 @@
 
 psalmChant = {
   \PsalmSignature
-  \chantTenorEOne
+  \S \chantTenorEOne
   \chantMediatioEOne #'((syneresis . partial))
   \divisioMaxima
   \break
-  \chantTenorEOne
+  \S \chantTenorEOne
   \chantTerminatioETwod #'((syneresis . partial)
                            (epenthesis . partial))
   \finalis
@@ -21,82 +21,82 @@ psalmChant = {
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \Tenor \VSup"1,15" "Como és bela, minha amada, como és"
+  \VSup "1,15" \Tenor "Como és bela, minha amada, como és"
   be -- la,
-  \Tenor "com teus olhos de"
+  "" \Tenor "com teus olhos de"
   \MelismaOff pom -- _ ba! \MelismaOn
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
-  \Tenor \VSup "2,11" "O inverno pas" -- sou, __ _
-  \Tenor "as chuvas cessaram e já se"
+  \VSup "2,11" \Tenor "O inverno pas" -- sou, __ _
+  "" \Tenor "as chuvas cessaram e já se"
   \MelismaOff fo -- _ ram. \MelismaOn
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \Tenor \VSup "12ab" "Apareceram as flores no"
+  \VSup "12ab" \Tenor "Apareceram as flores no"
   cam -- po,
-  \Tenor "chegou o tempo da"
+  "" \Tenor "chegou o tempo da"
   \MelismaOff po -- _ da. \MelismaOn
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
-  \Tenor \VSup "12cd" "A rola já faz ouvir seu canto em nossa"
+  \VSup "12cd" \Tenor "A rola já faz ouvir seu canto em nossa"
   ter -- ra.
-  \Tenor \VSup "13b" "Soltam perfume as vinhas em" flor. __
+  \VSup "13b" \Tenor "Soltam perfume as vinhas em" flor. __
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \Tenor \VSup "14def" "A tua voz ressoe aos meus ou" --
+  \VSup "14def" \Tenor "A tua voz ressoe aos meus ou" --
   vi -- dos,
-  \Tenor "pois a tua voz é suave e o teu rosto é"
+  "" \Tenor "pois a tua voz é suave e o teu rosto é"
   \MelismaOff lin -- _ do!” \MelismaOn
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \AltLyrics
-  \Tenor \VSup "4,11ab" "Teus lábios, minha esposa, são favo que destila o" mel; __ _
-  \Tenor "sob a tua língua há mel e"
+  \VSup "4,11ab" \Tenor "Teus lábios, minha esposa, são favo que destila o" mel; __ _
+  "" \Tenor "sob a tua língua há mel e"
   \MelismaOff lei -- _ te. \MelismaOn
 }
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
-  \Tenor \VSup "4,11cd" "O perfume de tuas"
+  \VSup "4,11cd" \Tenor "O perfume de tuas"
   ves -- tes
-  \Tenor "é como o perfume do"
+  "" \Tenor "é como o perfume do"
   \MelismaOff Lí -- ba -- no. \MelismaOn
 }
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
   \AltLyrics
-  \Tenor \VSup "12" "És um jardim fechado, minha irmã e es" --
+  \VSup "12" \Tenor "És um jardim fechado, minha irmã e es" --
   po -- sa,
-  \Tenor "jardim fechado e fonte la" --
+  "" \Tenor "jardim fechado e fonte la" --
   \MelismaOff cra -- _ da. \MelismaOn
 }
 
 psalmVerseIX = \lyricmode {
   \set stanza = "9."
-  \Tenor \VSup "5,2cd" "“Abre-me, ó minha irmã e a" --
+  \VSup "5,2cd" \Tenor "“Abre-me, ó minha irmã e a" --
   ma -- da,
-  \Tenor "minha pomba, minha imacu" --
+  "" \Tenor "minha pomba, minha imacu" --
   \MelismaOff la -- _ da”. \MelismaOn
 }
 
 psalmVerseX = \lyricmode {
   \set stanza = "10."
   \AltLyrics
-  \Tenor \VSup "6,4" "Tu és bela, minha amada, como Tersa, formosa como Jerusa" -- lém, __ _
-  \Tenor "terrível como um exército em ordem de ba" --
+  \VSup "6,4" \Tenor "Tu és bela, minha amada, como Tersa, formosa como Jerusa" -- lém, __ _
+  "" \Tenor "terrível como um exército em ordem de ba" --
   \MelismaOff ta -- _ lha. \MelismaOn
 }
 
@@ -113,10 +113,8 @@ psalmVerseX = \lyricmode {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
       \psalmChant
-      \Spacer 1
       \chantAlleluiaETwod
       \finalis
-      \Spacer 22
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {

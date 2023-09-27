@@ -18,19 +18,18 @@ antiphonChant = \relative c' {
   \divisioMaior
   c \E d \EE f g \E f \CC f e \C_C d c \E e \CC f e \E d \C d d
   \finalis
-  \Spacer 22
 }
 
 antiphonLyrics = \lyricmode {
   Be -- á -- ta \MelismaOff Ma -- ter \MelismaOn et in -- tác -- ta Vir -- go,
-  glo -- ri -- ó -- sa Re -- gí -- na __ mun -- di,
-  in -- ter -- cé -- de pro no -- bis ad Dó -- mi -- num.
+  glo -- ri -- ó -- sa __ Re -- gí -- na __ mun -- di,
+  in -- ter -- cé -- de pro no -- bis ad __ Dó -- mi -- num.
 }
 
 antiphonLyricsPt = \lyricmode {
   \AltLyrics
   Ben -- di -- ta Mãe __ e in -- tac -- ta Vir -- gem,
-  glo -- ri -- o -- sa Ra -- i -- \MelismaOff nha do \MelismaOn mun -- do,
+  glo -- ri -- o -- sa __ Ra -- i -- \MelismaOff nha do \MelismaOn mun -- do,
   in -- ter -- ce -- dei por \MelismaOff to -- dos \MelismaOn nós jun -- to~ao Se -- nhor.
 }
 

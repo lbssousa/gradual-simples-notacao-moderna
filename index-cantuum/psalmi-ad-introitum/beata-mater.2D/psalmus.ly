@@ -10,7 +10,7 @@
 psalmChantA = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioII
+  \S \chantInchoatioII
   \chantTenorII
   \chantMediatioII #'((syneresis . partial))
   \divisioMaxima
@@ -18,51 +18,49 @@ psalmChantA = {
   \chantTerminatioIID #'((syneresis . partial)
                          (epenthesis . partial))
   \finalis
-  \Spacer 9
+
 }
 
 psalmChantB = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioII
+  \S \chantInchoatioII
   \chantTenorII
   \chantMediatioII #'((syneresis . total))
   \divisioMaxima
   \chantTenorII
-  \break
   \chantTerminatioIID #'()
   \finalis
-  \Spacer 29
+
 }
 
 psalmChantC = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioII
+  \S \chantInchoatioII
   \chantTenorII
   \chantFlexaII #'()
   \divisioMinima
-  \chantTenorII
+  \S \chantTenorII
   \chantMediatioII #'((syneresis . total))
   \divisioMaxima
-  \break
   \chantTenorII
   \chantTerminatioIID #'()
   \finalis
-  \Spacer 17
+
 }
 
 psalmChantD = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioII
+  \S \chantInchoatioII
   \chantTenorII
   \chantMediatioII #'((syneresis . partial))
   \divisioMaxima
   \chantTenorII
   \chantTerminatioIID #'((syneresis . partial))
   \finalis
-  \Spacer 29
+
 }
 
 psalmVerseI = \lyricmode {
@@ -85,7 +83,7 @@ psalmVerseII = \lyricmode {
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \VSup "4" \markup { \concat { "S" \undertie "e a" "s" } } á --
+  \VSup "4" Se~as á --
   \Tenor "guas trovejam e as ondas se a" --
   \MelismaOff gi -- tam, \MelismaOn
   \Tenor "se, em feroz tempestade, as montanhas" se~a --
@@ -132,7 +130,7 @@ psalmVerseVIII = \lyricmode {
   \VSup "9c" Re -- pri --
   \Tenor "me as guerras na face da"
   \MelismaOff ter -- ra, \MelismaOn
-  \Tenor \VSup "10" "ele quebra os arcos, as lanças des" -- trói, __
+  \VSup "10" \Tenor "ele quebra os arcos, as lanças des" -- trói, __
   \Tenor "e queima no fogo os escudos" e~as ar -- mas.
 }
 
@@ -147,7 +145,7 @@ psalmVerseIX = \lyricmode {
 psalmVerseX = \lyricmode {
   \set stanza = "10."
   \AltLyrics
-  \VSup "6" Co -- nos --
+  \VSup "12" Co -- nos --
   \Tenor "co está o Senhor do uni"
   \MelismaOff ver -- so! \MelismaOn
   \Tenor "O nosso refúgio é o Deus de" Ja -- có! __ _
@@ -170,7 +168,7 @@ psalmVerseX = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #3
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -182,7 +180,7 @@ psalmVerseX = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #3
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -194,7 +192,7 @@ psalmVerseX = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #2
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -207,7 +205,7 @@ psalmVerseX = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #2
 
 \score {
   \new GregorianTranscriptionStaff <<

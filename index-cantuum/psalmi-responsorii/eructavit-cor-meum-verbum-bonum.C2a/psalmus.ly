@@ -8,7 +8,7 @@
 \include "../../../modules/lilypond/lyrics.ily"
 
 chantResponsorium = \relative c'' {
-  \C g \CC f g \C a g \CC f d \C f \break g \CC g f
+  \C g \CC f g \C a g \CC f d \C f g \CC g f
   \finalis
 }
 
@@ -19,10 +19,9 @@ lyricsResponsorium = \lyricmode {
 
 psalmChant = {
   \PsalmSignature
-  \chantTenorC
+  \S \chantTenorC
   \chantMediatioC #'((syneresis . partial))
   \divisioMaxima
-  \break
   \chantTenorC
   \chantTerminatioCTwoa #'((syneresis . partial))
   \finalis
@@ -30,14 +29,14 @@ psalmChant = {
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \Tenor \VSup "2ab" "Transborda um poema do meu cora" -- ção, __
+  \VSup "2ab" \Tenor "Transborda um poema do meu cora" -- ção, __
   \Tenor "vou can" -- tar -- -vos.
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \AltLyrics
-  \Tenor \VSup "3b" "Vossos lábios espalham a graça, o en" --
+  \VSup "3b" \Tenor "Vossos lábios espalham a graça, o en" --
   \MelismaOff can -- to, \MelismaOn
   \Tenor "porque Deus, para sempre, vos deu sua"
   bên -- ção.
@@ -45,7 +44,7 @@ psalmVerseII = \lyricmode {
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \Tenor \VSup "8" "Vós amais a justiça e odiais a maldade. É por isso que Deus vos ungiu com seu"
+  \VSup "8" \Tenor "Vós amais a justiça e odiais a maldade. ’ É por isso que Deus vos ungiu com seu"
   \MelismaOff ó -- leo, \MelismaOn
   \Tenor "deu-vos mais alegria que aos vossos a" -- mi -- gos.
 }
@@ -53,14 +52,14 @@ psalmVerseIII = \lyricmode {
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \AltLyrics
-  \Tenor \VSup "9" "Vossas vestes exalam preciosos per" --
+  \VSup "9" \Tenor "Vossas vestes exalam preciosos per" --
   \MelismaOff fu -- mes. \MelismaOn
   \Tenor "De ebúrneos palácios os sons vos de" -- lei -- tam.
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \Tenor \VSup "10" "As filhas de reis vêm ao vosso encontro, e à vossa direita se encontra a ra" --
+  \VSup "10" \Tenor "As filhas de reis vêm ao vosso encontro, ’ e à vossa direita se encontra a ra" --
   \MelismaOff i -- nha \MelismaOn
   \Tenor "com veste esplendente de ouro de O" -- fir. __ _
 }
@@ -68,13 +67,13 @@ psalmVerseV = \lyricmode {
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \AltLyrics
-  \Tenor \VSup "11" "Escutai, minha filha, olhai, ouvi" \MelismaOff is -- to: \MelismaOn
+  \VSup "11" \Tenor "Escutai, minha filha, olhai, ouvi" \MelismaOff is -- to: \MelismaOn
   \Tenor "Esquecei vosso povo e a casa pa" -- ter -- na!
 }
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
-  \Tenor \VSup "12" "Que o Rei se encante com vossa be" --
+  \VSup "12" \Tenor "Que o Rei se encante com vossa be" --
   \MelismaOff le -- za! \MelismaOn
   \Tenor "Prestai-lhe homenagem: é vosso Se" -- nhor! __ _
 }
@@ -82,21 +81,21 @@ psalmVerseVII = \lyricmode {
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
   \AltLyrics
-  \Tenor \VSup "13" "O povo de Tiro vos traz seus pre" --
+  \VSup "13" \Tenor "O povo de Tiro vos traz seus pre" --
   \MelismaOff sen -- tes, \MelismaOn
   \Tenor "os grandes do povo vos pedem fa" -- vo -- res.
 }
 
 psalmVerseIX = \lyricmode {
   \set stanza = "9."
-  \Tenor \VSup "14" "Majestosa, a princesa real vem che" -- \MelismaOff gan -- do, \MelismaOn
+  \VSup "14" \Tenor "Majestosa, a princesa real vem che" -- \MelismaOff gan -- do, \MelismaOn
   \Tenor "vestida de ricos brocados de" ou -- ro.
 }
 
 psalmVerseX = \lyricmode {
   \set stanza = "10."
   \AltLyrics
-  \Tenor \VSup "15" "Em vestes vistosas ao Rei se di" --
+  \VSup "15" \Tenor "Em vestes vistosas ao Rei se di" --
   \MelismaOff ri -- ge, \MelismaOn
   \Tenor "e as virgens amigas lhe formam cor" -- te -- jo.
 }
@@ -111,9 +110,7 @@ psalmVerseX = \lyricmode {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
       \psalmChant
-      \Spacer 1
       \chantResponsorium
-      \Spacer 30
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" {
