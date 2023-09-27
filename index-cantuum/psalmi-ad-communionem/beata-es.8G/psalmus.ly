@@ -10,21 +10,21 @@
 psalmChant = {
   \PsalmSignature
   \key c \major
-  \chantInchoatioVIII
+  \S \chantInchoatioVIII
   \chantTenorVIII
   \chantMediatioVIII #'((syneresis . partial))
-  \divisioMaxima
-  \chantTenorVIII
+  \divisioMaxima \break
+  \S \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
-  \Spacer 7
+
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "46" A mi --
   \Tenor "nha alma engrandece o Se" -- nhor __
-  \Tenor \VSup "47" "e se alegrou o meu espírito em Deus, meu" Sal -- va -- dor. __
+  \VSup "47" \Tenor "e se alegrou o meu espírito em Deus, meu" Sal -- va -- dor. __
 }
 
 psalmVerseII = \lyricmode {
@@ -33,7 +33,7 @@ psalmVerseII = \lyricmode {
   \VSup "48" Pois e --
   \Tenor "le viu a pequenez de sua"
   \MelismaOff ser -- va, \MelismaOn
-  \Tenor "desde agora as gerações hão de chamar-me" de ben --
+  "" \Tenor "desde agora as gerações hão de chamar-me" de ben --
   \MelismaOff di -- ta. \MelismaOn
 }
 
@@ -42,7 +42,7 @@ psalmVerseIII = \lyricmode {
   \VSup "49" O Po --
   \Tenor "deroso fez por mim mara" --
   \MelismaOff vi -- lhas \MelismaOn
-  \Tenor "e Santo" é~o seu
+  "" \Tenor "e Santo" é~o seu
   \MelismaOff no -- me! \MelismaOn
 }
 
@@ -51,7 +51,7 @@ psalmVerseIV = \lyricmode {
   \AltLyrics
   \VSup "50" Seu a --
   \Tenor "mor, de geração em gera" -- ção, __
-  \Tenor "chega a todos" que~o res --
+  "" \Tenor "chega a todos" que~o res --
   \MelismaOff pei -- tam. \MelismaOn
 }
 
@@ -60,7 +60,7 @@ psalmVerseV = \lyricmode {
   \VSup "51" De -- mons --
   \Tenor "trou o poder de seu"
   \MelismaOff bra -- ço, \MelismaOn
-  \Tenor "dispersou os" or -- gu --
+  "" \Tenor "dispersou os" or -- gu --
   \MelismaOff lho -- sos. \MelismaOn
 }
 
@@ -70,7 +70,7 @@ psalmVerseVI = \lyricmode {
   \VSup "52" Der -- ru --
   \Tenor "bou os poderosos de seus"
   \MelismaOff tro -- nos \MelismaOn
-  \Tenor "e os humildes" e -- xal -- tou. __
+  "" \Tenor "e os humildes" e -- xal -- tou. __
 }
 
 psalmVerseVII = \lyricmode {
@@ -78,7 +78,7 @@ psalmVerseVII = \lyricmode {
   \VSup "53" De bens
   \Tenor "saciou os fa" --
   \MelismaOff min -- tos, \MelismaOn
-  \Tenor "e despediu, sem" na -- da,~os
+  "" \Tenor "e despediu, sem" na -- da,~os
   \MelismaOff ri -- cos. \MelismaOn
 }
 
@@ -87,14 +87,14 @@ psalmVerseVIII = \lyricmode {
   \AltLyrics
   \VSup "54" A -- co --
   \Tenor "lheu Israel, seu servi" -- dor, __
-  \Tenor "fiel ao" seu a -- mor. __
+  "" \Tenor "fiel ao" seu a -- mor. __
 }
 
 psalmVerseIX = \lyricmode {
   \set stanza = "9."
   \VSup "55" Co -- mo~ha --
   \Tenor "via prometido aos nossos" pais, __
-  \Tenor "em favor de Abraão e de seus filhos," pa -- ra
+  "" \Tenor "em favor de Abraão e de seus filhos," pa -- ra
   \MelismaOff sem -- pre. \MelismaOn
 }
 
@@ -117,6 +117,8 @@ psalmVerseIX = \lyricmode {
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIX
   >>
 }
+
+\markup \vspace #2
 
 \score {
   \new GregorianTranscriptionStaff <<

@@ -10,15 +10,15 @@
 psalmChant = {
   \key c \major
   \PsalmSignature
-  \chantInchoatioIV #'()
+  \S \chantInchoatioIV #'()
   \chantTenorIV
   \chantMediatioIV #'()
   \divisioMaxima
   \chantTenorIV
-  \break
+
   \chantTerminatioIVE #'()
   \finalis
-  \Spacer 22
+
 }
 
 psalmVerseI = \lyricmode {
