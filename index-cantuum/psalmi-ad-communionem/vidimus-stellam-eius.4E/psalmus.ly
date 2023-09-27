@@ -9,68 +9,68 @@
 
 psalmChantA = {
   \PsalmSignature
-  \chantInchoatioIV #'()
+  \S \chantInchoatioIV #'()
   \chantTenorIV
   \chantMediatioIV #'((syneresis . partial))
   \divisioMaxima
-  \chantTenorIV
+  \S \chantTenorIV
   \chantTerminatioIVE #'((syneresis . partial))
   \finalis
-  \Spacer 19
+
 }
 
 psalmChantB = {
   \PsalmSignature
-  \chantInchoatioIV #'()
+  \S \chantInchoatioIV #'()
   \chantTenorIV
   \chantFlexaIV #'((syneresis . total))
   \divisioMinima
   \chantTenorIV
   \chantMediatioIV #'()
   \divisioMaxima
-  \chantTenorIV
+  \S \chantTenorIV
   \chantTerminatioIVE #'()
   \finalis
-  \Spacer 8
+
 }
 
 psalmChantC = {
   \PsalmSignature
-  \chantInchoatioIV #'()
+  \S \chantInchoatioIV #'()
   \chantTenorIV
   \chantMediatioIV #'()
-  \divisioMaxima
-  \chantTenorIV
+  \divisioMaxima \break
+  \S \chantTenorIV
   \chantTerminatioIVE #'((syneresis . partial))
   \finalis
-  \Spacer 22
+
 }
 
 psalmChantD = {
   \PsalmSignature
-  \chantInchoatioIV #'()
+  \S \chantInchoatioIV #'()
   \chantTenorIV
   \chantFlexaIV #'()
   \divisioMinima
-  \chantTenorIV
+  \S \chantTenorIV
   \chantMediatioIV #'((syneresis . total))
   \divisioMaxima
   \chantTenorIV
   \chantTerminatioIVE #'()
   \finalis
-  \Spacer 9
+
 }
 
 psalmChantE = {
   \PsalmSignature
-  \chantInchoatioIV #'()
+  \S \chantInchoatioIV #'()
   \chantTenorIV
   \chantMediatioIV #'()
   \divisioMaxima
   \chantTenorIV
   \chantTerminatioIVE #'()
   \finalis
-  \Spacer 24
+
 }
 
 psalmVerseI = \lyricmode {
@@ -78,7 +78,7 @@ psalmVerseI = \lyricmode {
   \VSup "1" Can -- tai __
   \Tenor "ao Senhor Deus um" can -- to
   \MelismaOff no -- vo, \MelismaOn
-  \Tenor \VSup "2a" "cantai ao Senhor Deus, ó" ter -- ra in --
+  \VSup "2a" \Tenor "cantai ao Senhor Deus, ó" ter -- ra in --
   tei -- ra!
 }
 
@@ -88,14 +88,14 @@ psalmVerseII = \lyricmode {
   \VSup "2bc" Can -- tai __
   \Tenor "e bendizei seu" san -- to
   \MelismaOff no -- me! \MelismaOn
-  \Tenor "Dia após dia anunciai su" -- a sal -- va -- ção! __ _
+  "" \Tenor "Dia após dia anunciai su" -- a sal -- va -- ção! __ _
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
   \VSup "3" Ma -- ni --
   \Tenor "festai a sua glória en" -- tre~as na -- ções, __
-  \Tenor "e entre os povos do univer" -- so seus pro --
+  "" \Tenor "e entre os povos do univer" -- so seus pro --
   dí -- gios!
 }
 
@@ -104,7 +104,7 @@ psalmVerseIV = \lyricmode {
   \AltLyrics
   \VSup "4" Pois Deus __
   \Tenor "é grande e muito digno" de lou -- vor, __
-  \Tenor "é mais terrível e maior" que~os ou -- tros deu -- ses.
+  "" \Tenor "é mais terrível e maior" que~os ou -- tros deu -- ses.
 }
 
 psalmVerseV = \lyricmode {
@@ -112,7 +112,7 @@ psalmVerseV = \lyricmode {
   \VSup "6" Di -- an --
   \Tenor "te dele vão a glória e a" ma -- jes --
   \MelismaOff ta -- de, \MelismaOn
-  \Tenor "e o seu templo, que bele" -- za e~es -- plen -- dor! __ _
+  "" \Tenor "e o seu templo, que bele" -- za e~es -- plen -- dor! __ _
 }
 
 psalmVerseVI = \lyricmode {
@@ -120,7 +120,7 @@ psalmVerseVI = \lyricmode {
   \VSup "7" Ó fa --
   \Tenor "mília das nações, dai ao Se" -- nhor, __
   \Tenor "ó nações, dai ao Senhor po" -- der e gló -- ria,
-  \Tenor \VSup "8a" "dai-lhe a glória que é devi" -- da ao seu no -- me!
+  \VSup "8a" \Tenor "dai-lhe a glória que é devi" -- da ao seu no -- me!
 }
 
 psalmVerseVII = \lyricmode {
@@ -128,7 +128,7 @@ psalmVerseVII = \lyricmode {
   \VSup "8b" O -- fe --
   \Tenor "recei um sacrifício" nos seus
   á -- trios,
-  \Tenor \VSup "9a" "adorai-o no esplendor" da san -- ti --
+  \VSup "9a" \Tenor "adorai-o no esplendor" da san -- ti --
   da -- de!
 }
 
@@ -137,14 +137,14 @@ psalmVerseVIII = \lyricmode {
   \AltLyrics
   \VSup "9b" Ter -- ra
   \Tenor "inteira, estremecei di" -- an -- te de -- le!
-  \Tenor \VSup "10a" "Publicai entre as nações:" “Rei -- na~o Se -- nhor!” __ _
+  \VSup "10a" \Tenor "Publicai entre as nações:" “Rei -- na~o Se -- nhor!” __ _
 }
 
 psalmVerseIX = \lyricmode {
   \set stanza = "9."
   \VSup "12b" E e --
   \Tenor "xultem as florestas e as" ma -- tas
-  \Tenor \VSup "13ab" "na presença do Senhor, pois" e -- le vem, __
+  \VSup "13ab" \Tenor "na presença do Senhor, pois" e -- le vem, __
   \Tenor "porque vem para julgar a" ter -- ra in -- tei -- ra.
 }
 
@@ -173,7 +173,7 @@ psalmVerseX = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #4
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -185,7 +185,7 @@ psalmVerseX = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #4
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -198,7 +198,7 @@ psalmVerseX = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #4
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -210,7 +210,7 @@ psalmVerseX = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #4
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -222,7 +222,7 @@ psalmVerseX = \lyricmode {
   >>
 }
 
-\markup \vspace #1
+\markup \vspace #4
 
 \score {
   \new GregorianTranscriptionStaff <<

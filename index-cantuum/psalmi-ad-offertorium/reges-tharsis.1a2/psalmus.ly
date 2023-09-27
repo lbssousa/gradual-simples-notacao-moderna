@@ -10,7 +10,7 @@
 psalmChantA = {
   \key d \minor
   \PsalmSignature
-  \chantInchoatioI #'()
+  \S \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'()
   \chantMediatioSecundusI #'((syneresis . partial))
@@ -18,13 +18,13 @@ psalmChantA = {
   \chantTenorI
   \chantTerminatioIgTwo #'((syneresis . partial))
   \finalis
-  \Spacer 16
+
 }
 
 psalmChantB = {
   \key d \minor
   \PsalmSignature
-  \chantInchoatioI #'()
+  \S \chantInchoatioI #'()
   \chantTenorI
   \chantFlexaI #'((syneresis . total))
   \divisioMinima
@@ -35,13 +35,13 @@ psalmChantB = {
   \chantTenorI
   \chantTerminatioIgTwo #'()
   \finalis
-  \Spacer 10
+
 }
 
 psalmChantC = {
   \key d \minor
   \PsalmSignature
-  \chantInchoatioI #'()
+  \S \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'()
   \chantMediatioSecundusI #'()
@@ -49,7 +49,7 @@ psalmChantC = {
   \chantTenorI
   \chantTerminatioIgTwo #'()
   \finalis
-  \Spacer 24
+
 }
 
 psalmVerseI = \lyricmode {
