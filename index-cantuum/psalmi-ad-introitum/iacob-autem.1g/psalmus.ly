@@ -15,31 +15,16 @@ psalmChantA = {
   \chantMediatioPrimusI #'()
   \chantMediatioSecundusI #'((syneresis . partial))
   \divisioMaxima
-  \chantTenorI
+  \S \chantTenorI
   \chantTerminatioIg #'((syneresis . partial))
   \finalis
-  \Spacer 25
-}
-
-psalmChantB = {
-  \PsalmSignature
-  \key d \minor
-  \S \chantInchoatioI #'()
-  \chantTenorI
-  \chantMediatioPrimusI #'()
-  \chantMediatioSecundusI #'((syneresis . total))
-  \divisioMaxima
-  \S \chantTenorI
-  \chantTerminatioIg #'()
-  \finalis
-  \Spacer 15
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "1" Fe -- liz __
   \Tenor "és tu se temes" o Se -- nhor, __
-  \Tenor "e trilhas" seus ca -- mi -- nhos!
+  "" \Tenor "e trilhas" seus ca -- mi -- nhos!
 }
 
 psalmVerseII = \lyricmode {
@@ -47,7 +32,7 @@ psalmVerseII = \lyricmode {
   \AltLyrics
   \VSup "2" Do tra --
   \Tenor "balho de tuas mãos hás" de vi -- ver, __
-  \Tenor "serás feliz, tu" -- do~i -- rá bem! __ _
+  "" \Tenor "serás feliz, tu" -- do~i -- rá bem! __ _
 }
 
 psalmVerseIII = \lyricmode {
@@ -55,7 +40,7 @@ psalmVerseIII = \lyricmode {
   \VSup "3ab" A tu --
   \Tenor "a esposa é uma videira" bem fe --
   \MelismaOff cun -- da \MelismaOn
-  \Tenor "no coração da" tu -- a ca -- sa.
+  "" \Tenor "no coração da" tu -- a ca -- sa.
 }
 
 psalmVerseIV = \lyricmode {
@@ -64,7 +49,7 @@ psalmVerseIV = \lyricmode {
   \VSup "3ab" Os teus __
   \Tenor "filhos são rebentos de" o -- li --
   \MelismaOff vei -- ra \MelismaOn
-  \Tenor "ao redor de" tu -- a me -- sa.
+  "" \Tenor "ao redor de" tu -- a me -- sa.
 }
 
 psalmVerseV = \lyricmode {
@@ -72,7 +57,7 @@ psalmVerseV = \lyricmode {
   \VSup "4" Se -- rá __
   \Tenor "assim abençoado" to -- do
   \MelismaOff ho -- mem \MelismaOn
-  \Tenor "que te" -- me o Se -- nhor.
+  "" \Tenor "que te" -- me o Se -- nhor.
 }
 
 psalmVerseVI = \lyricmode {
@@ -80,7 +65,7 @@ psalmVerseVI = \lyricmode {
   \AltLyrics
   \VSup "5ab" O Se --
   \Tenor "nhor te abençoe" de Si -- ão, __
-  \Tenor "cada dia de" tu -- a vi -- da.
+  "" \Tenor "cada dia de" tu -- a vi -- da.
 }
 
 psalmVerseVII = \lyricmode {
@@ -112,15 +97,6 @@ psalmVerseVIII = \lyricmode {
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
-  >>
-}
-
-\score {
-  \new GregorianTranscriptionStaff <<
-    \new GregorianTranscriptionVoice = "psalm" {
-      \psalmChantB
-    }
-
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
   >>
