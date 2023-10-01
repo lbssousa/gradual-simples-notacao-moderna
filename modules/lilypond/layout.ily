@@ -31,4 +31,18 @@ GregorianTranscriptionLayout = \layout {
       \override LyricText.X-offset = #center-on-vowel
     }
   }
+
+  \context {
+    \GregorianTranscriptionLyrics
+    \name GregorianTranscriptionAltLyrics
+    \alias GregorianTranscriptionLyrics
+    %\override StanzaNumber.font-series = #'medium
+    \override LyricText.font-shape = #'italic
+    \override LyricText.color = #(x11-color 'grey20)
+  }
+
+  \context {
+    \StaffGroup
+    \accepts GregorianTranscriptionAltLyrics
+  }
 }
