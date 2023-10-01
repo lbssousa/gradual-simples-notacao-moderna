@@ -8,6 +8,7 @@
 \include "../../../../../modules/lilypond/symbols.ily"
 
 hymnChant = \relative c' {
+  \AntiphonSignature
   % Salvai o vosso povo
   \C c \CC d f \C f d f \CC e d \C c
   \divisioMaior
@@ -16,7 +17,7 @@ hymnChant = \relative c' {
 
   % Regei-nos e guardai-nos
   \CC f e \CC d f \CCC e d c
-  \divisioMaior \break
+  \divisioMaior
   \C c \CC d f \CCC f e d \C g
   \divisioMinima
   g g g a f \CCC g f e e
@@ -53,9 +54,9 @@ hymnChant = \relative c' {
   \finalis
 
   % Fazei que eu, para sempre
-  \C c \CC d f \C f f e d f f f f f g a \break \CC g f \CC g f \CC e d
+  \C c \CC d f \C f f e d f f f f f g a \CCmi g f \CC g f \CCmf e d
   \divisioMaior
-  \C c \CC d f \C f \CC f e \CC d c \C f f f f f g a \CC g f \CCC g f e \C e
+  \C c \CC d f \C f \CC f e \CC d c \C f f f f f g a \CCmi g f \CCC g f e \Cmf e
   \finalis
 }
 
