@@ -229,6 +229,6 @@ AfterStanzaSpacing =
     \override VerticalAxisGroup.nonstaff-nonstaff-spacing.basic-distance = 4
   #})
 
-AltLyrics = \override Lyrics.LyricText.font-shape = #'italic
+ItalicLyrics = \override Lyrics.LyricText.font-shape = #'italic
 BoldLyrics = \override Lyrics.LyricText.font-series = #'bold
 NormalLyrics = \override Lyrics.LyricText.font-series = #'medium
