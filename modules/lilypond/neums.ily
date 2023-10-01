@@ -14,14 +14,21 @@ C =
   #{ $p \dC #}
 )
 
+% Neuma de uma nota, cursivo,
+% fechando um melisma
+Cmf =
+#(define-music-function
+  (p)
+  (ly:pitch?)
+  #{ $p \dC\) #}
+)
+
 % Slot para alinhamento de letra.
 S =
-#(define-music-function
-  ()
-  ()
+#(define-music-function () ()
   #{
     \cadenzaOn
-    \once \omit NoteHead c \dC
+    \once \omit NoteHead c \dC \noBreak
     \cadenzaOff
   #}
 )
@@ -72,6 +79,15 @@ O =
   #{ $p \dC\Oriscus #}
 )
 
+% Neuma de uma nota, com oriscus,
+% fechando um melisma.
+Omf =
+#(define-music-function
+  (p)
+  (ly:pitch?)
+  #{ $p \dC\Oriscus\) #}
+)
+
 % Neuma de duas notas, totalmente cursivo
 CC =
 #(define-music-function
@@ -79,9 +95,37 @@ CC =
   (ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC(
+    $pa \dC( \noBreak
     \cadenzaOff
     $pb )
+  #}
+)
+
+% Neuma de duas notas, totalmente cursivo,
+% abrindo um melisma
+CCmi =
+#(define-music-function
+  (pa pb)
+  (ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC\(( \noBreak
+    \cadenzaOff
+    $pb )
+  #}
+)
+
+% Neuma de duas notas, totalmente cursivo,
+% fechando um melisma
+CCmf =
+#(define-music-function
+  (pa pb)
+  (ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC( \noBreak
+    \cadenzaOff
+    $pb )\)
   #}
 )
 
@@ -92,7 +136,8 @@ C_C =
   (ly:pitch? ly:pitch?)
   #{
     \once \slurDashed
-    $pa \dC( $pb )
+    $pa \dC( \noBreak
+    $pb )
   #}
 )
 
@@ -103,7 +148,7 @@ CE =
   (ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC(
+    $pa \dC( \noBreak
     \cadenzaOff
     $pb ^\Episema)
   #}
@@ -116,7 +161,7 @@ EE =
   (ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC^\Episema(
+    $pa \dC^\Episema( \noBreak
     \cadenzaOff
     $pb ^\Episema)
   #}
@@ -129,7 +174,7 @@ CL =
   (ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC(
+    $pa \dC( \noBreak
     \cadenzaOff
     \tweak font-size -4
     $pb )
@@ -144,7 +189,8 @@ C_L =
   (ly:pitch? ly:pitch?)
   #{
     \once \slurDashed
-    $pa \dC( $pb ^">")
+    $pa \dC( \noBreak
+    $pb ^">")
   #}
 )
 
@@ -155,7 +201,7 @@ EL =
   (ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC^\Episema(
+    $pa \dC^\Episema( \noBreak
     \cadenzaOff
     \tweak font-size -4
     $pb )
@@ -170,7 +216,7 @@ QC =
   (ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC\Quilisma(
+    $pa \dC\Quilisma( \noBreak
     \cadenzaOff
     $pb ) #}
 )
@@ -183,7 +229,7 @@ Vs =
   #{
     \once \slurDown
     \cadenzaOn
-    $p \dC(
+    $p \dC( \noBreak
     \cadenzaOff
     $p \Oriscus)
   #}
@@ -197,7 +243,7 @@ Pq =
   #{
     \once \slurDown
     \cadenzaOn
-    $pa \dC\Oriscus(
+    $pa \dC\Oriscus( \noBreak
     \cadenzaOff
     $pb )
   #}
@@ -210,9 +256,40 @@ CCC =
   (ly:pitch? ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC( $pb
+    $pa \dC( \noBreak
+    $pb \noBreak
     \cadenzaOff
     $pc )
+  #}
+)
+
+% Neuma de três notas, totalmente cursivo,
+% abrindo um melisma
+CCCmi =
+#(define-music-function
+  (pa pb pc)
+  (ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC\(( \noBreak
+    $pb \noBreak
+    \cadenzaOff
+    $pc )
+  #}
+)
+
+% Neuma de três notas, totalmente cursivo,
+% fechando um melisma
+CCCmf =
+#(define-music-function
+  (pa pb pc)
+  (ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC( \noBreak
+    $pb \noBreak
+    \cadenzaOff
+    $pc )\)
   #}
 )
 
@@ -223,11 +300,11 @@ C_CC =
   (ly:pitch? ly:pitch? ly:pitch?)
   #{
     \once \phrasingSlurDashed
-    $pa \dC\(
+    $pa \dC\( \noBreak
     \cadenzaOn
-    $pb \dC(
+    $pb \dC( \noBreak
     \cadenzaOff
-    $pc ) \)
+    $pc )\)
   #}
 )
 
@@ -238,7 +315,8 @@ CEE =
   (ly:pitch? ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC( $pb ^\Episema
+    $pa \dC( \noBreak
+    $pb ^\Episema \noBreak
     \cadenzaOff
     $pc ^\Episema)
   #}
@@ -251,7 +329,8 @@ CQC =
   (ly:pitch? ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC( $pb \Quilisma
+    $pa \dC( \noBreak
+    $pb \Quilisma \noBreak
     \cadenzaOff
     $pc )
   #}
@@ -264,7 +343,9 @@ CCCC =
   (ly:pitch? ly:pitch? ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC( $pb $pc
+    $pa \dC( \noBreak
+    $pb \noBreak
+    $pc \noBreak
     \cadenzaOff
     $pd )
   #}
@@ -277,7 +358,9 @@ CCQC =
   (ly:pitch? ly:pitch? ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC( $pb $pc \Quilisma
+    $pa \dC( \noBreak
+    $pb \noBreak
+    $pc \Quilisma \noBreak
     \cadenzaOff
     $pd )
   #}
@@ -290,7 +373,26 @@ CCCCC =
   (ly:pitch? ly:pitch? ly:pitch? ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC( $pb $pc $pd
+    $pa \dC( \noBreak
+    $pb \noBreak
+    $pc \noBreak
+    $pd \noBreak
+    \cadenzaOff
+    $pe )
+  #}
+)
+
+% Neuma de cinco notas, com quilisma na quarta nota
+CCCQC =
+#(define-music-function
+  (pa pb pc pd pe)
+  (ly:pitch? ly:pitch? ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC( \noBreak
+    $pb \noBreak
+    $pc \noBreak
+    $pd \Quilisma  \noBreak
     \cadenzaOff
     $pe )
   #}
@@ -303,7 +405,11 @@ CCCCCC =
   (ly:pitch? ly:pitch? ly:pitch? ly:pitch? ly:pitch? ly:pitch?)
   #{
     \cadenzaOn
-    $pa \dC( $pb $pc $pd $pe
+    $pa \dC( \noBreak
+    $pb \noBreak
+    $pc \noBreak
+    $pd \noBreak
+    $pe \noBreak
     \cadenzaOff
     $pf )
   #}
@@ -314,7 +420,10 @@ eC =
 #(define-music-function
   (p)
   (ly:pitch?)
-  #{ \Cp $p \C $p #}
+  #{
+    \Cp $p \noBreak
+    \C $p
+  #}
 )
 
 % Neuma de duas notas precedido de epêntese em uma cadência salmódica
@@ -322,5 +431,8 @@ eCC =
 #(define-music-function
   (pa pb)
   (ly:pitch? ly:pitch?)
-  #{ \Cp $pa \CC $pa $pb #}
+  #{
+    \Cp $pa \noBreak
+    \CC $pa $pb
+  #}
 )

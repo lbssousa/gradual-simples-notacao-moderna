@@ -35,7 +35,10 @@ AA =
 #(define-music-function
   (pa pb)
   (ly:pitch? ly:pitch?)
-  #{ \Aq $pa ( \Aq $pb ) #})
+  #{
+    \Aq $pa ( \noBreak
+    \Aq $pb )
+  #})
 
 MakeEpenthesis =
 #(define-music-function
@@ -52,7 +55,11 @@ eAA =
 #(define-music-function
   (pa pb)
   (ly:pitch? ly:pitch?)
-  #{ \Ap $pa \AA $pa $pb #})
+  #{
+    \Ap $pa \noBreak
+    \AA $pa $pb
+  #}
+)
 
 % Entonação inicial composta por
 % um neuma de uma nota seguido de outro neuma de duas notas
@@ -120,21 +127,21 @@ MakeAccentusOnePostOne =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        \A $pa (
-        \MakeEpenthesis $pe \dC #options
+        \A $pa ( \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         $pb )
       #})
     ((partial)
       #{
         \once \slurDashed
-        \A $pa (
-        \MakeEpenthesis $pe \dC #options
+        \A $pa ( \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         $pb )
       #})
     (else
       #{
-        \A $pa
-        \MakeEpenthesis $pe \dC #options
+        \A $pa \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \C $pb
       #})))
 
@@ -146,21 +153,21 @@ MakeAccentusOnePostTwo =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        \A $pa (
-        \MakeEpenthesis $pe \dC #options
+        \A $pa ( \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \CC $pb $pc )
       #})
     ((partial)
       #{
         \once \phrasingSlurDashed
-        \A $pa \(
-        \MakeEpenthesis $pe \dC #options
+        \A $pa \( \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \CC $pb $pc \)
       #})
     (else
       #{
-        \A $pa
-        \MakeEpenthesis $pe \dC #options
+        \A $pa \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \CC $pb $pc
       #})))
 
@@ -172,21 +179,21 @@ MakeAccentusOnePostThree =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        \A $pa (
-        \MakeEpenthesis $pe \dC #options
+        \A $pa ( \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \CCC $pb $pc $pd )
       #})
     ((partial)
       #{
         \once \phrasingSlurDashed
-        \A $pa \(
-        \MakeEpenthesis $pe \dC #options
+        \A $pa \( \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \CCC $pb $pc $pd \)
       #})
     (else
       #{
-        \A $pa
-        \MakeEpenthesis $pe \dC #options
+        \A $pa \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \CCC $pb $pc $pd
       #})))
 
@@ -198,21 +205,22 @@ MakeAccentusTwoPostOne =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        $pa 2*1/4 ( $pb
-        \MakeEpenthesis $pe \dC #options
+        $pa 2*1/4 ( $pb \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \C $pc )
       #})
     ((partial)
       #{
         \once \phrasingSlurDashed
-        $pa 2*1/4 \(( $pb )
-        \MakeEpenthesis $pe \dC #options
+        $pa 2*1/4 \(( \noBreak
+        $pb ) \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \C $pc \)
       #})
     (else
       #{
-        \AA $pa $pb
-        \MakeEpenthesis $pe \dC #options
+        \AA $pa $pb  \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \C $pc
       #})))
 
@@ -223,12 +231,16 @@ MakeAccentusTwoPostOneAlt =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        $pa 2*1/4 ( $pb \C $pc )
+        $pa 2*1/4 ( \noBreak
+        $pb \noBreak
+        \C $pc )
       #})
     ((partial)
       #{
         \once \phrasingSlurDashed
-        $pa 2*1/4 \(( $pb ) \C $pc \)
+        $pa 2*1/4 \((  \noBreak
+        $pb ) \noBreak
+        \C $pc \)
       #})
     (else
       #{
@@ -243,21 +255,23 @@ MakeAccentusTwoPostTwo =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        $pa 2*1/4 ( $pb
-        \MakeEpenthesis $pe \dC #options
+        $pa 2*1/4 ( \noBreak
+        $pb \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \CC $pc $pd )
       #})
     ((partial)
       #{
         \once \phrasingSlurDashed
-        $pa 2*1/4 \(( $pb )
-        \MakeEpenthesis $pe \dC #options
+        $pa 2*1/4 \(( \noBreak
+        $pb ) \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \CC $pc $pd \)
       #})
     (else
       #{
-        \AA $pa $pb
-        \MakeEpenthesis $pe \dC #options
+        \AA $pa $pb \noBreak
+        \MakeEpenthesis $pe \dC #options \noBreak
         \CC $pc $pd
       #})))
 
@@ -270,19 +284,23 @@ MakeAccentusTwoPreEpenthesisPostOne =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        \MakeEpenthesis $pe 2*1/2 #options
-        $pa 2*1/4 ( $pb \C $pc )
+        \MakeEpenthesis $pe 2*1/2 #options \noBreak
+        $pa 2*1/4 ( $pb \noBreak
+        \C $pc )
       #})
     ((partial)
       #{
-        \MakeEpenthesis $pe 2*1/2 #options
+        \MakeEpenthesis $pe 2*1/2 #options \noBreak
         \once \phrasingSlurDashed
-        $pa 2*1/4 \(( $pb ) \C $pc \)
+        $pa 2*1/4 \(( \noBreak
+        $pb ) \noBreak
+        \C $pc \)
       #})
     (else
       #{
-        \MakeEpenthesis $pe 2*1/2 #options
-        \AA $pa $pb \C $pc
+        \MakeEpenthesis $pe 2*1/2 #options \noBreak
+        \AA $pa $pb \noBreak
+        \C $pc
       #})))
 
 % Acento cadencial de duas notas precedido de epêntese,
@@ -294,17 +312,22 @@ MakeAccentusTwoPreEpenthesisPostTwo =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        \MakeEpenthesis $pe 2*1/2 #options
-        $pa 2*1/4 ( $pb \CC $pc $pd )
+        \MakeEpenthesis $pe 2*1/2 #options \noBreak
+        $pa 2*1/4 ( \noBreak
+        $pb \noBreak
+        \CC $pc $pd )
       #})
     ((partial)
       #{
-        \MakeEpenthesis $pe 2*1/2 #options
+        \MakeEpenthesis $pe 2*1/2 #options \noBreak
         \once \phrasingSlurDashed
-        $pa 2*1/4 \(( $pb ) \CC $pc $pd \)
+        $pa 2*1/4 \(( \noBreak
+        $pb ) \noBreak
+        \CC $pc $pd \)
       #})
     (else
       #{
-        \MakeEpenthesis $pe 2*1/2 #options
-        \AA $pa $pb \CC $pc $pd
+        \MakeEpenthesis $pe 2*1/2 #options \noBreak
+        \AA $pa $pb \noBreak
+        \CC $pc $pd
       #})))
