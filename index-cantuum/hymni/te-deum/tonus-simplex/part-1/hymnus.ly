@@ -95,7 +95,7 @@ hymnChant = \relative c' {
 
   % Nascestes duma Virgem
   \C g \CC g c \C c b a \CC b c \CC b a
-  \divisioMaior \break
+  \divisioMaior
   a a g a b \CC g e
   \finalis
 
@@ -124,7 +124,7 @@ hymnChant = \relative c' {
   \finalis
 
   % Fazei-nos ser contados
-  \C f f f f f f f f f e d f \break \CC e d \C c
+  \C f f f f f f f f f e d f \CC e d \C c
   \divisioMaior
   c c c e f g g g g g a f \CCC g f e \C e
   \finalis

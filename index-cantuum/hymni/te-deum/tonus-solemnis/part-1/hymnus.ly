@@ -28,13 +28,13 @@ hymnChant = \relative c' {
   \finalis
 
   % Sois Santo, Santo, Santo
-  g \CCQC g a b c \break \CC b a
+  g \CCQC g a b c \CC b a
   \finalis
   \CCQC g a b c \CC b a
   \finalis
   \CCCQC e g a b c \CC b a
   \divisioMinima
-  a a a a g \CC a b \CCC b a g \break \C g
+  a a a a g \CC a b \CCC b a g \C g
   \finalis
 
   % Proclamam céus e terra
@@ -59,7 +59,7 @@ hymnChant = \relative c' {
   \C g b a c b a \CC a b \C a a
   \divisioMaior
   e \CC g a a g \CC a b \C b \CC a g \C g
-  \finalis \break
+  \finalis
 
   % A vós, por toda a terra,
   \CC g b \C b a c b \CC a b \C a
@@ -102,7 +102,7 @@ hymnChant = \relative c' {
   % Sofrendo vós a morte
   \C e \CC g a \C a a a a a a a a a g \CQC a b c \CC b a
   \divisioMaior
-  \C e \CC g a \break a a a b a a a \CC a g a \CC a b g e
+  \C e \CC g a a a a b a a a \CC a g a \CC a b g e
   \finalis
 
   % Sentastes à direira
@@ -120,11 +120,11 @@ hymnChant = \relative c' {
   % Portanto, vos pedimos
   \C e \CC g a \C a a a a a a a a a g \CQC a b c \CC b a
   \divisioMaior
-  \C e \CC g a \C a a a b a a a \CC a g \break \C a \CC a b g e
+  \C e \CC g a \C a a a b a a a \CC a g \C a \CC a b g e
   \finalis
 
   % Fazei-nos ser contados
-  \C f f f f f f f f f e d f \break \CC e d \C c
+  \C f f f f f f f f f e d f \CC e d \C c
   \divisioMaior
   c c c e f g g g g g a f \CCC g f e \C e
   \finalis

@@ -8,6 +8,7 @@
 \include "../../../../../modules/lilypond/symbols.ily"
 
 hymnChant = \relative c' {
+  \AntiphonSignature
   % Salvai o vosso povo
   \C c \CC d f \C f d f \CC e d \C c
   \divisioMaior
@@ -17,7 +18,7 @@ hymnChant = \relative c' {
   % Regei-nos e guardai-nos
   \CC f e \CC d f \CCC e d c
   \divisioMaior
-  \C c \CC d f \break \CCC f e d \C g
+  \C c \CC d f \CCC f e d \C g
   \divisioMinima
   g g g a f \CCC g f e e
   \finalis
@@ -25,14 +26,14 @@ hymnChant = \relative c' {
   % Senhor, em cada dia
   \C e \CC g a \C a a g \CQC a b c \CC b a
   \divisioMaior
-  \C e \CC g a \C a \break \CC a g \CC a b \C g e
+  \C e \CC g a \C a \CC a g \CC a b \C g e
   \finalis
 
   % Louvamos vosso nome
   \C e \CC g a \C a a g \CQC a b c \CC b a
   \divisioMaior
   \C e \CC g a \C a \CC a g \CC a b \C g g e
-  \finalis \break
+  \finalis
 
   % Dignai-vos, neste dia
   \C e \CC g a \C a a g \CQC a b c \CC b a
@@ -41,7 +42,7 @@ hymnChant = \relative c' {
   \finalis
 
   % Senhor, tende piedade
-  \C e \CC g a \C a a a g \CQC a b c \break \CC b a
+  \C e \CC g a \C a a a g \CQC a b c \CC b a
   \divisioMaior
   \C e \CC g a \C a \CC a g \CC a b \C g e
   \finalis
@@ -53,9 +54,9 @@ hymnChant = \relative c' {
   \finalis
 
   % Fazei que eu, para sempre
-  \C c \CC d f \C f f e d f f f f f g a \CC g f \CC g f \CC e d
+  \C c \CC d f \C f f e d f f f f f g a \CCmi g f \CC g f \CCmf e d
   \divisioMaior
-  \C c \CC d f \C f \CC f e \CC d c \C f f f f f g a \CC g f \CCC g f e \C e
+  \C c \CC d f \C f \CC f e \CC d c \C f f f f f g a \CCmi g f \CCC g f e \Cmf e
   \finalis
 }
 
