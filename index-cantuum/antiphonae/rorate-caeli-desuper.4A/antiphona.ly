@@ -27,7 +27,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   Or -- va -- lhai, ó céus, do al -- to
   e~as nu -- vens cho -- vam __ o jus -- to;
   que se a -- bra a ter -- ra

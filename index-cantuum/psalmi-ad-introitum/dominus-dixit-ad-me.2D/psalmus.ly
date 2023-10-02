@@ -17,7 +17,6 @@ psalmChantA = {
   \chantTenorII
   \chantTerminatioIID #'((syneresis . total))
   \finalis
-
 }
 
 psalmChantB = {
@@ -33,7 +32,6 @@ psalmChantB = {
   \chantTenorII
   \chantTerminatioIID #'((syneresis . partial))
   \finalis
-
 }
 
 psalmChantC = {
@@ -46,7 +44,6 @@ psalmChantC = {
   \chantTenorII
   \chantTerminatioIID #'((syneresis . partial))
   \finalis
-
 }
 
 psalmVerseI = \lyricmode {
@@ -59,7 +56,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "6" “Fui eu
   \Tenor "mesmo que escolhi este meu" Rei, __
   \Tenor "e em Sião, meu monte santo, o con" -- sa -- grei!” __
@@ -85,7 +81,6 @@ psalmVerseIV = \lyricmode {
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \AltLyrics
   \VSup "10" E a --
   \Tenor "gora, poderosos, enten" -- dei; __
   \Tenor "soberanos, aprendei esta" li -- ção. __
@@ -102,7 +97,6 @@ psalmVerseVI = \lyricmode {
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
-  \AltLyrics
   \VSup "12cd" Fe -- li --
   \Tenor "zes hão de ser todos a" --
   \MelismaOff que -- les \MelismaOn
@@ -118,7 +112,7 @@ psalmVerseVII = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
   >>
 }
 
@@ -143,9 +137,9 @@ psalmVerseVII = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVII
   >>
 }
 

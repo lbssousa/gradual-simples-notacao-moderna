@@ -17,7 +17,6 @@ psalmChant = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
-
 }
 
 psalmVerseI = \lyricmode {
@@ -31,7 +30,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup"7" Sal -- mo --
   \Tenor "diai ao nosso Deus ao som da"
   \MelismaOff har -- pa, \MelismaOn
@@ -49,7 +47,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "9" Deus rei --
   \Tenor "na sobre todas as na" -- ções, __
   \Tenor "está sentado no seu trono" glo -- ri --
@@ -65,8 +62,8 @@ psalmVerseIV = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
   >>
 }

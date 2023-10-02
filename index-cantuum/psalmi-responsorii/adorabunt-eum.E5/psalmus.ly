@@ -54,14 +54,12 @@ psalmVerseII = \lyricmode {
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \AltLyrics
   \VSup "2" \Tenor "Com justiça ele governe o vosso" po -- vo,
   \Tenor "com equidade ele julgue os vos" -- sos po -- bres.
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "3" "" Das __ \Tenor "montanhas venha a paz a todo o" po -- vo,
   \Tenor "e desça das colinas a" jus --
   \MelismaOff ti -- ça! \MelismaOn
@@ -81,14 +79,12 @@ psalmVerseVI = \lyricmode {
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
-  \AltLyrics
   \VSup "12" \Tenor "Libertará o indigente que su" -- pli -- ca,
   \Tenor "e o pobre ao qual ninguém quer a" -- ju -- dar. __ _
 }
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
-  \AltLyrics
   \VSup "13" Te -- rá __ \Tenor "pena do indigente e do infe" -- liz, __ _
   \Tenor "e a vida dos humildes sal" -- va -- rá. __
 }
@@ -129,9 +125,9 @@ psalmVerseX = \lyricmode {
       \psalmVerseI
       \lyricsResponsorium
     }
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIX
   >>
 }
@@ -156,9 +152,9 @@ psalmVerseX = \lyricmode {
       \psalmVerseII
       \lyricsResponsorium
     }
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVIII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseX
   >>
 }

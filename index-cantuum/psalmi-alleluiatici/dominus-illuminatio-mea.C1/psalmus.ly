@@ -26,7 +26,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "1cd" \Tenor "O Senhor é a proteção da minha"
   \MelismaOff vi -- da; \MelismaOn
   \Tenor "perante quem eu tre" -- me -- rei? __
@@ -42,7 +41,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "4cd" \Tenor "Habitar no santuário do Se" -- nhor __
   \Tenor "por toda a mi" -- nha
   \MelismaOff vi -- da. \MelismaOn
@@ -57,7 +55,6 @@ psalmVerseV = \lyricmode {
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \AltLyrics
   \VSup "5ab" \Tenor "Pois um abrigo me dará sob o seu"
   \MelismaOff te -- to \MelismaOn
   \Tenor "nos dias da" des --
@@ -74,7 +71,6 @@ psalmVerseVII = \lyricmode {
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
-  \AltLyrics
   \VSup "7" \Tenor "Ó Senhor, ouvi a voz do meu a" --
   \MelismaOff pe -- lo, \MelismaOn
   \Tenor "atendei por com" pai -- xão! __
@@ -90,7 +86,6 @@ psalmVerseIX = \lyricmode {
 
 psalmVerseX = \lyricmode {
   \set stanza = "10."
-  \AltLyrics
   \VSup "8cd" \Tenor "Senhor, é vossa face que eu pro" --
   \MelismaOff cu -- ro; \MelismaOn
   \Tenor "não me escondais a vos" -- sa
@@ -106,7 +101,6 @@ psalmVerseXI = \lyricmode {
 
 psalmVerseXII = \lyricmode {
   \set stanza = "12."
-  \AltLyrics
   \VSup "9cd" \Tenor "Não me esqueçais nem me deixeis abando" --
   \MelismaOff na -- do, \MelismaOn
   \Tenor "meu Deus e Sal" -- va -- dor! __
@@ -128,7 +122,7 @@ psalmVerseXIII = \lyricmode {
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "psalm" {
       \psalmChant
-      \break
+
       \chantAlleluiaCOne
       \finalis
     }
@@ -137,17 +131,17 @@ psalmVerseXIII = \lyricmode {
       \psalmVerseI
       \lyricsAlleluiaCOne
     }
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVIII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIX
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseX
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseX
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseXI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseXII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseXII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseXIII
   >>
 }

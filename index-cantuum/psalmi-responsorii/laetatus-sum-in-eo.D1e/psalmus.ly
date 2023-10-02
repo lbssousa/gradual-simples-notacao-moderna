@@ -25,7 +25,6 @@ psalmChant = {
   \chantMediatioD #'((syneresis . partial))
   \divisioMaxima
   \S \chantTenorD
-
   \chantTerminatioDOnee #'((syneresis . partial))
   \finalis
 
@@ -39,7 +38,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "2" \Tenor "E agora nossos pés já se de" -- têm, __
   "" \Tenor "Jerusalém, em" tu -- as
   \MelismaOff por -- tas. \MelismaOn
@@ -55,7 +53,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "4ab" \Tenor "Para lá sobem as tribos de Isra" -- el, __
   "" \Tenor "as tribos" do Se -- nhor. __
 }
@@ -68,7 +65,6 @@ psalmVerseV = \lyricmode {
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \AltLyrics
   \VSup "5" \Tenor "A sede da justiça lá es" -- tá __
   "" \Tenor "e o trono" de Da -- vi. __
 }
@@ -82,7 +78,6 @@ psalmVerseVII = \lyricmode {
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
-  \AltLyrics
   \VSup "7" \Tenor "Que a paz habite dentro de teus"
   \MelismaOff mu -- ros, \MelismaOn
   "" \Tenor "tranquilidade em" teus pa --
@@ -98,7 +93,6 @@ psalmVerseIX = \lyricmode {
 
 psalmVerseX = \lyricmode {
   \set stanza = "10."
-  \AltLyrics
   \VSup "9" \Tenor "Pelo amor que tenho à casa do Se" -- nhor, __
   "" \Tenor "eu te desejo" to -- do bem! __
 }
@@ -120,14 +114,14 @@ psalmVerseX = \lyricmode {
       \lyricsResponsorium
     }
 
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVIII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIX
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseX
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseX
   >>
 }

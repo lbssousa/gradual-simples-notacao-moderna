@@ -29,7 +29,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   Os céus se~a -- le -- grem __ e e -- xul --
   \MelismaOff
   te a

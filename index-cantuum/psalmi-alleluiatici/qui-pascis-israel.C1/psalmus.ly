@@ -27,7 +27,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "9" \Tenor "Arrancastes do Egito esta vi" --
   \MelismaOff dei -- ra, \MelismaOn
   \Tenor "e expulsastes as nações para" plan --
@@ -43,7 +42,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "16" \Tenor "Foi a vossa mão direita que a plan" -- tou; __
   \Tenor "protegei-a, e ao rebento que" fir --
   \MelismaOff mas -- tes! \MelismaOn
@@ -59,7 +57,6 @@ psalmVerseV = \lyricmode {
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \AltLyrics
   \VSup "18" \Tenor "Pousai a mão por sobre o vosso Prote" --
   \MelismaOff gi -- do, \MelismaOn
   \Tenor "o filho do homem que escolhestes pa" -- ra vós! __
@@ -75,7 +72,6 @@ psalmVerseVII = \lyricmode {
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
-  \AltLyrics
   \VSup "20" \Tenor "Convertei-nos, ó Senhor Deus do universo, ’ e sobre nós iluminai a vossa"
   \MelismaOff fa -- ce! \MelismaOn
   \Tenor "Se voltardes para nós, sere" -- mos
@@ -99,12 +95,12 @@ psalmVerseVIII = \lyricmode {
       \psalmVerseI
       \lyricsAlleluiaCOne
     }
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVIII
   >>
 }

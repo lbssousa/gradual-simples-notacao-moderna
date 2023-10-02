@@ -20,7 +20,7 @@ psalmChant = {
   \S \chantTenorEOne
   \chantMediatioEOne #'((syneresis . partial))
   \divisioMaxima
-  \S \chantTenorEOne \break
+  \S \chantTenorEOne
   \chantTerminatioEOne #'((syneresis . partial))
   \finalis
 }
@@ -34,7 +34,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "2ab" \Tenor "Ó Pastor de Israel, prestai ou" --
   vi -- dos.
   "" \Tenor "Vós, que a José apascentais qual um" re --
@@ -50,7 +49,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "9" \Tenor "Arrancastes do Egito esta vi" --
   dei -- ra,
   "" \Tenor "e expulsastes as nações para" plan --
@@ -67,7 +65,6 @@ psalmVerseV = \lyricmode {
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \AltLyrics
   \VSup "11" \Tenor "Os montes recobriu com sua"
   som -- bra,
   "" \Tenor "e os cedros do Senhor com os" seus __
@@ -82,7 +79,6 @@ psalmVerseVII = \lyricmode {
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
-  \AltLyrics
   \VSup "15" \Tenor "Voltai-vos para nós, Deus do universo! Olhai dos altos céus e obser" -- vai. _ __
   "" \Tenor "Visitai a vossa vinha e pro" -- te -- gei -- -a!
 }
@@ -103,11 +99,12 @@ psalmVerseVIII = \lyricmode {
       \psalmVerseI
       \lyricsResponsorium
     }
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVIII
   >>
 }

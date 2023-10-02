@@ -15,10 +15,8 @@ psalmChant = {
   \chantMediatioIV #'()
   \divisioMaxima
   \chantTenorIV
-
   \chantTerminatioIVE #'()
   \finalis
-
 }
 
 psalmVerseI = \lyricmode {
@@ -30,7 +28,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "4,12" És um __
   \Tenor "jardim fechado, minha ir" -- mã e~es -- po -- sa,
   \Tenor "jardim fechado e" fon -- te la -- cra -- da.
@@ -50,6 +47,6 @@ psalmVerseII = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
   >>
 }

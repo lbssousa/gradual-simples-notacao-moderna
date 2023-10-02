@@ -26,7 +26,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "3" \Tenor "Perdoastes o pecado ao vosso"
   \MelismaOff po -- vo, \MelismaOn
   \Tenor "encobristes toda a falta co" -- me --
@@ -43,7 +42,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "5" \Tenor "Renovai-nos, nosso Deus e Salva" -- dor, __
   \Tenor "esquecei a vossa mágoa con" -- tra __ nós! __
 }
@@ -58,7 +56,6 @@ psalmVerseV = \lyricmode {
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \AltLyrics
   \VSup "7" \Tenor "Não vireis restituir a nossa"
   \MelismaOff vi -- da, \MelismaOn
   \Tenor "para que em vós se rejubile o vos" -- so __
@@ -89,11 +86,11 @@ psalmVerseVII = \lyricmode {
       \psalmVerseI
       \lyricsAlleluiaEStar
     }
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
   >>
 }

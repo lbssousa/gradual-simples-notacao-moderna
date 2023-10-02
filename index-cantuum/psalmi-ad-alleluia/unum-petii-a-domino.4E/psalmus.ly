@@ -17,7 +17,6 @@ psalmChant = {
   \chantTenorIV
   \chantTerminatioIVE #'()
   \finalis
-
 }
 
 psalmVerseI = \lyricmode {
@@ -30,7 +29,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "4cd" Ha -- bi --
   \Tenor "tar no santuário" do Se -- nhor __
   \Tenor "por to" -- da~a mi -- nha vi -- da.
@@ -52,7 +50,7 @@ psalmVerseIII = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
   >>
 }

@@ -29,7 +29,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "2" Do tra --
   \Tenor "balho de tuas mãos hás" de vi -- ver, __
   "" \Tenor "serás feliz, tu" -- do~i -- rá bem! __ _
@@ -45,7 +44,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "3ab" Os teus __
   \Tenor "filhos são rebentos de" o -- li --
   \MelismaOff vei -- ra \MelismaOn
@@ -62,7 +60,6 @@ psalmVerseV = \lyricmode {
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \AltLyrics
   \VSup "5ab" O Se --
   \Tenor "nhor te abençoe" de Si -- ão, __
   "" \Tenor "cada dia de" tu -- a vi -- da.
@@ -77,7 +74,6 @@ psalmVerseVII = \lyricmode {
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
-  \AltLyrics
   \VSup "6bc" Ó Se --
   \Tenor "nhor, que venha a paz a" Is -- ra -- el, __
   "" \Tenor "que venha a paz ao" vos -- so po -- vo!
@@ -92,13 +88,13 @@ psalmVerseVIII = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVIII
   >>
 }
 

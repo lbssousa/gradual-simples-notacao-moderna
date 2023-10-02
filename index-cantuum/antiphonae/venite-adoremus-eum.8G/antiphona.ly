@@ -14,7 +14,7 @@ antiphonChant = \relative c'' {
   \divisioMinima
   \C b c a g \EE a g \C f
   \divisioMaior
-  \E g \EE f a \break \C c c \CC b g
+  \E g \EE f a \C c c \CC b g
   \divisioMinima
   \C b c a b a g \Cp g
   \finalis
@@ -27,7 +27,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   Ó vin -- de, __ vin -- de, a -- do -- re -- mos,
   por -- que __ e -- le é __ o Se -- nhor, nos -- so Deus.
 }

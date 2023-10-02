@@ -17,7 +17,6 @@ psalmChantA = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . total))
   \finalis
-
 }
 
 psalmChantB = {
@@ -26,14 +25,13 @@ psalmChantB = {
   \S \chantInchoatioVIII
   \chantTenorVIII
   \chantFlexaVIII #'((epenthesis . partial))
-  \divisioMinima %\break
+  \divisioMinima
   \S \chantTenorVIII
   \chantMediatioVIII #'()
   \divisioMaxima
   \S \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
-
 }
 
 psalmChantC = {
@@ -46,7 +44,6 @@ psalmChantC = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . partial))
   \finalis
-
 }
 
 psalmVerseI = \lyricmode {
@@ -68,7 +65,6 @@ psalmVerseII = \lyricmode {
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \AltLyrics
   \VSup "8b" So -- bre
   \Tenor "mim está escrito no" li -- _ vro:
   \VSup "9" \Tenor "“Com prazer faço a vossa von" --
@@ -86,7 +82,6 @@ psalmVerseIV = \lyricmode {
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \AltLyrics
   \VSup "17cd" Di -- gam
   \Tenor "sempre: “É grande o Se" -- nhor!” __
   \Tenor "os que buscam em vós" seu au --
@@ -114,7 +109,7 @@ psalmVerseV = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIII
   >>
 }
 
@@ -127,6 +122,6 @@ psalmVerseV = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseV
   >>
 }

@@ -31,7 +31,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   Vi -- mos su -- a es -- tre -- la no O -- ri -- en -- te,
   e vi -- e -- mos com pre -- sen -- tes
   a -- do -- rar __ o Se -- nhor.

@@ -28,7 +28,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   Es -- ta -- vam os pais __ de Je -- sus __ _ ad -- mi -- ra -- dos com a -- qui -- lo que di -- zi -- am __ de -- le.
 }
 

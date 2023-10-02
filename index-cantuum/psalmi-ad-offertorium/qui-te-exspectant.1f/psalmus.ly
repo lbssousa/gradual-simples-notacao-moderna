@@ -12,7 +12,6 @@ psalmChant = {
   \S \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'((epenthesis . partial))
-  \break
   \chantMediatioSecundusI #'((syneresis . partial))
   \divisioMaxima
   \chantTenorI
@@ -30,7 +29,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "6" Re -- cor --
   \Tenor "dai, Senhor meu Deus," vos -- sa ter --
   \MelismaOff nu -- ra \MelismaOn
@@ -48,7 +46,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "20" De -- fen --
   \Tenor "dei a minha vida e" li -- _ ber --
   \MelismaOff tai -- -me; \MelismaOn
@@ -73,9 +70,9 @@ psalmVerseV = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
   >>
 }

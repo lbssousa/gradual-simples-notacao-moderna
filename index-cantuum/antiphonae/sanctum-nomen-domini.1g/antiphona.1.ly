@@ -12,9 +12,9 @@ antiphonChant = \relative c' {
   \key d \minor
   \C d \C_C e f \C g g e f \CC e d
   \divisioMinima
-  \C_CC f g a \C_C a g \C f \break \CC e f \C g \CC f e \C d d
+  \C_CC f g a \C_C a g \C f \CC e f \C g \CC f e \C d d
   \finalis
-  \Spacer 21
+
 }
 
 antiphonLyrics = \lyricmode {
@@ -23,7 +23,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   Ao \MelismaOff san -- to \MelismaOn no -- me do Se -- nhor __
   en -- gran -- de -- ce a mi -- nha al -- ma.
 }

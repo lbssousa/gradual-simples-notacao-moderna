@@ -35,7 +35,6 @@ psalmVerseIb = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2a."
-  \AltLyrics
   \VSup "2" \Tenor "Dai-lhe a glória devida ao" seu
   \MelismaOff no -- me. \MelismaOn
   "" _ _ _
@@ -56,7 +55,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4a."
-  \AltLyrics
   \VSup "4" \Tenor "Eis a voz do Senhor com poder! ’ Eis a voz do Senhor ma" -- jes --
   \MelismaOff to -- sa. \MelismaOn
   "" _ _ _
@@ -77,7 +75,6 @@ psalmVerseV = \lyricmode {
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6a."
-  \AltLyrics
   \VSup "10" \Tenor "É o Senhor que domina os" di --
   \MelismaOff lú -- vios. \MelismaOn
   "" _ _ _
@@ -88,7 +85,6 @@ psalmVerseVI = \lyricmode {
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7a."
-  \AltLyrics
   \VSup "11" \Tenor "Que o Senhor fortaleça o" seu
   \MelismaOff po -- vo. \MelismaOn
   "" _ _ _
@@ -118,7 +114,7 @@ psalmVerseVII = \lyricmode {
           \italic "Grupo ou todos"
         }
       }
-      \chantAlleluiaPrimusCFour \break
+      \chantAlleluiaPrimusCFour
 
       \section
       \sectionLabel \markup {
@@ -144,10 +140,10 @@ psalmVerseVII = \lyricmode {
       \lyricsAlleluiaCFour
     }
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVII
   >>
 }

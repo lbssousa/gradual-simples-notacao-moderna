@@ -12,11 +12,10 @@ psalmChantA = {
   \S \chantInchoatioIVA #'()
   \chantTenorIVA
   \chantMediatioIVA #'()
-  \divisioMaxima \break
+  \divisioMaxima
   \S \chantTenorIVA
   \chantTerminatioIVc #'()
   \finalis
-  \Spacer 13
 }
 
 psalmChantB = {
@@ -26,13 +25,11 @@ psalmChantB = {
   \chantFlexaIVA #'()
   \divisioMinima
   \chantTenorIVA
-  \break
   \chantMediatioIVA #'((syneresis . total))
   \divisioMaxima
   \chantTenorIVA
   \chantTerminatioIVc #'()
   \finalis
-  \Spacer 10
 }
 
 psalmChantC = {
@@ -44,7 +41,6 @@ psalmChantC = {
   \chantTenorIVA
   \chantTerminatioIVc #'((syneresis . partial))
   \finalis
-  \Spacer 16
 }
 
 psalmVerseI = \lyricmode {
@@ -59,7 +55,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "4" Mos -- trai- --
   \Tenor "me, ó Senhor, vos" --
   sos ca --
@@ -89,7 +84,6 @@ psalmVerseIV = \lyricmode {
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \AltLyrics
   \VSup "8" O Se --
   \Tenor "nhor é piedade e"
   re -- ti -- dão, __
@@ -116,7 +110,7 @@ psalmVerseVI = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
   >>
 }
 
@@ -141,7 +135,7 @@ psalmVerseVI = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
   >>
 }
