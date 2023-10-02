@@ -1,6 +1,7 @@
 \version "2.24.1"
 
 \include "./alignment-functions/center-on-digit.ily"
+\include "./alignment-functions/left-on-word.ily"
 \include "./colors.ily"
 \include "./symbols.ily"
 
@@ -135,8 +136,7 @@ Tenor =
   (tenor)
   (ly:music?)
   #{
-    \once \revert LyricText.X-offset
-    \once \override LyricText.self-alignment-X = #LEFT
+    \once \override LyricText.X-offset = #left-on-word
     #tenor
   #})
 
