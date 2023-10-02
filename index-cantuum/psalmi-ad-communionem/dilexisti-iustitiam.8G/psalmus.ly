@@ -20,7 +20,6 @@ psalmChantA = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'()
   \finalis
-
 }
 
 psalmChantB = {
@@ -33,7 +32,6 @@ psalmChantB = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'((syneresis . total))
   \finalis
-
 }
 
 psalmChantC = {
@@ -49,7 +47,6 @@ psalmChantC = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'()
   \finalis
-
 }
 
 psalmChantD = {
@@ -62,7 +59,6 @@ psalmChantD = {
   \chantTenorVIII
   \chantTerminatioVIIIG #'()
   \finalis
-
 }
 
 psalmVerseI = \lyricmode {
@@ -75,7 +71,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "3" Sois tão
   \Tenor "belo, o mais belo entre os filhos dos"
   \MelismaOff ho -- mens! \MelismaOn
@@ -110,7 +105,6 @@ psalmVerseV = \lyricmode {
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \AltLyrics
   \VSup "7" Vos -- so
   \Tenor "trono, ó Deus, é eterno, é sem" fim; __
   \Tenor "vosso cetro real é sinal" de jus -- ti -- ça.
@@ -126,7 +120,6 @@ psalmVerseVII = \lyricmode {
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
-  \AltLyrics
   \VSup "17" Dei -- xa --
   \Tenor "reis vossos pais, mas tereis muitos"
   \MelismaOff fi -- lhos; \MelismaOn
@@ -150,7 +143,7 @@ psalmVerseIX = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
   >>
 }
 
@@ -188,9 +181,9 @@ psalmVerseIX = \lyricmode {
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm"
     \psalmVerseV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVIII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIX
   >>
 }

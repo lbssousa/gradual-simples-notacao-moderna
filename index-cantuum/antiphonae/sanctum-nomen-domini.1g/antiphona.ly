@@ -33,7 +33,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   Ja -- có, por __ fim, ge -- _ rou Jo -- sé, __ _ _ o~es -- po -- so de Ma -- ri -- a, da qual __ nas -- ceu __ _ Je -- sus, __ que~é cha -- ma -- do __ Cris -- to.
 }
 

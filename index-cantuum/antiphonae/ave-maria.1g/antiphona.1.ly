@@ -30,7 +30,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   A -- ve Ma -- ri -- a, chei -- a de gra -- ça: o Se -- nhor é con -- vos -- co.
   Ben -- _ di -- ta sois vós en tre~as mu -- lhe -- _ res.
 }

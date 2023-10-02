@@ -38,7 +38,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   Com bon -- da -- de __ a -- giu __ o Se -- nhor, e~a nos -- sa ter -- ra __ deu __ o seu __ fru -- to.
 }
 

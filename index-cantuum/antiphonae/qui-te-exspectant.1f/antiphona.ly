@@ -20,7 +20,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   Os que~em vós es -- pe -- ram, ó Se -- nhor,
   não se -- rão __ con -- fun -- di -- dos.
 }

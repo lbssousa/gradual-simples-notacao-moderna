@@ -21,7 +21,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   A -- ben -- ço -- as -- tes, ó Se -- nhor, vos -- sa ter -- ra.
 }
 

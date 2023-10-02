@@ -25,7 +25,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   A vós, ó __ Se -- nhor, a mi -- nha al -- ma e -- le -- vo.
   Vin -- de e li -- ber -- tai- -- me, __ Se -- nhor, pois em vós me~a -- bri -- go.
 }

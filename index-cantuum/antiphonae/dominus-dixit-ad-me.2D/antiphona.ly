@@ -12,7 +12,7 @@ antiphonChant = \relative c' {
   \key c \major
   \C f e d \CC e f \C d c d
   e c d
-  \C_C f e \break
+  \C_C f e
   \CC c d \C c
   \divisioMaior
   \C_CC f e d
@@ -36,7 +36,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   O Se -- nhor dis -- se a mim: Tu és o meu __ Fi -- lho,
   Eu __ _ ho -- je __ "" ge -- rei a ti!
 }

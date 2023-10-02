@@ -15,10 +15,8 @@ psalmChant = {
   \chantMediatioIV #'()
   \divisioMaxima
   \chantTenorIV
-  \break
   \chantTerminatioIVE #'((syneresis . total))
   \finalis
-  \Spacer 21
 }
 
 psalmVerseI = \lyricmode {
@@ -31,9 +29,8 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
-  \VSup "8" Mos -- trai --
-  \Tenor "-nos, ó Senhor, vos" --
+  \VSup "8" Mos -- trai- --
+  \Tenor "nos, ó Senhor, vos" --
   sa bon -- da -- de,
   \Tenor "concedei-nos também vos" -- sa sal -- va -- ção! __
 }
@@ -47,6 +44,6 @@ psalmVerseII = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
   >>
 }

@@ -12,7 +12,7 @@ antiphonChant = \relative c' {
   \key d \minor
   \Cp f \C f e \E d \C d
   \divisioMinima
-  d e f \CCC g a g \CCC a bes a
+  d e f \CCCmi g a g \CCCmf a bes a
   \divisioMaior
   \Cp a \Cp a \C a g f g f \CL f e \C g \CC f e \C d d d
   \finalis
@@ -25,7 +25,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   Os reis de Tár -- sis e das i -- lhas __ _
   seus pre -- sen -- tes o -- fer -- ta -- rão __ ao Se -- nhor dos reis.
 }

@@ -21,7 +21,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   To -- dos os can -- tos da ter -- ra vi -- ram
   a sal -- va -- ção do nos -- so Deus.
 }

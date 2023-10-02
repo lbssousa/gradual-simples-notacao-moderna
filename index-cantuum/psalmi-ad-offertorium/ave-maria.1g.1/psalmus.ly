@@ -13,13 +13,11 @@ psalmChant = {
   \S \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'()
-  \break
   \chantMediatioSecundusI #'((syneresis . partial))
   \divisioMaxima
   \chantTenorI
   \chantTerminatioIg #'((syneresis . partial))
   \finalis
-
 }
 
 psalmVerseI = \lyricmode {
@@ -34,7 +32,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "7cd" De mim __
   \Tenor "lembrai-vos, porque sois mi" se -- ri --
   \MelismaOff cór -- dia \MelismaOn
@@ -51,7 +48,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "9" E -- le __
   \Tenor "dirige os humildes" na jus --
   \MelismaOff ti -- ça, \MelismaOn
@@ -77,9 +73,9 @@ psalmVerseV = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
   >>
 }

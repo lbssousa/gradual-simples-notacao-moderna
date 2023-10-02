@@ -26,7 +26,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   Eis que __ fiz de __ ti a __ luz das gen -- tes, __ ""
   pa -- ra se -- res mi -- nha
   \MelismaOff sal -- va -- \MelismaOn

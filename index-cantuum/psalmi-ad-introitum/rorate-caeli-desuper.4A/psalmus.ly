@@ -12,11 +12,10 @@ psalmChant = {
   \S \chantInchoatioIVA #'((dieresis . partial))
   \chantTenorIVA
   \chantMediatioIVA #'((syneresis . partial))
-  \divisioMaxima \break
+  \divisioMaxima
   \chantTenorIVA
   \chantTerminatioIVA #'((syneresis . partial))
   \finalis
-
 }
 
 psalmVerseI = \lyricmode {
@@ -27,7 +26,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "3" O di --
   \Tenor "a ao dia transmite es" -- ta men --
   \MelismaOff sa -- gem, \MelismaOn
@@ -46,7 +44,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "5" Seu som __
   \Tenor "ressoa e se espalha em" to -- da~a
   \MelismaOff ter -- ra, \MelismaOn
@@ -63,7 +60,6 @@ psalmVerseV = \lyricmode {
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \AltLyrics
   \MelismaOff
   \VSup "6cd" Co --
   \MelismaOff mo um \MelismaOn
@@ -82,7 +78,6 @@ psalmVerseVII = \lyricmode {
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
-  \AltLyrics
   \VSup "7cd" A -- té __
   \Tenor "que possa chegar ao" ou -- tro~ex --
   \MelismaOff tre -- mo, \MelismaOn
@@ -98,13 +93,13 @@ psalmVerseVIII = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVIII
   >>
 }
 

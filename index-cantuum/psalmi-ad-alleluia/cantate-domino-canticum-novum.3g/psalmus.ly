@@ -30,7 +30,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "2" O Se --
   \Tenor "nhor fez conhecer a" sal -- va -- ção, __ _
   \Tenor "e às nações, su" -- a jus -- ti -- ça.
@@ -45,6 +44,6 @@ psalmVerseII = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
   >>
 }

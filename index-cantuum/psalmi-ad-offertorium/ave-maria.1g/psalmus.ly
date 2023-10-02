@@ -18,7 +18,6 @@ psalmChant = {
   \chantTenorI
   \chantTerminatioIg #'((syneresis . partial))
   \finalis
-
 }
 
 psalmVerseI = \lyricmode {
@@ -31,7 +30,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "11" A ver --
   \Tenor "dade e o amor se en" con -- tra -- rão, __
   \Tenor "a justiça e a paz se a" --
@@ -48,7 +46,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "13" O Se --
   \Tenor "nhor nos dará tudo o" que é bom, __
   \Tenor "e a nossa terra nos dará su" -- as co --
@@ -64,8 +61,8 @@ psalmVerseIV = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
   >>
 }

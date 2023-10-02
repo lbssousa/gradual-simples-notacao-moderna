@@ -18,7 +18,6 @@ psalmChantA = {
   \chantTerminatioIID #'((syneresis . partial)
                          (epenthesis . partial))
   \finalis
-
 }
 
 psalmChantB = {
@@ -31,7 +30,6 @@ psalmChantB = {
   \chantTenorII
   \chantTerminatioIID #'()
   \finalis
-
 }
 
 psalmChantC = {
@@ -47,7 +45,6 @@ psalmChantC = {
   \chantTenorII
   \chantTerminatioIID #'()
   \finalis
-
 }
 
 psalmChantD = {
@@ -60,7 +57,6 @@ psalmChantD = {
   \chantTenorII
   \chantTerminatioIID #'((syneresis . partial))
   \finalis
-
 }
 
 psalmVerseI = \lyricmode {
@@ -73,7 +69,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "3" As -- sim
   \Tenor "não tememos, se a terra estre" --
   \MelismaOff me -- ce, \MelismaOn
@@ -101,7 +96,6 @@ psalmVerseIV = \lyricmode {
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \AltLyrics
   \VSup "6"  Quem a
   \Tenor "pode abalar? Deus está no seu"
   \MelismaOff mei -- o! \MelismaOn
@@ -144,7 +138,6 @@ psalmVerseIX = \lyricmode {
 
 psalmVerseX = \lyricmode {
   \set stanza = "10."
-  \AltLyrics
   \VSup "12" Co -- nos --
   \Tenor "co está o Senhor do uni"
   \MelismaOff ver -- so! \MelismaOn
@@ -160,11 +153,11 @@ psalmVerseX = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
   >>
 }
 
@@ -201,7 +194,7 @@ psalmVerseX = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIX
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseX
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseX
   >>
 }
 

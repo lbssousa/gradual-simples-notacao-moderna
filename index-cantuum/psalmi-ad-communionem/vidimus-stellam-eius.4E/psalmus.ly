@@ -16,7 +16,6 @@ psalmChantA = {
   \S \chantTenorIV
   \chantTerminatioIVE #'((syneresis . partial))
   \finalis
-
 }
 
 psalmChantB = {
@@ -31,7 +30,6 @@ psalmChantB = {
   \S \chantTenorIV
   \chantTerminatioIVE #'()
   \finalis
-
 }
 
 psalmChantC = {
@@ -39,11 +37,10 @@ psalmChantC = {
   \S \chantInchoatioIV #'()
   \chantTenorIV
   \chantMediatioIV #'()
-  \divisioMaxima \break
+  \divisioMaxima
   \S \chantTenorIV
   \chantTerminatioIVE #'((syneresis . partial))
   \finalis
-
 }
 
 psalmChantD = {
@@ -58,7 +55,6 @@ psalmChantD = {
   \chantTenorIV
   \chantTerminatioIVE #'()
   \finalis
-
 }
 
 psalmChantE = {
@@ -70,7 +66,6 @@ psalmChantE = {
   \chantTenorIV
   \chantTerminatioIVE #'()
   \finalis
-
 }
 
 psalmVerseI = \lyricmode {
@@ -84,7 +79,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "2bc" Can -- tai __
   \Tenor "e bendizei seu" san -- to
   \MelismaOff no -- me! \MelismaOn
@@ -101,7 +95,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \AltLyrics
   \VSup "4" Pois Deus __
   \Tenor "é grande e muito digno" de lou -- vor, __
   "" \Tenor "é mais terrível e maior" que~os ou -- tros deu -- ses.
@@ -134,7 +127,6 @@ psalmVerseVII = \lyricmode {
 
 psalmVerseVIII = \lyricmode {
   \set stanza = "8."
-  \AltLyrics
   \VSup "9b" Ter -- ra
   \Tenor "inteira, estremecei di" -- an -- te de -- le!
   \VSup "10a" \Tenor "Publicai entre as nações:" “Rei -- na~o Se -- nhor!” __ _
@@ -166,9 +158,9 @@ psalmVerseX = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
   >>
 }
@@ -194,7 +186,7 @@ psalmVerseX = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVIII
   >>
 }
 

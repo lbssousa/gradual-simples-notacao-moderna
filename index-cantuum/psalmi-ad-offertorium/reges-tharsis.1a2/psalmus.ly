@@ -18,7 +18,6 @@ psalmChantA = {
   \chantTenorI
   \chantTerminatioIgTwo #'((syneresis . partial))
   \finalis
-
 }
 
 psalmChantB = {
@@ -35,7 +34,6 @@ psalmChantB = {
   \chantTenorI
   \chantTerminatioIgTwo #'()
   \finalis
-
 }
 
 psalmChantC = {
@@ -49,7 +47,6 @@ psalmChantC = {
   \chantTenorI
   \chantTerminatioIgTwo #'()
   \finalis
-
 }
 
 psalmVerseI = \lyricmode {
@@ -61,7 +58,6 @@ psalmVerseI = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \AltLyrics
   \VSup "8" De mar __
   \Tenor "a mar estenderá o" seu do --
   \MelismaOff mí -- nio, \MelismaOn
@@ -100,7 +96,7 @@ psalmVerseV = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
   >>
 }

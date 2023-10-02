@@ -16,17 +16,17 @@ antiphonChant = \relative c'' {
   \divisioMaior
   a c b c a \C_C a g \C a b a g g
   \finalis
-  \Spacer 15
+
 }
 
 antiphonLyrics = \lyricmode {
-  Be -- á -- ta es, Vir -- go Ma -- rí -- a,
+  Be -- á -- ta __ es, Vir -- go __ Ma -- rí -- a,
   quæ óm -- ni -- um por -- tá -- sti cre -- a -- tó -- rem.
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
-  Ben -- di -- ta sois, Vir -- gem Ma -- ri -- a,
+
+  Ben -- di -- ta __ sois, Vir -- gem __ Ma -- ri -- a,
   que~em vós trou -- xes -- tes \MelismaOff o cri -- \MelismaOn a -- dor de tu -- do.
 }
 

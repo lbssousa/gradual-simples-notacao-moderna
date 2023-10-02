@@ -32,7 +32,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   A -- mas -- tes __ a jus -- ti -- ça __
   e~o -- di -- as --
   \MelismaOff tes a \MelismaOn

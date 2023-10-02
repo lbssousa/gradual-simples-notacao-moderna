@@ -28,7 +28,6 @@ psalmVerseIb = \lyricmode {
 
 psalmVerseII = \lyricmode {
   \set stanza = "2a."
-  \AltLyrics
   \VSup "1cd" \Tenor "Sua mão e o seu braço for" -- te~e
   \MelismaOff san -- to. \MelismaOn
   "" _ _ _
@@ -48,7 +47,6 @@ psalmVerseIII = \lyricmode {
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4a."
-  \AltLyrics
   \VSup "3ab" \Tenor "Recordou o seu amor sempre" fi -- el. __
   "" _ _ _
   \set stanza = "4b."
@@ -66,7 +64,6 @@ psalmVerseV = \lyricmode {
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6a."
-  \AltLyrics
   \VSup "4" \Tenor "Aclamai o Senhor Deus, ó ter" -- ra~in --
   \MelismaOff tei -- ra. \MelismaOn
   "" _ _ _
@@ -96,7 +93,7 @@ psalmVerseVI = \lyricmode {
         }
       }
       \chantAlleluiaPrimusCFour
-      \break
+
       \section
       \sectionLabel \markup {
         \with-color #gregorio-color {
@@ -121,9 +118,9 @@ psalmVerseVI = \lyricmode {
       \lyricsAlleluiaCFour
     }
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIII
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
   >>
 }

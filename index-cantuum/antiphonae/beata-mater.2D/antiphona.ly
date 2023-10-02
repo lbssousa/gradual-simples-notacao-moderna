@@ -27,7 +27,7 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-  \AltLyrics
+
   Ben -- di -- ta Mãe __ e in -- tac -- ta Vir -- gem,
   glo -- ri -- o -- sa __ Ra -- i -- \MelismaOff nha do \MelismaOn mun -- do,
   in -- ter -- ce -- dei por \MelismaOff to -- dos \MelismaOn nós jun -- to~ao Se -- nhor.
