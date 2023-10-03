@@ -32,7 +32,7 @@ hymnChant = \relative c' {
   \finalis
   \CCQC g a b c \CC b a
   \finalis
-  \CC a e \CC g a \C a
+  \CCmi a e \CCmf g a \C a
   \divisioMinima
   a a a g a b a g
   \finalis
@@ -181,10 +181,10 @@ hymnLyrics = \lyricmode {
   So -- fren -- do vós a mor -- te, da mor -- te tri -- un -- fas -- tes, __ a -- brin -- do~aos que têm fé dos céus o Rei -- no~e -- ter -- no.
 
   \NormalLyrics
-  Sen -- tas -- tes à di -- rei -- ta de Deus, do Pai na gló -- ria.
+  Sen -- tas -- tes à di -- rei -- ta __ de Deus, do Pai na gló -- ria.
 
   \BoldLyrics
-  Nós cre -- mos que de no -- vo vi -- reis co -- mo ju -- iz.
+  Nós cre -- mos que de no -- vo vi -- reis co -- mo ju -- iz. __
 
   \NormalLyrics
   Por -- tan -- to, vos pe -- di -- mos: sal -- vai os vos -- sos ser -- vos, __ que vós, Se -- nhor, re -- mis -- tes com san -- gue pre -- ci -- o -- so.
