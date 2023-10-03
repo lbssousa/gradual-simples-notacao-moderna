@@ -351,6 +351,22 @@ CCCC =
   #}
 )
 
+% Neuma de quatro notas, totalmente cursivo,
+% fechando um melisma
+CCCCmf =
+#(define-music-function
+  (pa pb pc pd)
+  (ly:pitch? ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC( \noBreak
+    $pb \noBreak
+    $pc \noBreak
+    \cadenzaOff
+    $pd )\)
+  #}
+)
+
 % Neuma de quatro notas, com quilisma na terceira nota
 CCQC =
 #(define-music-function
@@ -406,6 +422,24 @@ CCCCCC =
   #{
     \cadenzaOn
     $pa \dC( \noBreak
+    $pb \noBreak
+    $pc \noBreak
+    $pd \noBreak
+    $pe \noBreak
+    \cadenzaOff
+    $pf )
+  #}
+)
+
+% Neuma de seis notas, totalmente cursivo,
+% abrindo um melisma.
+CCCCCCmi =
+#(define-music-function
+  (pa pb pc pd pe pf)
+  (ly:pitch? ly:pitch? ly:pitch? ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC\(( \noBreak
     $pb \noBreak
     $pc \noBreak
     $pd \noBreak

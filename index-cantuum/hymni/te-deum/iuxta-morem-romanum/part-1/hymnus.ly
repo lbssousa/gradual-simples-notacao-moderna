@@ -148,13 +148,13 @@ hymnLyrics = \lyricmode {
   Pro -- cla -- mam céus e ter -- ra a vos -- sa i -- men -- sa gló -- ria.
 
   \BoldLyrics
-  A vós ce -- le -- bra~o co -- ro glo -- ri -- o -- so dos A -- pós -- to -- los.
+  A vós ce -- le -- bra~o co -- ro glo -- ri -- o -- so __ dos A -- pós -- to -- los.
 
   \NormalLyrics
   Vos lou -- va dos Pro -- fe -- tas a no -- bre __ mul -- ti -- dão __
 
   \BoldLyrics
-  e~o lu -- mi -- no -- so~e -- xér -- ci -- to dos vos -- sos san -- tos Már -- ti -- res.
+  e~o lu -- mi -- no -- so~e -- xér -- ci -- to dos vos -- sos __ san -- tos Már -- ti -- res.
 
   \NormalLyrics
   A vós por to -- da~a ter -- ra pro -- cla -- ma~a San -- ta I -- gre -- ja,
