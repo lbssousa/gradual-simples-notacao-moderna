@@ -16,13 +16,13 @@ hymnChant = \relative c' {
   \finalis
 
   % A vós, eterno Pai
-  \CC g b \C b a \C c b \CCC a b a
+  g b a \C c b \CCC a b a
   \divisioMaior
   \C e \CC g a g a b \CCC b a g \C g
   \finalis
 
   % A vós cantam os anjos
-  \CC g b \C b a c b \CC a b \C a
+  g b a c b \CC a b \C a
   \divisioMaior
   e \CC g a a g \CC a b \CCC b a g \C g
   \finalis
@@ -38,31 +38,31 @@ hymnChant = \relative c' {
   \finalis
 
   % Proclamam céus e terra
-  \CC g b \C b a c b \CC a b \C a
+  g b a c b \CC a b \C a
   \divisioMaior
   e \CC g a a g \CC a b \CCC b a g \C g
   \finalis
 
   % A vós celebra o coro
-  \CC g b \C b a c b \CC a b \C a
+  g b a c b \CC a b \C a
   \divisioMaior
   e \CC g a \C a a g \CC a b \C b \CC a g \C g
   \finalis
 
   % Vos louva dos Profetas
-  \CC g b \C b a c b \CC a b \C a
+  g b a c b \CC a b \C a
   \divisioMaior
   e \CC g a a g \CC a b \CCC b a g
   \finalis
 
   % e o luminoso exército
-  \C g b a c b a \CC a b \C a a
+  \C g b a c b \CC a b \C a a
   \divisioMaior
   e \CC g a a g \CC a b \C b \CC a g \C g
   \finalis
 
   % A vós, por toda a terra,
-  \CC g b \C b a c b \CC a b \C a
+  g b a c b \CC a b \C a
   \divisioMaior
   e \CC g a \C a a g \CC a b \CCC b a g \C g
   \finalis
@@ -86,7 +86,7 @@ hymnChant = \relative c' {
   \finalis
 
   % Ó Cristo, rei da glória
-  \CC g a \C a a \CC a g \CC a b g e
+  g a a \CC a g \CC a b g e
   \finalis
 
   % do Pai eterno filho
@@ -136,10 +136,10 @@ hymnLyrics = \lyricmode {
   a vós, __ Se -- nhor, can -- ta -- mos.
 
   \BoldLyrics
-  A __ vós, E -- ter -- no Pai, __ a -- do -- ra to -- da~a ter -- ra.
+  A vós, E -- ter -- no Pai, __ a -- do -- ra to -- da~a ter -- ra.
 
   \NormalLyrics
-  A __ vós can -- tam os an -- jos, os céus __ e seus po -- de -- res:
+  A vós can -- tam os an -- jos, os céus __ e seus po -- de -- res:
 
   \BoldLyrics
   Sois San -- to, __ San -- to, __ San -- to, __ Se -- nhor, Deus do u -- ni -- ver -- so!
@@ -148,16 +148,16 @@ hymnLyrics = \lyricmode {
   Pro -- cla -- mam céus e ter -- ra a vos -- sa~i -- men -- sa __ gló -- ria.
 
   \BoldLyrics
-  A __ vós ce -- le -- bra~o co -- ro glo -- ri -- o -- so dos A -- pós -- to -- los.
+  A vós ce -- le -- bra~o co -- ro glo -- ri -- o -- so dos A -- pós -- to -- los.
 
   \NormalLyrics
-  Vos __ lou -- va dos Pro -- fe -- tas a no -- bre mul -- ti -- dão __
+  Vos lou -- va dos Pro -- fe -- tas a no -- bre mul -- ti -- dão __
 
   \BoldLyrics
-  e o lu -- mi -- no -- so~e -- xér -- ci -- to dos vos -- sos san -- tos __ Már -- ti -- res.
+  e~o lu -- mi -- no -- so~e -- xér -- ci -- to dos vos -- sos san -- tos __ Már -- ti -- res.
 
   \NormalLyrics
-  A __ vós por to -- da~a ter -- ra pro -- cla -- ma~a San -- ta I -- gre -- ja,
+  A vós por to -- da~a ter -- ra pro -- cla -- ma~a San -- ta I -- gre -- ja,
 
   \BoldLyrics
   ó __ Pai __ o -- ni -- po -- ten -- te, de~i -- men -- sa ma -- jes -- ta -- de,
@@ -169,7 +169,7 @@ hymnLyrics = \lyricmode {
   Deus __ vi -- vo~e ver -- da -- dei -- ro, e~ao vos -- so San -- to Es -- pí -- ri -- to.
 
   \NormalLyrics
-  Ó, __ Cris -- to, Rei __ da __ gló -- ria,
+  Ó, Cris -- to, Rei __ da __ gló -- ria,
 
   \BoldLyrics
   do Pai __ e -- ter -- no __ Fi -- lho,

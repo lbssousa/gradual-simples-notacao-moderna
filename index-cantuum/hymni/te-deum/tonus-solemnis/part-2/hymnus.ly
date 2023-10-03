@@ -42,7 +42,7 @@ hymnChant = \relative c' {
   \finalis
 
   % Senhor, tende piedade
-  \C e \CC g a \C a a a g \CQC a b c \CC b a
+  \C e \CC g a \C a a g \CQC a b c \CC b a
   \divisioMaior
   \C e \CC g a \C a \CC a g \CC a b \C g e
   \finalis
@@ -76,7 +76,7 @@ hymnLyrics = \lyricmode {
   Dig -- nai- -- vos, nes -- te di -- a, __ guar -- dar- -- nos do __ pe -- ca -- do.
 
   \BoldLyrics
-  Se -- nhor, __ ten -- de pi -- e -- da -- de __ de nós, __ que~a vós __ cla -- ma -- mos.
+  Se -- nhor, __ ten -- de pie -- da -- de __ de nós, __ que~a vós __ cla -- ma -- mos.
 
   \NormalLyrics
   Que des -- ça so -- bre nós, Se -- nhor, a vos -- sa gra -- ça, __ por -- que __ em vós pu -- se -- mos a nos -- sa con -- fi -- an -- ça.

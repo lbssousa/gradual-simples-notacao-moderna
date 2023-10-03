@@ -69,7 +69,6 @@ hymnChant = \relative c' {
 
   % Ó Pai onipotente
   \CCQC g a b c \CC a b
-  \divisioMaior
   b b b b b b c b \C g c \CC b a \C g
   \finalis
 
