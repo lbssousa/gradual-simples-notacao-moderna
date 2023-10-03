@@ -169,16 +169,16 @@ hymnLyrics = \lyricmode {
   Deus vi -- vo~e ver -- da -- dei -- ro, e~ao vos -- so San -- to~Es -- pí -- ri -- to.
 
   \NormalLyrics
-  Ó, Cris -- to, Rei da gló -- ria,
+  Ó, __ Cris -- to, Rei da gló -- ria,
 
   \BoldLyrics
   do Pai e -- ter -- no Fi -- lho,
 
   \NormalLyrics
-  nas -- ces -- tes du -- ma Vir -- gem, a fim de nos sal -- var. __
+  nas -- ces -- tes du -- ma Vir -- gem, __ a fim de nos sal -- var. __
 
   \BoldLyrics
-  So -- fren -- do vós a mor -- te, da mor -- te tri -- un -- fas -- tes, a -- brin -- do~aos que têm fé dos céus o Rei -- no~e -- ter -- no.
+  So -- fren -- do vós a mor -- te, da mor -- te tri -- un -- fas -- tes, __ a -- brin -- do~aos que têm fé dos céus o Rei -- no~e -- ter -- no.
 
   \NormalLyrics
   Sen -- tas -- tes à di -- rei -- ta de Deus, do Pai na gló -- ria.
@@ -187,7 +187,7 @@ hymnLyrics = \lyricmode {
   Nós cre -- mos que de no -- vo vi -- reis co -- mo ju -- iz.
 
   \NormalLyrics
-  Por -- tan -- to, vos pe -- di -- mos: sal -- vai os vos -- sos ser -- vos, que vós, Se -- nhor, re -- mis -- tes com san -- gue pre -- ci -- o -- so.
+  Por -- tan -- to, vos pe -- di -- mos: sal -- vai os vos -- sos ser -- vos, __ que vós, Se -- nhor, re -- mis -- tes com san -- gue pre -- ci -- o -- so.
 
   \BoldLyrics
   Fa -- zei- -- nos ser con -- ta -- dos, Se -- nhor, vos su -- pli -- ca -- mos, em mei -- o~aos vos -- sos san -- tos, na vos -- sa~e -- ter -- na gló -- ria.

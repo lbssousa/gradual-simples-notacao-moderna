@@ -142,7 +142,7 @@ hymnLyrics = \lyricmode {
   A __ vós can -- tam os an -- jos, os céus __ e seus po -- de -- res:
 
   \BoldLyrics
-  Sois San -- to, __ San -- to, __ San -- to, Se -- nhor, Deus do u -- ni -- ver -- so!
+  Sois San -- to, __ San -- to, __ San -- to, __ Se -- nhor, Deus do u -- ni -- ver -- so!
 
   \NormalLyrics
   Pro -- cla -- mam céus e ter -- ra a vos -- sa~i -- men -- sa __ gló -- ria.
@@ -166,10 +166,10 @@ hymnLyrics = \lyricmode {
   e a -- do -- ra jun -- ta -- men -- te o vos -- so Fi -- lho __ ú -- ni -- co,
 
   \BoldLyrics
-  Deus vi -- vo~e ver -- da -- dei -- ro, e~ao vos -- so San -- to Es -- pí -- ri -- to.
+  Deus __ vi -- vo~e ver -- da -- dei -- ro, e~ao vos -- so San -- to Es -- pí -- ri -- to.
 
   \NormalLyrics
-  Ó, Cris -- to, Rei __ da __ gló -- ria,
+  Ó, __ Cris -- to, Rei __ da __ gló -- ria,
 
   \BoldLyrics
   do Pai __ e -- ter -- no __ Fi -- lho,
