@@ -98,7 +98,7 @@ psalmVerseX = \lyricmode {
 
 \header {
   poet = " "
-  composer = "Texto: Bíblia Sagrada - Tradução Oficial da CNBB (2019)"
+  composer = "Texto: Bíblia Sagrada - Tradução Oficial da CNBB (6ª Edição, 2022)"
 }
 \score {
   \header {
