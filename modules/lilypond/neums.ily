@@ -49,6 +49,14 @@ E =
   #{ $p \dC^\Episema #}
 )
 
+% Neuma de uma nota, com episema e parênteses
+Ep =
+#(define-music-function
+  (p)
+  (ly:pitch?)
+  #{ \parenthesize $p \dC^\Episema #}
+)
+
 % Neuma de uma nota, com liquescência diminutiva
 Ldim =
 #(define-music-function
@@ -333,6 +341,21 @@ CQC =
     $pb \Quilisma \noBreak
     \cadenzaOff
     $pc )
+  #}
+)
+
+% Neuma de três notas, com episema nas duas notas
+% primeiras e oriscus na terceira.
+EEO =
+#(define-music-function
+  (pa pb pc)
+  (ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC^\Episema( \noBreak
+    $pb ^\Episema \noBreak
+    \cadenzaOff
+    $pc ^\Oriscus)
   #}
 )
 

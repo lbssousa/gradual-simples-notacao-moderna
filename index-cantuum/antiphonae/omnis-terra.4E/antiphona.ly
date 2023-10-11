@@ -7,44 +7,39 @@
 \include "../../../modules/lilypond/lyrics.ily"
 \include "../../../modules/lilypond/symbols.ily"
 
-antiphonChant = \relative c'' {
+antiphonChant = \relative c' {
   \AntiphonSignature
-  \C a c \CC c d \C d d
+  \Ldim f \C d f \EE e d \EE e f \C g f f g e
   \divisioMinima
-  d d c \CC d e \C c \CL d e \C d d
+  f \Ldim d \C c \E d \E d
   \divisioMaior
-  a d c b a g \EE a g
-  \divisioMinima
-  \C f g a bes c bes a a
+  \C c d \Cp f \C f f f f f f f d f e
   \finalis
 }
 
 antiphonLyrics = \lyricmode {
-  Ad te, Dó -- mi -- ne, le -- vá -- vi á -- ni -- mam __ me -- am:
-  ve -- ni, et é -- ri -- pe me, __ Dó -- mi -- ne, ad te con -- fú -- gi.
+  Om -- nis ter -- ra __ ad -- ó -- ret te, De -- us, et psal -- lat ti -- bi, psal -- mum _ di -- cat nó -- mi -- ni tu -- o, Dó -- mi -- ne.
 }
 
 antiphonLyricsPt = \lyricmode {
-
-  A vós, ó __ Se -- nhor, a mi -- nha al -- ma e -- le -- vo.
-  Vin -- de e li -- ber -- tai- -- me, __ Se -- nhor, pois em vós me~a -- bri -- go.
+  To -- da~a ter -- ra __ a -- do -- re- -- vos, ó Deus, e can -- te a vós, en -- to -- e sal -- mos ao vos -- so no -- me, ó Se -- nhor.
 }
 
 \GregorianTranscriptionLayout
 
 \header {
-  meter = "Cantus ID 001255 cf. Sl 142(143),8d-9"
+  meter = "Cantus ID 004155 cf. Sl 65(66),4"
   arranger = "Adapt.: Lincoln Haas Hein, Laércio de Sousa"
 }
 
 \score {
   \header {
-    piece = "IV c"
+    piece = "IV E"
   }
 
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "antiphon" {
-      \transpose c g, \antiphonChant
+      \antiphonChant
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics

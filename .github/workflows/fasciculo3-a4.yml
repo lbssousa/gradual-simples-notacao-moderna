@@ -1,0 +1,28 @@
+name: "Fascículo 3 / Layout A4"
+on:
+  push:
+    branches: [main]
+defaults:
+  run:
+    working-directory: .
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Construir PDFs
+        uses: lbssousa/latex-music-action@v4.1.2
+        with:
+          root_file: fasciculo3-a4.tex
+          latexmk_use_lualatex: true
+          latexmk_shell_escape: true
+
+      - name: Fazer upload dos artefatos
+        uses: actions/upload-artifact@v3
+        with:
+          name: fasciculo3-a4
+          path: |
+            *.pdf
+            *.log

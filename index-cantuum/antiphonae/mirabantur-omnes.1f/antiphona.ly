@@ -2,49 +2,41 @@
 
 \include "gregorian.ly"
 \include "../../../modules/lilypond/neums.ily"
-\include "../../../modules/lilypond/spacing.ily"
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 \include "../../../modules/lilypond/symbols.ily"
 
-antiphonChant = \relative c'' {
+antiphonChant = \relative c' {
   \AntiphonSignature
-  \C a c \CC c d \C d d
+  \C d \CC e f \C g g \CL f e \C d
   \divisioMinima
-  d d c \CC d e \C c \CL d e \C d d
-  \divisioMaior
-  a d c b a g \EE a g
-  \divisioMinima
-  \C f g a bes c bes a a
+  \C_C f a \C a g a f g \CL f e \C d \CCQC e f g a \CC f e \C d d
   \finalis
 }
 
 antiphonLyrics = \lyricmode {
-  Ad te, Dó -- mi -- ne, le -- vá -- vi á -- ni -- mam __ me -- am:
-  ve -- ni, et é -- ri -- pe me, __ Dó -- mi -- ne, ad te con -- fú -- gi.
+  Mi -- ra -- bán -- tur om -- nes de __ his quæ pro -- ce -- dé -- bant de o -- re __ De -- i.
 }
 
 antiphonLyricsPt = \lyricmode {
-
-  A vós, ó __ Se -- nhor, a mi -- nha al -- ma e -- le -- vo.
-  Vin -- de e li -- ber -- tai- -- me, __ Se -- nhor, pois em vós me~a -- bri -- go.
+  To -- dos __ se~ad -- mi -- ra -- vam \MelismaOff da -- qui -- \MelismaOn lo que pro -- ce -- di -- a __ da bo -- ca __ de Deus.
 }
 
 \GregorianTranscriptionLayout
 
 \header {
-  meter = "Cantus ID 001255 cf. Sl 142(143),8d-9"
+  meter = "Cantus ID 003761 cf. Lc 4,22"
   arranger = "Adapt.: Lincoln Haas Hein, Laércio de Sousa"
 }
 
 \score {
   \header {
-    piece = "IV c"
+    piece = "I f"
   }
 
   \new GregorianTranscriptionStaff <<
     \new GregorianTranscriptionVoice = "antiphon" {
-      \transpose c g, \antiphonChant
+      \antiphonChant
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
