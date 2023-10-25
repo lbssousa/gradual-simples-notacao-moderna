@@ -27,17 +27,17 @@ antiphonChant = \relative c' {
 
 antiphonLyrics = \lyricmode {
   A -- ve, Ma -- rí -- a, gra -- ti -- a ple -- na: _ _ Dó -- mi -- nus te -- cum:
-  be -- ne -- dí -- cta _ tu in mu -- li --
+  be -- ne -- dí -- cta _ tu in __ mu -- li --
   \MelismaOff
   é -- ri --
   \MelismaOn
-  bus, al -- le -- lú -- ia.
+  bus, __ al -- le -- lú -- ia.
 }
 
 antiphonLyricsPt = \lyricmode {
 
   A -- ve Ma -- ri -- a, chei -- a de gra -- ça: o Se -- nhor é con -- vos -- co.
-  Ben -- _ di -- ta sois vós en tre~as mu -- lhe -- res, a -- le -- lu -- ia.
+  Ben -- _ di -- ta sois vós en -- tre~as mu -- lhe -- res, __ a -- le -- lu -- ia.
 }
 
 \GregorianTranscriptionLayout

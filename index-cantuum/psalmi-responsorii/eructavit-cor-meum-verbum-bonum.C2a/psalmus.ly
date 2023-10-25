@@ -24,7 +24,7 @@ psalmChant = {
   \divisioMaxima
   \chantTenorC
   \chantTerminatioCTwoa #'((syneresis . partial))
-  \finalis
+  s \finalis
 }
 
 psalmVerseI = \lyricmode {

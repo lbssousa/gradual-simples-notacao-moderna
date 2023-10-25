@@ -18,7 +18,6 @@ antiphonChant = \relative c' {
   \divisioMaior
   c \E d \EE f g \E f \CC f e \C_C d c \E e \CC f e \E d \C d d
   \finalis
-
 }
 
 antiphonLyrics = \lyricmode {
@@ -52,6 +51,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }

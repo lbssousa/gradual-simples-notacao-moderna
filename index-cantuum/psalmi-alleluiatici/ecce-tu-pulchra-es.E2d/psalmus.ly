@@ -15,7 +15,7 @@ psalmChant = {
   \S \chantTenorEOne
   \chantTerminatioETwod #'((syneresis . partial)
                            (epenthesis . partial))
-  \finalis
+  s \finalis
 }
 
 psalmVerseI = \lyricmode {

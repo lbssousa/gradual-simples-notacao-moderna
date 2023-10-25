@@ -26,13 +26,13 @@ antiphonChant = \relative c' {
 
 antiphonLyrics = \lyricmode {
   A -- ve, Ma -- rí -- a, gra -- ti -- a ple -- na: _ _ Dó -- mi -- nus te -- cum:
-  be -- ne -- dí -- cta _ tu in mu -- li -- é -- ri -- bus.
+  be -- ne -- dí -- cta _ tu in __ mu -- li -- é -- ri -- bus.
 }
 
 antiphonLyricsPt = \lyricmode {
 
   A -- ve Ma -- ri -- a, chei -- a de gra -- ça: o Se -- nhor é con -- vos -- co.
-  Ben -- _ di -- ta sois vós en tre~as mu -- lhe -- _ res.
+  Ben -- _ di -- ta sois vós en -- tre~as mu -- lhe -- _ res.
 }
 
 \GregorianTranscriptionLayout

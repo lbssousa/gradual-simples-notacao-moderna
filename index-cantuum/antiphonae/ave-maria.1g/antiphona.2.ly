@@ -18,7 +18,10 @@ antiphonChant = \relative c' {
   \divisioMaior
   g \Cp g \C a g \Cp g \C f
   \divisioMinima
-  \CL e c \C d \CC f e
+  \S \CL e c \C d \CC f e
+  \C d \Cp d \C d s
+  \finalis
+  \S \CL e c \C d \CC f e
   \C_C d c
   \QC e f \Ldim g \CC f e \C d d
   \finalis
@@ -27,17 +30,26 @@ antiphonChant = \relative c' {
 
 antiphonLyrics = \lyricmode {
   A -- ve, Ma -- rí -- a, gra -- ti -- a ple -- na: _ _ Dó -- mi -- nus te -- cum:
-  be -- ne -- dí -- cta _ tu in mu -- li --
+  be -- ne -- dí -- cta _ tu
+  † in __ mu -- li --
   \MelismaOff
   é -- ri --
   \MelismaOn
-  bus, al -- le -- lú -- ia.
+  bus.
+  \set stanza = \markup \column { \vspace #.33 "T. P." }
+  † in __ mu -- li --
+  \MelismaOff
+  é -- ri --
+  \MelismaOn
+  bus, __ al -- le -- lú -- ia.
 }
 
 antiphonLyricsPt = \lyricmode {
 
   A -- ve Ma -- ri -- a, chei -- a de gra -- ça: o Se -- nhor é con -- vos -- co.
-  Ben -- _ di -- ta sois vós en tre~as mu -- lhe -- res, a -- le -- lu -- ia.
+  Ben -- _ di -- ta sois vós
+  \markup \upright † en -- tre~as mu -- lhe -- _ res.
+  \markup \upright † en -- tre~as mu -- lhe -- res, __ a -- le -- lu -- ia.
 }
 
 \GregorianTranscriptionLayout
@@ -58,6 +70,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }
