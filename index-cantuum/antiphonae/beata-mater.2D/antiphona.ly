@@ -14,30 +14,34 @@ antiphonChant = \relative c' {
   \divisioMinima
   d c d f \CC f e \C c
   \divisioMaior
-  c d \CC f g \EE f e \CC d c \C d \C_C f e \C d d
+  c d \CC f g \once \slurDown \EE f e \CC d c \C d \C_C f e \C d d
   \divisioMaior
-  c \E d \EE f g \E f \CC f e \C_C d c \E e \CC f e \E d \C d d
+  c \E d \EE f g \E f \CC f e \C_C d c \E e \S \CC f e \E d \C d d s
+  \finalis
+  \S \CC f e \E d \C d \CC d c \C d \CC f e \C d d
   \finalis
 }
 
 antiphonLyrics = \lyricmode {
   Be -- á -- ta \MelismaOff Ma -- ter \MelismaOn et in -- tác -- ta Vir -- go,
   glo -- ri -- ó -- sa __ Re -- gí -- na __ mun -- di,
-  in -- ter -- cé -- de pro no -- bis ad __ Dó -- mi -- num.
+  in -- ter -- cé -- de pro __ no -- bis † ad __ Dó -- mi -- num.
+  \set stanza = \markup \column { \vspace #.33 "T. P." }
+  † ad __ Dó -- mi -- num, __ al -- le -- lú -- ia.
 }
 
 antiphonLyricsPt = \lyricmode {
-
   Ben -- di -- ta Mãe __ e in -- tac -- ta Vir -- gem,
   glo -- ri -- o -- sa __ Ra -- i -- \MelismaOff nha do \MelismaOn mun -- do,
-  in -- ter -- ce -- dei por \MelismaOff to -- dos \MelismaOn nós jun -- to~ao Se -- nhor.
+  in -- ter -- ce -- dei por __ \MelismaOff to -- dos \MelismaOn nós \markup \upright † jun -- to~ao Se -- nhor.
+  \markup \upright † jun -- to~ao Se -- nhor, __ a -- le -- lu -- ia.
 }
 
 \GregorianTranscriptionLayout
 
 \header {
-  meter = "cf. Sl 2,7"
-  arranger = "Adapt.: Lincoln Haas Hein, Laércio de Sousa"
+  meter = "Cantus ID 001570"
+  arranger = "Adapt.: Laércio de Sousa"
 }
 
 \score {
@@ -51,6 +55,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }

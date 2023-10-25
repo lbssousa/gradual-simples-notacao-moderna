@@ -19,13 +19,13 @@ antiphonChant = \relative c' {
 
 antiphonLyrics = \lyricmode {
   Sanc -- tum __ no -- men Dó -- mi -- ni __
-  ma -- _ \MelismaOff gní -- fi -- \MelismaOn cat á -- ni -- ma me -- a.
+  ma -- _ \MelismaOff gní -- fi -- \MelismaOn cat á -- ni -- ma __ me -- a.
 }
 
 antiphonLyricsPt = \lyricmode {
 
   Ao \MelismaOff san -- to \MelismaOn no -- me do Se -- nhor __
-  en -- gran -- de -- ce a mi -- nha al -- ma.
+  en -- gran -- de -- ce a __ mi -- nha __ al -- ma.
 }
 
 \GregorianTranscriptionLayout
@@ -46,6 +46,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }

@@ -109,6 +109,19 @@ CC =
   #}
 )
 
+% Neuma de duas notas, totalmente cursivo, com parênteses
+CpCp =
+#(define-music-function
+  (pa pb)
+  (ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    \parenthesize $pa \dC( \noBreak
+    \cadenzaOff
+    \parenthesize $pb )
+  #}
+)
+
 % Neuma de duas notas, totalmente cursivo,
 % abrindo um melisma
 CCmi =
@@ -375,6 +388,22 @@ CCCC =
 )
 
 % Neuma de quatro notas, totalmente cursivo,
+% abrindo um melisma
+CCCCmi =
+#(define-music-function
+  (pa pb pc pd)
+  (ly:pitch? ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC\(( \noBreak
+    $pb \noBreak
+    $pc \noBreak
+    \cadenzaOff
+    $pd )
+  #}
+)
+
+% Neuma de quatro notas, totalmente cursivo,
 % fechando um melisma
 CCCCmf =
 #(define-music-function
@@ -421,6 +450,22 @@ CCCCC =
   #}
 )
 
+% Neuma de cinco notas, com quilisma na segunda nota
+CQCCC =
+#(define-music-function
+  (pa pb pc pd pe)
+  (ly:pitch? ly:pitch? ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC( \noBreak
+    $pb \Quilisma \noBreak
+    $pc \noBreak
+    $pd \noBreak
+    \cadenzaOff
+    $pe )
+  #}
+)
+
 % Neuma de cinco notas, com quilisma na quarta nota
 CCCQC =
 #(define-music-function
@@ -431,7 +476,7 @@ CCCQC =
     $pa \dC( \noBreak
     $pb \noBreak
     $pc \noBreak
-    $pd \Quilisma  \noBreak
+    $pd \Quilisma \noBreak
     \cadenzaOff
     $pe )
   #}
