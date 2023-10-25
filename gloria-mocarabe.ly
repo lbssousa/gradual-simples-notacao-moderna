@@ -88,27 +88,29 @@ gloriaChant = \relative c' {
 }
 
 gloriaLyrics = \lyricmode {
-  Gló -- ria~a Deus nas al -- tu -- ras
-  e paz na ter -- ra~aos ho -- mens por E -- le~a -- ma -- dos.
-  Se -- nhor Deus, Rei dos céus, __ Deus Pai to -- do -- -po -- de -- ro -- so:
-  nós Vos lou -- va -- mos,
-  nós Vos ben -- di -- ze -- mos,
-  nós Vos a -- do -- ra -- mos,
-  nós Vos glo -- ri -- fi -- ca -- mos,
-  nós Vos da -- mos gra -- ças,
+  Gló -- ria~a Deus nas al -- tu -- ras,
+  e paz na ter -- ra~aos ho -- mens por e -- le~a -- ma -- dos.
+  Se -- nhor Deus, rei dos céus, __ Deus Pai to -- do- -- po -- de -- ro -- so.
+  Nós vos lou -- va -- mos,
+  nós vos ben -- di -- ze -- mos,
+  nós vos a -- do -- ra -- mos,
+  nós vos glo -- ri -- fi -- ca -- mos,
+  nós vos da -- mos gra -- ças
   por vos -- sa~i -- men -- sa gló -- ria.
   Se -- nhor __ Je -- sus Cris -- to,
   Fi -- lho U -- ni -- gê -- ni -- to,
   Se -- nhor __ Deus, Cor -- dei -- ro de Deus, __
-  Fi -- lho de Deus Pai: __
+  Fi -- lho de Deus Pai. __
   Vós que ti -- rais o pe -- ca -- do do mun -- do,
-  ten -- de pi -- e -- da -- de de __ nós;
+  ten -- de pi -- e -- da -- de de __ nós.
   Vós que ti -- rais o pe -- ca -- do do mun -- do,
-  a -- co -- lhei a nos -- sa sú -- pli -- ca;
+  a -- co -- lhei a nos -- sa sú -- pli -- ca.
   Vós que~es -- tais à di -- rei -- ta do Pai, __
   ten -- de pi -- e -- da -- de de nós.
-  Só Vós __ sois o San -- to; só Vós, __ o Se -- nhor;
-  só Vós, __ o Al -- tís -- si -- mo, Je -- sus Cris -- to; __ _
+  Só vós __ sois o San -- to,
+  só vós, __ o Se -- nhor,
+  só vós, __ o Al -- tís -- si -- mo,
+  Je -- sus Cris -- to, __ _
   com o Es -- pí -- ri -- to San -- to,
   na gló -- ri -- a __ _ _ de __ Deus __ Pai. __
   A -- mém.
@@ -130,7 +132,7 @@ gloriaLyrics = \lyricmode {
   title = "Glória a Deus nas alturas"
   subtitle = "melodia moçárabe"
   composer = "L.: Missal Romano, 3ª Edição (CNBB)"
-  arranger = "M.: Kyriale Simplex (n. 40)"
+  arranger = "M.: Kyriale Simplex (Ordinário II)"
   meter = ""
   tagline = ##f
 }

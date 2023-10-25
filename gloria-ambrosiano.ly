@@ -7,7 +7,7 @@
 \include "modules/lilypond/lyrics.ily"
 
 GloriaMelisma = \relative c'' {
-  \CCCCCCmi c c d c b c \CCCCmf a b a g
+  \CCCCCC c c d c b c \CCCCmf a b a g
 }
 
 gloriaChant = \relative c'' {
@@ -37,13 +37,13 @@ gloriaChant = \relative c'' {
   a a a a a a g \finalis
 
   % Nós vos damos graças
-  g g g g g \CCC b a g \GloriaMelisma \divisioMinima
+  g g g g g \CCCmi b a g \GloriaMelisma \divisioMinima
 
   % por vossa imensa glória
   a a a b a a g \finalis
 
   % Senhor Jesus Cristo
-  a \CC a g \C b b c \CCCC a b a g \GloriaMelisma \divisioMinima
+  a \CC a g \C b b c \CCCCmi a b a g \GloriaMelisma \divisioMinima
 
   % Filho Unigênito
   a a a a a a g \finalis
@@ -52,13 +52,13 @@ gloriaChant = \relative c'' {
   a a \CC a g \C a a a a \CC a g \C a a a a \CC a g \finalis
 
   % Vós que tirais o pecado do mundo,
-  \C a a a a a a b a a g \CCC b a g \GloriaMelisma \divisioMinima
+  \C a a a a a a b a a g \CCCmi b a g \GloriaMelisma \divisioMinima
 
   % tende piedade de nós
   \C a a a a a a a \CC a g \finalis
 
   % Vós que tirais o pecado do mundo,
-  \C a a a a a a b a a g \CCC b a g \GloriaMelisma \divisioMinima
+  \C a a a a a a b a a g \CCCmi b a g \GloriaMelisma \divisioMinima
 
   % acolhei a nossa súplica
   \C a a a a a a a a g \finalis
@@ -73,7 +73,7 @@ gloriaChant = \relative c'' {
   a a a a \CC a g \finalis
 
   % Só vós, o Altíssimo, Jesus Cristo
-  \C a a a a a a g b b c \CCCC a b a g \GloriaMelisma \finalis
+  \C a a a a a a g b b c \CCCCmi a b a g \GloriaMelisma \finalis
 
   % Com o Espírito Santo, na glória de Deus Pai.
   \C a a a a a a a a a \CC b a \C g a \CC b a \C a \finalis
@@ -86,27 +86,29 @@ gloriaChant = \relative c'' {
 }
 
 gloriaLyrics = \lyricmode {
-  Gló -- ria~a Deus nas al -- tu -- ras
-  e paz na ter -- ra~aos ho -- mens por E -- le~a -- ma -- dos.
-  Se -- nhor Deus, __ Rei dos céus, __ Deus Pai to -- do -- -po -- de -- ro -- so:
-  nós Vos lou -- va -- mos,
-  nós Vos ben -- di -- ze -- mos,
-  nós Vos a -- do -- ra -- mos,
-  nós Vos glo -- ri -- fi -- ca -- mos,
-  nós Vos da -- mos gra -- ças, __ _ _
+  Gló -- ria~a Deus nas al -- tu -- ras,
+  e paz na ter -- ra~aos ho -- mens por e -- le~a -- ma -- dos.
+  Se -- nhor Deus, __ rei dos céus, __ Deus Pai to -- do- -- po -- de -- ro -- so.
+  Nós vos lou -- va -- mos,
+  nós vos ben -- di -- ze -- mos,
+  nós vos a -- do -- ra -- mos,
+  nós vos glo -- ri -- fi -- ca -- mos,
+  nós vos da -- mos gra -- ças __ _ _
   por vos -- sa~i -- men -- sa gló -- ria.
   Se -- nhor __ Je -- sus Cris -- to, __ _ _
   Fi -- lho U -- ni -- gê -- ni -- to,
   Se -- nhor Deus, __ Cor -- dei -- ro de Deus, __
-  Fi -- lho de Deus Pai: __
+  Fi -- lho de Deus Pai. __
   Vós que ti -- rais o pe -- ca -- do do mun -- do, __ _ _
-  ten -- de pi -- e -- da -- de de nós; __
+  ten -- de pi -- e -- da -- de de nós. __
   Vós que ti -- rais o pe -- ca -- do do mun -- do, __ _ _
-  a -- co -- lhei a nos -- sa sú -- pli -- ca;
+  a -- co -- lhei a nos -- sa sú -- pli -- ca.
   Vós que~es -- tais à di -- rei -- ta do Pai, __
   ten -- de pi -- e -- da -- de de nós. __
-  Só Vós sois o San -- to; só Vós, o Se -- nhor; __
-  só Vós, o Al -- tís -- si -- mo, Je -- sus Cris -- to; __ _ _
+  Só vós sois o San -- to,
+  só vós, o Se -- nhor, __
+  só vós, o Al -- tís -- si -- mo,
+  Je -- sus Cris -- to, __ _ _
   com o Es -- pí -- ri -- to San -- to,
   na gló -- ria de Deus __ Pai.
   A -- mém.
@@ -130,7 +132,7 @@ gloriaLyrics = \lyricmode {
   title = "Glória a Deus nas alturas"
   subtitle = "melodia ambrosiana"
   composer = "L.: Missal Romano, 3ª Edição (CNBB)"
-  arranger = "M.: Kyriale Simplex (n. 45)"
+  arranger = "M.: Kyriale Simplex (Ordinário III)"
   meter = ""
   tagline = ##f
 }
