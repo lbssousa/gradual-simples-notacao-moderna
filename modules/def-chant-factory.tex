@@ -3,6 +3,8 @@
 
 \makeatletter
 
+\setluaoption{ly}{staffsize}{20}
+
 \newcommand{\Map}[2]{\@for\p:={#2}\do{\expandafter#1\p}} % chktex 41
 \def\@Antiphon@Annotation{}
 \def\@Verse@Annotation{}
@@ -141,18 +143,18 @@
   }
 }
 
-\def\@Lily@Staff@Size{20}
+
 
 \NewDocumentCommand \MakeChantAntiphon { s m O{} } {
   \def\@Antiphon@L{antiphona\IfBlankF{#3}{.#3}}
 
-  \lilypondfile[staffsize=\@Lily@Staff@Size]{index-cantuum/antiphonae/#2/\@Antiphon@L}
+  \lilypondfile{index-cantuum/antiphonae/#2/\@Antiphon@L}
 }
 
 \NewDocumentCommand \MakeChantAlleluia { s m O{} } {
   \def\@Antiphon@L{antiphona}
 
-  \lilypondfile[staffsize=\@Lily@Staff@Size]{index-cantuum/antiphonae/alleluia.#2/\@Antiphon@L}
+  \lilypondfile{index-cantuum/antiphonae/alleluia.#2/\@Antiphon@L}
 
   #3
 }
@@ -190,7 +192,7 @@
 }
 
 \NewDocumentCommand \MakeChantPsalm { m m } {
-  \lilypondfile[staffsize=\@Lily@Staff@Size]{index-cantuum/#1/#2/psalmus}
+  \lilypondfile{index-cantuum/#1/#2/psalmus}
 }
 
 \newcommand{\DoGregorioImportL}{}
@@ -224,7 +226,7 @@
 }
 
 \NewDocumentCommand \MakeChantHymn { m m } {
-  \lilypondfile[staffsize=\@Lily@Staff@Size]{index-cantuum/#1/#2/hymnus}
+  \lilypondfile{index-cantuum/#1/#2/hymnus}
 }
 
 \newtoggle{biginitial}

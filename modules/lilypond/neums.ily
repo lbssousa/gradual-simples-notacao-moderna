@@ -343,6 +343,20 @@ CEE =
   #}
 )
 
+% Neuma de três notas, com episema em todas as notas
+EEE =
+#(define-music-function
+  (pa pb pc)
+  (ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \cadenzaOn
+    $pa \dC ^\Episema( \noBreak
+    $pb ^\Episema \noBreak
+    \cadenzaOff
+    $pc ^\Episema)
+  #}
+)
+
 % Neuma de três notas, com quilisma na segunda nota
 CQC =
 #(define-music-function
@@ -354,6 +368,21 @@ CQC =
     $pb \Quilisma \noBreak
     \cadenzaOff
     $pc )
+  #}
+)
+
+% Neuma de uma nota seguido de neuma de duas notas, totalmente cursivos, com quilisma na nota do meio e ligadura parcial
+C_QC =
+#(define-music-function
+  (pa pb pc)
+  (ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \once \phrasingSlurDashed
+    $pa \dC\( \noBreak
+    \cadenzaOn
+    $pb \dC\Quilisma( \noBreak
+    \cadenzaOff
+    $pc )\)
   #}
 )
 
