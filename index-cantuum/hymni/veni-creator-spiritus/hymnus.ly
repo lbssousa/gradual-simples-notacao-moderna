@@ -32,7 +32,7 @@ hymnLyricsI = \lyricmode {
 
 hymnLyricsII = \lyricmode {
   \set stanza = "2."
-  Vós sois cha -- ma -- do~o~In __ -- ter -- ces -- sor,
+  Vós sois cha -- ma -- do~o~In -- ter -- ces -- sor,
   do Deus ex -- cel -- so~o __ dom sem par,
   a fon -- te __ vi -- va,~o __ fo -- go,~o~a -- mor,
   a~un -- ção di -- vi -- na~e __ sa -- lu -- tar.
@@ -48,9 +48,9 @@ hymnLyricsIII = \lyricmode {
 
 hymnLyricsIV = \lyricmode {
   \set stanza = "4."
-  A nos -- sa __ men -- te~i __ -- lu -- mi -- nai,
+  A nos -- sa __ men -- te~i -- lu -- mi -- nai,
   os co -- ra -- ções en -- chei de~a -- mor,
-  nos -- sa __ fra -- que -- za~en __ -- co -- ra -- jai,
+  nos -- sa __ fra -- que -- za~en -- co -- ra -- jai,
   qual for -- ça~e __ -- ter -- na~e __ pro -- te -- tor.
 }
 
