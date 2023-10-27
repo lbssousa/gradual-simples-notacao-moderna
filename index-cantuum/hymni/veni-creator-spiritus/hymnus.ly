@@ -51,7 +51,7 @@ hymnLyricsIV = \lyricmode {
   A nos -- sa __ men -- te~i -- lu -- mi -- nai,
   os co -- ra -- ções en -- chei de~a -- mor,
   nos -- sa __ fra -- que -- za~en -- co -- ra -- jai,
-  qual for -- ça~e __ -- ter -- na~e __ pro -- te -- tor.
+  qual __ for -- ça~e __ -- ter -- na~e __ pro -- te -- tor.
 }
 
 hymnLyricsV = \lyricmode {
