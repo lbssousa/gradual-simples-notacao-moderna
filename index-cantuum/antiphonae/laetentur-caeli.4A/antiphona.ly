@@ -16,7 +16,6 @@ antiphonChant = \relative c'' {
   \divisioMinima
   \EE f g \C a \Ldim c \C a a
   \finalis
-
 }
 
 antiphonLyrics = \lyricmode {
@@ -29,7 +28,6 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-
   Os céus se~a -- le -- grem __ e e -- xul --
   \MelismaOff
   te a
@@ -56,6 +54,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }

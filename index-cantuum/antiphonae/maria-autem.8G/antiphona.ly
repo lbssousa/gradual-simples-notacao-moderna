@@ -16,7 +16,6 @@ antiphonChant = \relative c'' {
   \divisioMaior
   \Ldim a \C g e f \C_C g a \C a g g
   \finalis
-
 }
 
 antiphonLyrics = \lyricmode {
@@ -24,7 +23,6 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-
   Ma -- ri -- a, po -- rém, con -- ser -- va -- va to -- das es -- sas pa -- la -- vras, pon -- de -- ran -- do-as
   \MelismaOff
   no seu
@@ -50,6 +48,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }

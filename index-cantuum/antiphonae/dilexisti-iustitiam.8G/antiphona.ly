@@ -18,7 +18,6 @@ antiphonChant = \relative c'' {
   \divisioMinima
   \Cp g \C a \C_C g f \CC g a \C a g g \Cp g
   \finalis
-
 }
 
 antiphonLyrics = \lyricmode {
@@ -32,7 +31,6 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-
   A -- mas -- tes __ a jus -- ti -- ça __
   e~o -- di -- as --
   \MelismaOff tes a \MelismaOn
@@ -45,7 +43,7 @@ antiphonLyricsPt = \lyricmode {
 \GregorianTranscriptionLayout
 
 \header {
-  meter = "cf. Sl 45(44),8"
+  meter = "cf. Sl 44(45),8"
   arranger = "Adapt.: Lincoln Haas Hein, Laércio de Sousa"
 }
 
@@ -60,6 +58,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }
