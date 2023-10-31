@@ -19,7 +19,6 @@ antiphonChant = \relative c' {
   \CC e f \CC d c \Cp c
   \C d e f d
   \finalis
-
 }
 
 antiphonLyrics = \lyricmode {
@@ -36,7 +35,6 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-
   O Se -- nhor dis -- se a mim: Tu és o meu __ Fi -- lho,
   Eu __ _ ho -- je __ "" ge -- rei a ti!
 }
@@ -59,6 +57,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }

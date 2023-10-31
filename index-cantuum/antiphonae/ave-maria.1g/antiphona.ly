@@ -22,7 +22,6 @@ antiphonChant = \relative c' {
   \C_C d c
   \QC e f \Ldim g \CC f e \C d d
   \finalis
-
 }
 
 antiphonLyrics = \lyricmode {
@@ -35,7 +34,6 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-
   A -- ve Ma -- ri -- a, chei -- a de gra -- ça: o Se -- nhor é con -- vos -- co.
   Ben -- _ di -- ta sois vós en -- tre~as mu -- lhe -- res, __ a -- le -- lu -- ia.
 }
@@ -58,6 +56,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }

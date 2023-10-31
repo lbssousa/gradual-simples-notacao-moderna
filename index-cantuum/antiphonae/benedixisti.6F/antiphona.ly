@@ -13,7 +13,6 @@ antiphonChant = \relative c' {
   \divisioMinima
   \C g \CC f e \C d f g g f
   \finalis
-
 }
 
 antiphonLyrics = \lyricmode {
@@ -21,7 +20,6 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-
   A -- ben -- ço -- as -- tes, ó Se -- nhor, vos -- sa ter -- ra.
 }
 
@@ -43,6 +41,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }

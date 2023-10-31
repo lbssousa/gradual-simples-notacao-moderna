@@ -16,7 +16,6 @@ antiphonChant = \relative c' {
   \divisioMaior
   \Cp a \C f g a c g a g g g \CCCC g a g f \CC g a \C_C a g g
   \finalis
-
 }
 
 antiphonLyrics = \lyricmode {
@@ -28,7 +27,6 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-
   Es -- ta -- vam os pais __ de Je -- sus __ _ ad -- mi -- ra -- dos com a -- qui -- lo que di -- zi -- am __ de -- le.
 }
 
@@ -50,6 +48,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }

@@ -20,7 +20,6 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-
   Os que~em vós es -- pe -- ram, ó Se -- nhor,
   não se -- rão __ con -- fun -- di -- dos.
 }
@@ -43,6 +42,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }

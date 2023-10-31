@@ -23,11 +23,9 @@ antiphonLyrics = \lyricmode {
   et nu -- bes plu -- ant __ _ iu -- stum:
   a -- pe -- ri -- á -- tur ter -- ra,
   et gér -- mi -- net __ "" Sal -- va -- tó -- rem.
-
 }
 
 antiphonLyricsPt = \lyricmode {
-
   Or -- va -- lhai, ó céus, do al -- to
   e~as nu -- vens cho -- vam __ o jus -- to;
   que se a -- bra a ter -- ra
@@ -52,6 +50,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }

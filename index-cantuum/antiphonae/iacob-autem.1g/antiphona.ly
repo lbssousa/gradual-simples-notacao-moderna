@@ -21,7 +21,6 @@ antiphonChant = \relative c' {
   \divisioMinima
   \C e f g \CC f e \C d d
   \finalis
-
 }
 
 antiphonLyrics = \lyricmode {
@@ -33,7 +32,6 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-
   Ja -- có, por __ fim, ge -- _ rou Jo -- sé, __ _ _ o~es -- po -- so de Ma -- ri -- a, da qual __ nas -- ceu __ _ Je -- sus, __ que~é cha -- ma -- do __ Cris -- to.
 }
 
@@ -55,6 +53,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }

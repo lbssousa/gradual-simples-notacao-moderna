@@ -26,7 +26,6 @@ antiphonLyrics = \lyricmode {
 }
 
 antiphonLyricsPt = \lyricmode {
-
   Eis que __ fiz de __ ti a __ luz das gen -- tes, __ ""
   pa -- ra se -- res mi -- nha
   \MelismaOff sal -- va -- \MelismaOn
@@ -51,6 +50,6 @@ antiphonLyricsPt = \lyricmode {
     }
 
     \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyricsPt
+    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
   >>
 }
