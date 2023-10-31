@@ -329,6 +329,21 @@ C_CC =
   #}
 )
 
+% Neuma de uma nota seguido de neuma de duas notas, totalmente cursivos, com ligadura parcial
+CC_C =
+#(define-music-function
+  (pa pb pc)
+  (ly:pitch? ly:pitch? ly:pitch?)
+  #{
+    \once \phrasingSlurDashed
+    \cadenzaOn
+    $pa \dC\(( \noBreak
+    $pb \dC) \noBreak
+    \cadenzaOff
+    $pc \)
+  #}
+)
+
 % Neuma de três notas, com episema na segunda e terceira nota
 CEE =
 #(define-music-function
