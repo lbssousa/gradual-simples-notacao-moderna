@@ -12,7 +12,7 @@ psalmChantA = {
   \PsalmSignature
   \S \chantTenorC
   \chantTerminatioCOne #'((syneresis . partial))
-  \finalis
+  s \finalis
 }
 
 psalmChantB = {
@@ -20,7 +20,7 @@ psalmChantB = {
   \chantTenorC
   \chantTerminatioCOne #'((syneresis . partial)
                           (epenthesis . partial))
-  \finalis
+  s \finalis
 }
 
 psalmVerseIa = \lyricmode {

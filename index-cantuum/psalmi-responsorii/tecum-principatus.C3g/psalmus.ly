@@ -25,7 +25,7 @@ psalmOddVersesChant = {
   \divisioMaxima
   \chantTenorC
   \chantTerminatioCTwog #'((syneresis . partial))
-  \finalis
+  s \finalis
 }
 
 psalmEvenVersesChant = {
@@ -37,7 +37,7 @@ psalmEvenVersesChant = {
   \divisioMaxima
   \chantTenorSecundusCThree
   \chantTerminatioCThreeg #'((syneresis . partial))
-  \finalis
+  s \finalis
 }
 
 psalmVerseI = \lyricmode {
