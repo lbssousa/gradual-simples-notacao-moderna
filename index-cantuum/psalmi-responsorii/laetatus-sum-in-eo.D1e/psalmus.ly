@@ -26,7 +26,7 @@ psalmChant = {
   \divisioMaxima
   \S \chantTenorD
   \chantTerminatioDOnee #'((syneresis . partial))
-  \finalis
+  s \finalis
 
 }
 

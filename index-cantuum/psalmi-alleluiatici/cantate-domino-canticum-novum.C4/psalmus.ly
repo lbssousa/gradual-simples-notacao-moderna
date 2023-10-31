@@ -11,7 +11,7 @@ psalmChant = {
   \PsalmSignature
   \S \chantTenorC
   \chantTerminatioCOne #'((syneresis . partial))
-  \finalis
+  s \finalis
 }
 
 psalmVerseIa = \lyricmode {
