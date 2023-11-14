@@ -1,0 +1,39 @@
+% chktex-file 1
+\documentclass[a4paper]{memoir}
+
+\usepackage[top=7mm,bottom=7mm,inner=10mm,outer=10mm,headheight=15pt,includehead,includefoot]{geometry}
+\input{modules/def-imports}
+\usepackage{multicol}
+\usepackage{array}
+
+\def\mytitle{Missa I para o Tempo do Advento}
+\def\mysubtitle{}
+
+\input{modules/def-toggles}
+\input{modules/def-headings-flyer}
+\input{modules/def-titles-flyer}
+\input{modules/def-gregorio}
+\input{modules/def-gregorio-flyer}
+\input{modules/def-chant-factory}
+
+\toggletrue{disablehyperlinks}
+
+\title{\mytitle}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{multicols*}{2}
+  \SectionAntiphonPsalmFlyer{Entrada}{ad-te-domine.4c}{Salmo 24(25)}{psalmi-ad-introitum}
+
+  \SectionAntiphonPsalmFlyer{Ofertório}
+  {qui-te-expectant.1f}{Salmo 24(25)}{psalmi-ad-offertorium}
+
+  \SectionAntiphonPsalmFlyer{Comunhão}{benignitatem.8G}{Salmo 84(85)}{psalmi-ad-communionem}
+\end{multicols*}
+
+\end{document}

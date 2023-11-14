@@ -12,9 +12,9 @@ antiphonChant = \relative c'' {
   \divisioMinima
   d c d e \CL d c \Cp c \E d \C d
   \divisioMaior
-  d a d c b \CL a g \C a
+  \Cp d \C a d c b \CL a g \C a
   \divisioMinima
-  g f g \EE a bes \Cp bes \Ldim c \C bes \C a \Cp a
+  \Cp g \C g f g \EE a bes \Ldim c \C bes \C a \Cp a
   \finalis
 }
 
@@ -22,14 +22,14 @@ antiphonLyrics = \lyricmode {
   Ro -- rá -- te cæ -- li dé -- su -- per,
   et nu -- bes plu -- ant __ _ iu -- stum:
   a -- pe -- ri -- á -- tur ter -- ra,
-  et gér -- mi -- net __ "" Sal -- va -- tó -- rem.
+  _ et gér -- mi -- net __ Sal -- va -- tó -- rem.
 }
 
 antiphonLyricsPt = \lyricmode {
-  Or -- va -- lhai, ó céus, do al -- to
+  Do al -- to, ó céus, or -- va -- lhai
   e~as nu -- vens cho -- vam __ o jus -- to;
-  que se a -- bra a ter -- ra
-  e ger -- mi -- ne __ o Sal -- va -- dor.
+  _ que se a -- bra~a ter -- ra
+  e ger -- mi -- ne o __ Sal -- va -- dor.
 }
 
 \GregorianTranscriptionLayout

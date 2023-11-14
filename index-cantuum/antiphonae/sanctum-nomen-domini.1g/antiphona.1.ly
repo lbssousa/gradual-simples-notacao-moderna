@@ -10,21 +10,21 @@
 antiphonChant = \relative c' {
   \AntiphonSignature
   \key d \minor
-  \C d \C_C e f \C g g e f \CC e d
+  \Cp d \C d \CC e f \C g g e f \CC e d
   \divisioMinima
-  \C_CC f g a \C_C a g \C f \CC e f \C g \CC f e \C d d
+  \CCC f g a \C a g f \CC e f \C g \CC f e \C d d
   \finalis
 
 }
 
 antiphonLyrics = \lyricmode {
-  Sanc -- tum __ no -- men Dó -- mi -- ni __
-  ma -- _ \MelismaOff gní -- fi -- \MelismaOn cat á -- ni -- ma __ me -- a.
+  _ Sanc -- tum __ no -- men Dó -- mi -- ni __
+  ma -- gní -- fi -- cat á -- ni -- ma __ me -- a.
 }
 
 antiphonLyricsPt = \lyricmode {
 
-  Ao \MelismaOff san -- to \MelismaOn no -- me do Se -- nhor __
+  Ao san -- to __ no -- me do Se -- nhor __
   en -- gran -- de -- ce a __ mi -- nha __ al -- ma.
 }
 
