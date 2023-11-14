@@ -25,18 +25,6 @@ psalmChantB = {
   \PsalmSignature
   \S \chantInchoatioII
   \chantTenorII
-  \chantMediatioII #'((syneresis . total))
-  \divisioMaxima
-  \chantTenorII
-  \chantTerminatioIID #'()
-  \finalis
-}
-
-psalmChantC = {
-  \key c \major
-  \PsalmSignature
-  \S \chantInchoatioII
-  \chantTenorII
   \chantFlexaII #'()
   \divisioMinima
   \S \chantTenorII
@@ -47,7 +35,7 @@ psalmChantC = {
   \finalis
 }
 
-psalmChantD = {
+psalmChantC = {
   \key c \major
   \PsalmSignature
   \S \chantInchoatioII
@@ -100,7 +88,7 @@ psalmVerseV = \lyricmode {
   \Tenor "pode abalar? Deus está no seu"
   \MelismaOff mei -- o! \MelismaOn
   \Tenor "Já bem antes da aurora, ele vem a" -- ju --
-  \MelismaOff dá -- _ -la. \MelismaOn
+  \MelismaOff dá- -- _ la. \MelismaOn
 }
 
 psalmVerseVI = \lyricmode {
@@ -116,7 +104,7 @@ psalmVerseVII = \lyricmode {
   \VSup "9ab" Vin -- de
   \Tenor "ver, contemplai os prodígios de" Deus __
   \Tenor "e a obra estupenda que fez no u" -- ni --
-  ver -- so.
+  \MelismaOff ver -- _ so. \MelismaOn
 }
 
 psalmVerseVIII = \lyricmode {
@@ -158,10 +146,11 @@ psalmVerseX = \lyricmode {
     \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
     \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
   >>
 }
 
-\markup \vspace #3
+\markup \vspace #1
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -169,11 +158,11 @@ psalmVerseX = \lyricmode {
       \transpose d g \psalmChantB
     }
 
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
+    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
   >>
 }
 
-\markup \vspace #3
+\markup \vspace #1
 
 \score {
   \new GregorianTranscriptionStaff <<
@@ -181,24 +170,12 @@ psalmVerseX = \lyricmode {
       \transpose d g \psalmChantC
     }
 
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVIII
-  >>
-}
-
-\markup \vspace #2
-
-\score {
-  \new GregorianTranscriptionStaff <<
-    \new GregorianTranscriptionVoice = "psalm" {
-      \transpose d g \psalmChantD
-    }
-
     \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIX
     \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseX
   >>
 }
 
-\markup \vspace #2
+\markup \vspace #1
 
 \score {
   \new GregorianTranscriptionStaff <<

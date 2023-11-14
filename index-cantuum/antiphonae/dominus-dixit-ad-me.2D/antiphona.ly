@@ -16,8 +16,8 @@ antiphonChant = \relative c' {
   \CC c d \C c
   \divisioMaior
   \C_CC f e d
-  \CC e f \CC d c \Cp c
-  \C d e f d
+  \CC e f \C_C d c
+  d \C_C e f d
   \finalis
 }
 
@@ -31,12 +31,12 @@ antiphonLyrics = \lyricmode {
   \MelismaOff
   e --
   \MelismaOn
-  go __ ho -- di -- e gé -- nu -- i te.
+  go __ ho -- \MelismaOff di -- e \MelismaOn gé -- \MelismaOff nu -- i \MelismaOn te.
 }
 
 antiphonLyricsPt = \lyricmode {
   O Se -- nhor dis -- se a mim: Tu és o meu __ Fi -- lho,
-  Eu __ _ ho -- je __ "" ge -- rei a ti!
+  Eu __ _ ho -- je __ te ge -- rei!
 }
 
 \GregorianTranscriptionLayout
