@@ -1,12 +1,12 @@
 {
   "name": "gradual-simples",
-  "image": "mcr.microsoft.com/devcontainers/base:alpine-3.19",
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
   "features": {
     "ghcr.io/lbssousa/devcontainer-features-texlive-music/texlive:1": {
       "repository": "https://linorg.usp.br/CTAN/systems/texlive/tlnet",
       "version": "latest",
       "scheme": "minimal",
-      "extra-packages": "babel-latin babel-portuges booktabs currfile ebgaramond enumitem environ epstopdf-pkg filehook fontspec gregoriotex hyperref hyphen-latin hyphen-portuguese l3packages latex-bin latexindent latexmk luacolor luamplib luaoptions luatexbase lyluatex memoir metalogo metapost metre microtype minibox paracol pdflscape pdfpages relsize texcount textcase titlesec tools xcolor xkeyval xpatch xstring"
+      "extra-packages": "babel-latin babel-portuges booktabs currfile ebgaramond enumitem environ epstopdf epstopdf-pkg filehook fontspec gregoriotex hyperref hyphen-latin hyphen-portuguese l3packages latex-bin latexindent latexmk luacolor luamplib luaoptions luatexbase lyluatex memoir metalogo metapost metre microtype minibox paracol pdflscape pdfpages relsize texcount textcase titlesec tools xcolor xkeyval xpatch xstring"
     },
     "ghcr.io/lbssousa/devcontainer-features-texlive-music/lilypond:1": {
       "version": "2.24.3"
@@ -70,8 +70,7 @@
           "--view",
           "--shell-escape"
         ],
-        "latex-workshop.view.pdf.viewer": "tab",
-        "terminal.integrated.defaultProfile.linux": "zsh"
+        "latex-workshop.view.pdf.viewer": "tab"
       },
       "extensions": [
         "james-yu.latex-workshop",
