@@ -1,0 +1,8 @@
+image: registry.gitlab.com/laerciosousa/gitpod-workspace-texlive-lilypond:2024-03-28-11-55
+vscode:
+  extensions:
+    - james-yu.latex-workshop
+    - lhl2617.VSLilyPond
+    - tecosaur.latex-utilities
+    - yzhang.markdown-all-in-one
+
