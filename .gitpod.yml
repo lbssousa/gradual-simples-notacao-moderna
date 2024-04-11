@@ -1,4 +1,4 @@
-image: registry.gitlab.com/laerciosousa/gitpod-workspace-texlive-lilypond
+image: registry.gitlab.com/laerciosousa/gitpod-workspace-texlive-lilypond:2024-04-10-18-58
 vscode:
   extensions:
     - james-yu.latex-workshop
