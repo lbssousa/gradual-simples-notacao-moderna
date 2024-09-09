@@ -113,23 +113,36 @@ markupFiveSyllables =
 MelismaOff = \set ignoreMelismata = ##t
 MelismaOn = \unset ignoreMelismata
 
-I =
-#(define-music-function
-  (syllable)
-  (ly:music?)
-  #{ \markupOneSyllable italic #syllable #})
+ItalicLyrics = \override Lyrics.LyricText.font-shape = #'italic
+BoldLyrics = \override Lyrics.LyricText.font-series = #'bold
+NormalLyrics = \override Lyrics.LyricText.font-series = #'medium
+
+BeginBold = \override LyricText.font-series = #'bold
+EndBold = \revert LyricText.font-series
+
+BeginItalic = \override LyricText.font-shape = #'italic
+EndItalic = \revert LyricText.font-shape
+
+BeginInchoatio = \BeginItalic
+EndInchoatio = \EndItalic
 
 B =
 #(define-music-function
   (syllable)
   (ly:music?)
-  #{ \markupOneSyllable bold #syllable #})
+  #{ \BeginBold #syllable \EndBold #})
+
+I =
+#(define-music-function
+  (syllable)
+  (ly:music?)
+  #{ \BeginItalic #syllable \EndItalic #})
 
 Inchoatio =
 #(define-music-function
   (syllable1 syllable2)
   (ly:music? ly:music?)
-  #{ \markupTwoSyllables italic #syllable1 italic #syllable2 #})
+  #{ \BeginInchoatio #syllable1 #syllable2 \EndInchoatio #})
 
 Tenor =
 #(define-music-function
@@ -144,31 +157,35 @@ Flexa =
 #(define-music-function
   (syllable1 syllable2)
   (ly:music? ly:music?)
-  #{ \lyricmode { \markupOneSyllable bold #syllable1 #syllable2 } #})
+  #{ \lyricmode { \BeginBold #syllable1 \EndBold #syllable2 } #})
 
 MediatioIV =
 #(define-music-function
   (syllable1 syllable2 syllable3)
   (ly:music? ly:music? ly:music?)
-  #{ \markupThreeSyllables italic #syllable1 italic #syllable2 bold #syllable3 #})
+  #{
+    \lyricmode {
+      \BeginItalic #syllable1 #syllable2 \EndItalic \BeginBold #syllable3 \EndBold
+    }
+  #})
 
 TerminatioSimplexIVE =
 #(define-music-function
   (syllable1 syllable2 syllable3 syllable4)
   (ly:music? ly:music? ly:music? ly:music?)
-  #{ \markupFourSyllables italic #syllable1 italic #syllable2 italic #syllable3 bold #syllable4 #})
+  #{ \BeginItalic #syllable1 #syllable2 #syllable3 \EndItalic \BeginBold #syllable4 \EndBold #})
 
 TerminatioIVE =
 #(define-music-function
   (syllable1 syllable2 syllable3 syllable4 syllable5)
   (ly:music? ly:music? ly:music? ly:music? ly:music?)
-  #{ \markupFiveSyllables italic #syllable1 italic #syllable2 italic #syllable3 bold #syllable4 bold #syllable5 #})
+  #{ \BeginItalic #syllable1 #syllable2 #syllable3 \EndItalic \BeginBold #syllable4 #syllable5 \EndBold #})
 
 TerminatioIVc =
 #(define-music-function
   (syllable1)
   (ly:music?)
-  #{ \markupOneSyllable bold #syllable1 #})
+  #{ \BeginBold #syllable1 \EndBold #})
 
 VSup =
 #(define-music-function
@@ -228,7 +245,3 @@ AfterStanzaSpacing =
   #{
     \override VerticalAxisGroup.nonstaff-nonstaff-spacing.basic-distance = 4
   #})
-
-ItalicLyrics = \override Lyrics.LyricText.font-shape = #'italic
-BoldLyrics = \override Lyrics.LyricText.font-series = #'bold
-NormalLyrics = \override Lyrics.LyricText.font-series = #'medium
