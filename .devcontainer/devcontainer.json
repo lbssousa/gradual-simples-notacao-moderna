@@ -1,6 +1,6 @@
 {
   "name": "gradual-simples",
-  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/lbssousa/devcontainer-features-texlive-music/texlive:1": {
       "repository": "https://linorg.usp.br/CTAN/systems/texlive/tlnet",
@@ -9,7 +9,7 @@
       "extra-packages": "babel-latin babel-portuges booktabs currfile ebgaramond enumitem environ epstopdf epstopdf-pkg filehook fontspec gregoriotex hyperref hyphen-latin hyphen-portuguese l3packages latex-bin latexindent latexmk luacolor luamplib luaoptions luatexbase lyluatex memoir metalogo metapost metre microtype minibox paracol pdflscape pdfpages relsize texcount textcase titlesec tools xcolor xkeyval xpatch xstring"
     },
     "ghcr.io/lbssousa/devcontainer-features-texlive-music/lilypond:1": {
-      "version": "2.24.3"
+      "version": "2.24.4"
     }
   },
   "remoteUser": "vscode",
