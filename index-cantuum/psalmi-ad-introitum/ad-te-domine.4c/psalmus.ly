@@ -7,147 +7,183 @@
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
-psalmChantA = {
+psalmChant = {
   \PsalmSignature
   \S \chantInchoatioIVA #'()
+  \bar "!"
   \chantTenorIVA
-  \chantMediatioIVA #'()
+  \chantFlexaIVA #'() \noBreak \S
+  \divisioMinima
+  \bar "!"
+  \chantTenorIVA
+  \chantMediatioIVA #'((syneresis . partial)) \noBreak \S
   \divisioMaxima
   \S \chantTenorIVA
-  \chantTerminatioIVc #'()
-  \finalis
-}
-
-psalmChantB = {
-  \PsalmSignature
-  \S \chantInchoatioIVA #'()
-  \chantTenorIVA
-  \chantFlexaIVA #'()
-  \divisioMinima
-  \chantTenorIVA
-  \chantMediatioIVA #'((syneresis . total))
-  \divisioMaxima
-  \chantTenorIVA
-  \chantTerminatioIVc #'()
-  \finalis
-}
-
-psalmChantC = {
-  \PsalmSignature
-  \S \chantInchoatioIVA #'()
-  \chantTenorIVA
-  \chantMediatioIVA #'((syneresis . partial))
-  \divisioMaxima
-  \chantTenorIVA
   \chantTerminatioIVc #'((syneresis . partial))
   \finalis
 }
 
+psalmOrganRight = {
+  \PsalmSignature
+  \S \rightInchoatioIVA
+  \rightTenorIVA
+  \rightFlexaIVA
+  \rightTenorIVA
+  \rightMediatioIVA \S
+  \S \rightTenorAltIVA
+  \rightTerminatioIVc
+}
+
+psalmOrganLeft = {
+  \clef bass
+  \S \leftInchoatioIVA
+  \leftTenorIVA
+  \leftFlexaIVA
+  \leftTenorIVA
+  \leftMediatioIVA \S
+  \divisioMaxima
+  \S \leftTenorAltIVA
+  \leftTerminatioIVc
+  \finalis
+}
+
+psalmOrganPedal = {
+  \S \pedalInchoatioIVA
+  \pedalTenorIVA
+  \pedalFlexaIVA
+  \pedalTenorIVA
+  \pedalMediatioIVA \S
+  \S \pedalTenorAltIVA
+  \pedalTerminatioIVc
+}
+
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \VSup "2b" Não tri --
+  \VSup "2b" \Inchoatio Não tri -- _ _ _ _
   \Tenor "unfem sobre mim os"
-  i -- ni --
-  \MelismaOff mi -- gos! \MelismaOn
+  \MelismaOff
+  \MediatioIV i -- ni -- mi -- gos! \MediatioMark
+  \MelismaOn
   \VSup "3a" \Tenor "Não se envergonha quem em vós põe a espe" --
-  \MelismaOff ran -- ça. \MelismaOn
+  \MelismaOff
+  \B ran -- ça.
+  \MelismaOn
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \VSup "4" Mos -- trai- --
+  \VSup "4" \Inchoatio Mos -- trai- -- _ _ _ _
   \Tenor "me, ó Senhor, vos" --
-  sos ca --
-  \MelismaOff mi -- nhos \MelismaOn
+  \MelismaOff
+  \MediatioIV sos ca -- mi -- "nhos" \MediatioMark
+  \MelismaOn
   "" \Tenor "e fazei-me conhecer a vossa es" --
-  \MelismaOff tra -- da! \MelismaOn
+  \MelismaOff
+  \B tra -- da!
+  \MelismaOn
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
-  \VSup "5" Vos -- sa __
-  \Tenor "verdade me oriente e me con" -- du -- za,
+  \VSup "5" \Inchoatio Vos -- sa __
+  \Tenor "verdade me oriente e me con" --
+  \B du -- za, \FlexaMark
   \Tenor "porque sois o Deus da minha"
-  sal -- va -- ção; __
-  \Tenor "em vós espero, ó Senhor, todos os"
-  \MelismaOff di -- as. \MelismaOn
+  \MediatioIV sal -- va -- ção; __ \MediatioMark
+  "" \Tenor "em vós espero, ó Senhor, todos os"
+  \MelismaOff
+  \B di -- as.
+  \MelismaOn
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \VSup "7cd" De mim __
+  \VSup "7cd" \Inchoatio De mim __ -- _ _ _ _
   \Tenor "lembrai-vos, porque sois mi" --
-  se -- ri --
-  \MelismaOff cór -- dia \MelismaOn
-  \Tenor "e sois bondade sem limites, ó Se" -- nhor! __
+  \MelismaOff
+  \MediatioIV se -- ri -- cór -- dia \MediatioMark
+  \MelismaOn
+  "" \Tenor "e sois bondade sem limites, ó Se" --
+  \B nhor! __
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \VSup "8" O Se --
+  \VSup "8" \Inchoatio O Se -- _ _ _ _
   \Tenor "nhor é piedade e"
-  re -- ti -- dão, __
-  \Tenor "e reconduz ao bom caminho os peca" --
-  \MelismaOff do -- res. \MelismaOn
+  \MediatioIV re -- ti -- dão, __ \MediatioMark
+  "" \Tenor "e reconduz ao bom caminho os peca" --
+  \MelismaOff
+  \B do -- res.
+  \MelismaOn
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \VSup "9" E -- le __
+  \VSup "9" \Inchoatio E -- le __ -- _ _ _ _
   \Tenor "dirige os humildes"
-  na jus --
-  \MelismaOff ti -- ça, \MelismaOn
-  \Tenor "e aos pobres ele ensina o seu ca" --
-  \MelismaOff mi -- nho. \MelismaOn
+  \MelismaOff
+  \MediatioIV na jus -- ti -- ça, \MediatioMark
+  \MelismaOn
+  "" \Tenor "e aos pobres ele ensina o seu ca" --
+  \MelismaOff
+  \B mi -- nho.
+  \MelismaOn
+}
+
+chantPart = \new GregorianTranscriptionStaff <<
+  \new GregorianTranscriptionVoice = "psalm" {
+    \psalmChant
+  }
+
+  \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
+  \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
+  \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+  \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
+  \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+  \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
+>>
+
+organPart = \new PianoStaff <<
+  \new GregorianTranscriptionStaff = "right" <<
+    \new GregorianTranscriptionVoice { \voiceOne \psalmChant }
+    \new GregorianTranscriptionVoice { \voiceTwo \psalmOrganRight }
+  >>
+
+  \new GregorianTranscriptionStaff = "left+pedal" <<
+      \new GregorianTranscriptionVoice { \voiceOne \psalmOrganLeft }
+      \new GregorianTranscriptionVoice { \voiceTwo \psalmOrganPedal }
+    >>
+>>
+
+chordsPart = \new ChordNames {
+  s4 \chordsInchoatioIVA
+  \chordsTenorIVA
+  \chordsFlexaIVA
+  \chordsTenorIVA
+  \chordsMediatioIVA s4
+  s4 \chordsTenorAltIVA
+  \chordsTerminatioIVc
 }
 
 \GregorianTranscriptionLayout
 
-\score {
-  \new GregorianTranscriptionStaff <<
-    \new GregorianTranscriptionVoice = "psalm" {
-      \transpose c g, \psalmChantA
-    }
+\header {
+  arranger = "Harmon.: Theo Flury, Gennaro M. Becchimanzi"
+}
 
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseI
-    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
+\score {
+  \transpose c g, <<
+    \chordsPart
+    \chantPart
+    \organPart
   >>
 }
 
-\markup \vspace #1
-
 \score {
-  \new GregorianTranscriptionStaff <<
-    \new GregorianTranscriptionVoice = "psalm" {
-      \transpose c g, \psalmChantB
-    }
-
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-  >>
-}
-
-\markup \vspace #1
-
-\score {
-  \new GregorianTranscriptionStaff <<
-    \new GregorianTranscriptionVoice = "psalm" {
-      \transpose c g, \psalmChantC
-    }
-
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVI
-  >>
-}
-
-\markup \vspace #1
-
-\score {
-  \new GregorianTranscriptionStaff <<
-    \new GregorianTranscriptionVoice = "gloria" {
-      \transpose c g, \gloriaPatriChantIVc
-    }
-
-    \new GregorianTranscriptionLyrics \lyricsto "gloria" \gloriaPatriVerseIVc
+  \transpose c g, <<
+    \gloriaPatriChordsPartIVc
+    \gloriaPatriChantPartIVc
+    \gloriaPatriOrganPartIVc
   >>
 }
