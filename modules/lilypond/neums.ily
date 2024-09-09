@@ -188,6 +188,18 @@ EE =
   #}
 )
 
+% Neuma de duas notas, com episema nas duas notas
+E_E =
+#(define-music-function
+  (pa pb)
+  (ly:pitch? ly:pitch?)
+  #{
+    \once \slurDashed
+    $pa \dC^\Episema( \noBreak
+    $pb ^\Episema)
+  #}
+)
+
 % Neuma de duas notas, cursivo na primeira nota e com liquescência na última nota
 CL =
 #(define-music-function
