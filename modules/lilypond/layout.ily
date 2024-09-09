@@ -21,11 +21,6 @@ GregorianTranscriptionLayout = \layout {
     \hide TupletBracket
   }
 
-  %\context {
-  %  \GregorianTranscriptionVoice
-  %  \consists Stem_engraver
-  %}
-
   \context {
     \GregorianTranscriptionLyrics {
       \override LyricText.X-offset = #center-on-vowel
@@ -36,9 +31,7 @@ GregorianTranscriptionLayout = \layout {
     \GregorianTranscriptionLyrics
     \name GregorianTranscriptionAltLyrics
     \alias GregorianTranscriptionLyrics
-    %\override StanzaNumber.font-series = #'medium
-    \override LyricText.font-shape = #'italic
-    \override LyricText.color = #(x11-color 'grey20)
+    \override LyricText.color = #(x11-color 'grey40)
   }
 
   \context {
