@@ -9,25 +9,25 @@
 
 antiphonChant = \relative c'' {
   \AntiphonSignature
-  \C a c \CC c d \C d d
+  \C a c \CC c d \C_C d d
   \divisioMinima
   d d c \CC d e \C c \CL d e \C d d
   \divisioMaior
-  a d c b a g \EE a g
+  \C_C a d c b a g \E_E a g
   \divisioMinima
   \C f g a bes c bes a a
   \finalis
 }
 
 antiphonLyrics = \lyricmode {
-  Ad te, Dó -- mi -- ne, le -- vá -- vi á -- ni -- mam __ me -- am:
-  ve -- ni, et é -- ri -- pe me, __ Dó -- mi -- ne, ad te con -- fú -- gi.
+  Ad te, Dó -- \MelismaOff mi -- ne, \MelismaOn le -- vá -- vi á -- ni -- mam __ me -- am:
+  \MelismaOff ve -- ni, \MelismaOn et é -- ri -- pe me, __ Dó -- mi -- ne, ad te con -- fú -- gi.
 }
 
 antiphonLyricsPt = \lyricmode {
 
-  A vós, ó __ Se -- nhor, a mi -- nha al -- ma e -- le -- vo.
-  Vin -- de e li -- ber -- tai- -- me, __ Se -- nhor, pois em vós me~a -- bri -- go.
+  A vós, Se -- nhor, __ e -- le -- vo a mi -- nha __ al -- ma.
+  Vin -- de e li -- ber -- \MelismaOff tai- -- me, \MelismaOn Se -- nhor, pois em vós me~a -- bri -- go.
 }
 
 \GregorianTranscriptionLayout
