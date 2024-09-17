@@ -19,6 +19,7 @@ GregorianTranscriptionLayout = \layout {
     \hide Beam
     \hide TupletNumber
     \hide TupletBracket
+    \remove Collision_engraver
   }
 
   \context {
@@ -37,5 +38,11 @@ GregorianTranscriptionLayout = \layout {
   \context {
     \StaffGroup
     \accepts GregorianTranscriptionAltLyrics
+  }
+
+  \context {
+    \GregorianTranscriptionVoice
+    \consists "Horizontal_bracket_engraver"
+    \override HorizontalBracket.direction = #UP
   }
 }
