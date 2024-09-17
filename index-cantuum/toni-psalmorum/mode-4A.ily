@@ -62,150 +62,150 @@ chantTerminatioIVc =
   #})
 
 rightInchoatioIVA = \relative c'' {
-  a2*3/2~
+  a2*3/2
 }
 
 rightTenorIVA = \relative c'' {
-  a2*1/2~
-}
-
-rightFlexaIVA = \relative c'' {
-  g2*3/2~
-}
-
-rightMediatioIVA = \relative c'' {
-  a2*2~
-}
-
-rightTenorAltIVA = \relative c'' {
-  bes2*1/2~
-}
-
-rightTerminatioIVc = \relative c'' {
   a2*1/2
 }
 
+rightFlexaIVA = \relative c'' {
+  g2*2
+}
+
+rightMediatioIVA = \relative c'' {
+  a2*5/2
+}
+
+rightTenorAltIVA = \relative c'' {
+  bes2*1/2
+}
+
+rightTerminatioIVc = \relative c'' {
+  a2*3/2
+}
+
 leftInchoatioIVA = \relative c' {
-  f2*3/2~
+  f2*3/2
 }
 
 leftTenorIVA = \relative c' {
-  f2*1/2~
+  f2*1/2
 }
 
 leftFlexaIVA = \relative c' {
-  e2*3/2~
+  e2*2
 }
 
 leftMediatioIVA = \relative c' {
-  f2*2~
+  f2*5/2
 }
 
 leftTenorAltIVA = \relative c'' {
-  g2*1/2~
+  g2*1/2
 }
 
 leftTerminatioIVc = \relative c' {
-  e2
+  e2*3/2
 }
 
 pedalInchoatioIVA = \relative c' {
-  d2*3/2~
+  d2*3/2
 }
 
 pedalTenorIVA = \relative c' {
-  d2*1/2~
+  d2*1/2
 }
 
 pedalFlexaIVA = \relative c' {
-  \tweak X-offset #1.2 d2*3/2~
+  \tweak X-offset #1.2 d2*2
 }
 
 pedalMediatioIVA = \relative c' {
-  d2*2~
+  d2*5/2
 }
 
 pedalTenorAltIVA = \relative c' {
-  g2*1/2~
+  g2*1/2
 }
 
 pedalTerminatioIVc = \relative c' {
-  a2
+  a2*3/2
 }
 
 chordsInchoatioIVA = \chordmode {
-  d2*3/2:m~
+  d2*3/2:m
 }
 
 chordsTenorIVA = \chordmode {
-  d2*1/2:m~
+  d2*1/2:m
 }
 
 chordsFlexaIVA = \chordmode {
-  c2*3/2/d~
+  e2*2:m/d
 }
 
 chordsMediatioIVA = \chordmode {
-  d2*2:m~
+  d2*5/2:m
 }
 
 chordsTenorAltIVA = \chordmode {
-  g2*1/2:m~
+  g2*1/2:m
 }
 
 chordsTerminatioIVc = \chordmode {
-  a2:m
+  a2*3/2:m
 }
 
 chantSegmentGloriaPatriIVA = {
   \time 1/4
   \chantInchoatioIVA #'((dieresis . total))
   \chantTenorIVA
-  \chantMediatioIVA #'()
+  \chantMediatioIVA #'((epenthesis . partial))
   \divisioMaxima
-  \chantInchoatioIVA #'()
+  \chantInchoatioIVA #'((epenthesis . partial))
   \chantTenorIVA
-  \chantMediatioIVA #'()
+  \chantMediatioIVA #'((epenthesis . partial))
   \divisioMaxima
   \chantTenorIVA
 }
 
 gloriaPatriOrganRightIVc = {
   \PsalmSignature
-  \rightInchoatioIVA
-  \rightTenorIVA
-  \rightMediatioIVA
-  \rightInchoatioIVA
-  \rightTenorIVA
-  \rightMediatioIVA
-  \rightTenorAltIVA
-  \rightTerminatioIVc
+  \rightInchoatioIVA ~
+  \rightTenorIVA ~
+  \rightMediatioIVA ~
+  \rightInchoatioIVA ~
+  \rightTenorIVA ~
+  \rightMediatioIVA (
+  \rightTenorAltIVA ) (
+  \rightTerminatioIVc )
 }
 
 gloriaPatriOrganLeftIVc = {
   \clef bass
-  \leftInchoatioIVA
-  \leftTenorIVA
-  \leftMediatioIVA
+  \leftInchoatioIVA ~
+  \leftTenorIVA ~
+  \leftMediatioIVA ~
   \divisioMaxima
-  \leftInchoatioIVA
-  \leftTenorIVA
-  \leftMediatioIVA
+  \leftInchoatioIVA ~
+  \leftTenorIVA ~
+  \leftMediatioIVA (
   \divisioMaxima
-  \leftTenorAltIVA
-  \leftTerminatioIVc
+  \leftTenorAltIVA ) (
+  \leftTerminatioIVc )
   \finalis
 }
 
 gloriaPatriOrganPedalIVc = {
-  \pedalInchoatioIVA
-  \pedalTenorIVA
-  \pedalMediatioIVA
-  \pedalInchoatioIVA
-  \pedalTenorIVA
-  \pedalMediatioIVA
-  \pedalTenorAltIVA
-  \pedalTerminatioIVc
+  \pedalInchoatioIVA ~
+  \pedalTenorIVA ~
+  \pedalMediatioIVA ~
+  \pedalInchoatioIVA ~
+  \pedalTenorIVA ~
+  \pedalMediatioIVA (
+  \pedalTenorAltIVA ) (
+  \pedalTerminatioIVc )
 }
 
 gloriaPatriChantIVA = {
@@ -216,19 +216,20 @@ gloriaPatriChantIVA = {
 
 gloriaPatriChantIVc = {
   \chantSegmentGloriaPatriIVA
-  \chantTerminatioIVc #'((syneresis . total))
+  \chantTerminatioIVc #'((epenthesis . partial)
+                         (syneresis . total))
   \finalis
 }
 
 verseSegmentGloriaPatriIVA = \lyricmode {
   \set stanza = "Opcional:"
   \BeginInchoatio Gló -- ria ao \EndInchoatio
-  \Tenor "Pai e ao Filho e ao Espí" -- \I ri -- \I to \B San -- to,
+  \Tenor "Pai e ao Filho e ao Espí" -- \I ri -- \I to \B San -- _ to,
   \I Co -- \I mo __ \Tenor "era no princípio, a" --
   \BeginItalic
   go -- ra~e
   \EndItalic
-  \B sem -- pre,
+  \B sem -- _ pre,
 }
 
 gloriaPatriVerseIVA = \lyricmode {

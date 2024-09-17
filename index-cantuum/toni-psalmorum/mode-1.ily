@@ -128,6 +128,134 @@ chantTerminatioIDTwo =
     }
   #})
 
+rightInchoatioI = \relative c' {
+  d2*3/2
+}
+
+rightFlexaTenorI = \relative c' {
+  d2*3/2
+}
+
+rightFlexaI = \relative c'' {
+  e2*3/2
+}
+
+rightTenorI = \relative c' {
+  f2*7/2
+}
+
+rightTenorAltI = \relative c' {
+  e2*3/2
+}
+
+rightTerminatioAccentusIf = \relative c' {
+  d2
+}
+
+rightTerminatioPostAccentusPrimusIf = \relative c' {
+  c4
+}
+
+rightTerminatioPostAccentusSecundusIf = \relative c' {
+  c4
+}
+
+leftInchoatioI = \relative c {
+  f2*3/2
+}
+
+leftFlexaTenorI = \relative c {
+  f2*3/2
+}
+
+leftFlexaI = \relative c {
+  g2*3/2
+}
+
+leftTenorI = \relative c {
+  f2*7/2
+}
+
+leftTenorAltI = \relative c {
+  f2*3/2
+}
+
+leftTerminatioAccentusIf = \relative c' {
+  bes2
+}
+
+leftTerminatioPostAccentusPrimusIf = \relative c' {
+  bes4
+}
+
+leftTerminatioPostAccentusSecundusIf = \relative c' {
+  a4
+}
+
+pedalInchoatioI = \relative c {
+  d2*3/2
+}
+
+pedalFlexaTenorI = \relative c {
+  d2*3/2
+}
+
+pedalFlexaI = \relative c' {
+  d2*3/2
+}
+
+pedalTenorI = \relative c {
+  d2*7/2
+}
+
+pedalTenorAltI = \relative c {
+  \tweak X-offset #1.2 f2*3/2
+}
+
+pedalTerminatioAccentusIf = \relative c {
+  f2
+}
+
+pedalTerminatioPostAccentusPrimusIf = \relative c {
+  f4
+}
+
+pedalTerminatioPostAccentusSecundusIf = \relative c {
+  f4
+}
+
+chordsInchoatioI = \chordmode {
+  d2*3/2:m
+}
+
+chordsFlexaTenorI = \chordmode {
+  d2*3/2:m
+}
+
+chordsFlexaI = \chordmode {
+  c2*3/2/d
+}
+
+chordsTenorI = \chordmode {
+  d2*7/2:m
+}
+
+chordsTenorAltI = \chordmode {
+  a2*3/2:m/f
+}
+
+chordsTerminatioAccentusIf = \chordmode {
+  g2:m/f
+}
+
+chordsTerminatioPostAccentusPrimusIf = \chordmode {
+  c4:7/f
+}
+
+chordsTerminatioPostAccentusSecundusIf = \chordmode {
+  f4
+}
+
 chantSegmentGloriaPatriI = {
   \time 1/4
   \key d \minor
@@ -186,7 +314,7 @@ gloriaPatriChantIDTwo = {
   \finalis
 }
 
-gloriaPatriVerseI = \lyricmode {
+gloriaPatrIfrseI = \lyricmode {
   \set stanza = "Opcional:"
   Gló -- ria ao
   \Tenor "Pai e ao Filho e ao Es" -- pí -- ri -- to San -- to,
@@ -194,7 +322,7 @@ gloriaPatriVerseI = \lyricmode {
   \Tenor "pelos séculos dos sécu" -- los, a -- mém! __
 }
 
-gloriaPatriVerseIf = \lyricmode {
+gloriaPatrIfrseIf = \lyricmode {
   \set stanza = "Opcional:"
   Gló -- ria ao
   \Tenor "Pai e ao Filho e ao Es" -- pí -- ri -- to San -- to,
