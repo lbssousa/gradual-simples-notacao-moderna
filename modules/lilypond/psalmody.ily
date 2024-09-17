@@ -284,22 +284,25 @@ MakeAccentusTwoPreEpenthesisPostOne =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        \MakeEpenthesis $pe 2*1/2 #options \noBreak
-        $pa 4*1/2^\AccentusMark ( $pb \noBreak
+        \once \override HorizontalBracketText.text = \AccentusMark
+        \MakeEpenthesis $pe \dC #options \startGroup \noBreak
+        $pa 4*1/2 ( $pb \stopGroup \noBreak
         \C $pc )
       #})
     ((partial)
       #{
-        \MakeEpenthesis $pe 2*1/2 #options \noBreak
+        \once \override HorizontalBracketText.text = \AccentusMark
+        \MakeEpenthesis $pe \dC #options \startGroup \noBreak
         \once \phrasingSlurDashed
-        $pa 4*1/2^\AccentusMark \(( \noBreak
-        $pb ) \noBreak
+        $pa 4*1/2 \(( \noBreak
+        $pb ) \stopGroup \noBreak
         \C $pc \)
       #})
     (else
       #{
-        \MakeEpenthesis $pe 2*1/2 #options \noBreak
-        \AA $pa $pb \noBreak
+        \once \override HorizontalBracketText.text = \AccentusMark
+        \MakeEpenthesis $pe 2*1/2 #options \startGroup \noBreak
+        \AA $pa $pb \stopGroup \noBreak
         \C $pc
       #})))
 
