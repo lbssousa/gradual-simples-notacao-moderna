@@ -161,13 +161,19 @@ Flexa =
 
 MediatioIV =
 #(define-music-function
-  (syllable1 syllable2 syllable3)
+  (preAccentus1 preAccentus2 accentus)
   (ly:music? ly:music? ly:music?)
   #{
     \lyricmode {
-      \BeginItalic #syllable1 #syllable2 \EndItalic \BeginBold #syllable3 \EndBold
+      \BeginItalic #preAccentus1 #preAccentus2 \EndItalic \BeginBold #accentus \EndBold
     }
   #})
+
+TerminatioI =
+#(define-music-function
+  (preAccentus1 preAccentus2 accentus)
+  (ly:music? ly:music? ly:music?)
+  #{ \BeginItalic #preAccentus1 #preAccentus2 \EndItalic \BeginBold #accentus \EndBold #})
 
 TerminatioSimplexIVE =
 #(define-music-function
@@ -186,6 +192,12 @@ TerminatioIVc =
   (syllable1)
   (ly:music?)
   #{ \BeginBold #syllable1 \EndBold #})
+
+TerminatioVIII =
+#(define-music-function
+  (preAccentus1 preAccentus2 accentus)
+  (ly:music? ly:music? ly:music?)
+  #{ \BeginItalic #preAccentus1 #preAccentus2 \EndItalic \BeginBold #accentus \EndBold #})
 
 VSup =
 #(define-music-function
