@@ -44,7 +44,7 @@ antiphonLyricsPt = \lyricmode {
 
 \header {
   meter = "Cantus ID a01124 cf. Sl 84(85),13"
-  arranger = "Adapt.: Lincoln Haas Hein, Laércio de Sousa"
+  arranger = "Adaptação: Lincoln Haas Hein, Laércio de Sousa"
 }
 
 \score {

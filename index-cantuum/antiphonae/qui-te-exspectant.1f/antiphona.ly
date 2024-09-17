@@ -8,27 +8,28 @@
 
 antiphonChant = \relative c' {
   \AntiphonSignature
+  \key d \minor
   \Cp d d d c f g f \CC g a \E a
   \divisioMinima
-  \Cp a \Cp a \CL g e \CL g a \CL f e \C d d
+  \C_L g e \C_L g a \CL f e \C d d
   \finalis
 }
 
 antiphonLyrics = \lyricmode {
   _ Qui te ex -- péc -- tant, Dó -- mi -- ne,
-  _ _ non __ con -- fun -- dén -- tur.
+  non __ con -- fun -- dén -- tur.
 }
 
 antiphonLyricsPt = \lyricmode {
-  Os que~em vós es -- pe -- ram, ó Se -- nhor,
-  não se -- rão __ con -- fun -- di -- dos.
+  Os que vos es -- pe -- ram, ó Se -- nhor,
+  \MelismaOff não se -- rão con -- \MelismaOn fun -- di -- dos.
 }
 
 \GregorianTranscriptionLayout
 
 \header {
   meter = "cf. Sl 24(25),3"
-  arranger = "Adapt.: Laércio de Sousa"
+  arranger = "Adaptação: Laércio de Sousa"
 }
 
 \score {
