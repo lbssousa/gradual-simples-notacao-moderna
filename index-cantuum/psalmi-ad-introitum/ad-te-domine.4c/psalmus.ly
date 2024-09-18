@@ -7,91 +7,99 @@
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
+MySpacer = \Spacer 8
+
 psalmChant = {
   \PsalmSignature
-  \S \chantInchoatioIVA #'()
+  \S a'
+  \chantInchoatioIVA #'()
   \bar "!"
   \chantTenorIVA
-  \chantFlexaIVA #'((epenthesis . partial)) \noBreak \S
+  \chantFlexaIVA #'()
   \divisioMinima
   \bar "!"
   \chantTenorIVA
-  \chantMediatioIVA #'((epenthesis . partial)
-                       (syneresis . partial)) \noBreak \S
+  \chantMediatioIVA #'((syneresis . partial))
   \divisioMaxima
-  \S \chantTenorIVA
-  \chantTerminatioIVc #'((epenthesis . partial)
-                         (syneresis . partial))
+  \S a' \chantTenorIVA
+  \chantTerminatioIVc #'((syneresis . partial))
   \finalis
+  \MySpacer
 }
 
 psalmOrganRight = {
   \PsalmSignature
-  s4 \rightInchoatioIVA ~
-  \rightTenorIVA (
-  \rightFlexaIVA ) (
-  \rightTenorIVA ) ~
-  \rightMediatioIVA ( s4
-  s4 \rightTenorAltIVA ) (
-  \rightTerminatioIVc )
+  s4 \rightInchoatioIVA
+  \rightTenorIVA
+  \rightFlexaIVA #'()
+  \rightTenorIVA
+  \rightMediatioIVA #'()
+  \divisioMaxima
+  s4 \rightTenorTerminatioIVA
+  \rightTerminatioIVc s4
+  \finalis
+  \MySpacer
 }
 
 psalmOrganLeft = {
   \clef bass
-  s4 \leftInchoatioIVA ~
-  \leftTenorIVA (
-  \leftFlexaIVA ) (
-  \leftTenorIVA ) (
-  \leftMediatioIVA ) ( s4
+  s4 \leftInchoatioIVA
+  \leftTenorIVA
+  \leftFlexaIVA #'()
+  \leftTenorIVA
+  \leftMediatioIVA #'()
   \divisioMaxima
-  s4 \leftTenorAltIVA ) (
-  \leftTerminatioIVc )
+  s4 \leftTenorTerminatioIVA (
+  \leftTerminatioIVc ) s4
   \finalis
+  \MySpacer
 }
 
 psalmOrganPedal = {
-  s4 \pedalInchoatioIVA ~
-  \pedalTenorIVA ~
-  \pedalFlexaIVA ~
-  \pedalTenorIVA ~
-  \pedalMediatioIVA ( s4
-  s4 \pedalTenorAltIVA ) (
-  \pedalTerminatioIVc )
+  s4 \pedalInchoatioIVA
+  \pedalTenorIVA
+  \pedalFlexaIVA #'()
+  \pedalTenorIVA
+  \pedalMediatioIVA #'()
+  s4 \pedalTenorTerminatioIVc (
+  \pedalTerminatioIVc ) s4
 }
 
 chordsPart = \new ChordNames {
   s4 \chordsInchoatioIVA
   \chordsTenorIVA
-  \chordsFlexaIVA
+  \chordsFlexaIVA #'()
   \chordsTenorIVA
-  \chordsMediatioIVA s4
-  s4 \chordsTenorAltIVA
-  \chordsTerminatioIVc
+  \chordsMediatioIVA #'()
+  s4 \chordsTenorTerminatioIVA
+  \chordsTerminatioIVc s4
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
-  \VSup "2b" \Inchoatio Não tri -- _ _ _ _ _
+  \VSup "2b" \Inchoatio Não tri --
+  _ _ _
   \Tenor "unfem sobre mim os"
   \MelismaOff
-  \MediatioIV i -- ni -- mi -- _ gos! \MediatioMark
+  \MediatioIV i -- ni -- mi -- \Mediatio gos!
   \MelismaOn
   \VSup "3a" \Tenor "Não se envergonha quem em vós põe a espe" --
   \MelismaOff
-  \B ran -- _ ça.
+  \B ran -- ça.
   \MelismaOn
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
-  \VSup "4" \Inchoatio Mos -- trai- -- _ _ _ _ _
+  \VSup "4" \Inchoatio Mos -- trai- --
+  _ _ _
   \Tenor "me, ó Senhor, vos" --
   \MelismaOff
-  \MediatioIV sos ca -- mi -- _ nhos \MediatioMark
+  \MediatioIV sos ca -- mi -- \Mediatio nhos
   \MelismaOn
   "" \Tenor "e fazei-me conhecer a vossa es" --
   \MelismaOff
-  \B tra -- _ da!
+  \B tra -- da!
   \MelismaOn
 }
 
@@ -99,21 +107,22 @@ psalmVerseIII = \lyricmode {
   \set stanza = "3."
   \VSup "5" \Inchoatio Vos -- sa __
   \Tenor "verdade me oriente e me con" --
-  \B du -- _ za, \FlexaMark
+  \B du -- \Flexa za,
   \Tenor "porque sois o Deus da minha"
-  \MediatioIV sal -- va -- ção; __ \MediatioMark
+  \BeginItalic sal -- va -- \EndItalic \BeginBold \Mediatio ção; __ \EndBold
   "" \Tenor "em vós espero, ó Senhor, todos os"
   \MelismaOff
-  \B di -- _ as.
+  \B di -- as.
   \MelismaOn
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \VSup "7cd" \Inchoatio De mim __ -- _ _ _ _ _
+  \VSup "7cd" \Inchoatio De mim __
+  _ _ _
   \Tenor "lembrai-vos, porque sois mi" --
   \MelismaOff
-  \MediatioIV se -- ri -- cór -- _ dia \MediatioMark
+  \MediatioIV se -- ri -- cór -- \Mediatio dia
   \MelismaOn
   "" \Tenor "e sois bondade sem limites, ó Se" --
   \B nhor! __
@@ -121,25 +130,27 @@ psalmVerseIV = \lyricmode {
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
-  \VSup "8" \Inchoatio O Se -- _ _ _ _ _
+  \VSup "8" \Inchoatio O Se --
+  _ _ _
   \Tenor "nhor é piedade e"
-  \MediatioIV re -- ti -- dão, __ \MediatioMark
+  \BeginItalic re -- ti -- \EndItalic \BeginBold \Mediatio dão, __ \EndBold
   "" \Tenor "e reconduz ao bom caminho os peca" --
   \MelismaOff
-  \B do -- _ res.
+  \B do -- res.
   \MelismaOn
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
-  \VSup "9" \Inchoatio E -- le __ -- _ _ _ _ _
+  \VSup "9" \Inchoatio E -- le __
+  _ _ _
   \Tenor "dirige os humildes"
   \MelismaOff
-  \MediatioIV na jus -- ti -- _ ça, \MediatioMark
+  \MediatioIV na jus -- ti -- \Mediatio ça,
   \MelismaOn
   "" \Tenor "e aos pobres ele ensina o seu ca" --
   \MelismaOff
-  \B mi -- _ nho.
+  \B mi -- nho.
   \MelismaOn
 }
 
@@ -158,7 +169,7 @@ chantPart = \new GregorianTranscriptionStaff <<
 
 organPart = \new PianoStaff <<
   \new GregorianTranscriptionStaff = "right" <<
-    \new GregorianTranscriptionVoice { \voiceOne \psalmChant }
+    %\new GregorianTranscriptionVoice { \voiceOne \psalmChant }
     \new GregorianTranscriptionVoice { \voiceTwo \psalmOrganRight }
   >>
 
@@ -175,7 +186,7 @@ organPart = \new PianoStaff <<
 }
 
 \score {
-  \transpose c g, <<
+  <<
     \chordsPart
     \chantPart
     \organPart
@@ -183,7 +194,7 @@ organPart = \new PianoStaff <<
 }
 
 \score {
-  \transpose c g, <<
+  <<
     \gloriaPatriChordsPartIVc
     \gloriaPatriChantPartIVc
     \gloriaPatriOrganPartIVc
