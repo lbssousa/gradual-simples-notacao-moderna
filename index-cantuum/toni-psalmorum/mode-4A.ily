@@ -7,17 +7,19 @@
 \include "../../modules/lilypond/lyrics.ily"
 \include "../../modules/lilypond/layout.ily"
 
+MySpacer = \Spacer 13
+
 chantInchoatioIVA =
 #(define-music-function
   (options)
   (alist?)
   #{
     \relative c'' {
-      \MakeInchoatioOnePostTwo d c d #options
+      \MakeInchoatioOnePostTwo a g a #options
     }
   #})
 
-chantTenorIVA = \relative c'' { \T d }
+chantTenorIVA = \relative c'' { \T a }
 
 chantFlexaIVA =
 #(define-music-function
@@ -25,7 +27,7 @@ chantFlexaIVA =
   (alist?)
   #{
     \relative c'' {
-      \MakeAccentusOnePostOne d c c #options
+      \MakeAccentusOnePostOne a g g #options
     }
   #})
 
@@ -35,8 +37,8 @@ chantMediatioIVA =
   (alist?)
   #{
     \relative c'' {
-      \C c \C d
-      \MakeAccentusOnePostOne e d d #options
+      \C g \C a
+      \MakeAccentusOnePostOne b a a #options
     }
   #})
 
@@ -46,8 +48,8 @@ chantTerminatioIVA =
   (alist?)
   #{
     \relative c'' {
-      \C c d e
-      \MakeAccentusOnePostOne c a a #options
+      \C g a b
+      \MakeAccentusOnePostOne a e e #options
     }
   #})
 
@@ -57,154 +59,206 @@ chantTerminatioIVc =
   (alist?)
   #{
     \relative c'' {
-      \MakeAccentusOnePostOne d c c #options
+      \MakeAccentusOnePostOne a g g #options
     }
   #})
 
-rightInchoatioIVA = \relative c'' {
-  a2*3/2
+rightInchoatioIVA = \relative c' {
+  c2*3/2~
 }
 
-rightTenorIVA = \relative c'' {
-  a2*1/2
+rightTenorIVA = \relative c' {
+  c2*1/2~
 }
 
-rightFlexaIVA = \relative c'' {
-  g2*2
-}
+rightFlexaIVA =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \MakeOrganFlexa b #options
+    }
+  #})
 
-rightMediatioIVA = \relative c'' {
-  a2*5/2
-}
+rightMediatioIVA =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c' {
+      \MakeOrganMediatioIV c #options ~
+    }
+  #})
 
-rightTenorAltIVA = \relative c'' {
-  bes2*1/2
-}
-
-rightTerminatioIVc = \relative c'' {
-  a2*3/2
-}
-
-leftInchoatioIVA = \relative c' {
-  f2*3/2
-}
-
-leftTenorIVA = \relative c' {
-  f2*1/2
-}
-
-leftFlexaIVA = \relative c' {
-  e2*2
-}
-
-leftMediatioIVA = \relative c' {
-  f2*5/2
-}
-
-leftTenorAltIVA = \relative c'' {
-  g2*1/2
-}
-
-leftTerminatioIVc = \relative c' {
-  e2*3/2
-}
-
-pedalInchoatioIVA = \relative c' {
-  d2*3/2
-}
-
-pedalTenorIVA = \relative c' {
+rightTenorTerminatioIVA = \relative c' {
   d2*1/2
 }
 
-pedalFlexaIVA = \relative c' {
-  \tweak X-offset #1.2 d2*2
+rightTerminatioIVc = \relative c' {
+  b2*1/2
 }
 
-pedalMediatioIVA = \relative c' {
-  d2*5/2
+leftInchoatioIVA = \relative c {
+  e2*3/2~
 }
 
-pedalTenorAltIVA = \relative c' {
-  g2*1/2
+leftTenorIVA = \relative c {
+  e2*1/2~
 }
 
-pedalTerminatioIVc = \relative c' {
-  a2*3/2
+leftFlexaIVA =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c {
+      \MakeOrganFlexa d #options
+    }
+  #})
+
+leftMediatioIVA =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c {
+      \MakeOrganMediatioIV e #options ~
+    }
+  #})
+
+leftTenorTerminatioIVA = \relative c {
+  f2*1/2
+}
+
+leftTerminatioIVc = \relative c {
+  e2*1/2
+}
+
+pedalInchoatioIVA = \relative c {
+  a2*3/2~
+}
+
+pedalTenorIVA = \relative c {
+  a2*1/2~
+}
+
+pedalFlexaIVA =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c {
+      \MakeOrganFlexa a #options
+    }
+  #})
+
+pedalMediatioIVA =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c {
+      \MakeOrganMediatioIV a #options ~
+    }
+  #})
+
+pedalTenorTerminatioIVc = \relative c {
+  d2*1/2
+}
+
+pedalTerminatioIVc = \relative c {
+  \tweak X-offset #1.2 e2*1/2
 }
 
 chordsInchoatioIVA = \chordmode {
-  d2*3/2:m
+  a4*3:m
 }
 
 chordsTenorIVA = \chordmode {
-  d2*1/2:m
+  a4:m
 }
 
-chordsFlexaIVA = \chordmode {
-  e2*2:m/d
-}
+chordsMediatioIVA =
+#(define-music-function
+  (options)
+  (alist?)
+  (case (assoc-get 'epenthesis options)
+    ((total) #{ \chordmode { a4*7:m } #})
+    ((partial) #{ \chordmode { a4*7:m } #})
+    (else #{ \chordmode { a4*4:m } #})))
 
-chordsMediatioIVA = \chordmode {
-  d2*5/2:m
-}
+chordsFlexaIVA =
+#(define-music-function
+  (options)
+  (alist?)
+  (case (assoc-get 'epenthesis options)
+    ((total) #{ \chordmode { b4:m/d } #})
+    ((partial) #{ \chordmode { b4:m/d } #})
+    (else #{ \chordmode { b4*2:m/d } #}))
+)
 
-chordsTenorAltIVA = \chordmode {
-  g2*1/2:m
+chordsTenorTerminatioIVA = \chordmode {
+  d4:m
 }
 
 chordsTerminatioIVc = \chordmode {
-  a2*3/2:m
+  e4:m
 }
 
 chantSegmentGloriaPatriIVA = {
   \time 1/4
   \chantInchoatioIVA #'((dieresis . total))
   \chantTenorIVA
-  \chantMediatioIVA #'((epenthesis . partial))
+  \chantMediatioIVA #'()
   \divisioMaxima
-  \chantInchoatioIVA #'((epenthesis . partial))
+  \chantInchoatioIVA #'()
   \chantTenorIVA
-  \chantMediatioIVA #'((epenthesis . partial))
+  \chantMediatioIVA #'()
   \divisioMaxima
   \chantTenorIVA
 }
 
 gloriaPatriOrganRightIVc = {
   \PsalmSignature
-  \rightInchoatioIVA ~
-  \rightTenorIVA ~
-  \rightMediatioIVA ~
-  \rightInchoatioIVA ~
-  \rightTenorIVA ~
-  \rightMediatioIVA (
-  \rightTenorAltIVA ) (
-  \rightTerminatioIVc )
+  \rightInchoatioIVA
+  \rightTenorIVA
+  \rightMediatioIVA #'()
+  \divisioMaxima
+  \rightInchoatioIVA
+  \rightTenorIVA
+  \rightMediatioIVA #'()
+  \divisioMaxima
+  \rightTenorTerminatioIVA
+  \rightTerminatioIVc s4
+  \finalis
+  \MySpacer
 }
 
 gloriaPatriOrganLeftIVc = {
   \clef bass
-  \leftInchoatioIVA ~
-  \leftTenorIVA ~
-  \leftMediatioIVA ~
+  \leftInchoatioIVA
+  \leftTenorIVA
+  \leftMediatioIVA #'()
   \divisioMaxima
-  \leftInchoatioIVA ~
-  \leftTenorIVA ~
-  \leftMediatioIVA (
+  \leftInchoatioIVA
+  \leftTenorIVA
+  \leftMediatioIVA #'()
   \divisioMaxima
-  \leftTenorAltIVA ) (
-  \leftTerminatioIVc )
+  \leftTenorTerminatioIVA (
+  \leftTerminatioIVc ) s4
   \finalis
+  \MySpacer
 }
 
 gloriaPatriOrganPedalIVc = {
-  \pedalInchoatioIVA ~
-  \pedalTenorIVA ~
-  \pedalMediatioIVA ~
-  \pedalInchoatioIVA ~
-  \pedalTenorIVA ~
-  \pedalMediatioIVA (
-  \pedalTenorAltIVA ) (
+  \pedalInchoatioIVA
+  \pedalTenorIVA
+  \pedalMediatioIVA #'()
+  \pedalInchoatioIVA
+  \pedalTenorIVA
+  \pedalMediatioIVA #'()
+  \pedalTenorTerminatioIVc (
   \pedalTerminatioIVc )
 }
 
@@ -216,20 +270,20 @@ gloriaPatriChantIVA = {
 
 gloriaPatriChantIVc = {
   \chantSegmentGloriaPatriIVA
-  \chantTerminatioIVc #'((epenthesis . partial)
-                         (syneresis . total))
+  \chantTerminatioIVc #'((syneresis . total))
   \finalis
+  \MySpacer
 }
 
 verseSegmentGloriaPatriIVA = \lyricmode {
   \set stanza = "Opcional:"
   \BeginInchoatio Gló -- ria ao \EndInchoatio
-  \Tenor "Pai e ao Filho e ao Espí" -- \I ri -- \I to \B San -- _ to,
-  \I Co -- \I mo __ \Tenor "era no princípio, a" --
+  \Tenor "Pai e ao Filho e ao Espí" -- \I ri -- \I to \B San -- to,
+  \I co -- \I mo __ \Tenor "era no princípio, a" --
   \BeginItalic
   go -- ra~e
   \EndItalic
-  \B sem -- _ pre,
+  \B sem -- pre,
 }
 
 gloriaPatriVerseIVA = \lyricmode {
@@ -252,7 +306,7 @@ gloriaPatriChantPartIVc = \new GregorianTranscriptionStaff <<
 
 gloriaPatriOrganPartIVc = \new PianoStaff <<
   \new GregorianTranscriptionStaff = "right" <<
-    \new GregorianTranscriptionVoice { \voiceOne \gloriaPatriChantIVc }
+    %\new GregorianTranscriptionVoice { \voiceOne \gloriaPatriChantIVc }
     \new GregorianTranscriptionVoice { \voiceTwo \gloriaPatriOrganRightIVc }
   >>
 
@@ -265,10 +319,10 @@ gloriaPatriOrganPartIVc = \new PianoStaff <<
 gloriaPatriChordsPartIVc = \new ChordNames {
   \chordsInchoatioIVA
   \chordsTenorIVA
-  \chordsMediatioIVA
+  \chordsMediatioIVA #'()
   \chordsInchoatioIVA
   \chordsTenorIVA
-  \chordsMediatioIVA
-  \chordsTenorAltIVA
+  \chordsMediatioIVA #'()
+  \chordsTenorTerminatioIVA
   \chordsTerminatioIVc
 }
