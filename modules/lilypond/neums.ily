@@ -25,10 +25,12 @@ Cmf =
 
 % Slot para alinhamento de letra.
 S =
-#(define-music-function () ()
+#(define-music-function (p) (ly:pitch?)
   #{
     \cadenzaOn
-    \once \omit NoteHead c \dC \noBreak
+    \hideNotes
+    $p \dC \noBreak
+    \unHideNotes
     \cadenzaOff
   #}
 )
