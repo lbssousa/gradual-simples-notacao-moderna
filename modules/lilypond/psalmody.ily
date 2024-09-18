@@ -50,6 +50,26 @@ MakeEpenthesis =
     (else #{ #}))
 )
 
+MakeOrganFlexa =
+#(define-music-function
+  (p options)
+  (ly:pitch? alist?)
+  (case (assoc-get 'epenthesis options)
+    ((total) #{ $p 2*1/2 #})
+    ((partial) #{ $p 2*1/2 #})
+    (else #{ $p 2 #}))
+)
+
+MakeOrganMediatioIV =
+#(define-music-function
+  (p options)
+  (ly:pitch? alist?)
+  (case (assoc-get 'epenthesis options)
+    ((total) #{ $p 2*7/2 #})
+    ((partial) #{ $p 2*7/2 #})
+    (else #{ $p 2*2 #}))
+)
+
 % Neuma de duas notas de apoio/acento precedido de epêntese em uma cadência salmódica
 eAA =
 #(define-music-function
