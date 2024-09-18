@@ -113,7 +113,7 @@ chordsPart = \new ChordNames {
   }
 
   <<
-    %\chordsPart
+    \chordsPart
     \chantPart
     \organPart
   >>
