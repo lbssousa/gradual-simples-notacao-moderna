@@ -225,7 +225,9 @@ C_L =
   #{
     \once \slurDashed
     $pa \dC( \noBreak
-    $pb ^">")
+    \tweak font-size -4
+    $pb )
+    %$pb ^">")
   #}
 )
 
