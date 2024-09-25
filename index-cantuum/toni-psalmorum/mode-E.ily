@@ -28,6 +28,18 @@ chantTerminatioEOne =
     }
   #})
 
+rightTenorEOne = \relative c' { c2*3/2 }
+rightTenorTerminatioEOne = \relative c' { c2*2 }
+rightTerminatioEOne = \relative c' { d4 }
+
+leftTenorEOne = \relative c' { g2*3/2 }
+leftTenorTerminatioEOne = \relative c' { a2*2 }
+leftTerminatioEOne = \relative c' { b4 }
+
+pedalTenorEOne = \relative c { c2*3/2 }
+pedalTenorTerminatioEOne = \relative c { a2*2 }
+pedalTerminatioEOne = \relative c { g4 }
+
 chantTerminatioETwod =
 #(define-music-function
   (options)
@@ -126,6 +138,21 @@ chantTerminatioEStar =
     }
   #})
 
+rightTenorEStar = \relative c' { e2*3/2 }
+rightTenorTerminatioPrimusEStar = \relative c' { d2*1/2 }
+rightTenorTerminatioSecundusEStar = \relative c' { d2*3/2 }
+rightTerminatioEStar = \relative c' { c2*3/2 }
+
+leftTenorEStar = \relative c' { c2*3/2 }
+leftTenorTerminatioPrimusEStar = \relative c' { g2*1/2 }
+leftTenorTerminatioSecundusEStar = \relative c' { a2*3/2 }
+leftTerminatioEStar = \relative c' { a2*3/2 }
+
+pedalTenorEStar = \relative c { c2*3/2 }
+pedalTenorTerminatioPrimusEStar = \relative c { b2*1/2 }
+pedalTenorTerminatioSecundusEStar = \relative c { d2*3/2 }
+pedalTerminatioEStar = \relative c { a2*3/2 }
+
 chantAlleluiaETwod = \relative c' {
   \C e e e e \divisioMinima e e \CCC d g f \C e
 }
@@ -136,7 +163,26 @@ lyricsAlleluiaETwod = \lyricmode {
 }
 
 chantAlleluiaEStar = \relative c' {
-  \C f e \CC f g \CCC f f e d c \CL d e \C e
+  \C f \C e \CC f g \CCC f f e \C d \C c \CL d e \C e
+  \finalis
+}
+
+rightAlleluiaEStar = \relative c' {
+  d2 c2*5/2 a2~ a2 e'4
+  \finalis
+}
+
+leftAlleluiaEStar = \relative c' {
+  a2~ a2*5/2~ a2~ a2 b4
+  \finalis
+}
+
+pedalAlleluiaEStar = \relative c {
+  d2~ d2*5/2 e2 f2 e4
+}
+
+chordsAlleluiaEStar = \chordmode {
+  d2:m d2*5/2:m7 d2:m/e d2:m/f c4
 }
 
 lyricsAlleluiaEStar = \lyricmode {
