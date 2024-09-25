@@ -7,6 +7,8 @@
 \include "../../modules/lilypond/lyrics.ily"
 \include "../../modules/lilypond/layout.ily"
 
+MySpacer = \Spacer 5
+
 chantInchoatioVIII = \relative c'' { \C g a }
 chantGloriaInchoatioVIII = \relative c'' { \C a }
 
@@ -71,15 +73,15 @@ rightFlexaVIII = \relative c'' {
 }
 
 rightTenorVIII = \relative c'' {
-  g2*2
+  g2*3/2
 }
 
-rightTenorAltVIII = \relative c'' {
+rightTenorTerminatioVIII = \relative c'' {
   a2*3/2
 }
 
 rightTerminatioAccentusVIIIG = \relative c' {
-  d4*2
+  d4
 }
 
 rightTerminatioPostAccentusVIIIG = \relative c' {
@@ -103,15 +105,15 @@ leftFlexaVIII = \relative c' {
 }
 
 leftTenorVIII = \relative c' {
-  c2*2
+  c2*3/2
 }
 
-leftTenorAltVIII = \relative c' {
+leftTenorTerminatioVIII = \relative c' {
   c2*3/2
 }
 
 leftTerminatioAccentusVIIIG = \relative c' {
-  c4*2
+  c4
 }
 
 leftTerminatioPostAccentusVIIIG = \relative c' {
@@ -135,15 +137,15 @@ pedalFlexaVIII = \relative c {
 }
 
 pedalTenorVIII = \relative c {
-  e2*2
+  e2*3/2
 }
 
-pedalTenorAltVIII = \relative c {
+pedalTenorTerminatioVIII = \relative c {
   f2*3/2
 }
 
 pedalTerminatioAccentusVIIIG = \relative c' {
-  g4*2
+  g4
 }
 
 pedalTerminatioPostAccentusVIIIG = \relative c' {
@@ -167,58 +169,61 @@ chordsFlexaVIII = \chordmode {
 }
 
 chordsTenorVIII = \chordmode {
-  c2*2
+  c2*3/2
 }
 
-chordsTenorAltVIII = \chordmode {
+chordsTenorTerminatioVIII = \chordmode {
   f2*3/2
 }
 
 chordsTerminatioAccentusVIIIG = \chordmode {
-  g4*2:sus4
+  g4:sus4
 }
 
 chordsTerminatioPostAccentusVIIIG = \chordmode {
   g4
 }
 
-chantSegmentGloriaPatrVIIIIII = {
+chantSegmentGloriaPatrVIII = {
   \time 1/4
   \key c \major
   \chantInchoatioVIII
   \chantTenorVIII
-  \chantMediatioVIII #'((epenthesis . partial))
+  \chantMediatioVIII #'()
   \divisioMaxima
   \chantGloriaInchoatioVIII
   \chantTenorVIII
-  \chantMediatioVIII #'((epenthesis . partial))
+  \chantMediatioVIII #'()
   \divisioMaxima
   \chantTenorVIII
 }
 
 gloriaPatriChantVIIIc = {
-  \chantSegmentGloriaPatrVIIIIII
-  \chantTerminatioVIIIc #'((epenthesis . partial)
-                           (syneresis . total))
+  \chantSegmentGloriaPatrVIII
+  \chantTerminatioVIIIc #'((syneresis . total))
   \finalis
 }
 
 gloriaPatriChantVIIIG = {
-  \chantSegmentGloriaPatrVIIIIII
-  \chantTerminatioVIIIG #'((epenthesis . partial)
-                           (syneresis . total))
+  \chantSegmentGloriaPatrVIII
+  \chantTerminatioVIIIG #'((syneresis . total))
   \finalis
+  \MySpacer
 }
 
 gloriaPatriOrganRightVIIIG = {
   \PsalmSignature
   \rightInchoatioVIII ~
   \rightTenorVIII ~
+  \divisioMaxima
   \rightGloriaInchoatioVIII ~
-  \rightTenorVIII (
-  \rightTenorAltVIII ) (
-  \rightTerminatioAccentusVIIIG ) (
-  \rightTerminatioPostAccentusVIIIG )
+  \rightTenorVIII
+  \divisioMaxima
+  \rightTenorTerminatioVIII
+  \rightTerminatioAccentusVIIIG
+  \rightTerminatioPostAccentusVIIIG
+  \finalis
+  \MySpacer
 }
 
 gloriaPatriOrganLeftVIIIG = {
@@ -228,29 +233,30 @@ gloriaPatriOrganLeftVIIIG = {
   \leftTenorVIII ~
   \divisioMaxima
   \leftGloriaInchoatioVIII ~
-  \leftTenorVIII (
+  \leftTenorVIII
   \divisioMaxima
-  \leftTenorAltVIII ) (
-  \leftTerminatioAccentusVIIIG ) (
-  \leftTerminatioPostAccentusVIIIG )
+  \leftTenorTerminatioVIII
+  \leftTerminatioAccentusVIIIG
+  \leftTerminatioPostAccentusVIIIG
   \finalis
+  \MySpacer
 }
 
 gloriaPatriOrganPedalVIIIG = {
   \pedalInchoatioVIII ~
   \pedalTenorVIII ~
   \pedalGloriaInchoatioVIII ~
-  \pedalTenorVIII (
-  \pedalTenorAltVIII ) (
-  \pedalTerminatioAccentusVIIIG ) (
-  \pedalTerminatioPostAccentusVIIIG )
+  \pedalTenorVIII
+  \pedalTenorTerminatioVIII
+  \pedalTerminatioAccentusVIIIG
+  \pedalTerminatioPostAccentusVIIIG
 }
 
 gloriaPatriVerseVIII = \lyricmode {
   \set stanza = "Opcional:"
   \Inchoatio Gló -- ria~ao
-  \Tenor "Pai e ao Filho e ao Espírito" \B San -- _ to,
-  \I Co -- \Tenor "mo era no princípio, agora e" \B sem -- _ pre,
+  \Tenor "Pai e ao Filho e ao Espírito" \B San -- to,
+  \I Co -- \Tenor "mo era no princípio, agora e" \B sem -- pre,
   \Tenor "pelos séculos dos sécu" -- \TerminatioVIII los, a -- mém! __ _
 }
 
@@ -264,7 +270,7 @@ gloriaPatriChantPartVIIIG = \new GregorianTranscriptionStaff <<
 
 gloriaPatriOrganPartVIIIG = \new PianoStaff <<
   \new GregorianTranscriptionStaff = "right" <<
-    \new GregorianTranscriptionVoice { \voiceOne \gloriaPatriChantVIIIG }
+    %\new GregorianTranscriptionVoice { \voiceOne \gloriaPatriChantVIIIG }
     \new GregorianTranscriptionVoice { \voiceTwo \gloriaPatriOrganRightVIIIG }
   >>
 
@@ -279,7 +285,7 @@ gloriaPatriChordsPartVIIIG = \new ChordNames {
   \chordsTenorVIII
   \chordsGloriaInchoatioVIII
   \chordsTenorVIII
-  \chordsTenorAltVIII
+  \chordsTenorTerminatioVIII
   \chordsTerminatioAccentusVIIIG
   \chordsTerminatioPostAccentusVIIIG
 }
