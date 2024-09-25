@@ -10,7 +10,7 @@
 antiphonChant = \relative c' {
   \AntiphonSignature
   \key c \major
-  \C e g \CC g a \C_C a a \S a
+  \C e g \CC g a \C_C a a
   \divisioMinima
   a a g \CC a b \C g \CL a b \C a a
   \divisioMaior
@@ -23,7 +23,7 @@ antiphonChant = \relative c' {
 antiphonOrganRight = \relative c' {
   \AntiphonSignature
   b2 d2*3/2 e2*5/2
-  d2*5/2 d4 d
+  d2*2 d4 d
   \divisioMaxima
   %\tweak X-offset #1.2
   e2*3/2 d2*3/2 c2
@@ -37,7 +37,7 @@ antiphonOrganLeft = \relative c' {
   \clef bass
   \key c \major
   g2~ g2*3/2~ g2*5/2~
-  g2*5/2 g4 fis
+  g2*2 g4 fis
   \divisioMaxima
   e2*3/2 a2*3/2 g2
   a2*2~ a2 e4~ e
@@ -46,7 +46,7 @@ antiphonOrganLeft = \relative c' {
 
 antiphonOrganPedal = \relative c {
   \AntiphonSignature
-  e2 b2*3/2 c2*5/2 b2*5/2 d4~ d
+  e2 b2*3/2 c2*5/2 b2*2 d4~ d
   c2*3/2~ c2*3/2~ c2
   a2*2 d2
   \tweak X-offset #1.2 e4~
@@ -54,19 +54,18 @@ antiphonOrganPedal = \relative c {
 }
 
 antiphonChords = \chordmode {
-  e2:m g2*3/2/b c2*5/2:6 g2*5/2/b d4:sus4 d4
+  e2:m g2*3/2/b c2*5/2:6 g2*2/b d4:sus4 d4
   c2*3/2:6 d2*3/2/c c2
   a2*2:m d2:sus4 c4/e e4:m
 }
 
 antiphonLyrics = \lyricmode {
-  Ad te, Dó -- \MelismaOff mi -- ne, \MelismaOn \MediatioMark le -- vá -- vi á -- ni -- mam __ me -- am:
+  Ad te, Dó -- \MelismaOff mi -- \Mediatio ne, \MelismaOn le -- vá -- vi á -- ni -- mam __ me -- am:
   \MelismaOff ve -- ni, \MelismaOn et é -- ri -- pe me, __ Dó -- mi -- ne, ad te con -- fú -- gi.
 }
 
 antiphonLyricsPt = \lyricmode {
-
-  A vós, Se -- nhor, __ \MediatioMark e -- le -- vo a mi -- nha __ al -- ma.
+  A vós, Se -- \Mediatio nhor, __ e -- le -- vo a __ mi -- nha __ al -- ma.
   Vin -- de e li -- ber -- \MelismaOff tai- -- me, \MelismaOn Se -- nhor, pois em vós me~a -- bri -- go.
 }
 
