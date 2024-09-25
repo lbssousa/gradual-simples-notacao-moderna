@@ -5,6 +5,7 @@
 \include "../../modules/lilypond/spacing.ily"
 \include "../../modules/lilypond/psalmody.ily"
 \include "../../modules/lilypond/lyrics.ily"
+\include "../../modules/lilypond/layout.ily"
 
 chantInchoatioIV =
 #(define-music-function
@@ -12,13 +13,13 @@ chantInchoatioIV =
   (alist?)
   #{
     \relative c'' {
-      \MakeInchoatioOnePostTwo a g a #options
+      \MakeInchoatioOnePostTwo b a b #options
     }
   #})
 
-chantTenorIV = \relative c'' { \T a }
+chantTenorIV = \relative c'' { \T b }
 
-chantTenorAltSecundusIV = \relative c'' { \C a }
+chantTenorTerminatioSecundusIV = \relative c'' { \C b }
 
 chantFlexaIV =
 #(define-music-function
@@ -26,7 +27,7 @@ chantFlexaIV =
   (alist?)
   #{
     \relative c'' {
-      \MakeAccentusOnePostOne a g g #options
+      \MakeAccentusOnePostOne b a a #options
     }
   #})
 
@@ -36,8 +37,8 @@ chantMediatioIV =
   (alist?)
   #{
     \relative c'' {
-      \C g \C a
-      \MakeAccentusOnePostOne b a a #options
+      \C a \C b
+      \MakeAccentusOnePostOne cis b b #options
     }
   #})
 
@@ -47,113 +48,115 @@ chantTerminatioIVE =
   (alist?)
   #{
     \relative c'' {
-      \C g \C a \CC b a
-      \MakeAccentusTwoPreEpenthesisPostOne g g f e #options
+      \C a \C b \CC cis b
+      \MakeAccentusTwoPreEpenthesisPostOne a a g fis #options
     }
   #})
 
 rightInchoatioIV = \relative c' {
-  e2*3/2
+  fis2*3/2
 }
 
 rightTenorIV = \relative c' {
-  e2*3/2
+  fis2*3/2
 }
 
 rightFlexaIV = \relative c'' {
-  d2*3/2
+  e2*3/2
 }
 
 rightMediatioIV = \relative c' {
-  e2*3/2
+  fis2
 }
 
-rightTenorAltPrimusIV = \relative c' {
-  e2*1/2
+rightTenorTerminatioPrimusIV = \relative c' {
+  fis2*1/2
 }
 
-rightTenorAltSecundusIV = \relative c' {
-  d2*5/2
+rightTenorTerminatioSecundusIV = \relative c' {
+  e2*5/2
 }
 
 rightTerminatioAccentusIVE = \relative c' {
-  d2
+  e2*1/2
 }
 
 rightTerminatioPostAccentusIVE = \relative c' {
-  \tweak X-offset #1.2 e4
+  %\tweak X-offset #1.2
+  fis4
 }
 
 leftInchoatioIV = \relative c' {
-  a2*3/2
+  b2*3/2
 }
 
 leftTenorIV = \relative c' {
-  a2*3/2
+  b2*3/2
 }
 
 leftFlexaIV = \relative c' {
-  e2*3/2
+  fis2*3/2
 }
 
 leftMediatioIV = \relative c' {
-  g2*3/2
-}
-
-leftTenorAltPrimusIV = \relative c' {
-  a2*1/2
-}
-
-leftTenorAltSecundusIV = \relative c' {
-  a2*5/2
-}
-
-leftTerminatioAccentusIVE = \relative c' {
   a2
 }
 
+leftTenorTerminatioPrimusIV = \relative c' {
+  b2*1/2
+}
+
+leftTenorTerminatioSecundusIV = \relative c' {
+  b2*5/2
+}
+
+leftTerminatioAccentusIVE = \relative c' {
+  b2*1/2
+}
+
 leftTerminatioPostAccentusIVE = \relative c' {
-  b4
+  cis4
 }
 
 pedalInchoatioIV = \relative c {
-  c2*3/2
-}
-
-pedalTenorIV = \relative c {
-  c2*3/2
-}
-
-pedalFlexaIV = \relative c' {
   d2*3/2
 }
 
+pedalTenorIV = \relative c {
+  d2*3/2
+}
+
+pedalFlexaIV = \relative c' {
+  e2*3/2
+}
+
 pedalMediatioIV = \relative c' {
-  \tweak X-offset #1.2 g2*3/2
+  \tweak X-offset #1.2
+  a2
 }
 
-pedalTenorAltPrimusIV = \relative c {
-  f2*1/2
+pedalTenorTerminatioPrimusIV = \relative c' {
+  g2*1/2
 }
 
-pedalTenorAltSecundusIV = \relative c {
-  f2*5/2
+pedalTenorTerminatioSecundusIV = \relative c' {
+  g2*5/2
 }
 
 pedalTerminatioAccentusIVE = \relative c {
-  e2
+  fis2*1/2
 }
 
 pedalTerminatioPostAccentusIVE = \relative c {
-  e4
+  fis4
 }
 
 chordsInchoatioIV = \chordmode {
-  a2*3/2:m/c
+  b2*3/2:m/d
 }
 
 chordsTenorIV = \chordmode {
-  a2*3/2:m/c
+  b2*3/2:m/d
 }
 
 chordsFlexaIV = \chordmode {
@@ -161,23 +164,23 @@ chordsFlexaIV = \chordmode {
 }
 
 chordsMediatioIV = \chordmode {
-  e2*3/2:m/g
+  fis2*1/2:m/a
 }
 
-chordsTenorAltPrimusIV = \chordmode {
-  a2*1/2:m/f
+chordsTenorTerminatioPrimusIV = \chordmode {
+  b2*1/2:m/g
 }
 
-chordsTenorAltSecundusIV = \chordmode {
-  d2*5/2:m/f
+chordsTenorTerminatioSecundusIV = \chordmode {
+  e2*5/2:m/g
 }
 
 chordsTerminatioAccentusIVE = \chordmode {
-  g2:sus2/e
+  a4:sus2/fis
 }
 
 chordsTerminatioPostAccentusIVE = \chordmode {
-  e4:m
+  fis4:m
 }
 
 gloriaPatriChantIVE = {
