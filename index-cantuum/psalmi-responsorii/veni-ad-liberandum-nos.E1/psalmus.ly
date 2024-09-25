@@ -10,6 +10,26 @@ chantResponsorium = \relative c'' {
   \C g e f d c d f f e \finalis
 }
 
+responsoriumOrganRight = \relative c' {
+  c2*3/2 a2~ a d4 b
+  \finalis
+}
+
+responsoriumOrganLeft = \relative c' {
+  g2*3/2 a2~ a~ a4 e
+  \finalis
+}
+
+responsoriumOrganPedal = \relative c {
+  c2*3/2 f2 e d4
+  \tweak X-offset #1.2
+  e
+}
+
+responsoriumChords = \chordmode {
+  c2*3/2 d2:m/f d:m/e d4:m e:m
+}
+
 lyricsResponsorium = \lyricmode {
   \set stanza = \Responsorium
   Ó Se -- nhor, Deus do u -- ni -- ver -- so.
@@ -17,12 +37,46 @@ lyricsResponsorium = \lyricmode {
 
 psalmChant = {
   \PsalmSignature
-  \S \chantTenorEOne
+  \key a \minor
+  \S g' \chantTenorEOne
   \chantMediatioEOne #'((syneresis . partial))
   \divisioMaxima
-  \S \chantTenorEOne
+  \S g' \chantTenorEOne
   \chantTerminatioEOne #'((syneresis . partial))
-  s \finalis
+  \finalis
+}
+
+psalmOrganRight = {
+  \PsalmSignature
+  \key a \minor
+  s4 \rightTenorEOne (
+  \divisioMaxima
+  s4 \rightTenorTerminatioEOne )
+  \rightTerminatioEOne
+  \finalis
+}
+
+psalmOrganLeft = {
+  \PsalmSignature
+  \clef bass
+  \key a \minor
+  s4 \leftTenorEOne
+  \divisioMaxima
+  s4 \leftTenorTerminatioEOne
+  \leftTerminatioEOne
+  \finalis
+}
+
+psalmOrganPedal = \relative c {
+  \PsalmSignature
+  s4 \pedalTenorEOne
+  s4 \pedalTenorTerminatioEOne
+  \pedalTerminatioEOne
+}
+
+psalmChords = \chordmode {
+  s4 c2*3/2
+  s4 a2*2:m g4
 }
 
 psalmVerseI = \lyricmode {
@@ -85,26 +139,67 @@ psalmVerseVIII = \lyricmode {
 
 \GregorianTranscriptionLayout
 
+\header {
+  arranger = "Harmonização: Theo Flury, Gennaro M. Becchimanzi"
+}
+
+chantPart = \new GregorianTranscriptionStaff <<
+  \new GregorianTranscriptionVoice = "psalm" {
+    \psalmChant
+    \chantResponsorium
+  }
+
+  \new GregorianTranscriptionLyrics \lyricsto "psalm" {
+    \psalmVerseI
+    \lyricsResponsorium
+  }
+  \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
+  \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+  \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
+  \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+  \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
+  \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
+  \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVIII
+>>
+
+organPart = \new PianoStaff <<
+  \new GregorianTranscriptionStaff = "right" <<
+    %\new GregorianTranscriptionVoice { \voiceOne \psalmChant }
+    \new GregorianTranscriptionVoice {
+      \voiceTwo
+      \psalmOrganRight
+      \responsoriumOrganRight
+    }
+  >>
+
+  \new GregorianTranscriptionStaff = "left+pedal" <<
+    \new GregorianTranscriptionVoice {
+      \voiceOne
+      \psalmOrganLeft
+      \responsoriumOrganLeft
+    }
+    \new GregorianTranscriptionVoice {
+      \voiceTwo
+      \psalmOrganPedal
+      \responsoriumOrganPedal
+    }
+  >>
+>>
+
+chordsPart = \new ChordNames {
+  \psalmChords
+  \responsoriumChords
+}
+
 \score {
   \header {
     piece = "E 1"
   }
-  \new GregorianTranscriptionStaff <<
-    \new GregorianTranscriptionVoice = "psalm" {
-      \psalmChant
-      \chantResponsorium
-    }
 
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" {
-      \psalmVerseI
-      \lyricsResponsorium
-    }
-    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
-    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVIII
+  \transpose a c'
+  <<
+    \chordsPart
+    \chantPart
+    \organPart
   >>
 }

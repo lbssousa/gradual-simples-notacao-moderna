@@ -8,89 +8,165 @@
 
 psalmChant = {
   \PsalmSignature
-  \S \chantTenorEStar
+  \key c \major
+  \S g' \chantTenorEStar
   \chantMediatioEStar #'((syneresis . partial))
   \divisioMaxima
   \chantTenorEStar
+  \chantTenorEStar
   \chantTerminatioEStar #'((syneresis . partial)
                            (epenthesis . partial))
-  s \finalis
+  \finalis
+}
+
+psalmOrganRight = {
+  \PsalmSignature
+  \key c \major
+  s4 \rightTenorEStar
+  \divisioMaxima
+  \rightTenorTerminatioPrimusEStar ~
+  \rightTenorTerminatioSecundusEStar
+  \rightTerminatioEStar
+  \finalis
+}
+
+psalmOrganLeft = {
+  \PsalmSignature
+  \clef bass
+  \key c \major
+  s4 \leftTenorEStar
+  \divisioMaxima
+  \leftTenorTerminatioPrimusEStar
+  \leftTenorTerminatioSecundusEStar ~
+  \leftTerminatioEStar
+  \finalis
+}
+
+psalmOrganPedal = \relative c {
+  \PsalmSignature
+  s4 \pedalTenorEStar
+  \pedalTenorTerminatioPrimusEStar
+  \pedalTenorTerminatioSecundusEStar
+  \pedalTerminatioEStar
+}
+
+psalmChords = \chordmode {
+  s4 c2*3/2 g2*1/2:7/b g2*3/2/d a2*3/2:m
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "2" \Tenor "Favorecestes, ó Senhor, a vossa"
-  \MelismaOff ter -- ra, \MelismaOn
-  \Tenor "libertastes os cativos de" Ja -- có. __
+  \MelismaOff \B ter -- \Mediatio ra, \MelismaOn
+  \Tenor "libertastes os ca" -- \Tenor "tivos de" \I Ja -- \B có. __
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \VSup "3" \Tenor "Perdoastes o pecado ao vosso"
-  \MelismaOff po -- vo, \MelismaOn
-  \Tenor "encobristes toda a falta co" -- me --
-  \MelismaOff ti -- _ da. \MelismaOn
+  \MelismaOff \B po -- \Mediatio vo, \MelismaOn
+  \Tenor "encobristes toda a" \Tenor "falta co" -- \I me --
+  \MelismaOff \B ti -- _ da. \MelismaOn
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
   \VSup "4" \Tenor "Retirastes a ameaça que fi" --
-  \MelismaOff zes -- tes, \MelismaOn
-  \Tenor "acalmastes o furor de vos" -- sa __
-  \MelismaOff i -- _ ra. \MelismaOn
+  \MelismaOff \B zes -- \Mediatio tes, \MelismaOn
+  \Tenor "acalmastes o fu" -- \Tenor "ror de vos" -- \I sa __
+  \MelismaOff \B i -- _ ra. \MelismaOn
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
-  \VSup "5" \Tenor "Renovai-nos, nosso Deus e Salva" -- dor, __
-  \Tenor "esquecei a vossa mágoa con" -- tra __ nós! __
+  \VSup "5" \Tenor "Renovai-nos, nosso Deus e Salva" -- \BeginBold \Mediatio dor, __ \EndBold
+  \Tenor "esquecei a vossa" \Tenor "mágoa con" -- \I tra __ \B nós! __
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
   \VSup "6" \Tenor "Ficareis eternamente irri" --
-  \MelismaOff ta -- do? \MelismaOn
-  \Tenor "Guardareis a vossa ira pe" -- los __
-  \MelismaOff sé -- cu -- los? \MelismaOn
+  \MelismaOff \B ta -- \Mediatio do? \MelismaOn
+  \Tenor "Guardareis a vossa" \Tenor "ira pe" -- \I los __
+  \MelismaOff \B sé -- cu -- los? \MelismaOn
 }
 
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \VSup "7" \Tenor "Não vireis restituir a nossa"
-  \MelismaOff vi -- da, \MelismaOn
-  \Tenor "para que em vós se rejubile o vos" -- so __
-  \MelismaOff po -- _ vo? \MelismaOn
+  \MelismaOff \B vi -- \Mediatio da, \MelismaOn
+  \Tenor "para que em vós se reju" -- \Tenor "bile o vos" -- \I so __
+  \MelismaOff \B po -- _ vo? \MelismaOn
 }
 
 psalmVerseVII = \lyricmode {
   \set stanza = "7."
   \VSup "8" \Tenor "Mostrai-nos, ó Senhor, vossa bon" --
-  \MelismaOff da -- de, \MelismaOn
-  \Tenor "concedei-nos também vossa sal" -- va -- ção. __
+  \MelismaOff \B da -- \Mediatio de, \MelismaOn
+  \Tenor "concedei-nos também" \Tenor "vossa sal" -- \I va -- \B ção. __
 }
 
 \GregorianTranscriptionLayout
+
+\header {
+  arranger = "Harmonização: Theo Flury, Gennaro M. Becchimanzi"
+}
+
+chantPart = \new GregorianTranscriptionStaff <<
+  \new GregorianTranscriptionVoice = "psalm" {
+    \psalmChant
+    \chantAlleluiaEStar
+  }
+
+  \new GregorianTranscriptionLyrics \lyricsto "psalm" {
+    \psalmVerseI
+    \lyricsAlleluiaEStar
+  }
+  \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
+  \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
+  \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
+  \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
+  \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
+  \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
+>>
+
+organPart = \new PianoStaff <<
+  \new GregorianTranscriptionStaff = "right" <<
+    %\new GregorianTranscriptionVoice { \voiceOne \psalmChant }
+    \new GregorianTranscriptionVoice {
+      \voiceTwo
+      \psalmOrganRight
+      \rightAlleluiaEStar
+    }
+  >>
+
+  \new GregorianTranscriptionStaff = "left+pedal" <<
+    \new GregorianTranscriptionVoice {
+      \voiceOne
+      \psalmOrganLeft
+      \leftAlleluiaEStar
+    }
+    \new GregorianTranscriptionVoice {
+      \voiceTwo
+      \psalmOrganPedal
+      \pedalAlleluiaEStar
+    }
+  >>
+>>
+
+chordsPart = \new ChordNames {
+  \psalmChords
+  \chordsAlleluiaEStar
+}
 
 \score {
   \header {
     piece = "E *"
   }
-  \new GregorianTranscriptionStaff <<
-    \new GregorianTranscriptionVoice = "psalm" {
-      \psalmChant
-      \chantAlleluiaEStar
-      \finalis
-    }
 
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" {
-      \psalmVerseI
-      \lyricsAlleluiaEStar
-    }
-    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseII
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseIII
-    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseIV
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseV
-    \new GregorianTranscriptionAltLyrics \lyricsto "psalm" \psalmVerseVI
-    \new GregorianTranscriptionLyrics \lyricsto "psalm" \psalmVerseVII
+  <<
+    \chordsPart
+    \chantPart
+    \organPart
   >>
 }

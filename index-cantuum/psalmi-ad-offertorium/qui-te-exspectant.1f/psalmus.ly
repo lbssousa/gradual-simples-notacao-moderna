@@ -7,59 +7,63 @@
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
+MySpacer = \Spacer 13
+
 psalmChant = {
   \PsalmSignature
   \key d \minor
-  \S \chantInchoatioI #'()
+  \S f' \chantInchoatioI #'()
   \chantTenorI
   \chantMediatioPrimusI #'((epenthesis . partial))
-  \chantMediatioSecundusI #'((epenthesis . partial)
-                             (syneresis . partial)) \S \break
+  \chantMediatioSecundusI #'((syneresis . partial))
   \divisioMaxima
   \chantTenorI
-  \chantTerminatioIf #'((epenthesis . partial)
-                        (syneresis . partial))
+  \chantTerminatioIf #'((syneresis . partial))
   \finalis
-  \Spacer 13
+  \MySpacer
 }
 
 psalmOrganRight = {
   \PsalmSignature
-  s4 \rightInchoatioI (
-  \rightTenorI ) ( s4
-  \rightTenorAltI ) (
-  \rightTerminatioAccentusIf ) (
-  \rightTerminatioPostAccentusPrimusIf ) (
-  \rightTerminatioPostAccentusSecundusIf )
+  \key d \minor
+  s4 \rightInchoatioI
+  \rightTenorI
+  \divisioMaxima
+  \rightTenorTerminatioI
+  \rightTerminatioAccentusIf
+  \rightTerminatioPostAccentusPrimusIf~
+  \rightTerminatioPostAccentusSecundusIf
+  \finalis
+  \MySpacer
 }
 
 psalmOrganLeft = {
   \clef bass
   \key d \minor
-  s4 \leftInchoatioI (
-  \leftTenorI ) ( s4
+  s4 \leftInchoatioI~
+  \leftTenorI~
   \divisioMaxima
-  \leftTenorAltI ) (
-  \leftTerminatioAccentusIf ) (
-  \leftTerminatioPostAccentusPrimusIf ) (
-  \leftTerminatioPostAccentusSecundusIf )
+  \leftTenorTerminatioI
+  \leftTerminatioAccentusIf~
+  \leftTerminatioPostAccentusPrimusIf
+  \leftTerminatioPostAccentusSecundusIf
   \finalis
-  \Spacer 13
+  \MySpacer
 }
 
 psalmOrganPedal = {
-  s4 \pedalInchoatioI (
-  \pedalTenorI ) ( s4
-  \pedalTenorAltI ) (
-  \pedalTerminatioAccentusIf ) (
-  \pedalTerminatioPostAccentusPrimusIf ) (
-  \pedalTerminatioPostAccentusSecundusIf )
+  s4 \pedalInchoatioI~
+  \pedalTenorI
+  \pedalTenorTerminatioI~
+  \pedalTerminatioAccentusIf~
+  \pedalTerminatioPostAccentusPrimusIf~
+  \pedalTerminatioPostAccentusSecundusIf
 }
 
 chordsPart = \new ChordNames {
   s4 \chordsInchoatioI
-  \chordsTenorI s4
-  \chordsTenorAltI
+  \chordsTenorI
+  \chordsTenorTerminatioI
   \chordsTerminatioAccentusIf
   \chordsTerminatioPostAccentusPrimusIf
   \chordsTerminatioPostAccentusSecundusIf
@@ -69,42 +73,42 @@ psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "1" \Inchoatio Se -- nhor __
   \Tenor "meu Deus, a vós elevo a" \B mi -- _ nha
-  \MelismaOff \B al -- _ ma, \MelismaOn \MediatioMark
-  \Tenor "em vós confio: que eu não seja en" -- \TerminatioI ver -- go -- nha -- _ do. __
+  \MelismaOff \B al -- \Mediatio ma, \MelismaOn
+  \Tenor "em vós confio: que eu não seja en" -- \TerminatioI ver -- go -- nha -- do. __
 }
 
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \VSup "6" \Inchoatio Re -- cor --
   \Tenor "dai, Senhor meu Deus," \B vos -- sa ter --
-  \MelismaOff \B nu -- _ ra \MelismaOn \MediatioMark
+  \MelismaOff \B nu -- \Mediatio ra \MelismaOn
   \Tenor "e a vossa salvação que" \TerminatioI são e --
-  ter -- _ nas! __
+  ter -- nas! __
 }
 
 psalmVerseIII = \lyricmode {
   \set stanza = "3."
   \VSup "10" \Inchoatio Ver -- da --
-  \Tenor "de e amor são os caminhos" \B do _ Se -- \B nhor __ \MediatioMark
+  \Tenor "de e amor são os caminhos" \B do _ Se -- \BeginBold \Mediatio nhor __ \EndBold
   \Tenor "para quem guarda sua Aliança e" \TerminatioI seus pre --
-  cei -- _ tos. __
+  cei -- tos. __
 }
 
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \VSup "20" \Inchoatio De -- fen --
   \Tenor "dei a minha vida e" \B li -- _ ber --
-  \MelismaOff \B tai- -- _ me; \MelismaOn \MediatioMark
+  \MelismaOff \B tai- -- \Mediatio me; \MelismaOn
   \Tenor "em vós confio, que eu não seja en" -- \TerminatioI ver -- go --
-  nha -- _ do! __
+  nha -- do! __
 }
 
 psalmVerseV = \lyricmode {
   \set stanza = "5."
   \VSup "22" \Inchoatio Li -- ber --
   \Tenor "tai, ó Senhor Deus, a"
-   \B Is -- _ ra -- \B el __ \MediatioMark
-  \Tenor "de toda a sua angústia" \TerminatioI e~a -- fli -- ção! __ _ _
+   \B Is -- _ ra -- \BeginBold \Mediatio el __ \EndBold
+  \Tenor "de toda a sua angústia e" \TerminatioI a -- fli -- ção! __ _ _
 }
 
 chantPart = \new GregorianTranscriptionStaff <<
@@ -121,7 +125,7 @@ chantPart = \new GregorianTranscriptionStaff <<
 
 organPart = \new PianoStaff <<
   \new GregorianTranscriptionStaff = "right" <<
-    \new GregorianTranscriptionVoice { \voiceOne \psalmChant }
+    %\new GregorianTranscriptionVoice { \voiceOne \psalmChant }
     \new GregorianTranscriptionVoice { \voiceTwo \psalmOrganRight }
   >>
 
@@ -138,7 +142,7 @@ organPart = \new PianoStaff <<
 }
 
 \score {
-  <<
+  \transpose f g <<
     \chordsPart
     \chantPart
     \organPart

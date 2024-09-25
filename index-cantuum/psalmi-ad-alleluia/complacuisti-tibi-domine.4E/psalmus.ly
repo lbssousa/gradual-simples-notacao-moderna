@@ -7,62 +7,71 @@
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
-psalmChant = {
-  \key c \major
+MySpacer = \Spacer 23
+
+global = {
   \PsalmSignature
-  \S \chantInchoatioIV #'()
+  \key d \major
+}
+
+psalmChant = {
+  \global
+  \S b' \chantInchoatioIV #'()
   \chantTenorIV
-  \chantMediatioIV #'((epenthesis . partial)) \noBreak \S
+  \chantMediatioIV #'()
   \divisioMaxima
   \chantTenorIV
-  \chantTenorAltSecundusIV
-  \chantTerminatioIVE #'((epenthesis . partial)
-                         (syneresis . total))
+  \chantTenorTerminatioSecundusIV
+  \chantTerminatioIVE #'((syneresis . total))
   \finalis
-  \Spacer 23
+  \MySpacer
 }
 
 psalmOrganRight = {
-  \PsalmSignature
-  \S \rightInchoatioIV ~
+  \global
+  s4 \rightInchoatioIV ~
   \rightTenorIV ~
-  \rightMediatioIV ( \S
-  \rightTenorAltPrimusIV ) (
-  \rightTenorAltSecundusIV ) (
-  \rightTerminatioAccentusIVE ) (
-  \rightTerminatioPostAccentusIVE )
+  \rightMediatioIV
+  \divisioMaxima
+  \rightTenorTerminatioPrimusIV
+  \rightTenorTerminatioSecundusIV
+  \rightTerminatioAccentusIVE
+  \rightTerminatioPostAccentusIVE
+  \finalis
+  \MySpacer
 }
 
 psalmOrganLeft = {
+  \global
   \clef bass
-  \S \leftInchoatioIV ~
+  s4 \leftInchoatioIV ~
   \leftTenorIV (
-  \leftMediatioIV ) ( \S
+  \leftMediatioIV )
   \divisioMaxima
-  \leftTenorAltPrimusIV ~
-  \leftTenorAltSecundusIV ) (
-  \leftTerminatioAccentusIVE ) (
-  \leftTerminatioPostAccentusIVE )
+  \leftTenorTerminatioPrimusIV ~
+  \leftTenorTerminatioSecundusIV
+  \leftTerminatioAccentusIVE
+  \leftTerminatioPostAccentusIVE
   \finalis
-  \Spacer 23
+  \MySpacer
 }
 
 psalmOrganPedal = {
-  \S \pedalInchoatioIV ~
+  s4 \pedalInchoatioIV ~
   \pedalTenorIV (
-  \pedalMediatioIV ) ( \S
-  \pedalTenorAltPrimusIV ~
-  \pedalTenorAltSecundusIV ) (
-  \pedalTerminatioAccentusIVE ) (
-  \pedalTerminatioPostAccentusIVE )
+  \pedalMediatioIV )
+  \pedalTenorTerminatioPrimusIV ~
+  \pedalTenorTerminatioSecundusIV
+  \pedalTerminatioAccentusIVE
+  \pedalTerminatioPostAccentusIVE
 }
 
 chordsPart = \new ChordNames {
   s4 \chordsInchoatioIV
   \chordsTenorIV
   \chordsMediatioIV s4
-  \chordsTenorAltPrimusIV
-  \chordsTenorAltSecundusIV
+  \chordsTenorTerminatioPrimusIV
+  \chordsTenorTerminatioSecundusIV
   \chordsTerminatioAccentusIVE
   \chordsTerminatioPostAccentusIVE
 }
@@ -71,9 +80,9 @@ psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "2" \Inchoatio Fa -- vo --
   \Tenor "recestes, ó Senhor, a"
-  \MediatioIV vos -- sa ter -- _ ra, \MediatioMark
+  \MediatioIV vos -- sa ter -- \Mediatio ra,
   \Tenor "libertastes os ca" -- ti --
-  \BeginItalic vos de Ja -- \EndItalic _
+  \BeginItalic vos de Ja -- \EndItalic
   \BeginBold có. __ \EndBold
 }
 
@@ -81,9 +90,9 @@ psalmVerseII = \lyricmode {
   \set stanza = "2."
   \VSup "8" \Inchoatio Mos -- trai- --
   \Tenor "nos, ó Senhor, vos" --
-  \MediatioIV sa bon -- da -- _ de, \MediatioMark
+  \MediatioIV sa bon -- da -- \Mediatio de,
   \Tenor "concedei-nos também" vos --
-  \BeginItalic sa sal -- va -- \EndItalic _
+  \BeginItalic sa sal -- va -- \EndItalic
   \BeginBold ção! __ \EndBold
 }
 
@@ -98,7 +107,7 @@ chantPart = \new GregorianTranscriptionStaff <<
 
 organPart = \new PianoStaff <<
   \new GregorianTranscriptionStaff = "right" <<
-    \new GregorianTranscriptionVoice { \voiceOne \psalmChant }
+    %\new GregorianTranscriptionVoice { \voiceOne \psalmChant }
     \new GregorianTranscriptionVoice { \voiceTwo \psalmOrganRight }
   >>
 
@@ -115,7 +124,7 @@ organPart = \new PianoStaff <<
 }
 
 \score {
-  <<
+  \transpose d c <<
     \chordsPart
     \chantPart
     \organPart

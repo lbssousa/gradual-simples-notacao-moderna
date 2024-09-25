@@ -24,6 +24,44 @@ antiphonChant = \relative c'' {
   \finalis
 }
 
+antiphonOrganRight = \relative c' {
+  \AntiphonSignature
+  \key c \major
+  c2*3/2 e2*3/2 e2*2 d2*3/2
+  \divisioMaxima
+  d e~ e2~ e4 d2~ d4~ d
+  \finalis
+}
+
+antiphonOrganLeft = \relative c' {
+  \AntiphonSignature
+  \clef bass
+  \key c \major
+  c2*3/2
+  \tweak X-offset #1.2
+  a2*3/2~ a2*2~ a2*3/2~
+  \divisioMaxima
+  a~ a~ a2 c4~ c2~ c4 b
+  \finalis
+}
+
+antiphonOrganPedal = \relative c' {
+  \AntiphonSignature
+  a2*3/2~ a2*3/2
+  \tweak X-offset #1.2
+  g2*2 f2*3/2
+  d
+  \tweak X-offset #1.2
+  a'
+  \tweak X-offset #1.2
+  g2~ g4 f2 g4~ g
+}
+
+antiphonChords = \chordmode {
+  c2*3/2/a a2*3/2:m a2*2:m/g d2*3/2:m/f
+  d:m a:m a2:m/g a4:m/g c2:sus2/f g4:sus4 g
+}
+
 antiphonLyrics = \lyricmode {
   Be --
   \MelismaOff
@@ -44,7 +82,37 @@ antiphonLyricsPt = \lyricmode {
 
 \header {
   meter = "Cantus ID a01124 cf. Sl 84(85),13"
-  arranger = "Adaptação: Lincoln Haas Hein, Laércio de Sousa"
+  arranger = \markup {
+    \center-column {
+      "Adaptação: Lincoln Haas Hein, Laércio de Sousa"
+      \line { "Harmonização: Theo Flury, Gennaro M. Becchimanzi" }
+    }
+  }
+}
+
+chantPart = \new GregorianTranscriptionStaff <<
+  \new GregorianTranscriptionVoice = "antiphon" {
+    \antiphonChant
+  }
+
+  \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
+  \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
+>>
+
+organPart = \new PianoStaff <<
+  \new GregorianTranscriptionStaff = "right" <<
+    %\new GregorianTranscriptionVoice { \voiceOne \antiphonChant }
+    \new GregorianTranscriptionVoice { \voiceTwo \antiphonOrganRight }
+  >>
+
+  \new GregorianTranscriptionStaff = "left+pedal" <<
+    \new GregorianTranscriptionVoice { \voiceOne \antiphonOrganLeft }
+    \new GregorianTranscriptionVoice { \voiceTwo \antiphonOrganPedal }
+  >>
+>>
+
+chordsPart = \new ChordNames {
+  \antiphonChords
 }
 
 \score {
@@ -52,12 +120,10 @@ antiphonLyricsPt = \lyricmode {
     piece = "VIII G"
   }
 
-  \new GregorianTranscriptionStaff <<
-    \new GregorianTranscriptionVoice = "antiphon" {
-      \transpose c a, \antiphonChant
-    }
-
-    \new GregorianTranscriptionLyrics \lyricsto "antiphon" \antiphonLyrics
-    \new GregorianTranscriptionAltLyrics \lyricsto "antiphon" \antiphonLyricsPt
+  \transpose c bes,
+  <<
+    \chordsPart
+    \chantPart
+    \organPart
   >>
 }
