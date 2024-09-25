@@ -141,15 +141,15 @@ rightFlexaI = \relative c'' {
 }
 
 rightTenorI = \relative c' {
-  f2*7/2
+  f2*3
 }
 
-rightTenorAltI = \relative c' {
+rightTenorTerminatioI = \relative c' {
   e2*3/2
 }
 
 rightTerminatioAccentusIf = \relative c' {
-  d2
+  d2*1/2
 }
 
 rightTerminatioPostAccentusPrimusIf = \relative c' {
@@ -173,15 +173,15 @@ leftFlexaI = \relative c {
 }
 
 leftTenorI = \relative c {
-  f2*7/2
+  f2*3
 }
 
-leftTenorAltI = \relative c {
+leftTenorTerminatioI = \relative c {
   f2*3/2
 }
 
 leftTerminatioAccentusIf = \relative c' {
-  bes2
+  bes2*1/2
 }
 
 leftTerminatioPostAccentusPrimusIf = \relative c' {
@@ -205,15 +205,15 @@ pedalFlexaI = \relative c' {
 }
 
 pedalTenorI = \relative c {
-  d2*7/2
+  d2*3
 }
 
-pedalTenorAltI = \relative c {
+pedalTenorTerminatioI = \relative c {
   \tweak X-offset #1.2 f2*3/2
 }
 
 pedalTerminatioAccentusIf = \relative c {
-  f2
+  f2*1/2
 }
 
 pedalTerminatioPostAccentusPrimusIf = \relative c {
@@ -237,15 +237,15 @@ chordsFlexaI = \chordmode {
 }
 
 chordsTenorI = \chordmode {
-  d2*7/2:m
+  d2*3:m
 }
 
-chordsTenorAltI = \chordmode {
+chordsTenorTerminatioI = \chordmode {
   a2*3/2:m/f
 }
 
 chordsTerminatioAccentusIf = \chordmode {
-  g2:m/f
+  g2*1/2:m/f
 }
 
 chordsTerminatioPostAccentusPrimusIf = \chordmode {
