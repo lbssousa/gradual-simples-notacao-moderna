@@ -3,7 +3,6 @@
 
 \makeatletter
 
-\setluaoption{ly}{staffsize}{20}
 
 \newcommand{\Map}[2]{\@for\p:={#2}\do{\expandafter#1\p}} % chktex 41
 \def\@Antiphon@Annotation{}
@@ -148,13 +147,13 @@
 \NewDocumentCommand \MakeChantAntiphon { s m O{} } {
   \def\@Antiphon@L{antiphona\IfBlankF{#3}{.#3}}
 
-  \lilypondfile{index-cantuum/antiphonae/#2/\@Antiphon@L}
+  \input{index-cantuum/antiphonae/#2/\@Antiphon@L}
 }
 
 \NewDocumentCommand \MakeChantAlleluia { s m O{} } {
   \def\@Antiphon@L{antiphona}
 
-  \lilypondfile{index-cantuum/antiphonae/alleluia.#2/\@Antiphon@L}
+  \input{index-cantuum/antiphonae/alleluia.#2/\@Antiphon@L}
 
   #3
 }
@@ -192,7 +191,7 @@
 }
 
 \NewDocumentCommand \MakeChantPsalm { m m } {
-  \lilypondfile{index-cantuum/#1/#2/psalmus}
+  \input{index-cantuum/#1/#2/psalmus}
 }
 
 \newcommand{\DoGregorioImportL}{}
@@ -226,7 +225,7 @@
 }
 
 \NewDocumentCommand \MakeChantHymn { m m } {
-  \lilypondfile{index-cantuum/#1/#2/hymnus}
+  \input{index-cantuum/#1/#2/hymnus}
 }
 
 \newtoggle{biginitial}
