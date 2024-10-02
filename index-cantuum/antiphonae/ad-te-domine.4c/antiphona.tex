@@ -1,0 +1,112 @@
+\begin{center}
+  Cantus ID 001255 cf. Sl 142(143),8d-9
+  \hfill
+  \begin{tabular}{rl}
+    Adaptação:    & Lincoln Haas Hein, Laércio de Sousa \\
+    Harmonização: & Theo Flury, Gennaro M. Becchimanzi
+  \end{tabular}
+\end{center}
+
+\begin{music}
+  \instrumentnumber{2} % quantidade de instrumentos
+  \setinterinstrument{1}{18pt}
+  \setstaffs{1}{2} % quantidade de pautas por instrumento
+  \setclef{1}{\bass}
+  \nobarnumbers % disable bar numbers
+  %\lyrraise{2}{b-5pt}
+  \setname{2}{\textbf{\textsc{iv c}}}
+
+  \setlyrics{chant}{%
+    \lyrlayout{\bfseries}%
+    Ad te, Dó_-mi-ne, le-vá-vi á_-ni-mam_ me-am:
+    ve-ni, et é-ri-pe me,_
+    Dó-mi-ne, ad te con-fú-gi.
+  }
+
+  \setlyrics{chantPT}{%
+  A vós, Se__-nhor, e-le-vo a_ mi-nha_ al-ma:
+  vin_-de e li-ber-tai{-}-me,
+  Se-nhor, pois em vós me\lyrlink a-bri-go.
+  }
+
+  \assignlyrics{2}{chant,chantPT}
+
+  \startpiece % starting real score
+  \notes|&\sk\en% little space after clef
+  % Ad te
+  \NOtes%
+  \ZHneum{L}\isluruwrap{1}{\Hneum}{N}|%
+  \Hneum{b}&%
+  \chord{Em}\Cneum{{eg}}%
+  \en%
+  % Dó-
+  \neumnotes%
+  \ZHneum{I}\isluruwrap*{1}{\Hneum}{N}|%
+  \Hneum{d}&%
+  \chord{G/B}\CCneum{g}{h}%
+  \en%
+  % -mi-
+  \NOtes|&\Epenthesis{\Cneum}{h}\en%
+  % -ne,
+  \NOtes%
+  \ZHneum{J}\isluruwrap*{1}{\Hneum}{N}|%
+  \Hneum{e}&%
+  \chord{C\textsuperscript{6}}\Cneum{h}%
+  \en%
+  \znotes|&\MediatioMark\en%
+  \znotes|&\DivisioMinima\en\setemptybar\bar%
+  % levávi
+  \NOtes|&\Cneum{{hhg}}\en%
+  % á-
+  \neumnotes%
+  \ZHneum{I}\tslurwrap{1}{\Hneum}{N}|%
+  \Hneum{d}&%
+  \chord{G/B}\CCneum{h}{i}%
+  \en%
+  % -ni-
+  \NOtes|&\Cneum{g}\en%
+  % -mam
+  \neumnotes|&\CLneum{h}{i}\en%
+  % meam:
+  \NOtes%
+  \islurdwrap{1}{\ZCneum}{I}\Cneum{L}\tslurwrap{1}{\ZCneum}{I}\Cneum{{^K}}|%
+  \islurdwrap{2}{\Cneum}{d}\tslurwrap{2}{\Cneum}{d}&%
+  \chord{D\textsuperscript{sus4}}\Cneum{h}\chord{D}\Cneum{h}%
+  \en%
+  \DivisioMinor%
+  % Veni, et
+  \NOtes%
+  \islurdwrap{1}{\ZHneum}{J}\Hneum{L}|%
+  \Hneum{e}&%
+  \chord{C\textsuperscript{6}}\CpCneum{e}{h}\Cneum{g}%
+  \en%
+  % éripe
+  \NOtes%
+  \islurdwrap*{1}{\ZHneum}{J}\Hneum{a}|%
+  \Hneum{d}&%
+  \chord{D/C}\Cneum{{^fed}}%
+  \en%
+  % me,
+  \NOtes%
+  \tslurwrap{1}{\ZHneum}{J}\Hneum{N}|%
+  \Hneum{c}&%
+  \chord{C}\EpEneum{e}{d}%
+  \en%
+  \znotes|&\DivisioMinima\en\setemptybar\bar%
+  % Dómine, ad
+  \NOtes%
+  \ZHneum{{Ha}}|%
+  \Hneum{c}&%
+  \chord{Am}\Cneum{{cdef}}%
+  \en%
+  % te con-
+  \NOtes\ZHneum{{Ka}}|\Hneum{d}&\Cneum{{gf}}\en%
+  % -fúgi.
+  \NOtes%
+  \roff{\islurdwrap{1}{\ZCneum}{L}}\isluruwrap{2}{\Cneum}{L}\roff{\tslurwrap{1}{\ZCneum}{L}}\tslurwrap{2}{\Cneum}{L}|%
+  \Cneum{{cb}}&%
+  \chord{C/E}\Cneum{e}\chord{Em}\Cneum{e}%
+  \en%
+  \setdoublebar%
+  \endpiece % terminate excerpt
+\end{music}
