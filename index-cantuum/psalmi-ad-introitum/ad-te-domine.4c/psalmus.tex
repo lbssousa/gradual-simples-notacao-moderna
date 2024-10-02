@@ -1,12 +1,105 @@
-\SetVersePairs{
-  {\item \VSup{4}\Inchoatio{Vi}{as} tuas, Dómine, de\MediatioIV{món}{stra}[ ]{mi}[hi,] et sémitas tuas édo\TerminatioIVc{ce} me.~\Antiphona}%
-    {\item \VSup{4}\Inchoatio{Mos}{trai}-me, ó Senhor, vos\MediatioIV{sos}[ ]{ca}{mi}[nhos,] e fazei-me conhecer a vossa es\TerminatioIVc{tra}da!~\Antiphona},
-  {\item \VSup{5}\Inchoatio{Dí}{ri}ge me in veritáte tua, et \Flexa{do}[ce me,] quia tu es Deus sa\MediatioIV{lú}{tis}[ ]{me}[æ,] et te sustínui tota \TerminatioIVc{di}e.~\Antiphona}%
-    {\item \VSup{5}\Inchoatio{Vos}{sa} verdade me oriente e me con\Flexa{du}[za,] porque sois o Deus da \MediatioIV{mi}{nha}[ ]{sal}[vação;] em vós espero, ó Senhor, todos os \TerminatioIVc{di}as!~\Antiphona},
-  {\item \VSup{7bc}\Inchoatio{Se}{cún}dum misericórdiam tuam me\MediatioIV{mén}{to}[ ]{me}[\-i tu,] propter bonitátem tuam, \TerminatioIVc{Dó}mine.~\Antiphona}%
-    {\item \VSup{7cd}\Inchoatio{De}[ ]{mim} lembrai-vos, porque sois mi\MediatioIV{se}{ri}{cór}[dia] e sois bondade sem limites, ó \TerminatioIVc{Se}nhor!~\Antiphona},
-  {\item \VSup{8}\Inchoatio{Dul}{cis} et \MediatioIV{rec}{tus}[ ]{Dó}[minus,] propter hoc peccatóres viam do\TerminatioIVc{cé}bit.~\Antiphona}%
-    {\item \VSup{8}\Inchoatio{O}[ ]{Se}nhor é pieda\MediatioIV{de}[ ]{e}[ ]{re}[tidão,] e reconduz ao bom caminho os peca\TerminatioIVc{do}res.~\Antiphona},
-  {\item \VSup{9}\Inchoatio{Dí}{ri}get mansuétos \MediatioIV{in}[ ]{iu}{dí}[cio,] docébit mites vias \TerminatioIVc{su}as.~\Antiphona}%
-    {\item \VSup{9}\Inchoatio{E}{le} dirige os humildes \MediatioIV{na}[ ]{jus}{ti}[ça,] e aos pobres ele ensina o seu ca\TerminatioIVc{mi}nho.~\Antiphona}
-}
+\begin{flushright}
+  \begin{tabular}{rl}
+    Harmonização: & Theo Flury, Gennaro M. Becchimanzi
+  \end{tabular}
+\end{flushright}
+
+\begin{music}
+  \parindent0pt
+  \instrumentnumber{2} % quantidade de instrumentos
+  \setstaffs{1}{2} % quantidade de pautas por instrumento
+  \setinterinstrument{1}{50pt}
+  \setinterstaff{1}{14}
+  \setclef{1}{\bass}
+  \nobarnumbers % disable bar numbers
+  \indivbarrules
+  \sepbarrule{2}
+
+  \setlyrics{verse1}{%
+    \VSup{2b}Não tri-____ unfem\ sobre\ mim\ os i-ni-mi-gos!
+    \VSup{3a}Não\ se\ envergonha\ quem\ em\ vós\ põe\ a\ espe-ran-ça.%
+  }
+
+  \setlyrics{verse2}{%
+    \VSup{4}Mos-trai{-}-____ me,\ ó\ Senhor,\ vos-sos ca-mi-nhos
+    e\ fazei{-}me\ conhecer\ a\ vossa\ es-tra-da!%
+  }
+
+  \setlyrics{verse3}{%
+    \VSup{5}Vos-sa_ verdade\ me\ oriente\ e\ me\ con-du-za,
+    porque\ sois\ o\ Deus\ da\ minha sal-va-ção;_
+    em\ vós\ espero,\ ó\ Senhor,\ todos\ os di-as.%
+  }
+
+  \setlyrics{verse4}{%
+    \VSup{7cd}De mim____ lembrai{-}vos,\ porque\ sois\ mi-se-ri-cór-dia
+    e\ sois\ bondade\ sem\ limites,\ ó\ Se-nhor!_%
+  }
+
+  \setlyrics{verse5}{%
+    \VSup{8}O Se-____ nhor\ é\ piedade\ e re-ti-dão,_
+    e\ reconduz\ ao\ bom\ caminho\ os\ peca-do-res.%
+  }
+
+  \setlyrics{verse6}{%
+    \VSup{9}E-le____ dirige\ os\ humildes na jus-ti-ça,
+    e\ aos\ pobres\ ele\ ensina\ o\ seu\ ca-mi-nho.%
+  }
+
+  \assignlyrics{2}{verse1,verse2,verse3,verse4,verse5,verse6}
+
+  \startpiece
+  \znotes|&\loffset{1.5}{\verses{\lyric*{\textbf{1.}},\lyric*{\textbf{2.}},\lyric*{\textbf{3.}},\lyric*{\textbf{4.}},\lyric*{\textbf{5.}},\lyric*{\textbf{6.}}}}\en%
+  \hardspace{4mm}%
+  % Inchoatio
+  \NOtes%
+  \iextraslurud{4}{H}{5}{L}\InchoatioIVALeft|%
+  \iextraslurd{6}{c}\InchoatioIVARight&%
+  \InchoatioIVChantA%
+  \en%
+  \nnnotes|&\InchoatioIVChantB\en%
+  % Tenor - Flexa
+  \allbarrules\showdotbarrule\condotmultibarrule{1}%
+  \bar%
+  \notes%
+  \tslurud{1}{H}{2}{L}\islurd{1}{H}\TenorIVALeft|%
+  \tslur{3}{c}\TenorIVARight&%
+  \TenorIVChant%
+  \sk\sk\sk\sk\sk\sk\sk\sk\sk\sk\sk%
+  \en%
+  \NOtes%
+  \FlexaIVLeft|%
+  \FlexaIVRight&%
+  \FlexaIVChant%
+  \en%
+  \znotes|&\verses{,,\FlexaMark}\en%
+  \bar%
+  \allbarrules\showbarrule\conmultibarrule{1}%
+  % Tenor - Mediatio
+  \notes%
+  \tslur{1}{H}\textraslurud{4}{H}{5}{L}\TenorIVALeft|%
+  \textraslurd{6}{c}\TenorIVARight&%
+  \chord{Am}\TenorIVChant%
+  \sk\sk\sk\sk\sk\sk\sk\sk\sk\sk\sk%
+  \en%
+  \NOtes|&\MediatioIVChant\en%
+  \znotes|&\MediatioMark\en%
+  \bar%
+  % Tenor - Terminatio
+  \znotes|&\loffset{3}{\verses{\lyric*{\textbf{1.}},\lyric*{\textbf{2.}},\lyric*{\textbf{3.}},\lyric*{\textbf{4.}},\lyric*{\textbf{5.}},\lyric*{\textbf{6.}}}}\en%
+  \notes%
+  \TenorTerminatioIVALeft|%
+  \TenorTerminatioIVARight&%
+  \chord{Dm}\TenorIVChant%
+  \sk\sk\sk\sk\sk\sk\sk\sk\sk\sk\sk\sk\sk\sk\sk\sk\sk%
+  \en%
+  \NOtes%
+  \TerminatioIVcLeft|%
+  \TerminatioIVcRight&%
+  \TerminatioIVcChant%
+  \en%
+  \setdoublebar%
+  \endpiece
+\end{music}
+
+\input{index-cantuum/toni-communes-gloria-patri/tonus-4/gloria-4c.tex}
