@@ -1,0 +1,75 @@
+\begin{music}
+  \parindent0pt
+  \instrumentnumber{2} % quantidade de instrumentos
+  \setstaffs{1}{2} % quantidade de pautas por instrumento
+  \setinterinstrument{1}{3pt}
+  \setinterstaff{1}{10}
+  \setclef{1}{\bass}
+  \nobarnumbers % disable bar numbers
+  \indivbarrules
+  \sepbarrule{2}
+
+  \setlyrics{gloria}{%
+    Gló-ria ao Pai\ e\ ao\ Filho\ e\ ao\ Espí-ri-to San-to
+    Co-mo_ era\ no\ princípio,\ a-go-ra\lyrlink e sem-pre,
+    pelos\ séculos\ dos\ séculos,\ a-mém._%
+  }
+
+  \assignlyrics{2}{gloria}
+
+  \startpiece
+  \znotes|&\roffset{1.5}{\lyric*{\textbf{Opcional:}}}\en%
+  \hardspace{17mm}%
+  % Inchoatio
+  \NOtes%
+  \InchoatioIVALeft|%
+  \InchoatioIVARight&%
+  \InchoatioIVChantA%
+  \en%
+  \NOtes|&\InchoatioIVChantBDieresis\en%
+  \setemptybar\bar%
+  % Tenor - Mediatio
+  \notes%
+  \tslurud{1}{H}{2}{L}\islurud{1}{H}{2}{L}\TenorIVALeft|%
+  \tslur{3}{c}\islurd{3}{c}\TenorIVARight&%
+  \TenorIVChant%
+  \sk\sk\sk\sk\sk\sk\sk\sk%
+  \en%
+  \setemptybar\bar%
+  \NOtes|&\MediatioIVChant\en%
+  \znotes|&\MediatioMark\en%
+  \bar%
+  % Inchoatio
+  \NOtes%
+  \tslurud{1}{H}{2}{L}\InchoatioIVALeft|%
+  \tslur{3}{c}\InchoatioIVARight&%
+  \InchoatioIVChantA%
+  \en%
+  \neumnotes|&\InchoatioIVChantB\en%
+  \setemptybar\bar%
+  % Tenor - Mediatio
+  \notes%
+  \tslurud{1}{H}{2}{L}\TenorIVALeft|%
+  \tslur{3}{c}\TenorIVARight&%
+  \TenorIVChant\sk\sk\sk\sk\sk\sk%
+  \en%
+  \setemptybar\bar%
+  \NOtes|&\MediatioIVChant\en%
+  \znotes|&\MediatioMark\en%
+  \bar%
+  % Tenor - Terminatio
+  \notes%
+  \TenorTerminatioIVALeft|%
+  \TenorTerminatioIVARight&%
+  \chord{Dm}\TenorIVChant%
+  \sk\sk\sk\sk\sk\sk\sk\sk\sk%
+  \en%
+  \setemptybar\bar%
+  \neumnotes%
+  \TerminatioIVcLeft|%
+  \TerminatioIVcRight&%
+  \lyrlayout{\bfseries}\CCneum{h}{g}%
+  \en%
+  \setdoublebar%
+  \endpiece
+\end{music}
