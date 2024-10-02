@@ -1,0 +1,195 @@
+% ===================================================================
+% FORMATAÇÃO DE ESPAÇAMENTO ENTRE NOTAS
+% ===================================================================
+\def\nnotes{\vnotes1.6\elemskip}
+\def\nnnotes{\vnotes1.28\elemskip}
+\def\neumnotes{\nnnotes}
+
+% ===================================================================
+% FORMATAÇÃO DAS NOTAS/NEUMAS
+% ===================================================================
+
+% -------------------------------------------------------------------
+% Neumas cursivos
+% -------------------------------------------------------------------
+\NewDocumentCommand{\Cneum}{m}{\nq#1}
+\NewDocumentCommand{\ZCneum}{m}{\znq#1}
+\NewDocumentCommand{\CCneum}{s O{0} m m}{%
+  \isluru#2#3\Cneum#3\tslur#2#4\Cneum#4\sk%
+  \IfBooleanF{#1}{\sk}%
+}
+\NewDocumentCommand{\CpCneum}{O{0} m m}{%
+  \dotted\isluru#1#2\Cneum#2\tslur#1#3\Cneum#3%
+}
+\NewDocumentCommand{\CLneum}{s O{0} m m}{%
+  \isluru#2#3\Cneum#3\tslur#2#4\tinynotesize\Cneum#4\sk%
+  \IfBooleanF{#1}{\sk}%
+}
+
+% -------------------------------------------------------------------
+% Neumas alargados (com episema)
+% -------------------------------------------------------------------
+\NewDocumentCommand{\Eneum}{m}{\ust#1\Cneum#1}
+\NewDocumentCommand{\EEneum}{s O{0} m m}{%
+  \isluru#2#3\Eneum#3\tslur#2#4\Eneum#4\sh
+  \IfBooleanF{#1}{\sk}%
+}
+\NewDocumentCommand{\EpEneum}{O{0} m m}{%
+  \dotted\isluru#1#2\Eneum#2\tslur#1#3\Eneum#3%
+}
+
+% -------------------------------------------------------------------
+% Cordas de récita
+% -------------------------------------------------------------------
+\NewDocumentCommand{\Tneum}{m}{\wqq#1}
+\NewDocumentCommand{\ZTneum}{m}{\zwqq#1}
+
+% -------------------------------------------------------------------
+% Notas de récita parcial para harmonizações
+% -------------------------------------------------------------------
+\NewDocumentCommand{\Hneum}{m}{\nh#1}
+\NewDocumentCommand{\ZHneum}{m}{\znh#1}
+
+% -------------------------------------------------------------------
+% Formatação de epênteses
+% -------------------------------------------------------------------
+\NewDocumentCommand{\Epenthesis}{m m}{%
+  \lpar#2\rpar#2\expandafter#1#2%
+}
+
+% ===================================================================
+% ACORDES (CIFRAS)
+% ===================================================================
+\NewDocumentCommand{\chord}{m}{%
+  \zchar{13}{\small\color{gregoriocolor}#1}%
+}
+
+% ===================================================================
+% FORMATAÇÃO DE LIGADURAS
+% ===================================================================
+\NewDocumentCommand{\islurud}{m m m m}{%
+  \islurd#1#2\isluru#3#4%
+}
+\NewDocumentCommand{\tslurud}{m m m m}{%
+  \tslur#1#2\tslur#3#4%
+}
+
+\NewDocumentCommand{\iextraslurd}{m m}{%
+  \dotted\islurd#1#2%
+}
+\NewDocumentCommand{\iextrasluru}{m m}{%
+  \dotted\isluru#1#2%
+}
+\NewDocumentCommand{\iextraslurud}{m m m m}{%
+  \iextraslurd#1#2\iextrasluru#3#4%
+}
+
+\NewDocumentCommand{\textraslurd}{m m}{%
+  \midslur{-7}\tslur#1#2%
+}
+\NewDocumentCommand{\textrasluru}{m m}{%
+  \midslur{7}\tslur#1#2%
+}
+\NewDocumentCommand{\textraslurud}{m m m m}{%
+  \midslur{-7}\tslur#1#2\midslur{7}\tslur#3#4%
+}
+
+\NewDocumentCommand{\isluruwrap}{s m m m}{%
+  \IfBooleanT{#1}{\tslur#2#4}%
+  \isluru#2#4\expandafter#3#4%
+}
+\NewDocumentCommand{\islurdwrap}{s m m m}{%
+  \IfBooleanT{#1}{\tslur#2#4}%
+  \islurd#2#4\expandafter#3#4%
+}
+\NewDocumentCommand{\tslurwrap}{m m m}{%
+  \tslur#1#3\expandafter#2#3%
+}
+
+% ====================================================================
+% SÍMBOLOS ESPECIAIS
+% ====================================================================
+\NewDocumentCommand{\MediatioMark}{}{%
+  \loffset{0.5}{\lyric*{\GreStar}}%
+}
+\NewDocumentCommand{\FlexaMark}{}{%
+  \loffset{0.5}{\lyric*{\GreDagger}}%
+}
+\NewDocumentCommand{\Accentus}{}{%
+  %\zchar{5}{\fontfamily{greciliae}\selectfont }
+  \roffset{0.1}{\zchar{5}{\LARGE \'{}}}%
+}
+
+% ====================================================================
+% BARRAS
+% ====================================================================
+\NewDocumentCommand{\DivisioMinima}{}{%
+  \loffset{0.7}{\caesura}%
+  %\setemptybar\bar%
+}
+\NewDocumentCommand{\DivisioMinor}{}{\shortbarrules\bar\sepbarrules}
+\NewDocumentCommand{\Finalis}{}{\doublebar}
+
+
+% ==================================================================
+% TONS SALMÓDICOS
+% ==================================================================
+
+% ------------------------------------------------------------------
+% IV modo
+% ------------------------------------------------------------------
+\NewDocumentCommand{\InchoatioIVChantA}{}{%
+  \lyrlayout{\itshape}\chord{Am}\Cneum{h}%
+}
+\NewDocumentCommand{\InchoatioIVChantB}{}{%
+  \lyrlayout{\itshape}\CCneum*{g}{h}%
+}
+\NewDocumentCommand{\InchoatioIVChantBDieresis}{}{%
+  \lyrlayout{\itshape}\Cneum{{gh}}%
+}
+\NewDocumentCommand{\InchoatioIVChantBDieresisPartial}{}{%
+  \lyrlayout{\itshape}%
+  \dotted\isluru{0}{g}\Cneum{g}\tslur{0}{h}\Cneum{h}%
+}
+
+\NewDocumentCommand{\FlexaIVLeft}{}{%
+  \islurdwrap*{1}{\ZHneum}{H}\Hneum{K}%
+}
+\NewDocumentCommand{\FlexaIVRight}{}{\Hneum{b}}
+\NewDocumentCommand{\FlexaIVChant}{}{%
+  \lyrlayout{\bfseries}\Accentus\chord{Bm/D}\Cneum{h}\lyrlayout{}\Cneum{g}%
+}
+
+\NewDocumentCommand{\MediatioIVChant}{}{%
+  \lyrlayout{\itshape}\Cneum{{gh}}\lyrlayout{\bfseries}\Accentus\Cneum{i}\lyrlayout{}\Cneum{h}%
+}
+
+% ------------------------------------------------------------------
+% IV-A modo
+% ------------------------------------------------------------------
+\NewDocumentCommand{\InchoatioIVALeft}{}{%
+  \islurdwrap{1}{\ZHneum}{H}\isluruwrap{2}{\Hneum}{L}%
+}
+\NewDocumentCommand{\InchoatioIVARight}{}{%
+  \islurdwrap{3}{\Hneum}{c}%
+}
+
+\NewDocumentCommand{\TenorIVALeft}{}{%
+  \ZTneum{H}\Tneum{L}%
+}
+\NewDocumentCommand{\TenorIVARight}{}{%
+  \Tneum{c}%
+}
+\NewDocumentCommand{\TenorIVChant}{}{%
+  \lyrlayout{\leftlyrtrue}\Tneum{h}%
+}
+
+\NewDocumentCommand{\TenorTerminatioIVALeft}{}{\ZTneum{K}\Tneum{M}}
+\NewDocumentCommand{\TenorTerminatioIVARight}{}{\Tneum{d}}
+
+\NewDocumentCommand{\TerminatioIVcLeft}{}{\roff{\ZHneum{L}}\Hneum{L}}
+\NewDocumentCommand{\TerminatioIVcRight}{}{\Hneum{b}}
+\NewDocumentCommand{\TerminatioIVcChant}{}{%
+  \dotted\isluru{0}{h}\Accentus\lyrlayout{\bfseries}\chord{Em}\Cneum{h}%
+  \tslur{0}{g}\lyrlayout{}\Cneum{g}%
+}
