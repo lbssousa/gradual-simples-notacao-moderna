@@ -10,20 +10,21 @@
 antiphonChant = \relative c' {
   \AntiphonSignature
   \key c \major
-  \C e g \CC g a \C_C a a
+  e4 g g8( \Loff a) \parenthesize a4 a8
+  \once \hideNotes a
   \divisioMinima
-  a a g \CC a b \C g \CL a b \C a a
+  a4 a g a8( \Loff b) g4 a8( \Loff \tweak font-size -4 b) a4 a
   \divisioMaior
-  \C_C e a g fis e d \E_E e d
+  \once \slurDashed e( a) g fis e d \once \slurDashed \slurDown e^-( d^-)
   \divisioMinima
-  \C c d e f g f e e
+  c d e f g f e e
   \finalis
 }
 
 antiphonOrganRight = \relative c' {
   \AntiphonSignature
-  b2 d2*3/2 e2*5/2
-  d2*2 d4 d
+  b2 d2 e2*2
+  d2*3/2 d4 d
   \divisioMaxima
   %\tweak X-offset #1.2
   e2*3/2 d2*3/2 c2
@@ -36,8 +37,8 @@ antiphonOrganLeft = \relative c' {
   \AntiphonSignature
   \clef bass
   \key c \major
-  g2~ g2*3/2~ g2*5/2~
-  g2*2 g4 fis
+  g2~ g2~ g2*2~
+  g2*3/2 g4 fis
   \divisioMaxima
   e2*3/2 a2*3/2 g2
   a2*2~ a2 e4~ e
@@ -46,7 +47,7 @@ antiphonOrganLeft = \relative c' {
 
 antiphonOrganPedal = \relative c {
   \AntiphonSignature
-  e2 b2*3/2 c2*5/2 b2*2 d4~ d
+  e2 b2 c2*2 b2*3/2 d4~ d
   c2*3/2~ c2*3/2~ c2
   a2*2 d2
   \tweak X-offset #1.2 e4~
@@ -54,34 +55,27 @@ antiphonOrganPedal = \relative c {
 }
 
 antiphonChords = \chordmode {
-  e2:m g2*3/2/b c2*5/2:6 g2*2/b d4:sus4 d4
-  c2*3/2:6 d2*3/2/c c2
+  e2:m g2/b c2*2:6 g2*3/2:9/b d4:sus4 d4
+  c2*3/2:6 d2*3/2/c c4 c:9
   a2*2:m d2:sus4 c4/e e4:m
 }
 
 antiphonLyrics = \lyricmode {
-  Ad te, Dó -- \MelismaOff mi -- \Mediatio ne, \MelismaOn le -- vá -- vi á -- ni -- mam __ me -- am:
+  Ad te, Dó -- mi -- ne, \MediatioMark le -- vá -- vi á -- ni -- mam me -- am:
   \MelismaOff ve -- ni, \MelismaOn et é -- ri -- pe me, __ Dó -- mi -- ne, ad te con -- fú -- gi.
 }
 
 antiphonLyricsPt = \lyricmode {
-  A vós, Se -- \Mediatio nhor, __ e -- le -- vo a __ mi -- nha __ al -- ma.
+  A vós, Se -- _ nhor, \MediatioMark e -- le -- vo a __ mi -- nha __ al -- ma.
   Vin -- de e li -- ber -- \MelismaOff tai- -- me, \MelismaOn Se -- nhor, pois em vós me~a -- bri -- go.
 }
 
 \GregorianTranscriptionLayout
 
-\header {
-  meter = "Cantus ID 001255 cf. Sl 142(143),8d-9"
-  arranger = \markup {
-    \center-column {
-      "Adaptação: Lincoln Haas Hein, Laércio de Sousa"
-      \line { "Harmonização: Theo Flury, Gennaro M. Becchimanzi" }
-    }
-  }
+chantPart = \new GregorianTranscriptionStaff \with {
+  instrumentName = \markup { \bold \caps "iv c" }
 }
-
-chantPart = \new GregorianTranscriptionStaff <<
+<<
   \new GregorianTranscriptionVoice = "antiphon" {
     \antiphonChant
   }
@@ -103,14 +97,11 @@ organPart = \new PianoStaff <<
 >>
 
 chordsPart = \new ChordNames {
+  \set chordChanges = ##t
   \antiphonChords
 }
 
 \score {
-  \header {
-    piece = "IV c"
-  }
-
   <<
     \chordsPart
     \chantPart
