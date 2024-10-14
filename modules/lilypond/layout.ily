@@ -11,11 +11,11 @@ PsalmSignature = {
 }
 
 GregorianTranscriptionLayout = \layout {
-  ragged-last = ##f
+  %ragged-last = ##f
   \context {
     \GregorianTranscriptionStaff
     measureBarType = ""
-    \override BarLine.X-extent = #'(-1 . 1)
+    \override BarLine.X-extent = #'(-0.5 . 0.5)
     \hide Beam
     \hide TupletNumber
     \hide TupletBracket
@@ -44,5 +44,10 @@ GregorianTranscriptionLayout = \layout {
     \GregorianTranscriptionVoice
     \consists "Horizontal_bracket_engraver"
     \override HorizontalBracket.direction = #UP
+  }
+
+  \context {
+    \ChordNames
+    \override ChordName.font-size = #-1.5
   }
 }
