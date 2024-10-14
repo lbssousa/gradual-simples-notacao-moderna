@@ -7,8 +7,6 @@
 \include "../../modules/lilypond/lyrics.ily"
 \include "../../modules/lilypond/layout.ily"
 
-MySpacer = \Spacer 13
-
 chantInchoatioIVA =
 #(define-music-function
   (options)
@@ -19,7 +17,23 @@ chantInchoatioIVA =
     }
   #})
 
-chantTenorIVA = \relative c'' { \T a }
+chantInchoatioIVASlot =
+#(define-music-function
+  (options)
+  (alist?)
+  #{
+    \relative c'' {
+      \MakeInchoatioOnePostTwoSlot a g a #options
+    }
+  #})
+
+chantTenorIVA = \relative c'' {
+  \MakeTenor a ##f
+}
+
+chantTenorIVASlot = \relative c'' {
+  \MakeTenor a ##t
+}
 
 chantFlexaIVA =
 #(define-music-function
@@ -27,7 +41,7 @@ chantFlexaIVA =
   (alist?)
   #{
     \relative c'' {
-      \MakeAccentusOnePostOne a g g #options
+      \MakeAccentusOnePostOneSlot a g g #options
     }
   #})
 
@@ -38,7 +52,7 @@ chantMediatioIVA =
   #{
     \relative c'' {
       \C g \C a
-      \MakeAccentusOnePostOne b a a #options
+      \MakeAccentusOnePostOneSlot b a a #options
     }
   #})
 
@@ -63,12 +77,26 @@ chantTerminatioIVc =
     }
   #})
 
-rightInchoatioIVA = \relative c' {
-  c2*3/2~
-}
+rightInchoatioIVA =
+#(define-music-function
+  (options)
+  (alist?)
+  (case (assoc-get 'dieresis options)
+    ((total) #{ \relative c' { c2*3/2~ } #})
+    ((partial) #{ \relative c' { c2*3/2~ } #})
+    (else #{ \relative c' { c2~ } #})))
 
-rightTenorIVA = \relative c' {
-  c2*1/2~
+rightInchoatioIVASlot =
+#(define-music-function
+  (options)
+  (alist?)
+  (case (assoc-get 'dieresis options)
+    ((total) #{ \relative c' { s8 c2*3/4~ } #})
+    ((partial) #{ \relative c' { s8 c2*3/4~ } #})
+    (else #{ \relative c' { s8 c2*3/4~ } #})))
+
+rightTenorFlexaIVA = \relative c' {
+  c\breve*1/8~
 }
 
 rightFlexaIVA =
@@ -81,30 +109,47 @@ rightFlexaIVA =
     }
   #})
 
-rightMediatioIVA =
+rightTenorMediatioIVA = \relative c' {
+  c\breve*5/8
+}
+
+rightTenorTerminatioIVA = \relative c' {
+  \MakeTenorTerminatio d ##f
+}
+
+rightTenorTerminatioIVASlot = \relative c' {
+  \MakeTenorTerminatio d ##t
+}
+
+rightTerminatioIVc =
 #(define-music-function
   (options)
   (alist?)
-  #{
-    \relative c' {
-      \MakeOrganMediatioIV c #options ~
-    }
-  #})
+  (case (assoc-get 'syneresis options)
+    ((total) #{ \relative c' { b2*1/2 } #})
+    ((partial) #{ \relative c' { b2 } #})
+    (else #{ \relative c' { b2 } #})))
 
-rightTenorTerminatioIVA = \relative c' {
-  d2*1/2
-}
+leftInchoatioIVA =
+#(define-music-function
+  (options)
+  (alist?)
+  (case (assoc-get 'dieresis options)
+    ((total) #{ \relative c { e2*3/2~ } #})
+    ((partial) #{ \relative c { e2*3/2~ } #})
+    (else #{ \relative c { e2~ } #})))
 
-rightTerminatioIVc = \relative c' {
-  b2*1/2
-}
+leftInchoatioIVASlot =
+#(define-music-function
+  (options)
+  (alist?)
+  (case (assoc-get 'dieresis options)
+    ((total) #{ \relative c { s8 e2*3/4~ } #})
+    ((partial) #{ \relative c { s8 e2*3/4~ } #})
+    (else #{ \relative c { s8 e2*3/4~ } #})))
 
-leftInchoatioIVA = \relative c {
-  e2*3/2~
-}
-
-leftTenorIVA = \relative c {
-  e2*1/2~
+leftTenorFlexaIVA = \relative c {
+  e\breve*1/8~
 }
 
 leftFlexaIVA =
@@ -117,30 +162,47 @@ leftFlexaIVA =
     }
   #})
 
-leftMediatioIVA =
+leftTenorMediatioIVA = \relative c {
+  e\breve*5/8
+}
+
+leftTenorTerminatioIVA = \relative c {
+  \MakeTenorTerminatio f ##f
+}
+
+leftTenorTerminatioIVASlot = \relative c {
+  \MakeTenorTerminatio f ##t
+}
+
+leftTerminatioIVc =
 #(define-music-function
   (options)
   (alist?)
-  #{
-    \relative c {
-      \MakeOrganMediatioIV e #options ~
-    }
-  #})
+  (case (assoc-get 'syneresis options)
+    ((total) #{ \relative c { e2*1/2 } #})
+    ((partial) #{ \relative c { e2 } #})
+    (else #{ \relative c { e2 } #})))
 
-leftTenorTerminatioIVA = \relative c {
-  f2*1/2
-}
+pedalInchoatioIVA =
+#(define-music-function
+  (options)
+  (alist?)
+  (case (assoc-get 'dieresis options)
+    ((total) #{ \relative c { a2*3/2~ } #})
+    ((partial) #{ \relative c { a2*3/2~ } #})
+    (else #{ \relative c { a2~ } #})))
 
-leftTerminatioIVc = \relative c {
-  e2*1/2
-}
+pedalInchoatioIVASlot =
+#(define-music-function
+  (options)
+  (alist?)
+  (case (assoc-get 'dieresis options)
+    ((total) #{ \relative c { s8 a2*3/4~ } #})
+    ((partial) #{ \relative c { a8 e2*3/4~ } #})
+    (else #{ \relative c { s8 a2*3/4~ } #})))
 
-pedalInchoatioIVA = \relative c {
-  a2*3/2~
-}
-
-pedalTenorIVA = \relative c {
-  a2*1/2~
+pedalTenorFlexaIVA = \relative c {
+  a\breve*1/8~
 }
 
 pedalFlexaIVA =
@@ -153,61 +215,82 @@ pedalFlexaIVA =
     }
   #})
 
-pedalMediatioIVA =
-#(define-music-function
-  (options)
-  (alist?)
-  #{
-    \relative c {
-      \MakeOrganMediatioIV a #options ~
-    }
-  #})
+pedalTenorMediatioIVA = \relative c {
+  a\breve*5/8
+}
 
 pedalTenorTerminatioIVc = \relative c {
-  d2*1/2
+  \MakeTenorTerminatio d ##f
 }
 
-pedalTerminatioIVc = \relative c {
-  \tweak X-offset #1.2 e2*1/2
+pedalTenorTerminatioIVcSlot = \relative c {
+  \MakeTenorTerminatio d ##t
 }
 
-chordsInchoatioIVA = \chordmode {
-  a4*3:m
-}
-
-chordsTenorIVA = \chordmode {
-  a4:m
-}
-
-chordsMediatioIVA =
+pedalTerminatioIVc =
 #(define-music-function
   (options)
   (alist?)
-  (case (assoc-get 'epenthesis options)
-    ((total) #{ \chordmode { a4*7:m } #})
-    ((partial) #{ \chordmode { a4*7:m } #})
-    (else #{ \chordmode { a4*4:m } #})))
+  (case (assoc-get 'syneresis options)
+    ((total) #{ \relative c { \Roff e2*1/2 } #})
+    ((partial) #{ \relative c { \Roff e2 } #})
+    (else #{ \relative c { \Roff e2 } #})))
+
+chordsInchoatioIVA =
+#(define-music-function
+  (options)
+  (alist?)
+  (case (assoc-get 'dieresis options)
+    ((total) #{ \chordmode { a2*3/2:m } #})
+    ((partial) #{ \chordmode { a2*3/2:m } #})
+    (else #{ \chordmode { a2:m } #})))
+
+chordsInchoatioIVASlot =
+#(define-music-function
+  (options)
+  (alist?)
+  (case (assoc-get 'dieresis options)
+    ((total) #{ \chordmode { s8 a2*3/4:m } #})
+    ((partial) #{ \chordmode { s8 a2*3/4:m } #})
+    (else #{ \chordmode { s8 a2*3/4:m } #})))
+
+chordsTenorFlexaIVA = \chordmode {
+  a\breve*1/8:m
+}
 
 chordsFlexaIVA =
 #(define-music-function
   (options)
   (alist?)
   (case (assoc-get 'epenthesis options)
-    ((total) #{ \chordmode { b4:m/d } #})
-    ((partial) #{ \chordmode { b4:m/d } #})
-    (else #{ \chordmode { b4*2:m/d } #}))
+    ((total) #{ \chordmode { g8:9/a g/a } #})
+    ((partial) #{ \chordmode { g4:9/a g/a } #})
+    (else #{ \chordmode { g4:9/a g/a } #}))
 )
 
-chordsTenorTerminatioIVA = \chordmode {
-  d4:m
+chordsTenorMediatioIVA = \chordmode {
+  a\breve*5/8:m
 }
 
-chordsTerminatioIVc = \chordmode {
-  e4:m
+chordsTenorTerminatioIVA = \chordmode {
+  d\breve*1/8:m
 }
+
+chordsTenorTerminatioIVASlot = \chordmode {
+  s8 d\breve*1/16:m
+}
+
+chordsTerminatioIVc =
+#(define-music-function
+  (options)
+  (alist?)
+  (case (assoc-get 'syneresis options)
+    ((total) #{ \chordmode { e8:sus4 e:m } #})
+    ((partial) #{ \chordmode { e4:sus4 e:m } #})
+    (else #{ \chordmode { e4:sus4 e:m } #})))
 
 chantSegmentGloriaPatriIVA = {
-  \time 1/4
+  \PsalmSignature
   \chantInchoatioIVA #'((dieresis . total))
   \chantTenorIVA
   \chantMediatioIVA #'()
@@ -221,45 +304,37 @@ chantSegmentGloriaPatriIVA = {
 
 gloriaPatriOrganRightIVc = {
   \PsalmSignature
-  \rightInchoatioIVA
-  \rightTenorIVA
-  \rightMediatioIVA #'()
+  \rightInchoatioIVA #'((dieresis . total))
+  \rightTenorMediatioIVA ~
   \divisioMaxima
-  \rightInchoatioIVA
-  \rightTenorIVA
-  \rightMediatioIVA #'()
+  \rightInchoatioIVA #'()
+  \rightTenorMediatioIVA
   \divisioMaxima
   \rightTenorTerminatioIVA
-  \rightTerminatioIVc s4
+  \rightTerminatioIVc #'((syneresis . total))
   \finalis
-  \MySpacer
 }
 
 gloriaPatriOrganLeftIVc = {
   \clef bass
-  \leftInchoatioIVA
-  \leftTenorIVA
-  \leftMediatioIVA #'()
+  \leftInchoatioIVA #'((dieresis . total))
+  \leftTenorMediatioIVA ~
   \divisioMaxima
-  \leftInchoatioIVA
-  \leftTenorIVA
-  \leftMediatioIVA #'()
+  \leftInchoatioIVA #'()
+  \leftTenorMediatioIVA
   \divisioMaxima
-  \leftTenorTerminatioIVA (
-  \leftTerminatioIVc ) s4
+  \leftTenorTerminatioIVA
+  \leftTerminatioIVc #'((syneresis . total))
   \finalis
-  \MySpacer
 }
 
 gloriaPatriOrganPedalIVc = {
-  \pedalInchoatioIVA
-  \pedalTenorIVA
-  \pedalMediatioIVA #'()
-  \pedalInchoatioIVA
-  \pedalTenorIVA
-  \pedalMediatioIVA #'()
-  \pedalTenorTerminatioIVc (
-  \pedalTerminatioIVc )
+  \pedalInchoatioIVA #'((dieresis . total))
+  \pedalTenorMediatioIVA ~
+  \pedalInchoatioIVA #'()
+  \pedalTenorMediatioIVA
+  \pedalTenorTerminatioIVc
+  \pedalTerminatioIVc #'((syneresis . total))
 }
 
 gloriaPatriChantIVA = {
@@ -272,18 +347,17 @@ gloriaPatriChantIVc = {
   \chantSegmentGloriaPatriIVA
   \chantTerminatioIVc #'((syneresis . total))
   \finalis
-  \MySpacer
 }
 
 verseSegmentGloriaPatriIVA = \lyricmode {
   \set stanza = "Opcional:"
   \BeginInchoatio Gló -- ria ao \EndInchoatio
-  \Tenor "Pai e ao Filho e ao Espí" -- \I ri -- \I to \B San -- to,
+  \Tenor "Pai e ao Filho e ao Espí" -- \I ri -- \I to \B San -- to, \MediatioMark
   \I co -- \I mo __ \Tenor "era no princípio, a" --
   \BeginItalic
   go -- ra~e
   \EndItalic
-  \B sem -- pre,
+  \B sem -- pre, \MediatioMark
 }
 
 gloriaPatriVerseIVA = \lyricmode {
@@ -293,7 +367,7 @@ gloriaPatriVerseIVA = \lyricmode {
 
 gloriaPatriVerseIVc = \lyricmode {
   \verseSegmentGloriaPatriIVA
-  \Tenor "pelos séculos dos séculos, a" -- \B mém! __
+  \Tenor "pelos séculos dos séculos, a" -- \B mém!
 }
 
 gloriaPatriChantPartIVc = \new GregorianTranscriptionStaff <<
@@ -311,18 +385,17 @@ gloriaPatriOrganPartIVc = \new PianoStaff <<
   >>
 
   \new GregorianTranscriptionStaff = "left+pedal" <<
-      \new GregorianTranscriptionVoice { \voiceOne \gloriaPatriOrganLeftIVc }
-      \new GregorianTranscriptionVoice { \voiceTwo \gloriaPatriOrganPedalIVc }
-    >>
+    \new GregorianTranscriptionVoice { \voiceOne \gloriaPatriOrganLeftIVc }
+    \new GregorianTranscriptionVoice { \voiceTwo \gloriaPatriOrganPedalIVc }
+  >>
 >>
 
 gloriaPatriChordsPartIVc = \new ChordNames {
-  \chordsInchoatioIVA
-  \chordsTenorIVA
-  \chordsMediatioIVA #'()
-  \chordsInchoatioIVA
-  \chordsTenorIVA
-  \chordsMediatioIVA #'()
+  \set chordChanges = ##t
+  \chordsInchoatioIVA #'((dieresis . total))
+  \chordsTenorMediatioIVA
+  \chordsInchoatioIVA #'()
+  \chordsTenorMediatioIVA
   \chordsTenorTerminatioIVA
-  \chordsTerminatioIVc
+  \chordsTerminatioIVc #'((syneresis . total))
 }
