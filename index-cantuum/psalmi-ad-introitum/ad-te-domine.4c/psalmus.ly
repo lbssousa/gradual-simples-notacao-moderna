@@ -7,81 +7,76 @@
 \include "../../../modules/lilypond/layout.ily"
 \include "../../../modules/lilypond/lyrics.ily"
 
-MySpacer = \Spacer 8
-
 psalmChant = {
   \PsalmSignature
-  \S a'
-  \chantInchoatioIVA #'()
+  \chantInchoatioIVASlot #'()
   \bar "!"
   \chantTenorIVA
-  \chantFlexaIVA #'()
+  \chantFlexaIVA #'((slot . yes))
   \divisioMinima
   \bar "!"
   \chantTenorIVA
-  \chantMediatioIVA #'((syneresis . partial))
+  \chantMediatioIVA #'((syneresis . partial)
+                       (slot . yes))
   \divisioMaxima
-  \S a' \chantTenorIVA
+  \chantTenorIVASlot
   \chantTerminatioIVc #'((syneresis . partial))
   \finalis
-  \MySpacer
 }
 
 psalmOrganRight = {
   \PsalmSignature
-  s4 \rightInchoatioIVA
-  \rightTenorIVA
+  \phrasingSlurDashed
+  \rightInchoatioIVASlot #'() \(
+  \rightTenorFlexaIVA
   \rightFlexaIVA #'()
-  \rightTenorIVA
-  \rightMediatioIVA #'()
+  \rightTenorMediatioIVA \)
   \divisioMaxima
-  s4 \rightTenorTerminatioIVA
-  \rightTerminatioIVc s4
+  \rightTenorTerminatioIVASlot
+  \rightTerminatioIVc #'((syneresis . partial))
   \finalis
-  \MySpacer
 }
 
 psalmOrganLeft = {
   \clef bass
-  s4 \leftInchoatioIVA
-  \leftTenorIVA
+  \phrasingSlurDashed
+  \leftInchoatioIVASlot #'() \(
+  \leftTenorFlexaIVA
   \leftFlexaIVA #'()
-  \leftTenorIVA
-  \leftMediatioIVA #'()
+  \leftTenorMediatioIVA \)
   \divisioMaxima
-  s4 \leftTenorTerminatioIVA (
-  \leftTerminatioIVc ) s4
+  \leftTenorTerminatioIVASlot
+  \leftTerminatioIVc #'((syneresis . partial))
   \finalis
-  \MySpacer
 }
 
 psalmOrganPedal = {
-  s4 \pedalInchoatioIVA
-  \pedalTenorIVA
+  \phrasingSlurDashed
+  \pedalInchoatioIVASlot #'() \(
+  \pedalTenorFlexaIVA
   \pedalFlexaIVA #'()
-  \pedalTenorIVA
-  \pedalMediatioIVA #'()
-  s4 \pedalTenorTerminatioIVc (
-  \pedalTerminatioIVc ) s4
+  \pedalTenorMediatioIVA \)
+  \pedalTenorTerminatioIVcSlot
+  \pedalTerminatioIVc #'((syneresis . partial))
 }
 
 chordsPart = \new ChordNames {
-  s4 \chordsInchoatioIVA
-  \chordsTenorIVA
+  \set chordChanges = ##t
+  \chordsInchoatioIVASlot #'()
+  \chordsTenorFlexaIVA
   \chordsFlexaIVA #'()
-  \chordsTenorIVA
-  \chordsMediatioIVA #'()
-  s4 \chordsTenorTerminatioIVA
-  \chordsTerminatioIVc s4
+  \chordsTenorMediatioIVA
+  \chordsTenorTerminatioIVASlot
+  \chordsTerminatioIVc #'((syneresis . partial))
 }
 
 psalmVerseI = \lyricmode {
   \set stanza = "1."
   \VSup "2b" \Inchoatio Não tri --
-  _ _ _
+  _ _ _ _
   \Tenor "unfem sobre mim os"
   \MelismaOff
-  \MediatioIV i -- ni -- mi -- \Mediatio gos!
+  \MediatioIV i -- ni -- mi -- gos! \MediatioMark
   \MelismaOn
   \VSup "3a" \Tenor "Não se envergonha quem em vós põe a espe" --
   \MelismaOff
@@ -92,10 +87,10 @@ psalmVerseI = \lyricmode {
 psalmVerseII = \lyricmode {
   \set stanza = "2."
   \VSup "4" \Inchoatio Mos -- trai- --
-  _ _ _
+  _ _ _ _
   \Tenor "me, ó Senhor, vos" --
   \MelismaOff
-  \MediatioIV sos ca -- mi -- \Mediatio nhos
+  \MediatioIV sos ca -- mi -- nhos \MediatioMark
   \MelismaOn
   "" \Tenor "e fazei-me conhecer a vossa es" --
   \MelismaOff
@@ -107,9 +102,9 @@ psalmVerseIII = \lyricmode {
   \set stanza = "3."
   \VSup "5" \Inchoatio Vos -- sa __
   \Tenor "verdade me oriente e me con" --
-  \B du -- \Flexa za,
+  \B du -- za, \FlexaMark
   \Tenor "porque sois o Deus da minha"
-  \BeginItalic sal -- va -- \EndItalic \BeginBold \Mediatio ção; __ \EndBold
+  \BeginItalic sal -- va -- \EndItalic \BeginBold ção; __ \EndBold \MediatioMark
   "" \Tenor "em vós espero, ó Senhor, todos os"
   \MelismaOff
   \B di -- as.
@@ -119,10 +114,10 @@ psalmVerseIII = \lyricmode {
 psalmVerseIV = \lyricmode {
   \set stanza = "4."
   \VSup "7cd" \Inchoatio De mim __
-  _ _ _
+  _ _ _ _
   \Tenor "lembrai-vos, porque sois mi" --
   \MelismaOff
-  \MediatioIV se -- ri -- cór -- \Mediatio dia
+  \MediatioIV se -- ri -- cór -- dia \MediatioMark
   \MelismaOn
   "" \Tenor "e sois bondade sem limites, ó Se" --
   \B nhor! __
@@ -131,9 +126,9 @@ psalmVerseIV = \lyricmode {
 psalmVerseV = \lyricmode {
   \set stanza = "5."
   \VSup "8" \Inchoatio O Se --
-  _ _ _
+  _ _ _ _
   \Tenor "nhor é piedade e"
-  \BeginItalic re -- ti -- \EndItalic \BeginBold \Mediatio dão, __ \EndBold
+  \BeginItalic re -- ti -- \EndItalic \BeginBold dão, __ \EndBold \MediatioMark
   "" \Tenor "e reconduz ao bom caminho os peca" --
   \MelismaOff
   \B do -- res.
@@ -143,10 +138,10 @@ psalmVerseV = \lyricmode {
 psalmVerseVI = \lyricmode {
   \set stanza = "6."
   \VSup "9" \Inchoatio E -- le __
-  _ _ _
+  _ _ _ _
   \Tenor "dirige os humildes"
   \MelismaOff
-  \MediatioIV na jus -- ti -- \Mediatio ça,
+  \MediatioIV na jus -- ti -- ça, \MediatioMark
   \MelismaOn
   "" \Tenor "e aos pobres ele ensina o seu ca" --
   \MelismaOff
@@ -180,10 +175,6 @@ organPart = \new PianoStaff <<
 >>
 
 \GregorianTranscriptionLayout
-
-\header {
-  arranger = "Harmonização: Theo Flury, Gennaro M. Becchimanzi"
-}
 
 \score {
   <<
