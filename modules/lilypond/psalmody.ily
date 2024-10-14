@@ -42,11 +42,11 @@ AA =
 
 MakeEpenthesis =
 #(define-music-function
-  (p d options)
-  (ly:pitch? ly:duration? alist?)
+  (p options)
+  (ly:pitch? alist?)
   (case (assoc-get 'epenthesis options)
-    ((total) #{ $p $d #})
-    ((partial) #{ \parenthesize $p $d #})
+    ((total) #{ $p 4 #})
+    ((partial) #{ \parenthesize $p 4 #})
     (else #{ #}))
 )
 
@@ -65,8 +65,8 @@ MakeOrganMediatioIV =
   (p options)
   (ly:pitch? alist?)
   (case (assoc-get 'epenthesis options)
-    ((total) #{ $p 2*7/2 #})
-    ((partial) #{ $p 2*7/2 #})
+    ((total) #{ $p 2*3 #})
+    ((partial) #{ $p 2*3 #})
     (else #{ $p 2*2 #}))
 )
 
@@ -88,14 +88,28 @@ MakeInchoatioOnePostTwo =
   (pa pb pc options)
   (ly:pitch? ly:pitch? ly:pitch? alist?)
   (case (assoc-get 'dieresis options)
-    ((total) #{ \C $pa \C $pb \C $pc #})
+    ((total) #{ $pa 4 $pb $pc #})
     ((partial)
       #{
-        \C $pa
+        $pa 4
         \once \slurDashed
-        \CC $pb $pc
+        $pb ( $pc )
       #})
-    (else #{ \C $pa \CC $pb $pc #})))
+    (else #{ $pa 4 $pb 8 ( \Loff $pc ) #})))
+
+MakeInchoatioOnePostTwoSlot =
+#(define-music-function
+  (pa pb pc options)
+  (ly:pitch? ly:pitch? ly:pitch? alist?)
+  (case (assoc-get 'dieresis options)
+    ((total) #{ \once \hideNotes $pa 8 $pa $pb 4 $pc #})
+    ((partial)
+      #{
+        \once \hideNotes $pa 8 $pa
+        \once \slurDashed
+        $pb ( $pc )
+      #})
+    (else #{ \once \hideNotes $pa 8 $pa $pb ( \Loff $pc ) #})))
 
 % Entonação inicial composta por
 % um neuma de duas notas seguido de outro neuma de duas notas
@@ -124,20 +138,37 @@ MakeInchoatioTwoPreEpenthesis =
   (case (assoc-get 'dieresis options)
     ((total)
       #{
-        \MakeEpenthesis $pe \dC #options
+        \MakeEpenthesis $pe #options
         \AA $pa $pb
       #})
     ((partial)
       #{
-        \MakeEpenthesis $pe \dC #options
+        \MakeEpenthesis $pe #options
         \once \slurDashed
         \AA $pa $pb
       #})
     (else
       #{
-        \MakeEpenthesis $pe \dC #options
+        \MakeEpenthesis $pe #options
         \AA $pa $pb
       #})))
+
+% Corda de recitação, com ou sem slot para alinhar sílaba extra
+MakeTenor =
+#(define-music-function
+  (p s)
+  (ly:pitch? boolean?)
+  (if s
+      #{ \once \hideNotes $p 8 \noBreak $p \breve*1/16 #}
+      #{ $p \breve*1/8 #}))
+
+MakeTenorTerminatio =
+#(define-music-function
+  (p s)
+  (ly:pitch? boolean?)
+  (if s
+      #{ s8 $p \breve*1/16 #}
+      #{ $p \breve*1/8 #}))
 
 % Acento cadencial de uma nota com pós-acento de uma nota
 MakeAccentusOnePostOne =
@@ -147,22 +178,46 @@ MakeAccentusOnePostOne =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        \A $pa ( \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
-        $pb \dC )
+        $pa 8^\AccentusMark (
+        \Loff $pb )
       #})
     ((partial)
       #{
         \once \slurDashed
-        \A $pa ( \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
-        $pb \dC )
+        $pa 4^\AccentusMark (
+        \MakeEpenthesis $pe #options
+        $pb )
       #})
     (else
       #{
-        \A $pa \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
-        \C $pb
+        $pa 4^\AccentusMark
+        \MakeEpenthesis $pe #options
+        $pb
+      #})))
+
+MakeAccentusOnePostOneSlot =
+#(define-music-function
+  (pa pe pb options)
+  (ly:pitch? ly:pitch? ly:pitch? alist?)
+  (case (assoc-get 'syneresis options)
+    ((total)
+      #{
+        $pa 4^\AccentusMark (
+        \MakeEpenthesis $pe #options
+        $pb 8 ) \once \hideNotes $pb
+      #})
+    ((partial)
+      #{
+        \once \slurDashed
+        $pa 4^\AccentusMark (
+        \MakeEpenthesis $pe #options
+        $pb 8 ) \once \hideNotes $pb
+      #})
+    (else
+      #{
+        $pa 4^\AccentusMark
+        \MakeEpenthesis $pe #options
+        $pb 8 \once \hideNotes $pb
       #})))
 
 % Acento cadencial de uma nota com pós-acento de duas notas
@@ -173,20 +228,20 @@ MakeAccentusOnePostTwo =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        \A $pa ( \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
+        $pa 4^\AccentusMark ( \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         \CC $pb $pc )
       #})
     ((partial)
       #{
         \once \phrasingSlurDashed
-        \A $pa \( \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
+        $pa 4^\AccentusMark \( \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         \CC $pb $pc \)
       #})
     (else
       #{
-        \A $pa \noBreak
+        $pa 4^\AccentusMark \noBreak
         \MakeEpenthesis $pe \dC #options \noBreak
         \CC $pb $pc
       #})))
@@ -199,21 +254,21 @@ MakeAccentusOnePostThree =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        \A $pa ( \noBreak
+        $pa 4^\AccentusMark ( \noBreak
         \MakeEpenthesis $pe \dC #options \noBreak
         \CCC $pb $pc $pd )
       #})
     ((partial)
       #{
         \once \phrasingSlurDashed
-        \A $pa \( \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
+        $pa 4^\AccentusMark \( \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         \CCC $pb $pc $pd \)
       #})
     (else
       #{
-        \A $pa \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
+        $pa 4^\AccentusMark \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         \CCC $pb $pc $pd
       #})))
 
@@ -226,7 +281,7 @@ MakeAccentusTwoPostOne =
     ((total)
       #{
         $pa 4*1/2^\AccentusMark ( $pb \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         \C $pc )
       #})
     ((partial)
@@ -234,13 +289,13 @@ MakeAccentusTwoPostOne =
         \once \phrasingSlurDashed
         $pa 4*1/2^\AccentusMark \(( \noBreak
         $pb ) \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         \C $pc \)
       #})
     (else
       #{
         \AA $pa $pb  \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         \C $pc
       #})))
 
@@ -277,7 +332,7 @@ MakeAccentusTwoPostTwo =
       #{
         $pa 4*1/2^\AccentusMark ( \noBreak
         $pb \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         \CC $pc $pd )
       #})
     ((partial)
@@ -285,13 +340,13 @@ MakeAccentusTwoPostTwo =
         \once \phrasingSlurDashed
         $pa 4*1/2^\AccentusMark \(( \noBreak
         $pb ) \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         \CC $pc $pd \)
       #})
     (else
       #{
         \AA $pa $pb \noBreak
-        \MakeEpenthesis $pe \dC #options \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         \CC $pc $pd
       #})))
 
@@ -305,14 +360,14 @@ MakeAccentusTwoPreEpenthesisPostOne =
     ((total)
       #{
         \once \override HorizontalBracketText.text = \AccentusMark
-        \MakeEpenthesis $pe \dC #options \startGroup \noBreak
+        \MakeEpenthesis $pe #options \startGroup \noBreak
         $pa 4*1/2 ( $pb \stopGroup \noBreak
         \C $pc )
       #})
     ((partial)
       #{
         \once \override HorizontalBracketText.text = \AccentusMark
-        \MakeEpenthesis $pe \dC #options \startGroup \noBreak
+        \MakeEpenthesis $pe #options \startGroup \noBreak
         \once \phrasingSlurDashed
         $pa 4*1/2 \(( \noBreak
         $pb ) \stopGroup \noBreak
@@ -321,7 +376,7 @@ MakeAccentusTwoPreEpenthesisPostOne =
     (else
       #{
         \once \override HorizontalBracketText.text = \AccentusMark
-        \MakeEpenthesis $pe 2*1/2 #options \startGroup \noBreak
+        \MakeEpenthesis $pe #options \startGroup \noBreak
         \AA $pa $pb \stopGroup \noBreak
         \C $pc
       #})))
@@ -335,14 +390,14 @@ MakeAccentusTwoPreEpenthesisPostTwo =
   (case (assoc-get 'syneresis options)
     ((total)
       #{
-        \MakeEpenthesis $pe 2*1/2 #options \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         $pa 4*1/2^\AccentusMark ( \noBreak
         $pb \noBreak
         \CC $pc $pd )
       #})
     ((partial)
       #{
-        \MakeEpenthesis $pe 2*1/2 #options \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         \once \phrasingSlurDashed
         $pa 4*1/2^\AccentusMark \(( \noBreak
         $pb ) \noBreak
@@ -350,7 +405,7 @@ MakeAccentusTwoPreEpenthesisPostTwo =
       #})
     (else
       #{
-        \MakeEpenthesis $pe 2*1/2 #options \noBreak
+        \MakeEpenthesis $pe #options \noBreak
         \AA $pa $pb \noBreak
         \CC $pc $pd
       #})))
