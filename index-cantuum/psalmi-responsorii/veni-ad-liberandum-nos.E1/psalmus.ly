@@ -187,6 +187,7 @@ organPart = \new PianoStaff <<
 >>
 
 chordsPart = \new ChordNames {
+  \set chordChanges = ##t
   \psalmChords
   \responsoriumChords
 }

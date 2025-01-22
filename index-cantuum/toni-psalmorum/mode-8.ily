@@ -281,6 +281,7 @@ gloriaPatriOrganPartVIIIG = \new PianoStaff <<
 >>
 
 gloriaPatriChordsPartVIIIG = \new ChordNames {
+  \set chordChanges = ##t
   \chordsInchoatioVIII
   \chordsTenorVIII
   \chordsGloriaInchoatioVIII

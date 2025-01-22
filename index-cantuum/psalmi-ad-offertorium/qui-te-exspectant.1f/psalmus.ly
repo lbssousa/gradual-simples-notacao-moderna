@@ -61,6 +61,7 @@ psalmOrganPedal = {
 }
 
 chordsPart = \new ChordNames {
+  \set chordChanges = ##t
   s4 \chordsInchoatioI
   \chordsTenorI
   \chordsTenorTerminatioI

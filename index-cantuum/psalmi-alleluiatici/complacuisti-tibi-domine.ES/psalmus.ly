@@ -155,9 +155,16 @@ organPart = \new PianoStaff <<
 >>
 
 chordsPart = \new ChordNames {
+  \set chordChanges = ##t
   \psalmChords
   \chordsAlleluiaEStar
 }
+
+\context {
+    \Lyrics {
+      \override LyricText.X-offset = #center-on-vowel
+    }
+  }
 
 \score {
   \header {

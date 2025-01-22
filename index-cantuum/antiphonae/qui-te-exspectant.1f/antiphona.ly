@@ -87,6 +87,7 @@ organPart = \new PianoStaff <<
 >>
 
 chordsPart = \new ChordNames {
+  \set chordChanges = ##t
   \antiphonChords
 }
 
